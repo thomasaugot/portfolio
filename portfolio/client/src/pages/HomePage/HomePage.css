@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+.Homepage {
+  background-color: #2C3333;
+  padding: 20% 10% 8% 10%;
+}
+
+.topContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepageTitle {
+  color: #E7F6F2;
+  padding: 18% 0 12% 0;
+  font-size: 2.5em;
+  width: 50vw;
+}
+
+.homepageP {
+  color: #E7F6F2;
+  font-family: "Caveat", cursive;
+  font-size: 1.2em;
+  margin-bottom: 5vh;
+}
+
+.profilePicure {
+  width: 32vw;
+  height: auto;
+  position: absolute;
+  right: 0;
+  margin: 11% 10% 0 0;
+}
+
+.linkAbout {
+  text-decoration: underline;
+  color: #E7F6F2;
+  font-family: "Raleway", sans-serif;
+}/*# sourceMappingURL=HomePage.css.map */

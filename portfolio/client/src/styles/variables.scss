@@ -1,23 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-$ubuntu-font: "Ubuntu", sans-serif;
+$ubuntu-font: "Raleway", sans-serif;
+$caveat-font:'Caveat', cursive;
 
-$bg: rgb(255, 255, 255);
+$bg: #E7F6F2;
 $bg2: #2C3333;
 $text: #2C3333;
-$text2: rgb(240, 240, 240);
+$text2: #E7F6F2;
 $primary: #00BFFF;
 
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 32px;
 
-$header-height: 72px;
+$header-height: 100px;
 
 $sm: 37.5em;
 $md: 48em;
 $lg: 64em;
 $xl: 75em;
+
+$font-size-rgl: 1.2em;
+$font-size-lrg: 2em;
 
 @mixin breakpoint($point) {
     @if $point == md {

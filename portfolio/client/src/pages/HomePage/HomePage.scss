@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.Homepage {
+  background-color: $bg2;
+  padding: 20% 10% 8% 10%;
+}
+
+.topContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepageTitle {
+  color: $text2;
+  padding: 18% 0 12% 0;
+  font-size: 2.5em;
+  width: 50vw;
+}
+
+.homepageP {
+  color: $text2;
+  font-family: $caveat-font;
+  font-size: $font-size-rgl;
+  margin-bottom: 5vh;
+}
+
+.profilePicure {
+  width: 32vw;
+  height: auto;
+  position: absolute;
+  right: 0;
+  margin: 11% 10% 0 0;
+}
+
+.linkAbout {
+  text-decoration: underline;
+  color: $text2;
+  font-family: $ubuntu-font;
+}
