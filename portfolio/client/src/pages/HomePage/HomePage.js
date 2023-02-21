@@ -2,7 +2,7 @@ import "./HomePage.scss";
 
 function HomePage() {
   return (
-    <div className="Homepage">
+    <div className="Homepage" id="HomePage">
       <div className="topContent">
         <h1 className="homepageTitle">
           Hi! I am Thomas, <br />

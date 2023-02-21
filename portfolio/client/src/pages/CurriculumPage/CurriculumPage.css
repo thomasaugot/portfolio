@@ -1,21 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-.AboutPage {
-  background-color: #E7F6F2;
+.CurriculumPage {
+  background-color: #A5C9CA;
   padding: 10%;
   color: #2C3333;
 }
 
-.AboutPage h1 {
+.CurriculumPage h1 {
   font-size: 3em;
   font-family: "Caveat", cursive;
+  margin-bottom: 2vh;
 }
-.AboutPage p {
+.CurriculumPage p {
   font-size: 1em;
   margin: 1vh;
 }
-.AboutPage h2 {
+.CurriculumPage h2 {
   font-size: 1.5em;
   font-family: "Caveat", cursive;
   margin-top: 1vh;
-}/*# sourceMappingURL=AboutPage.css.map */
+}
+.CurriculumPage .stack {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1vh;
+}/*# sourceMappingURL=CurriculumPage.css.map */

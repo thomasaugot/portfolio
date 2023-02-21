@@ -1,8 +1,8 @@
-import React from 'react'
+import "./PortfolioPage.scss";
 
 function PortfolioPage() {
   return (
-    <div>PortfolioPage</div>
+    <div className="PortfolioPage" id="PortfolioPage">PortfolioPage</div>
   )
 }
 

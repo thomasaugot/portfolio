@@ -1,16 +1,16 @@
 @import "../../styles/variables.scss";
 
-.PortfolioPage {
-  background-color: $bg2;
+.CurriculumPage {
+  background-color: $bg3;
   padding: 10%;
-  height: 80vh;
   color: $text;
 }
 
-.PortfolioPage {
+.CurriculumPage {
   h1 {
     font-size: 3em;
     font-family: $caveat-font;
+    margin-bottom: 2vh;
   }
   p {
     font-size: $font-size-sm;
@@ -20,5 +20,12 @@
     font-size: 1.5em;
     font-family: $caveat-font;
     margin-top: 1vh;
+  }
+
+  .stack {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1vh;
   }
 }

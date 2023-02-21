@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Stack from 'react-bootstrap/Stack';
 import styles from "./Header.module.scss";
 
 import { BiMenuAltRight } from "react-icons/bi";
@@ -26,19 +26,24 @@ const Header = () => {
           </span>
         </div>
         <div>
-          <nav
-            className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}
-          >
-            <a className={styles.nav__item} href={"/portfolio"}>
-              Portfolio
-            </a>
-            <a className={styles.nav__item} href={"/about"}>
-              About
-            </a>
-            <a className={styles.nav__item} href={"/contact"}>
-              Contact
-            </a>
-          </nav>
+          <div div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <nav
+              className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}
+            >
+              <a className={styles.nav__item} href="#PortfolioPage">
+                Projects
+              </a>
+              <a className={styles.nav__item} href="#AboutPage">
+                About
+              </a>
+              <a className={styles.nav__item} href="#CurriculmPage">
+                Curriculum
+              </a>
+              <a className={styles.nav__item} href="#ContactPage">
+                Contact
+              </a>
+            </nav>
+          </div>
         </div>
         <div>
           <button className={styles.header__toggler} onClick={menuToggler}>

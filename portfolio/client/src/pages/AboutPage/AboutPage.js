@@ -2,7 +2,7 @@ import "./AboutPage.scss";
 
 function AboutPage() {
   return (
-    <div className="AboutPage">
+    <div className="AboutPage" id="AboutPage">
       <h1>About me</h1>
 
       <p>
@@ -24,9 +24,10 @@ function AboutPage() {
       <p>
         The desire for freedom has brought me to the world of web development. I
         wanted a job that keeps me out of my routine and comfort zone, always
-        teaching me and allowing me to be create great things, to think outside
-        the box. I started coding as a hobby first and then decided to build a
-        career out of it!
+        teaching me and allowing me to create great things, to think outside
+        the box.
+        I started coding as a hobby first and then decided to build a
+        career out of it. In a world where everything becomes digital, I'll never lack work!
       </p>
     </div>
   );
