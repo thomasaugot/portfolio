@@ -21,7 +21,7 @@
   color: #E7F6F2;
   font-family: "Caveat", cursive;
   font-size: 1.2em;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 
 .profilePicure {
@@ -30,10 +30,4 @@
   position: absolute;
   right: 0;
   margin: 11% 10% 0 0;
-}
-
-.linkAbout {
-  text-decoration: underline;
-  color: #E7F6F2;
-  font-family: "Raleway", sans-serif;
 }/*# sourceMappingURL=HomePage.css.map */

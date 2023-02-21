@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.AboutPage {
+  background-color: $bg;
+  padding: 10%;
+  height: 80vh;
+  color: $text;
+}
+
+.AboutPage {
+  h1 {
+    font-size: 3em;
+    font-family: $caveat-font;
+  }
+  p {
+    font-size: $font-size-sm;
+    margin: 1vh;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-family: $caveat-font;
+    margin-top: 1vh;
+  }
+}

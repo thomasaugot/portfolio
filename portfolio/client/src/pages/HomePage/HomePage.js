@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./HomePage.scss";
 
 function HomePage() {
@@ -20,7 +19,6 @@ function HomePage() {
         I create your design
         using the latest development technologies
       </p>
-      <Link className="linkAbout" to="/about">Know more</Link>
     </div>
   );
 }

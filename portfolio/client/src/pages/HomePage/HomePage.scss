@@ -21,7 +21,7 @@
   color: $text2;
   font-family: $caveat-font;
   font-size: $font-size-rgl;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 
 .profilePicure {
@@ -30,10 +30,4 @@
   position: absolute;
   right: 0;
   margin: 11% 10% 0 0;
-}
-
-.linkAbout {
-  text-decoration: underline;
-  color: $text2;
-  font-family: $ubuntu-font;
 }

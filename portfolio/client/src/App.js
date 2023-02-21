@@ -13,14 +13,14 @@ function App() {
     <div className="App">
      <Header />
      <HomePage />
-     <PortfolioPage />
      <AboutPage />
+     <PortfolioPage />
      <ContactPage />
       
       <Routes>
         <Route  path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>      
