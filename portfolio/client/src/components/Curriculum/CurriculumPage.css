@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 .CurriculumPage {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: scroll;
   background-color: #A5C9CA;
   padding: 10%;
   color: #2C3333;

@@ -1,16 +1,16 @@
 @import "../../styles/variables.scss";
 
-.CurriculumPage {
-  background-color: $bg3;
+.AboutPage {
+  @include bootstrapScroll();
+  background-color: $bg;
   padding: 10%;
   color: $text;
 }
 
-.CurriculumPage {
+.AboutPage {
   h1 {
     font-size: 3em;
     font-family: $caveat-font;
-    margin-bottom: 2vh;
   }
   p {
     font-size: $font-size-sm;
@@ -19,13 +19,6 @@
   h2 {
     font-size: 1.5em;
     font-family: $caveat-font;
-    margin-top: 1vh;
-  }
-
-  .stack {
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1vh;
+    margin-top: 1.2vh;
   }
 }

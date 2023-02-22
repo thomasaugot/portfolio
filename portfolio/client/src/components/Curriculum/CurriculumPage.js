@@ -3,8 +3,7 @@ import "./CurriculumPage.scss";
 function CurriculumPage() {
   return (
     <div className="CurriculumPage" id="CurriculumPage">
-      <h1>My Stack</h1>
-
+      <h1>I build with...</h1>
       <div className="stack">
         <code>
           <img
@@ -90,6 +89,24 @@ function CurriculumPage() {
           />
         </code>
       </div>
+
+      <br></br>
+      <h1>Certifications</h1>
+      <h2>Ironhack</h2>
+      <p>
+        9-week web development Bootcamp, during which I was taught the following
+        technologies: <br></br>- Fontend: HTML, CSS/ Bootstrap, Javascript,
+        React
+        <br></br>- Backend: MongoDB, Express, Node, REST APIs <br></br>- Version
+        control: Git/ Github
+      </p>
+      <a
+        href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Show credential
+      </a>
     </div>
   );
 }

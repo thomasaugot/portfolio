@@ -1,6 +1,7 @@
 @import "../../styles/variables.scss";
 
 .Homepage {
+  @include bootstrapScroll();
   background-color: $bg2;
   padding: 20% 10% 8% 10%;
   z-index: 1000;
@@ -27,9 +28,9 @@
 }
 
 .profilePicure {
-  width: 32vw;
+  width: 35vw;
   height: auto;
   position: absolute;
   right: 0;
-  margin: 11% 10% 0 0;
+  margin: 15% 10% 0 0;
 }

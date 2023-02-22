@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-$ubuntu-font: "Raleway", sans-serif;
+$ubuntu-font: "Nunito", sans-serif;
 $caveat-font:'Caveat', cursive;
 
 $bg: #E7F6F2;
@@ -34,4 +34,9 @@ $font-size-lrg: 3em;
             @content;
         }
     }
+}
+
+@mixin bootstrapScroll {
+    height: fit-content;
+    overflow-y: scroll;
 }

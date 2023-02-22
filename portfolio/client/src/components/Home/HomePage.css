@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 .Homepage {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: scroll;
   background-color: #2C3333;
   padding: 20% 10% 8% 10%;
   z-index: 1000;
@@ -27,9 +30,9 @@
 }
 
 .profilePicure {
-  width: 32vw;
+  width: 35vw;
   height: auto;
   position: absolute;
   right: 0;
-  margin: 11% 10% 0 0;
+  margin: 15% 10% 0 0;
 }/*# sourceMappingURL=HomePage.css.map */

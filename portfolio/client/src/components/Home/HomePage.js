@@ -16,7 +16,7 @@ function HomePage() {
       </div>
 
       <p className="homepageP">
-        I create your design
+        I put your design to life
         using the latest development technologies
       </p>
     </div>
