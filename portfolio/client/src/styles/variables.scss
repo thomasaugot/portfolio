@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
 
-$ubuntu-font: "Nunito", sans-serif;
-$caveat-font:'Caveat', cursive;
+$ubuntu-font: "Titillium Web", sans-serif;
+$caveat-font: "Titillium Web", sans-serif;
 
-$bg: #E7F6F2;
-$bg2: #2C3333;
-$bg3: #A5C9CA;
+$bg: #e7f6f2;
+$bg2: #2c3333;
+$bg3: #a5c9ca;
 
-$text: #2C3333;
-$text2: #E7F6F2;
-$primary: #00BFFF;
+$text: #2c3333;
+$text2: #e7f6f2;
+$primary: #00bfff;
 
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 32px;
 
-$header-height: 100px;
+$base: 0.6rem;
+
+$header-height: 60px;
 
 $sm: 37.5em;
 $md: 48em;
@@ -29,14 +31,14 @@ $font-size-rgl: 1.5em;
 $font-size-lrg: 3em;
 
 @mixin breakpoint($point) {
-    @if $point == md {
-        @media (min-width: $md) {
-            @content;
-        }
+  @if $point == md {
+    @media (min-width: $md) {
+      @content;
     }
+  }
 }
 
 @mixin bootstrapScroll {
-    height: fit-content;
-    overflow-y: scroll;
+  height: fit-content;
+  overflow-y: scroll;
 }

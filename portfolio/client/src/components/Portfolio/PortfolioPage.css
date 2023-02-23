@@ -1,22 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
 .PortfolioPage {
-  background-color: #2C3333;
-  padding: 10%;
-  height: 80vh;
-  color: #2C3333;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: scroll;
+  padding: 20% 10% 8% 10%;
+  height: 100vh;
+  color: #e7f6f2;
+  overflow-y: hidden;
+  box-shadow: 0 1px 15px #00bfff;
 }
 
-.PortfolioPage h1 {
-  font-size: 3em;
-  font-family: "Caveat", cursive;
-}
-.PortfolioPage p {
-  font-size: 1em;
-  margin: 1vh;
-}
-.PortfolioPage h2 {
-  font-size: 1.5em;
-  font-family: "Caveat", cursive;
-  margin-top: 1vh;
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
 }/*# sourceMappingURL=PortfolioPage.css.map */

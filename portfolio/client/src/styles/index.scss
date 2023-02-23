@@ -3,52 +3,70 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: $ubuntu-font;
+  font-family: $ubuntu-font;
+  background-image: url("./wallpaper.jpg");
 }
 
 main {
-    height: calc(100vh - #{$header-height});
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: calc(100vh - #{$header-height});
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    .intro {
-        font-size: 38px;
-        text-align: center;
-        font-weight: 700;
-        color: $text2;
-        padding: $spacing-md $spacing-lg;
-        background: $bg2;
-        border-radius: $spacing-sm;
-        box-shadow: 0 0 10px $primary;
-        margin: 0 $spacing-md;
+  .intro {
+    font-size: 38px;
+    text-align: center;
+    font-weight: 700;
+    color: $text2;
+    padding: $spacing-md $spacing-lg;
+    background: $bg2;
+    border-radius: $spacing-sm;
+    box-shadow: 0 0 10px $primary;
+    margin: 0 $spacing-md;
 
-        margin-top: -$header-height;
+    margin-top: -$header-height;
 
-        &__focus {
-            color: $primary;
-        }
-
-        @include breakpoint(md) {
-            font-size: 42px;
-        }
+    &__focus {
+      color: $primary;
     }
+
+    @include breakpoint(md) {
+      font-size: 42px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text2;
+  &:hover {
+    color: $primary;
+  }
 }
 
 button {
-    // reset to default
-    font-family: inherit;
-    outline: none;
-    border: none;
-    background: none;
-    letter-spacing: inherit;
-    color: inherit;
-    font-size: inherit;
-    text-align: inherit;
-    padding: 0;
+  // reset to default
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  letter-spacing: inherit;
+  color: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: $caveat-font;
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 10px;
 }

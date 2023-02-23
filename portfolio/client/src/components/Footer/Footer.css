@@ -1,57 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
-@sectionsstyling {
-  overflow-y: hidden;
-  box-shadow: 0 1px 15px #00bfff;
-  height: 100vh;
-}
-.Homepage {
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow-y: scroll;
-  padding: 20% 10% 8% 10%;
-  overflow-y: hidden;
-  box-shadow: 0 1px 15px #00bfff;
-  height: 100vh;
-}
-
-.topContent {
-  display: flex;
-  flex-direction: column;
-  margin: 20% 0 5% 0;
-}
-
-.homepageTitle {
-  color: #e7f6f2;
-  font-size: 3em;
-  width: 80vw;
-  font-weight: bolder;
-}
-
-.bluetext {
-  color: #00bfff;
-}
-
-.homepageP {
-  color: #e7f6f2;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1.5em;
-  margin-bottom: 2vh;
-  font-weight: lighter;
-}
-
-.profilePicure {
-  width: -moz-fit-content;
-  width: fit-content;
-  display: none;
-}
-
-.container {
+.containerToTop {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 50%;
+  margin-bottom: 25%;
+  transform: rotate(180deg);
 }
 
 .chevron {
@@ -61,6 +16,7 @@
   opacity: 0;
   transform: scale(0.3);
   animation: move-chevron 3s ease-out infinite;
+  margin-bottom: 50%;
 }
 
 .chevron:first-child {
@@ -89,7 +45,7 @@
 .chevron:after {
   right: 0;
   width: 50%;
-  transform: skewY(-30deg);
+  transform: skewY(320deg);
 }
 
 @keyframes move-chevron {
@@ -108,4 +64,4 @@
     opacity: 0;
     transform: translateY(4.8rem) scale(0.5);
   }
-}/*# sourceMappingURL=HomePage.css.map */
+}/*# sourceMappingURL=Footer.css.map */

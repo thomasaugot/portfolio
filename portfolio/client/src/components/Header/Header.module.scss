@@ -2,7 +2,8 @@
 
 .header {
   height: $header-height;
-  background: $bg2;
+  background: rgb(26, 25, 25);
+  opacity: 0.6;
   color: $text2;
   position: fixed;
   z-index: 1000;

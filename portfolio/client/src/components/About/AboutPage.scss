@@ -2,16 +2,14 @@
 
 .AboutPage {
   @include bootstrapScroll();
-  background-color: $bg;
+  background-repeat: no-repeat;
+  opacity: 0.9;
   padding: 10%;
-  color: $text;
+  color: $text2;
+  height: 100vh;
 }
 
 .AboutPage {
-  h1 {
-    font-size: 3em;
-    font-family: $caveat-font;
-  }
   p {
     font-size: $font-size-sm;
     margin: 1vh;

@@ -2,9 +2,11 @@
 
 .CurriculumPage {
   @include bootstrapScroll();
-  background-color: $bg3;
   padding: 10%;
-  color: $text;
+  color: $text2;
+  overflow-y: hidden;
+  box-shadow: 0 1px 15px $primary;
+  height: 100vh;
 }
 
 .CurriculumPage {
@@ -12,6 +14,9 @@
     font-size: 3em;
     font-family: $caveat-font;
     margin-bottom: 2vh;
+    text-decoration-color: $primary;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 8px;
   }
   p {
     font-size: $font-size-sm;
