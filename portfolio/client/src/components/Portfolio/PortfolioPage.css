@@ -8,7 +8,7 @@
   height: fit-content;
   color: #e7f6f2;
   overflow-y: hidden;
-  box-shadow: 0 1px 15px #00bfff;
+  box-shadow: 0 1px 15px yellow;
 }
 
 .portfolioContent {
@@ -22,7 +22,7 @@
 
 .carousel {
   max-width: 75vw;
-  border: solid 1px #00bfff;
+  border: solid 1px yellow;
   border-radius: 15px;
   height: -moz-fit-content;
   height: fit-content;
@@ -38,7 +38,7 @@
 
 .carouselItem {
   background-color: transparent;
-  height: 350px;
+  height: 380px;
   margin-bottom: 30px;
   border: none;
 }
@@ -64,7 +64,7 @@
 }
 .card .blueBtn {
   border-radius: 5px;
-  background-color: #00bfff;
+  background-color: yellow;
   padding: 5px 1px;
   color: #2c3333;
   margin: 60px 10px 20px 10px;

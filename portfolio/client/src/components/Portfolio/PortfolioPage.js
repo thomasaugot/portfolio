@@ -16,28 +16,32 @@ function PortfolioPage() {
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
-    // {
-    //   id: 2,
-    //   capture1: require(""),
-    //   capture2: require(""),
-    //   capture3: require(""),
-    //   name: "The Broke Globetrotter",
-    //   description: "lorem shsd ssa asd",
-    //   stack: "",
-    //   linkRepo: "",
-    //   linkDemo: "",
-    // },
-    // {
-    //   id: 3,
-    //   capture1: require(""),
-    //   capture2: require(""),
-    //   capture3: require(""),
-    //   name: "Pickle Rick vs Rats - The Game",
-    //   description: "zdzad, zadzdzadzdjzhdzd zjzuzb",
-    //   stack: "",
-    //   linkRepo: "",
-    //   linkDemo: "",
-    // },
+    {
+      id: 2,
+      capture1: require("./responsive-BGtrotter.png"),
+      capture2: require("./BGtrotterCapture3.png"),
+      capture3: require("./BGtrotterCapture2.png"),
+      name: "The Broke Globetrotter",
+      description:
+        "I developed this full stack web application together with a classmate as a project during the web development program at Ironhack.",
+      stack:
+        "The application's concept is to gather collections of free stuff to do in cities worldwide for budget travellers. It features Nodejs, Express, MongoDB, Bootstrap",
+      linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
+      linkDemo: "https://the-broke-globetrotter.adaptable.app/",
+    },
+    {
+      id: 3,
+      capture1: require("./game-capture1.png"),
+      capture2: require("./game-capture2.png"),
+      capture3: require("./game-capture3.png"),
+      name: "Pickle Rick vs Rats - The Game",
+      description:
+        "I developed this game as my first project during a web development program at Ironhack.",
+      stack:
+        "Being a huge fan of Rick & Morty, no wonder I chose this theme! The game was entirely built using HTML, CSS & Javascript, and is only playable on desktop",
+      linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
+      linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
+    },
   ];
 
   return (
