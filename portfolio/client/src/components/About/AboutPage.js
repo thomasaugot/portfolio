@@ -7,7 +7,10 @@ function AboutPage() {
       <br></br>
       <h1>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <br></br>
-      <p>I was born in Saint-Nazaire, a little city on the North-Western coast of France.</p>
+      <p>
+        I was born in Saint-Nazaire, a little city on the North-Western coast of France, and grew up
+        in a little nearby town.
+      </p>
       <br></br>
       <h2>&nbsp;My story</h2>
 

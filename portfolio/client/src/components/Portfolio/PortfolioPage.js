@@ -5,96 +5,86 @@ function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      image: "./partymates-logo.PNG",
+      capture1: require("./partymates1.png"),
+      capture2: require("./partymates2.png"),
+      capture3: require("./partymates3.png"),
       name: "Partymates",
-      description: "gggggggggg gggggggggggggg gggggggggggg ggggggggggggg ggggggggggg ggggggg ggg",
-      stack: "",
-      linkRepo: "",
-      linkDemo: "",
+      description:
+        "I developed this application as my third and last project during a full stack web development program at Ironhack. It is a social media platform that connects users looking for party mates",
+      stack:
+        "The application is fully responsive, following the mobile first approach and uses the following technologies: HTML, CSS, Bootstrap, React, Express, Node.js, MongoDB and is interacting with a REST API that I builded.",
+      linkRepo: "https://github.com/thomasaugot/app-partymates-client",
+      linkDemo: "https://partymates.netlify.app/",
     },
-    {
-      id: 2,
-      image: "./brokeglob.png",
-      name: "The Broke Globetrotter",
-      description: "lorem shsd ssa asd",
-      stack: "",
-      linkRepo: "",
-      linkDemo: "",
-    },
-    {
-      id: 3,
-      image: "./gamerick.png",
-      name: "Pickle Rick vs Rats - The Game",
-      description: "zdzad, zadzdzadzdjzhdzd zjzuzb",
-      stack: "",
-      linkRepo: "",
-      linkDemo: "",
-    },
+    // {
+    //   id: 2,
+    //   capture1: require(""),
+    //   capture2: require(""),
+    //   capture3: require(""),
+    //   name: "The Broke Globetrotter",
+    //   description: "lorem shsd ssa asd",
+    //   stack: "",
+    //   linkRepo: "",
+    //   linkDemo: "",
+    // },
+    // {
+    //   id: 3,
+    //   capture1: require(""),
+    //   capture2: require(""),
+    //   capture3: require(""),
+    //   name: "Pickle Rick vs Rats - The Game",
+    //   description: "zdzad, zadzdzadzdjzhdzd zjzuzb",
+    //   stack: "",
+    //   linkRepo: "",
+    //   linkDemo: "",
+    // },
   ];
 
   return (
     <div className="PortfolioPage">
       <h1>My work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <br></br>
-      <Carousel className="carousel">
-        <Carousel.Item>
-          <div class="card">
-            <img src={require("./partymates-logo.PNG")} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
-              <a href="#" class="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div class="card">
-            <img src={require("./brokeglob.png")} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
-              <a href="#" class="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div class="card">
-            <img src={require("./gamerick.png")} class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
-              <a href="#" class="btn btn-primary">
-                Go somewhere
-              </a>
-            </div>
-          </div>
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <div className="portfolioContent">
+        {projects.map((project) => {
+          return (
+            <>
+              <Carousel className="carousel bg-transparent">
+                <Carousel.Item className=" carouselItem">
+                  <div class="card" id={project.id}>
+                    <img src={project.capture1} alt="..." />
+                    <div class="card-body bg-transparent">
+                      <h5 class="card-title bg-transparent">{project.name}</h5>
+                      <p class="card-text bg-transparent">{project.description}</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item className="carouselItem">
+                  <div class="card">
+                    <img src={project.capture2} alt="..." />
+                    <div class="card-body">
+                      <p class="card-text">{project.stack}</p>
+                    </div>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item className="carouselItem">
+                  <div class="card">
+                    <img src={project.capture3} alt="..." />
+                    <div class="card-body">
+                      <a href={project.linkRepo} class="blueBtn">
+                        View Code
+                      </a>
+                      <a href={project.linkDemo} class="whiteBtn">
+                        Visit page
+                      </a>
+                    </div>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
+            </>
+          );
+        })}
+      </div>
+      <br></br>
     </div>
   );
 }
