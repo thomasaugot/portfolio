@@ -3,9 +3,7 @@ import "./AboutPage.scss";
 function AboutPage() {
   return (
     <div className="AboutPage" id="AboutPage">
-      <br></br>
-      <br></br>
-      <h1>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <br></br>
       <p>
         I was born in Saint-Nazaire, a little city on the North-Western coast of France, and grew up

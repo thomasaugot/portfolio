@@ -2,11 +2,11 @@
 
 .PortfolioPage {
   @include bootstrapScroll();
-  padding: 20% 10% 8% 10%;
+  padding: 10% 10% 8% 10%;
   height: fit-content;
   color: $text2;
   overflow-y: hidden;
-  box-shadow: 0 1px 15px $primary;
+  box-shadow: 0 0 15px 0 $primary;
 }
 
 .portfolioContent {
@@ -27,6 +27,7 @@
   margin: 1vh 0;
   padding: 24px;
   box-shadow: 5px 5px 10px -5px;
+  text-align: center;
 }
 
 .carousel-inner {
@@ -38,12 +39,14 @@
   height: 380px;
   margin-bottom: 30px;
   border: none;
+  text-align: center;
 }
 
 .card {
   background-color: transparent !important;
   height: 5vh;
   border: none;
+  margin-bottom: 3px;
 }
 
 .card {
@@ -58,5 +61,46 @@
   .card-body {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .portfolioContent {
+    text-align: center;
+    width: 58vw;
+    padding-left: 13vw;
+  }
+
+  .card {
+    background-color: transparent !important;
+    width: 40vw;
+    height: 10vh;
+    border: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .PortfolioPage {
+    @include bootstrapScroll();
+    padding: 10% 10% 8% 10%;
+    overflow-y: hidden;
+  }
+
+  .portfolioContent {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .carousel {
+    max-width: 25vw;
+    margin: 0 1vw;
+    text-align: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-left: 5%;
   }
 }

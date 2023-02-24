@@ -3,10 +3,12 @@
 .ContactPage {
   @include bootstrapScroll();
   background-repeat: no-repeat;
+  padding: 20% 10% 8% 10%;
   opacity: 0.9;
   padding: 10%;
   color: $text2;
   height: fit-content;
+  overflow-y: hidden;
 }
 
 .contactForm {
@@ -18,4 +20,47 @@
   border-radius: 8px;
   padding: 7px 5px;
   margin: 7px 0 0 0;
+}
+
+.submitDiv {
+  text-align: center;
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .inputForm {
+    border-radius: 8px;
+    padding: 7px 5px;
+    margin: 7px 0 0 0;
+    width: 40vw;
+  }
+
+  .contactFormBtn {
+    width: 10vw;
+  }
+
+  .submitDiv {
+    margin-left: 14.5vw;
+  }
+
+  .ContactPage {
+    display: flex;
+  }
+
+  .letsConnect {
+    margin-left: 10vw;
+  }
+
+  .linkedInLogo {
+    width: 10vw;
+    margin-right: 2vw;
+  }
+
+  .githubLogo {
+    width: 8vw;
+  }
 }

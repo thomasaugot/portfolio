@@ -2,10 +2,10 @@
 
 .CurriculumPage {
   @include bootstrapScroll();
-  padding: 10% 10% 15% 10%;
+  padding: 20% 10% 15% 10%;
   color: $text2;
   overflow-y: hidden;
-  box-shadow: 0 1px 15px $primary;
+  box-shadow: 0 0 15px 0 $primary;
   height: fit-content;
 }
 
@@ -33,5 +33,30 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 1vh;
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .CurriculumPage {
+    padding: 10% 10% 15% 10%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .CurriculumPage {
+    padding: 10% 10% 15% 10%;
+  }
+  .stack {
+    padding-bottom: 3vh;
+  }
+
+  .stack {
+    img {
+      width: 70px;
+      height: auto;
+      margin-bottom: 2vh;
+    }
   }
 }

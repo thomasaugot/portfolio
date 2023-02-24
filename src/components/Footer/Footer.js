@@ -3,7 +3,7 @@ import "./Footer.scss";
 
 function Footer() {
   return (
-    <div>
+    <div className="Footer">
       <a href="#HomePage">
         <div class="containerToTop rotate">
           <div class="chevron"></div>
@@ -14,7 +14,7 @@ function Footer() {
 
         <br></br>
 
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center", color: "white" }}>
           This website was built by{" "}
           <a href="https://www.linkedin.com/in/thomas-augot/">Thomas Augot</a>
         </p>

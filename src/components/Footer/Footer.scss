@@ -65,3 +65,20 @@
     transform: translateY($base * 8) scale(0.5);
   }
 }
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .containerToTop {
+    margin-bottom: 1vh;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .containerToTop {
+    margin-bottom: 1%;
+  }
+  .chevron {
+    margin: 0;
+  }
+}

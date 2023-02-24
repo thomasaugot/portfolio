@@ -3,8 +3,6 @@ import "./CurriculumPage.scss";
 function CurriculumPage() {
   return (
     <div className="CurriculumPage" id="CurriculumPage">
-      <br></br>
-      <br></br>
       <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <div className="stack">
         <code>
@@ -51,12 +49,7 @@ function CurriculumPage() {
 
       <div className="stack">
         <code>
-          <img
-            height="50"
-            src="https://github.com/tandpfun/skill-icons/raw/main/icons/React-Dark.svg"
-            alt="React"
-            title="React"
-          />
+          <img height="50" src={require("./react-logo.png")} alt="React" title="React" />
         </code>
         <code>
           <img

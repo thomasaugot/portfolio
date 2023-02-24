@@ -4,7 +4,7 @@
   @include bootstrapScroll();
   padding: 20% 10% 8% 10%;
   overflow-y: hidden;
-  box-shadow: 0 1px 15px $primary;
+  box-shadow: 0 0 15px 0 $primary;
   height: 100vh;
 }
 
@@ -99,5 +99,75 @@
   100% {
     opacity: 0;
     transform: translateY($base * 8) scale(0.5);
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .chevron {
+    margin: 0;
+  }
+
+  .homepageTitle {
+    font-size: 8vw;
+  }
+
+  .homepageP {
+    margin-top: 4vh;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Homepage {
+    @include bootstrapScroll();
+    padding: 10% 10% 8% 10%;
+    overflow-y: hidden;
+    height: 100vh;
+  }
+
+  .profilePicure {
+    width: 17vw;
+    display: flex;
+    margin-left: 10vw;
+  }
+
+  .chevron {
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 4%;
+  }
+
+  .topContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0 0 2% 0;
+  }
+
+  .homepageTitle {
+    width: fit-content;
+    font-size: 4em;
+  }
+
+  .firstColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hompagebtmDiv {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .homepageP {
+    margin-top: 5%;
+    margin-bottom: 0;
   }
 }

@@ -8,14 +8,13 @@
   position: fixed;
   z-index: 1000;
   width: 100%;
-  box-shadow: 0 1px 5px $primary;
 
   &__content {
     max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 $spacing-md;
+    margin: 0;
+    padding: 0 0;
     @include breakpoint(md) {
-      padding: 0 $spacing-lg;
+      padding: 0 0;
     }
     transition: 0.3s ease padding;
 
@@ -64,7 +63,7 @@
 }
 
 .logo {
- padding: 50% 0;
+  padding: 50% 0;
 }
 
 .nav {
@@ -84,12 +83,9 @@
   &__item {
     display: block;
     padding: $spacing-md;
-
     text-decoration: none;
     color: inherit;
-
     height: 100%;
-
     transition: 0.3s ease color;
     &:hover {
       color: $primary;
@@ -136,5 +132,25 @@
   }
   &:hover {
     box-shadow: 0 0 0.75em 0 $primary;
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .nav {
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .nav {
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
