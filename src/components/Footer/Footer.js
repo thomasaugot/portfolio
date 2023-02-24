@@ -19,6 +19,7 @@ function Footer() {
           <a href="https://www.linkedin.com/in/thomas-augot/">Thomas Augot</a>
         </p>
       </a>
+      <br></br>
     </div>
   );
 }
