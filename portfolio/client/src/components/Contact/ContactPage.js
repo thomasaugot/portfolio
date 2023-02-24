@@ -72,6 +72,12 @@ function ContactPage() {
             src="https://github.com/thomasaugot/thomasaugot/blob/main/372102050_LINKEDIN_ICON_TRANSPARENT_1080.gif?raw=true"
             width="70"
           />
+          <a href="https://github.com/thomasaugot" target="_blank">
+            <img
+              src="https://github.com/thomasaugot/thomasaugot/blob/main/372102050_LINKEDIN_ICON_TRANSPARENT_1080.gif?raw=true"
+              width="70"
+            />
+          </a>
         </a>
       </div>
     </div>
