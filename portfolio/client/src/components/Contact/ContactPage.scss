@@ -1,1 +1,21 @@
 @import "../../styles/variables.scss";
+
+.ContactPage {
+  @include bootstrapScroll();
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  padding: 10%;
+  color: $text2;
+  height: 100vh;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputForm {
+  border-radius: 8px;
+  padding: 7px 5px;
+  margin: 7px 0 0 0;
+}

@@ -101,16 +101,28 @@ function CurriculumPage() {
       <h2>Ironhack</h2>
       <p>
         9-week web development Bootcamp, during which I was taught the following technologies:{" "}
-        <br></br>- Fontend: HTML, CSS/ Bootstrap, Javascript, React
-        <br></br>- Backend: MongoDB, Express, Node, REST APIs <br></br>- Version control: Git/
+        <br></br>- Fontend: HTML, CSS/ Bootstrap, Javascript, React.js
+        <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version control: Git/
         Github
       </p>
+      <br></br>
       <a
         href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
         rel="noreferrer"
         target="_blank"
+        className="whiteBtn"
       >
         Show credential
+      </a>
+      <br></br>
+      <br></br>
+      <a
+        href="https://drive.google.com/file/d/1IMMqzm1QQ15QedFOrJoYsl23fQW9OfRk/view?usp=sharing"
+        target="_blank"
+        rel="noreferrer"
+        className="blueBtn"
+      >
+        View my resume
       </a>
     </div>
   );

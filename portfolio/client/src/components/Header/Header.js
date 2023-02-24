@@ -22,14 +22,14 @@ const Header = () => {
             tabindex="0"
           >
             <nav className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}>
-              <a className={styles.nav__item} href="#PortfolioPage">
-                Projects
-              </a>
               <a className={styles.nav__item} href="#AboutPage">
                 About
               </a>
               <a className={styles.nav__item} href="#CurriculumPage">
                 Curriculum
+              </a>
+              <a className={styles.nav__item} href="#PortfolioPage">
+                Projects
               </a>
               <a className={styles.nav__item} href="#ContactPage">
                 Contact

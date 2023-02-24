@@ -26,12 +26,12 @@ main .intro {
   padding: 16px 32px;
   background: #2c3333;
   border-radius: 8px;
-  box-shadow: 0 0 10px #00bfff;
+  box-shadow: 0 0 10px yellow;
   margin: 0 16px;
   margin-top: -60px;
 }
 main .intro__focus {
-  color: #00bfff;
+  color: yellow;
 }
 @media (min-width: 48em) {
   main .intro {
@@ -44,7 +44,7 @@ a {
   color: #e7f6f2;
 }
 a:hover {
-  color: #00bfff;
+  color: yellow;
 }
 
 button {
@@ -63,7 +63,40 @@ h1 {
   font-size: 3em;
   font-family: "Titillium Web", sans-serif;
   text-decoration: underline;
-  text-decoration-color: #00bfff;
+  text-decoration-color: yellow;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 10px;
+}
+
+.blueBtn {
+  border-radius: 5px;
+  background-color: yellow;
+  padding: 5px 7px;
+  color: #2c3333;
+  font-weight: bold;
+  margin: 60px 10px 20px 10px;
+  border: solid 1px transparent;
+}
+.blueBtn:hover {
+  border: 1px solid rgb(0, 191, 255);
+  box-shadow: 5px 5px 10px -5px;
+  color: rgb(0, 191, 255);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.whiteBtn {
+  border-radius: 5px;
+  border: solid white 1px;
+  background-color: transparent;
+  padding: 5px 8.5px;
+  color: #e7f6f2;
+  margin: 0 10px;
+}
+.whiteBtn:hover {
+  border: 1px solid rgb(0, 191, 255);
+  box-shadow: 5px 5px 10px -5px;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

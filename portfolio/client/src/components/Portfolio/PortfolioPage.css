@@ -61,34 +61,4 @@
 .card .card-body {
   display: flex;
   flex-direction: column;
-}
-.card .blueBtn {
-  border-radius: 5px;
-  background-color: yellow;
-  padding: 5px 1px;
-  color: #2c3333;
-  margin: 60px 10px 20px 10px;
-  border: solid 1px transparent;
-}
-.card .blueBtn:hover {
-  border: 1px solid rgb(0, 191, 255);
-  box-shadow: 5px 5px 10px -5px;
-  color: rgb(0, 191, 255);
-  transition: 0.4s;
-  cursor: pointer;
-}
-.card .whiteBtn {
-  border-radius: 5px;
-  border: solid white 1px;
-  background-color: transparent;
-  padding: 5px 1px;
-  color: #e7f6f2;
-  margin: 0 10px;
-}
-.card .whiteBtn:hover {
-  border: 1px solid rgb(0, 191, 255);
-  box-shadow: 5px 5px 10px -5px;
-  color: white;
-  transition: 0.4s;
-  cursor: pointer;
 }/*# sourceMappingURL=PortfolioPage.css.map */

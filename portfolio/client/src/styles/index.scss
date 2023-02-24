@@ -70,3 +70,36 @@ h1 {
   text-decoration-thickness: 1.5px;
   text-underline-offset: 10px;
 }
+
+.blueBtn {
+  border-radius: 5px;
+  background-color: $primary;
+  padding: 5px 7px;
+  color: $text;
+  font-weight: bold;
+  margin: 60px 10px 20px 10px;
+  border: solid 1px transparent;
+  &:hover {
+    border: 1px solid rgb(0, 191, 255);
+    box-shadow: 5px 5px 10px -5px;
+    color: rgb(0, 191, 255);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+}
+
+.whiteBtn {
+  border-radius: 5px;
+  border: solid white 1px;
+  background-color: transparent;
+  padding: 5px 8.5px;
+  color: $text2;
+  margin: 0 10px;
+  &:hover {
+    border: 1px solid rgb(0, 191, 255);
+    box-shadow: 5px 5px 10px -5px;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+}

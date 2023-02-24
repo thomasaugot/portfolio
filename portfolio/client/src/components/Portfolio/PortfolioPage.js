@@ -25,7 +25,7 @@ function PortfolioPage() {
       description:
         "I developed this full stack web application together with a classmate as a project during the web development program at Ironhack.",
       stack:
-        "The application's concept is to gather collections of free stuff to do in cities worldwide for budget travellers. It features Nodejs, Express, MongoDB, Bootstrap",
+        "The application is a platform where to gather collections of free stuff to do in cities worldwide for budget travellers. It features backend technologies: Nodejs, Express.js, MongoDB. The frontend is rendered using Handlebars. Styling was made using CSS & Bootstrap, it is also responsive",
       linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
       linkDemo: "https://the-broke-globetrotter.adaptable.app/",
     },
@@ -45,7 +45,7 @@ function PortfolioPage() {
   ];
 
   return (
-    <div className="PortfolioPage">
+    <div className="PortfolioPage" id="PortfolioPage">
       <h1>My work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <br></br>
       <div className="portfolioContent">
