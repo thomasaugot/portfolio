@@ -1,18 +1,29 @@
-import React from "react";
-import * as emailjs from "emailjs-com";
+import React, { useState } from "react";
+// import * as emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 import "./ContactPage.scss";
 
 function ContactPage() {
+  const [stateMessage, setStateMessage] = useState(null);
+
   function sendEmail(e) {
+    e.persist();
     e.preventDefault();
-    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID").then(
-      (result) => {
-        alert("email sent successfully");
-      },
-      (error) => {
-        alert("error sending email");
-      }
-    );
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setStateMessage("Message sent !");
+        },
+        (error) => {
+          setStateMessage("Something went wrong, please try again later");
+        }
+      );
     //clears the form after sending the email
     e.target.reset();
   }
@@ -44,11 +55,12 @@ function ContactPage() {
           className="inputForm"
           id="message"
           name="message"
-          placeholder="Let's talk about it..."
+          placeholder="Your message here"
         />
-        <button type="submit" className="blueBtn" style={{ textAlign: "center", padding: "5px 0" }}>
-          send
+        <button type="submit" className="blueBtn" style={{ textAlign: "center", margin: "30px 0" }}>
+          Send
         </button>
+        <div style={{ fontSize: "5vw", textAlign: "center" }}>{stateMessage}</div>
       </form>
     </div>
   );
