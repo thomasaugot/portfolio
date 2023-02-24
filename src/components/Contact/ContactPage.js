@@ -67,15 +67,17 @@ function ContactPage() {
       <h1>Let's connect !</h1>
       <br></br>
       <div style={{ textAlign: "center" }}>
-        <a href="https://www.linkedin.com/in/thomas-augot" target="_blank">
+        <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
           <img
             src="https://github.com/thomasaugot/thomasaugot/blob/main/372102050_LINKEDIN_ICON_TRANSPARENT_1080.gif?raw=true"
             width="70"
+            alt="linkedin"
           />
-          <a href="https://github.com/thomasaugot" target="_blank">
+          <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
             <img
               src="https://raw.githubusercontent.com/thomasaugot/portfolio/16eacb1c4b0e913e8a02ad213b9eccbd6aaea969/portfolio/client/src/components/Contact/github-logo.gif"
               width="55"
+              alt="github"
             />
           </a>
         </a>
