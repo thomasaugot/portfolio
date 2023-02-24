@@ -74,7 +74,7 @@ function ContactPage() {
           />
           <a href="https://github.com/thomasaugot" target="_blank">
             <img
-              src="https://raw.githubusercontent.com/thomasaugot/portfolio/2f439479ce97b40474a0bf84d6539edb79ed2a4c/portfolio/client/src/components/Contact/githbub-logo.gif"
+              src="https://raw.githubusercontent.com/thomasaugot/portfolio/16eacb1c4b0e913e8a02ad213b9eccbd6aaea969/portfolio/client/src/components/Contact/github-logo.gif"
               width="55"
             />
           </a>
