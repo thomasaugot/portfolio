@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Stack from "react-bootstrap/Stack";
 import styles from "./Header.module.scss";
 
 import { BiMenuAltRight } from "react-icons/bi";
@@ -45,10 +44,6 @@ const Header = () => {
       </div>
     </div>
   );
-};
-
-const Button = () => {
-  return <button className={styles.button}>Click me</button>;
 };
 
 export default Header;
