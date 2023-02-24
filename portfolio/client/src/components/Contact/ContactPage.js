@@ -62,6 +62,18 @@ function ContactPage() {
         </button>
         <div style={{ fontSize: "5vw", textAlign: "center" }}>{stateMessage}</div>
       </form>
+      <br></br>
+
+      <h1>Let's connect !</h1>
+      <br></br>
+      <div style={{ textAlign: "center" }}>
+        <a href="https://www.linkedin.com/in/thomas-augot" target="_blank">
+          <img
+            src="https://github.com/thomasaugot/thomasaugot/blob/main/372102050_LINKEDIN_ICON_TRANSPARENT_1080.gif?raw=true"
+            width="70"
+          />
+        </a>
+      </div>
     </div>
   );
 }
