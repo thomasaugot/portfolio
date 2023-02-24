@@ -5,7 +5,6 @@ function CurriculumPage() {
     <div className="CurriculumPage" id="CurriculumPage">
       <br></br>
       <br></br>
-      <br></br>
       <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       <div className="stack">
         <code>
@@ -120,7 +119,7 @@ function CurriculumPage() {
         href="https://drive.google.com/file/d/1IMMqzm1QQ15QedFOrJoYsl23fQW9OfRk/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
-        className="blueBtn"
+        className="blueBtn spacing"
       >
         View my resume
       </a>
