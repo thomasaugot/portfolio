@@ -93,7 +93,7 @@ function CurriculumPage() {
       <h2>Ironhack</h2>
       <p>
         9-week web development Bootcamp, during which I was taught the following technologies:{" "}
-        <br></br>- Fontend: HTML, CSS/ Bootstrap, Javascript, React.js
+        <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
         <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version control: Git/
         Github
       </p>
