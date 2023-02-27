@@ -14,14 +14,6 @@ The application uses React and SCSS, and is fully responsive following the mobil
 
 ### `npm install`
 
-You will need to add the following environment variable to the .env file:
-
-- REACT_APP_TEMPLATE_ID
-- REACT_APP_SERVICE_ID
-- REACT_APP_PUBLIC_KEY
-
-These variables are related to the contact form using emailjs API.
-
 ### Run the application
 
 ### `npm start`
