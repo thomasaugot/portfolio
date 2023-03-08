@@ -102,9 +102,8 @@ function CurriculumPage() {
         href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
         rel="noreferrer"
         target="_blank"
-        className="whiteBtn"
       >
-        Show credential
+        <button className="whiteBtn">Show credential</button>
       </a>
       <br></br>
       <br></br>
@@ -112,9 +111,8 @@ function CurriculumPage() {
         href="https://drive.google.com/file/d/1IMMqzm1QQ15QedFOrJoYsl23fQW9OfRk/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
-        className="blueBtn spacing"
       >
-        View my resume
+        <button className="blueBtn">View my resume</button>
       </a>
     </div>
   );

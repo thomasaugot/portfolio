@@ -76,15 +76,15 @@ h1 {
 .blueBtn {
   border-radius: 5px;
   background-color: $primary;
-  padding: 5px 7px;
+  padding: 5px 20px;
   color: $text;
   font-weight: bold;
-  margin: 60px 10px 20px 10px;
+  margin: 10px 10px 10px 10px;
   border: solid 1px transparent;
   &:hover {
-    border: 1px solid rgb(0, 191, 255);
+    border: 1px solid rgb(247, 248, 248);
     box-shadow: 5px 5px 10px -5px;
-    color: rgb(0, 191, 255);
+    color: $text;
     transition: 0.4s;
     cursor: pointer;
     transform: scale(1.2);
@@ -95,11 +95,11 @@ h1 {
   border-radius: 5px;
   border: solid white 1px;
   background-color: transparent;
-  padding: 5px 8.5px;
+  padding: 5px 21.5px;
   color: $text2;
   margin: 0 10px;
   &:hover {
-    border: 1px solid rgb(0, 191, 255);
+    border: 1px solid rgb(252, 254, 255);
     box-shadow: 5px 5px 10px -5px;
     color: white;
     transition: 0.4s;
