@@ -56,6 +56,9 @@
       width: 70px;
       height: auto;
       margin-bottom: 2vh;
+      &:hover {
+        transform: scale(1.6);
+      }
     }
   }
 }
