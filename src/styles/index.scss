@@ -9,7 +9,8 @@
 
 body {
   font-family: $ubuntu-font;
-  background-image: url("./wallpaper.jpg");
+  background: rgb(45, 52, 54);
+  background: linear-gradient(260deg, rgba(45, 52, 54, 1) 18%, rgba(0, 0, 0, 1) 100%);
 }
 
 main {

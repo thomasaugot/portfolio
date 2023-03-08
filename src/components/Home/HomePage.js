@@ -31,13 +31,15 @@ function HomePage() {
         </div>
       </div>
 
-      <a href="#AboutPage">
-        <div class="container">
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-        </div>
-      </a>
+      <div className="position-relative linkDiv">
+        <a href="#AboutPage" className="stretched-link linkAbout">
+          <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div>
+        </a>
+      </div>
     </div>
   );
 }

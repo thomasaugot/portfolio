@@ -61,7 +61,7 @@ function ContactPage() {
             <button
               type="submit"
               className="blueBtn contactFormBtn"
-              style={{ textAlign: "center", margin: "30px 0" }}
+              style={{ textAlign: "center", margin: "30px 0", padding: "5px 30px" }}
             >
               Send
             </button>
