@@ -53,7 +53,7 @@ function PortfolioPage() {
           return (
             <>
               <Carousel className="carousel bg-transparent">
-                <Carousel.Item className=" carouselItem">
+                <Carousel.Item className="bg-transparent carouselItem">
                   <div class="card" id={project.id}>
                     <img src={project.capture1} alt="..." />
                     <div class="card-body bg-transparent">
@@ -62,7 +62,7 @@ function PortfolioPage() {
                     </div>
                   </div>
                 </Carousel.Item>
-                <Carousel.Item className="carouselItem">
+                <Carousel.Item className="bg-transparent carouselItem">
                   <div class="card">
                     <img src={project.capture2} alt="..." />
                     <div class="card-body">
@@ -70,7 +70,7 @@ function PortfolioPage() {
                     </div>
                   </div>
                 </Carousel.Item>
-                <Carousel.Item className="carouselItem">
+                <Carousel.Item className="bg-transparent carouselItem">
                   <div class="card">
                     <img src={project.capture3} alt="..." />
                     <div class="card-body">

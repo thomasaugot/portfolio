@@ -76,7 +76,7 @@
   padding: $spacing-md 0;
 
   &--open {
-    transition: 0.2s ease right;
+    transition: 0.2s ease top;
     right: 0;
   }
 
@@ -89,6 +89,8 @@
     transition: 0.3s ease color;
     &:hover {
       color: $primary;
+      transition: 1s;
+      transform: scale(1.5);
     }
   }
 

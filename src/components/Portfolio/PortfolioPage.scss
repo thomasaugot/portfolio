@@ -11,22 +11,24 @@
 .portfolioContent {
   display: flex;
   flex-direction: column;
-  background-color: transparent;
   justify-content: center;
   text-align: center;
   margin-left: 4%;
 }
 
 .carousel {
+  // this is the one to modify each cards
   max-width: 75vw;
-  border: solid 1px $primary;
   border-radius: 15px;
   height: fit-content;
-  background-color: transparent;
   margin: 1vh 0;
   padding: 24px;
-  box-shadow: 5px 5px 10px -5px;
+  box-shadow: 8px 8px 15px -8px;
   text-align: center;
+  &:hover {
+    transform: scale(1.1);
+    border: 0.2px solid white;
+  }
 }
 
 .carousel-inner {
@@ -34,7 +36,6 @@
 }
 
 .carouselItem {
-  background-color: transparent;
   height: 380px;
   margin-bottom: 30px;
   border: none;
@@ -42,10 +43,10 @@
 }
 
 .card {
-  background-color: transparent !important;
   height: 5vh;
   border: none;
   margin-bottom: 3px;
+  background-color: transparent !important;
 }
 
 .card {
@@ -56,6 +57,7 @@
   .card-img-top {
     border-top-right-radius: 32px;
     width: fit-content;
+    border: none;
   }
   .card-body {
     display: flex;

@@ -36,6 +36,7 @@
 .profilePicure {
   width: fit-content;
   display: none;
+  transform: perspective(800px);
 }
 
 .container {
