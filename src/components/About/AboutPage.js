@@ -21,11 +21,12 @@ function AboutPage() {
       <h2>&nbsp;Why Web Development?</h2>
 
       <p>
-        Freedom is what brought me to the world of web development. I wanted a flexible job that
-        keeps me out of my routine and comfort zone, always teaching me and allowing me to create
-        great things, to think outside the box. I started coding as a hobby first and then decided
-        to build a career out of it. In a world where everything becomes digital, I really feel like
-        I can contribute in a meaningful way, and help increasing businesses online visibility.
+        My thirst for more freedom and creativity brought me to the world of web development. I
+        wanted a flexible job that keeps me out of my routine and comfort zone, always teaching me
+        and allowing me to create great things, to think outside the box. I started coding as a
+        hobby first and then decided to build a career out of it. In a world where everything
+        becomes digital, I really feel like I can contribute in a meaningful way and help increasing
+        businesses online visibility.
       </p>
     </div>
   );
