@@ -84,7 +84,7 @@
 @media only screen and (min-width: 992px) {
   .PortfolioPage {
     @include bootstrapScroll();
-    padding: 10% 10% 8% 10%;
+    padding: 5% 10%;
     overflow-y: hidden;
   }
 
