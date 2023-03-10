@@ -8,7 +8,7 @@ function Footer() {
       <br></br>
       <br></br>
       <br></br>
-      <a href="#HomePage" className="stretched-link">
+      <a href="#HomePage">
         <div class="containerToTop rotate">
           <div class="chevron"></div>
           <div class="chevron"></div>
