@@ -91,6 +91,11 @@
   .portfolioContent {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .portfolioItem {
+    width: 23vw;
   }
 
   .carousel {
