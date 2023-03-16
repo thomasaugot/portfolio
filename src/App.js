@@ -27,7 +27,7 @@ function App() {
         <>
           <Header />
           <HomePage />
-          <Fade duration={2000}>
+          <Fade duration={1000}>
             <AboutPage />
             <CurriculumPage />
             <PortfolioPage />
