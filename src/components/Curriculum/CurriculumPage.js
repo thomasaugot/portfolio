@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 function CurriculumPage() {
   return (
     <div className="CurriculumPage" id="CurriculumPage">
-      <Fade duration={2000}>
+      <Fade duration={1000}>
         <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
         <div className="stack">
           <code>

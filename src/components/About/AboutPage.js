@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 function AboutPage() {
   return (
     <div className="AboutPage" id="AboutPage">
-      <Fade duration={2000}>
+      <Fade duration={1000}>
         <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
         <br></br>
 
