@@ -74,18 +74,16 @@ function ContactPage() {
         <div className="letsConnect">
           <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
-          <div>
+          <div className="logo-container">
             <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
               <img
-                src="https://github.com/thomasaugot/thomasaugot/blob/main/372102050_LINKEDIN_ICON_TRANSPARENT_1080.gif?raw=true"
-                width="70"
+                src="https://raw.githubusercontent.com/thomasaugot/portfolio/0c36e4ca9442e067c3d6abaace5345fdcb83b99b/src/components/Contact/linkedin-icon.gif"
                 alt="linkedin"
                 className="linkedInLogo"
               />
               <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
                 <img
-                  src="https://raw.githubusercontent.com/thomasaugot/portfolio/16eacb1c4b0e913e8a02ad213b9eccbd6aaea969/portfolio/client/src/components/Contact/github-logo.gif"
-                  width="55"
+                  src="https://raw.githubusercontent.com/thomasaugot/portfolio/0c36e4ca9442e067c3d6abaace5345fdcb83b99b/src/components/Contact/github-logo.gif"
                   alt="github"
                   className="githubLogo"
                 />

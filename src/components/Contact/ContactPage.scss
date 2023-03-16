@@ -27,6 +27,28 @@
   margin: 0;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedInLogo {
+  width: 30vw;
+  margin-right: 2vw;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.githubLogo {
+  width: 34vw;
+  margin-bottom: 9px;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
 /* Medium devices (Tablets, between 600px and 992px) */
 @media only screen and (min-width: 600px) {
 }
@@ -59,15 +81,9 @@
   .linkedInLogo {
     width: 10vw;
     margin-right: 2vw;
-    &:hover {
-      transform: scale(1.6);
-    }
   }
 
   .githubLogo {
-    width: 8vw;
-    &:hover {
-      transform: scale(1.6);
-    }
+    width: 11.5vw;
   }
 }
