@@ -6,13 +6,26 @@ import "./PortfolioPage.scss";
 function PortfolioPage() {
   const projects = [
     {
+      id: 5,
+      capture1: require("./mobile-overlay.png"),
+      capture2: require("./mobile-overlay.png"),
+      capture3: require("./mobile-overlay.png"),
+      name: "Todayzzz Todos",
+      description:
+        "!!UNDER CONSTRUCTION!! Just a simple todo app to practice Typescript and SCSS further, adding some cool React libraries",
+      stack:
+        "The app features: React, Typescript, SCSS, a drag & drop functionnality, a dark/light mode switch. I am currently developing the backend to enable account creation to save collections of todos.",
+      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
+      linkDemo: "https://todayzzz-todos.netlify.app/",
+    },
+    {
       id: 4,
       capture1: require("./farmhouse (2).png"),
       capture2: require("./farmhouse (1).png"),
       capture3: require("./farmhouse.png"),
       name: "Farmhouse Table",
       description:
-        "I developed this fully responsive application as a personal project to learn new things and grow my skillset. It is a restaurant website",
+        "I developed this fully responsive restaurant website to practice Typescript, responsive layouts and SASS",
       stack:
         "To build this app I used React, Typescript, SASS/SCSS and applied the mobile first workflow for styling. I also integrated Google Maps API and built the frontend of a reservation form, ready to be integrated to a server.",
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
@@ -51,9 +64,9 @@ function PortfolioPage() {
       capture3: require("./game-capture3.png"),
       name: "Pickle Rick vs Rats - The Game",
       description:
-        "I developed this game as my first project during a web development program at Ironhack.",
+        "I developed this shooting game as my first project during a web development program at Ironhack",
       stack:
-        "Being a huge fan of Rick & Morty, no wonder I chose this theme! The game was entirely built using HTML, CSS & Javascript, and is only playable on desktop",
+        "Being a huge fan of Rick & Morty, no wonder I chose this theme! The game was entirely built using HTML, CSS & Javascript, and since you need a keypad for the commands, it is only playable on desktop",
       linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
       linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
     },
@@ -68,8 +81,8 @@ function PortfolioPage() {
           {projects.map((project) => {
             return (
               <div className="portfolioItem">
-                <Carousel className="carousel bg-transparent">
-                  <Carousel.Item className="bg-transparent carouselItem">
+                <Carousel className="carousel bg-transparent noBootstrap">
+                  <Carousel.Item className="noBootstrap carouselItem">
                     <div class="card" id={project.id}>
                       <img src={project.capture1} alt="..." />
                       <div class="card-body bg-transparent">

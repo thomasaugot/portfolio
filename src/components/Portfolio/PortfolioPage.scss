@@ -11,14 +11,13 @@
 .portfolioContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   margin-left: 4%;
 }
 
 .carousel {
   // this is the one to modify each cards
-  max-width: 75vw;
   border-radius: 15px;
   height: fit-content;
   margin: 1vh 0;
@@ -74,7 +73,6 @@
   }
 
   .card {
-    width: 40vw;
     height: 10vh;
     border: none;
   }
@@ -92,16 +90,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .portfolioItem {
-    width: 23vw;
+    max-width: 33%;
+    margin-top: 5vh;
   }
 
   .carousel {
-    max-width: 25vw;
     margin: 0 1vw;
     text-align: center;
+    width: 100%;
   }
 
   .card {
