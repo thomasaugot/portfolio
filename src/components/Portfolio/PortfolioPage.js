@@ -12,9 +12,9 @@ function PortfolioPage() {
       capture3: require("./mobile-overlay.png"),
       name: "Todayzzz Todos",
       description:
-        "!!UNDER CONSTRUCTION!! Just a simple todo app to practice Typescript and SCSS further, adding some cool React libraries",
+        "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
       stack:
-        "The app features: React, Typescript, SCSS, a drag & drop functionnality, a dark/light mode switch. I am currently developing the backend to enable account creation to save collections of todos.",
+        "Tech stack: React, SCSS/SASS, Typescript. The app offers a dark/light mode switch. I am currently developing the backend to enable account creation & save collections of todos.",
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
@@ -24,10 +24,9 @@ function PortfolioPage() {
       capture2: require("./farmhouse (1).png"),
       capture3: require("./farmhouse.png"),
       name: "Farmhouse Table",
-      description:
-        "I developed this fully responsive restaurant website to practice Typescript, responsive layouts and SASS",
+      description: "A restaurant website integrating Google Maps API and a reservation form",
       stack:
-        "To build this app I used React, Typescript, SASS/SCSS and applied the mobile first workflow for styling. I also integrated Google Maps API and built the frontend of a reservation form, ready to be integrated to a server.",
+        "Tech stack: React, SCSS/SASS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
@@ -38,9 +37,9 @@ function PortfolioPage() {
       capture3: require("./partymates3.png"),
       name: "Partymates",
       description:
-        "I developed this full-stack application as my third and last project during a web development program at Ironhack. It is a social media platform that connects users looking for party mates",
+        "A full-stack MERN sort of social media app I created to connect people so they can travel to festivals together",
       stack:
-        "The app is fully responsive, following the mobile first workflow and features Bootstrap, React, Express, Node.js, MongoDB and is interacting with a REST API that I builded.",
+        "Tech stack: MongoDB, Express.js, React.js, Node.js, REST API (built by me), Postman. The app is fully responsive, following the mobile first workflow",
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
@@ -51,9 +50,8 @@ function PortfolioPage() {
       capture3: require("./BGtrotterCapture2.png"),
       name: "The Broke Globetrotter",
       description:
-        "I developed this full stack web application together with a classmate as a project during the web development program at Ironhack.",
-      stack:
-        "It is a platform gathering collections of free stuff to do in cities worldwide for budget travellers. It features backend technologies: Nodejs, Express.js, MongoDB. The frontend is rendered using Handlebars. Styling was made using CSS & Bootstrap",
+        " An app created in pairs, gathering collections of free stuff to do in cities worldwide featuring back-end technologies, for broke travellers (story of my life..!)",
+      stack: "Tech stack: MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman",
       linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
       linkDemo: "https://the-broke-globetrotter.adaptable.app/",
     },
@@ -63,10 +61,9 @@ function PortfolioPage() {
       capture2: require("./game-capture2.png"),
       capture3: require("./game-capture3.png"),
       name: "Pickle Rick vs Rats - The Game",
-      description:
-        "I developed this shooting game as my first project during a web development program at Ironhack",
+      description: "My first coding project, a cool Javascript shooting game, kill the angry rats!",
       stack:
-        "Being a huge fan of Rick & Morty, no wonder I chose this theme! The game was entirely built using HTML, CSS & Javascript, and since you need a keypad for the commands, it is only playable on desktop",
+        "Tech stack: HTML, CSS, Javascript. Since you need a keypad for the commands, it is only playable on desktop",
       linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
       linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
     },

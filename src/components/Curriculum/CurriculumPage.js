@@ -93,6 +93,9 @@ function CurriculumPage() {
               title="REST"
             />
           </code>
+          <code>
+            <img height="50" src={require("./git-logo.png")} alt="Git" title="Git" />
+          </code>
         </div>
 
         <br></br>
