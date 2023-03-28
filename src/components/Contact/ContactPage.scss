@@ -37,7 +37,7 @@
   width: 30vw;
   margin-right: 2vw;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(0.6) rotate(-20deg);
   }
 }
 
@@ -45,7 +45,7 @@
   width: 34vw;
   margin-bottom: 9px;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(0.6) rotate(20deg);
   }
 }
 
@@ -65,7 +65,7 @@
   .contactFormBtn {
     width: 10vw;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(0.8);
     }
   }
 

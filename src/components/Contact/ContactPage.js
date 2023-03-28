@@ -5,10 +5,12 @@ import "./ContactPage.scss";
 
 function ContactPage() {
   const [stateMessage, setStateMessage] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function sendEmail(e) {
     e.persist();
     e.preventDefault();
+    setIsSubmitting(true);
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
@@ -19,14 +21,23 @@ function ContactPage() {
       .then(
         (result) => {
           setStateMessage("Message sent !");
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000); // hide message after 5 seconds
         },
         (error) => {
           setStateMessage("Something went wrong, please try again later");
+          setIsSubmitting(false);
+          setTimeout(() => {
+            setStateMessage(null);
+          }, 5000); // hide message after 5 seconds
         }
       );
     //clears the form after sending the email
     e.target.reset();
   }
+
   return (
     <div className="ContactPage" id="ContactPage">
       <Fade duration={1000}>
@@ -66,7 +77,10 @@ function ContactPage() {
               >
                 Send
               </button>
-              <div style={{ fontSize: "5vw", textAlign: "center" }}>{stateMessage}</div>
+              {isSubmitting ? "Sending message..." : ""}
+              <div style={{ fontSize: "20px", textAlign: "center", margin: "-4% 0 4% 0" }}>
+                {stateMessage}
+              </div>
             </div>
           </form>
         </div>

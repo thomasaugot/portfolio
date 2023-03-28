@@ -16,6 +16,7 @@
     text-decoration-color: $primary;
     text-decoration-thickness: 1.5px;
     text-underline-offset: 8px;
+    width: 110%;
   }
   p {
     font-size: $font-size-sm;
@@ -25,6 +26,9 @@
     font-size: 1.5em;
     font-family: $caveat-font;
     margin-top: 1vh;
+  }
+  img {
+    margin: 2px;
   }
 
   .stack {
