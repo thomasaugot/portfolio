@@ -111,7 +111,7 @@ function CurriculumPage() {
           Git/ Github
         </p>
         <br></br>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div className="curriculum__buttons">
           <a
             href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
             rel="noreferrer"

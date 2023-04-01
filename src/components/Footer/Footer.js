@@ -19,8 +19,8 @@ function Footer() {
       <br></br>
 
       <p style={{ textAlign: "center", color: "white" }}>
-        This website was built by
-        <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>
+        Copyright © 2023 <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>.
+        <br></br>All rights reserved.
       </p>
 
       <br></br>
