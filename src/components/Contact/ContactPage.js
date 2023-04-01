@@ -40,7 +40,7 @@ function ContactPage() {
 
   return (
     <div className="ContactPage" id="ContactPage">
-      <Fade duration={1000}>
+      <Fade duration={3000}>
         <div>
           <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>

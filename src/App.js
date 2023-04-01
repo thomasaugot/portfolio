@@ -27,13 +27,11 @@ function App() {
         <>
           <Header />
           <HomePage />
-          <Fade duration={1000}>
-            <AboutPage />
-            <CurriculumPage />
-            <PortfolioPage />
-            <ContactPage />
-            <Footer />
-          </Fade>
+          <AboutPage />
+          <CurriculumPage />
+          <PortfolioPage />
+          <ContactPage />
+          <Footer />
         </>
       )}
     </div>

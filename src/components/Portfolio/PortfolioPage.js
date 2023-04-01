@@ -71,7 +71,7 @@ function PortfolioPage() {
 
   return (
     <div className="PortfolioPage" id="PortfolioPage">
-      <Fade duration={2000}>
+      <Fade duration={3000}>
         <h1>My work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
         <br></br>
         <div className="portfolioContent">
