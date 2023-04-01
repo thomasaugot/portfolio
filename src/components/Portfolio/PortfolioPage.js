@@ -1,7 +1,9 @@
 import Carousel from "react-bootstrap/Carousel";
 import { Fade } from "react-awesome-reveal";
+import { useInView } from "react-intersection-observer";
 
 import "./PortfolioPage.scss";
+import { useEffect, useState } from "react";
 
 function PortfolioPage() {
   const projects = [
@@ -69,53 +71,66 @@ function PortfolioPage() {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.2, // set threshold to 20%
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
+
   return (
-    <div className="PortfolioPage" id="PortfolioPage">
-      <Fade duration={3000}>
-        <h1>My work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-        <br></br>
-        <div className="portfolioContent">
-          {projects.map((project) => {
-            return (
-              <div className="portfolioItem">
-                <Carousel className="carousel bg-transparent noBootstrap">
-                  <Carousel.Item className="noBootstrap carouselItem">
-                    <div class="card" id={project.id}>
-                      <img src={project.capture1} alt="..." />
-                      <div class="card-body bg-transparent">
-                        <h5 class="card-title bg-transparent">{project.name}</h5>
-                        <p class="card-text bg-transparent">{project.description}</p>
+    <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
+      {isVisible && (
+        <Fade>
+          <h1>My work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <br></br>
+          <div className="portfolioContent">
+            {projects.map((project) => {
+              return (
+                <div className="portfolioItem">
+                  <Carousel className="carousel bg-transparent noBootstrap">
+                    <Carousel.Item className="noBootstrap carouselItem">
+                      <div class="card" id={project.id}>
+                        <img src={project.capture1} alt="..." />
+                        <div class="card-body bg-transparent">
+                          <h5 class="card-title bg-transparent">{project.name}</h5>
+                          <p class="card-text bg-transparent">{project.description}</p>
+                        </div>
                       </div>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item className="bg-transparent carouselItem">
-                    <div class="card">
-                      <img src={project.capture2} alt="..." />
-                      <div class="card-body">
-                        <p class="card-text">{project.stack}</p>
+                    </Carousel.Item>
+                    <Carousel.Item className="bg-transparent carouselItem">
+                      <div class="card">
+                        <img src={project.capture2} alt="..." />
+                        <div class="card-body">
+                          <p class="card-text">{project.stack}</p>
+                        </div>
                       </div>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item className="bg-transparent carouselItem">
-                    <div class="card">
-                      <img src={project.capture3} alt="..." />
-                      <div class="card-body">
-                        <a href={project.linkRepo} class="blueBtn">
-                          View Code
-                        </a>
-                        <a href={project.linkDemo} class="whiteBtn">
-                          Visit page
-                        </a>
+                    </Carousel.Item>
+                    <Carousel.Item className="bg-transparent carouselItem">
+                      <div class="card">
+                        <img src={project.capture3} alt="..." />
+                        <div class="card-body">
+                          <a href={project.linkRepo} class="blueBtn">
+                            View Code
+                          </a>
+                          <a href={project.linkDemo} class="whiteBtn">
+                            Visit page
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                  </Carousel.Item>
-                </Carousel>
-              </div>
-            );
-          })}
-        </div>
-        <br></br>
-      </Fade>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              );
+            })}
+          </div>
+          <br></br>
+        </Fade>
+      )}
     </div>
   );
 }
