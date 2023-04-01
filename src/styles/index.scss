@@ -15,6 +15,28 @@ body {
   overflow-x: hidden;
 }
 
+.App {
+  -webkit-animation: color-change-2x 6s linear infinite alternate both;
+  animation: color-change-2x 6s linear infinite alternate both;
+}
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background: rgb(45, 52, 54);
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background: rgb(45, 52, 54);
+  }
+}
+
 main {
   height: calc(100vh - #{$header-height});
   display: flex;

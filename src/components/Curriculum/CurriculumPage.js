@@ -111,21 +111,23 @@ function CurriculumPage() {
           Git/ Github
         </p>
         <br></br>
-        <a
-          href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <button className="whiteBtn">Show credential</button>
-        </a>
-        <br></br>
-        <a
-          href="https://drive.google.com/file/d/1WGdCcFDWfJ0V-aeLkNFlnW2hYIyFQH7E/view?usp=share_link"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="blueBtn">View my resume</button>
-        </a>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <a
+            href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <button className="whiteBtn">Show credential</button>
+          </a>
+          <br></br>
+          <a
+            href="https://drive.google.com/file/d/1WGdCcFDWfJ0V-aeLkNFlnW2hYIyFQH7E/view?usp=share_link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="blueBtn">View my resume</button>
+          </a>
+        </div>
       </Fade>
     </div>
   );
