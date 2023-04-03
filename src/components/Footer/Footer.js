@@ -38,6 +38,12 @@ function Footer() {
           </p>
 
           <br></br>
+          <img
+            src={require("../../shapes/shape__one.png")}
+            className="shapes"
+            alt="shape"
+            style={{ top: "530vh", left: "-15vw", overflow: "hidden" }}
+          />
         </Fade>
       )}
     </div>

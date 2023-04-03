@@ -19,6 +19,12 @@ function HomePage() {
     <div className="Homepage" id="HomePage" ref={ref}>
       {isVisible && (
         <Fade>
+          <img
+            src={require("../../shapes/shape__two.png")}
+            className="shapes"
+            alt="shape"
+            style={{ top: "-50vh", left: "45vw", overflow: "hidden" }}
+          />
           <div className="topContent">
             <div className="firstColumn">
               <div className="titleDiv">
@@ -52,6 +58,12 @@ function HomePage() {
               <div class="chevron"></div>
             </div>
           </a>
+          <img
+            src={require("../../shapes/shape__one.png")}
+            className="shapes"
+            alt="shape"
+            style={{ top: "85vh", left: "2vw", overflow: "hidden" }}
+          />
         </Fade>
       )}
     </div>

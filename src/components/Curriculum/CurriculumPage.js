@@ -19,6 +19,12 @@ function CurriculumPage() {
     <div className="CurriculumPage" id="CurriculumPage" ref={ref}>
       {isVisible && (
         <Fade>
+          <img
+            src={require("../../shapes/shape__two.png")}
+            className="shapes"
+            alt="shape"
+            style={{ top: "180vh", left: "75vw" }}
+          />
           <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <div className="stack">
             <Marquee gradientColor={"yellow"} pauseOnHover={true}>
@@ -116,6 +122,12 @@ function CurriculumPage() {
             >
               <button className="blueBtn">View my resume</button>
             </a>
+            <img
+              src={require("../../shapes/shape__one.png")}
+              className="shapes"
+              alt="shape"
+              style={{ top: "290vh", left: "15vw" }}
+            />
           </div>
         </Fade>
       )}
