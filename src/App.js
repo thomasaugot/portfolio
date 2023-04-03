@@ -5,7 +5,6 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import HomePage from "./components/Home/HomePage";
 import PortfolioPage from "./components/Portfolio/PortfolioPage";
-import { Fade } from "react-awesome-reveal";
 import Loading from "../src/components/Loading/Loading";
 import { useEffect, useState } from "react";
 

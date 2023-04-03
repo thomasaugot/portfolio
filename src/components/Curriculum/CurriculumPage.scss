@@ -4,7 +4,7 @@
   @include bootstrapScroll();
   padding: 20% 10% 15% 10%;
   color: $text2;
-  overflow-y: hidden;
+  overflow: hidden;
   height: fit-content;
 }
 
@@ -28,14 +28,16 @@
     margin-top: 1vh;
   }
   img {
-    margin: 2px;
+    margin: 15px 15px;
+    padding: 5px;
   }
 
   .stack {
     text-align: center;
     display: flex;
-    justify-content: space-around;
     margin-bottom: 1vh;
+    margin-left: -15vw;
+    width: 150%;
   }
 }
 
@@ -57,11 +59,12 @@
 
   .stack {
     img {
-      width: 70px;
+      width: 90px;
       height: auto;
       margin-bottom: 2vh;
+      margin: 15px 45px;
       &:hover {
-        transform: scale(1.6);
+        transform: scale(1.4);
       }
     }
   }
