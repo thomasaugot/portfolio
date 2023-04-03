@@ -37,6 +37,7 @@
   width: fit-content;
   display: none;
   transform: perspective(800px);
+  border-radius: 50px;
 }
 
 .container {
@@ -138,9 +139,10 @@
   }
 
   .profilePicure {
-    width: 17vw;
+    width: 19vw;
     display: flex;
     margin-left: 10vw;
+    border-radius: 100%;
   }
 
   .chevron {
