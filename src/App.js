@@ -30,7 +30,7 @@ function App() {
           <CurriculumPage />
           <PortfolioPage />
           <ContactPage />
-          <Footer />
+          <Footer />!
         </>
       )}
     </div>
