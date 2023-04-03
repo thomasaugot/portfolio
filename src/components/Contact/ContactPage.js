@@ -71,6 +71,7 @@ function ContactPage() {
                 type="text"
                 name="from_name"
                 placeholder="Your name"
+                required
               />
               <label for="email">Email</label>
               <input
@@ -79,6 +80,7 @@ function ContactPage() {
                 type="email"
                 name="reply_to"
                 placeholder="Your email"
+                required
               />
               <label for="message">Message</label>
               <textarea
@@ -87,6 +89,7 @@ function ContactPage() {
                 name="message"
                 placeholder="Your message here"
                 rows="8"
+                required
               />
               <div className="submitDiv">
                 <button
