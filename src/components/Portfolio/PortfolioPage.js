@@ -94,20 +94,20 @@ function PortfolioPage() {
                 <div className="portfolioItem">
                   <Carousel className="carousel noBootstrap">
                     <Carousel.Item className="noBootstrap carouselItem">
-                      <div class="card" id={project.id}>
+                      <div class="card" id={project.id} style={{ border: "transparent 1px solid" }}>
                         <img src={project.capture1} alt="..." />
                         <h5 class="card-title bg-transparent">{project.name}</h5>
                         <p class="card-text bg-transparent">{project.description}</p>
                       </div>
                     </Carousel.Item>
                     <Carousel.Item className="bg-transparent carouselItem">
-                      <div class="card">
+                      <div class="card" style={{ border: "transparent 1px solid" }}>
                         <img src={project.capture2} alt="..." />
                         <p class="card-text">{project.stack}</p>
                       </div>
                     </Carousel.Item>
                     <Carousel.Item className="bg-transparent carouselItem">
-                      <div class="card">
+                      <div class="card" style={{ border: "transparent 1px solid" }}>
                         <img src={project.capture3} alt="..." />
                         <a href={project.linkRepo} class="blueBtn">
                           View Code
