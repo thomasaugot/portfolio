@@ -24,9 +24,11 @@
   padding: 24px;
   box-shadow: 8px 8px 15px -8px;
   text-align: center;
+  background-color: transparent;
   &:hover {
     transform: scale(1.1);
     border: 0.2px solid white;
+    transition: 1s;
   }
 }
 
@@ -43,12 +45,14 @@
 
 .card {
   height: 5vh;
-  border: none;
   margin-bottom: 3px;
   background-color: transparent !important;
 }
 
 .card {
+  img {
+    margin-bottom: 15px;
+  }
   .card-title {
     color: $text2;
     font-size: 2em;
@@ -57,10 +61,6 @@
     border-top-right-radius: 32px;
     width: fit-content;
     border: none;
-  }
-  .card-body {
-    display: flex;
-    flex-direction: column;
   }
 }
 

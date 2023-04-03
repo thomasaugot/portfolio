@@ -89,8 +89,7 @@
     transition: 0.3s ease color;
     &:hover {
       color: $primary;
-      transition: 1s;
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
   }
 

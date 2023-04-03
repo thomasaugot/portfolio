@@ -38,6 +38,7 @@
   margin-right: 2vw;
   &:hover {
     transform: scale(0.6) rotate(-20deg);
+    transition: 1s;
   }
 }
 
@@ -46,6 +47,7 @@
   margin-bottom: 9px;
   &:hover {
     transform: scale(0.6) rotate(20deg);
+    transition: 1s;
   }
 }
 
