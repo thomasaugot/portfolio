@@ -27,7 +27,7 @@ function CurriculumPage() {
           />
           <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <div className="stack">
-            <Marquee gradientColor={"yellow"} pauseOnHover={true}>
+            <Marquee gradientColor={"yellow"} pauseOnHover={true} speed={60}>
               <img
                 height="70"
                 src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"

@@ -22,7 +22,7 @@ function Footer() {
             src={require("../../shapes/shape__one.png")}
             className="shapes"
             alt="shape"
-            style={{ top: "530vh", left: "-15vw", overflow: "hidden" }}
+            style={{ top: "580vh", left: "-10vw", overflow: "hidden" }}
           />
           <br></br>
           <br></br>
