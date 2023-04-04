@@ -34,8 +34,7 @@
 }
 
 .linkedInLogo {
-  width: 30vw;
-  margin-right: 2vw;
+  margin: 5vh 5vw;
   &:hover {
     transform: scale(0.6) rotate(-20deg);
     transition: 1s;
@@ -43,8 +42,7 @@
 }
 
 .githubLogo {
-  width: 34vw;
-  margin-bottom: 9px;
+  margin: 5vh 5vw;
   &:hover {
     transform: scale(0.6) rotate(20deg);
     transition: 1s;
@@ -81,11 +79,18 @@
   }
 
   .linkedInLogo {
-    width: 10vw;
-    margin-right: 2vw;
+    margin: 5vh 2vw;
+    &:hover {
+      transform: scale(0.6) rotate(-20deg);
+      transition: 1s;
+    }
   }
 
   .githubLogo {
-    width: 11.5vw;
+    margin: 5vh 2vw;
+    &:hover {
+      transform: scale(0.6) rotate(20deg);
+      transition: 1s;
+    }
   }
 }

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { AiFillGithub } from "react-icons/ai";
+import { SiUpwork } from "react-icons/si";
+import { IconContext } from "react-icons";
 import "./ContactPage.scss";
 
 function ContactPage() {
@@ -99,8 +103,9 @@ function ContactPage() {
                 >
                   Send
                 </button>
+                <br />
                 {isSubmitting ? "Sending message..." : ""}
-                <div style={{ fontSize: "20px", textAlign: "center", margin: "-4% 0 4% 0" }}>
+                <div style={{ fontSize: "18px", textAlign: "center", margin: "-4% 0 4% 0" }}>
                   {stateMessage}
                 </div>
               </div>
@@ -112,18 +117,35 @@ function ContactPage() {
             <br></br>
             <div className="logo-container">
               <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
-                <img
-                  src="https://raw.githubusercontent.com/thomasaugot/portfolio/0c36e4ca9442e067c3d6abaace5345fdcb83b99b/src/components/Contact/linkedin-icon.gif"
-                  alt="linkedin"
-                  className="linkedInLogo"
-                />
-                <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
-                  <img
-                    src="https://raw.githubusercontent.com/thomasaugot/portfolio/0c36e4ca9442e067c3d6abaace5345fdcb83b99b/src/components/Contact/github-logo.gif"
-                    alt="github"
-                    className="githubLogo"
-                  />
-                </a>
+                <IconContext.Provider
+                  value={{ color: "white", size: "65px", className: "linkedInLogo" }}
+                >
+                  <div>
+                    <SlSocialLinkedin />
+                  </div>
+                </IconContext.Provider>
+              </a>
+              <a
+                href="https://www.upwork.com/freelancers/~01b07aa7234690ca70?viewMode=1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconContext.Provider
+                  value={{ color: "white", size: "70px", className: "linkedInLogo" }}
+                >
+                  <div>
+                    <SiUpwork />
+                  </div>
+                </IconContext.Provider>
+              </a>
+              <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
+                <IconContext.Provider
+                  value={{ color: "white", size: "70px", className: "githubLogo" }}
+                >
+                  <div>
+                    <AiFillGithub />
+                  </div>
+                </IconContext.Provider>
               </a>
             </div>
           </div>
