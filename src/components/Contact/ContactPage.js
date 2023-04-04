@@ -118,7 +118,7 @@ function ContactPage() {
             <div className="logo-container">
               <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
                 <IconContext.Provider
-                  value={{ color: "white", size: "65px", className: "linkedInLogo" }}
+                  value={{ color: "white", size: "70px", className: "linkedInLogo" }}
                 >
                   <div>
                     <SlSocialLinkedin />
@@ -131,7 +131,7 @@ function ContactPage() {
                 rel="noreferrer"
               >
                 <IconContext.Provider
-                  value={{ color: "white", size: "70px", className: "linkedInLogo" }}
+                  value={{ color: "white", size: "70px", className: "upworkLogo" }}
                 >
                   <div>
                     <SiUpwork />
@@ -140,7 +140,7 @@ function ContactPage() {
               </a>
               <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
                 <IconContext.Provider
-                  value={{ color: "white", size: "70px", className: "githubLogo" }}
+                  value={{ color: "white", size: "67px", className: "githubLogo" }}
                 >
                   <div>
                     <AiFillGithub />
