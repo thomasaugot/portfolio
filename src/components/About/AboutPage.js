@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./AboutPage.scss";
-import { Fade } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 
 function AboutPage() {
@@ -17,32 +17,22 @@ function AboutPage() {
   return (
     <div className="AboutPage" id="AboutPage" ref={ref}>
       {isVisible && (
-        <Fade>
+        <Slide direction={"left"}>
           <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
 
-          <h2>&nbsp;My story</h2>
-
           <p>
-            I was born in Saint-Nazaire, a little city on the North-Western coast of France, and
-            grew up in a nearby country-side town. I enrolled at University and graduated in
-            Business and languages at age 20. But I always wanted to see the world. So I chose to
-            leave uni instead of pursuing a Master degree and spent the next 10 years around the
-            world, exploring and experiencing life abroad, far from home. I am now living in the
-            sunny Fuerteventura, Spain.
+            I am a French web developer based in the beautiful island of Fuerteventura, where the
+            summer never ends. After 10 years travelling around the world I found myself a passion
+            for coding and quit my old job to enroll in a web development bootcamp. Although I spent
+            most of my professional career in the hospitality industry, which gave me the
+            opportunity to develop excellent soft and interpersonal skills while also giving me the
+            opportunity to travel and gain new experiences, I always dreamed of a more flexible
+            career that would allow me to think creatively and learn new things every day. With
+            everything moving towards the digital world, I believe that I can make a meaningful
+            contribution to help businesses increase their online presence and visibility.
           </p>
-          <br></br>
-          <h2>&nbsp;Why Web Development?</h2>
-
-          <p>
-            My thirst for more freedom and creativity brought me to the world of web development. I
-            wanted a flexible job that keeps me out of my routine and comfort zone, always teaching
-            me and allowing me to create great things, to think outside the box. I started coding as
-            a hobby first and then decided to build a career out of it. In a world where everything
-            becomes digital, I really feel like I can contribute in a meaningful way and help
-            increasing businesses online visibility.
-          </p>
-        </Fade>
+        </Slide>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Fade } from "react-awesome-reveal";
+import { Roll } from "react-awesome-reveal";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -57,7 +57,7 @@ function ContactPage() {
   return (
     <div className="ContactPage" id="ContactPage" ref={ref}>
       {isVisible && (
-        <Fade>
+        <Roll>
           <div>
             <img
               src={require("../../shapes/shape__two.png")}
@@ -149,7 +149,7 @@ function ContactPage() {
               </a>
             </div>
           </div>
-        </Fade>
+        </Roll>
       )}
     </div>
   );
