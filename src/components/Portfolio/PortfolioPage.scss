@@ -27,13 +27,14 @@
   background-color: transparent;
   &:hover {
     transform: scale(1.1);
-    border: 0.2px solid white;
+    // border: 0.2px solid white;
     transition: 1s;
   }
 }
 
 .carousel-inner {
   border: none;
+  padding: 0 15px;
 }
 
 .carouselItem {

@@ -92,7 +92,7 @@ function PortfolioPage() {
             {projects.map((project) => {
               return (
                 <div className="portfolioItem">
-                  <Carousel className="carousel noBootstrap">
+                  <Carousel className="carousel noBootstrap" interval={null}>
                     <Carousel.Item className="noBootstrap carouselItem">
                       <div class="card" id={project.id} style={{ border: "transparent 1px solid" }}>
                         <img src={project.capture1} alt="..." />
