@@ -22,13 +22,13 @@ function AboutPage() {
           <br></br>
 
           <p>
-            I am a French web developer based in the beautiful island of Fuerteventura, where the
-            summer never ends. After 10 years travelling around the world I found myself a passion
-            for coding and quit my old job to enroll in a web development bootcamp. Although I spent
-            most of my professional career in the hospitality industry, which allowed me to develop
-            excellent soft and interpersonal skills while also giving me the opportunity to travel
-            and gain new experiences, I had always dreamed of a more flexible career in which I
-            could think creatively and learn new things every day. With everything moving towards
+            I am a French web developer based on the beautiful island of Fuerteventura, where the
+            summer never ends. After 10 years of travelling around the world, I found myself a
+            passion for coding and quit my old job to enrol in a web development Bootcamp. Although
+            I spent most of my professional career in the hospitality industry, which allowed me to
+            develop excellent soft and interpersonal skills while also giving me the opportunity to
+            travel and gain new experiences, I had always dreamed of a more flexible career in which
+            I could think creatively and learn new things every day. With everything moving towards
             the digital world, I believe that I can make a meaningful contribution to help
             businesses increase their online presence and visibility.
           </p>
