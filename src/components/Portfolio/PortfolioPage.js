@@ -86,7 +86,7 @@ function PortfolioPage() {
     <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
       {isVisible && (
         <Fade>
-          <h1>My work&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <h1>My projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
           <div className="portfolioContent">
             {projects.map((project) => {

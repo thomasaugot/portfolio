@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./CurriculumPage.scss";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 import Marquee from "react-fast-marquee";
 
@@ -23,7 +23,7 @@ function CurriculumPage() {
             src={require("../../shapes/shape__two.png")}
             className="shapes"
             alt="shape"
-            style={{ top: "180vh", left: "75vw" }}
+            style={{ top: "180vh", left: "75vw", position: "absolute", overflow: "hidden" }}
           />
           <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <div className="stack">
@@ -96,39 +96,41 @@ function CurriculumPage() {
           <br></br>
           <br></br>
           <br></br>
-
-          <h1>Certifications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-          <h2>Ironhack</h2>
-          <p>
-            9-week web development Bootcamp, during which I was taught the following technologies:{" "}
-            <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
-            <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version control:
-            Git/ Github
-          </p>
-          <br></br>
-          <div className="curriculum__buttons">
-            <a
-              href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <button className="whiteBtn">Show credential</button>
-            </a>
+          <Slide direction={"left"}>
+            <h1>Certifications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            <h2>Ironhack</h2>
+            <p>
+              9-week web development Bootcamp, during which I was taught the following technologies:{" "}
+              <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
+              <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version
+              control: Git/ Github
+            </p>
             <br></br>
-            <a
-              href="https://drive.google.com/file/d/1WGdCcFDWfJ0V-aeLkNFlnW2hYIyFQH7E/view?usp=share_link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="blueBtn">View my resume</button>
-            </a>
-            <img
-              src={require("../../shapes/shape__one.png")}
-              className="shapes"
-              alt="shape"
-              style={{ top: "290vh", left: "15vw" }}
-            />
-          </div>
+            <div className="curriculum__buttons">
+              <a
+                href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
+                rel="noreferrer"
+                target="_blank"
+              >
+                <button className="whiteBtn">Show credential</button>
+              </a>
+              <br></br>
+              <a
+                href="https://drive.google.com/file/d/1WGdCcFDWfJ0V-aeLkNFlnW2hYIyFQH7E/view?usp=share_link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="blueBtn">View my resume</button>
+              </a>
+
+              <img
+                src={require("../../shapes/shape__one.png")}
+                className="shapes"
+                alt="shape"
+                style={{ top: "290vh", position: "absolute", left: "15vw", overflow: "hidden" }}
+              />
+            </div>
+          </Slide>
         </Fade>
       )}
     </div>

@@ -63,7 +63,7 @@ function ContactPage() {
               src={require("../../shapes/shape__two.png")}
               className="shapes"
               alt="shape"
-              style={{ top: "450vh", left: "65vw", overflow: "hidden" }}
+              style={{ top: "450vh", left: "65vw", overflow: "hidden", position: "absolute" }}
             />
             <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>

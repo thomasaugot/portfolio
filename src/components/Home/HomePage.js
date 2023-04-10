@@ -23,7 +23,7 @@ function HomePage() {
             src={require("../../shapes/shape__two.png")}
             className="shapes"
             alt="shape"
-            style={{ top: "-50vh", left: "45vw", overflow: "hidden" }}
+            style={{ top: "-50vh", position: "absolute", left: "45vw", overflow: "hidden" }}
           />
           <div className="topContent">
             <div className="firstColumn">
@@ -62,7 +62,7 @@ function HomePage() {
             src={require("../../shapes/shape__one.png")}
             className="shapes"
             alt="shape"
-            style={{ top: "85vh", left: "2vw", overflow: "hidden" }}
+            style={{ top: "85vh", position: "absolute", left: "2vw", overflow: "hidden" }}
           />
         </Fade>
       )}

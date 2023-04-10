@@ -22,7 +22,7 @@ function Footer() {
             src={require("../../shapes/shape__one.png")}
             className="shapes"
             alt="shape"
-            style={{ top: "520vh", left: "-10vw", overflow: "hidden" }}
+            style={{ top: "400vh", left: "-10vw", overflow: "hidden", position: "absolute" }}
           />
           <br></br>
           <br></br>
@@ -40,7 +40,6 @@ function Footer() {
 
           <p style={{ textAlign: "center", color: "white" }}>
             Copyright © 2023 <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>.
-            <br></br>All rights reserved.
           </p>
 
           <br></br>
