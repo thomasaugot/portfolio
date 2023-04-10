@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Roll } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -57,7 +57,7 @@ function ContactPage() {
   return (
     <div className="ContactPage" id="ContactPage" ref={ref}>
       {isVisible && (
-        <Roll>
+        <>
           <div>
             <img
               src={require("../../shapes/shape__two.png")}
@@ -67,89 +67,92 @@ function ContactPage() {
             />
             <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
-            <form onSubmit={sendEmail} className="contactForm">
-              <label for="name">Name</label>
-              <input
-                className="inputForm"
-                id="name"
-                type="text"
-                name="from_name"
-                placeholder="Your name"
-                required
-              />
-              <label for="email">Email</label>
-              <input
-                className="inputForm"
-                id="email"
-                type="email"
-                name="reply_to"
-                placeholder="Your email"
-                required
-              />
-              <label for="message">Message</label>
-              <textarea
-                className="inputForm"
-                id="message"
-                name="message"
-                placeholder="Your message here"
-                rows="8"
-                required
-              />
-              <div className="submitDiv">
-                <button
-                  type="submit"
-                  className="blueBtn contactFormBtn"
-                  style={{ textAlign: "center", margin: "30px 0", padding: "5px 30px" }}
-                >
-                  Send
-                </button>
-                <br />
-                {isSubmitting ? "Sending message..." : ""}
-                <div style={{ fontSize: "18px", textAlign: "center", margin: "-4% 0 4% 0" }}>
-                  {stateMessage}
+            <Slide>
+              <form onSubmit={sendEmail} className="contactForm">
+                <label for="name">Name</label>
+                <input
+                  className="inputForm"
+                  id="name"
+                  type="text"
+                  name="from_name"
+                  placeholder="Your name"
+                  required
+                />
+                <label for="email">Email</label>
+                <input
+                  className="inputForm"
+                  id="email"
+                  type="email"
+                  name="reply_to"
+                  placeholder="Your email"
+                  required
+                />
+                <label for="message">Message</label>
+                <textarea
+                  className="inputForm"
+                  id="message"
+                  name="message"
+                  placeholder="Your message here"
+                  rows="8"
+                  required
+                />
+                <div className="submitDiv">
+                  <button
+                    type="submit"
+                    className="blueBtn contactFormBtn"
+                    style={{ textAlign: "center", margin: "30px 0", padding: "5px 30px" }}
+                  >
+                    Send
+                  </button>
+                  <br />
+                  {isSubmitting ? "Sending message..." : ""}
+                  <div style={{ fontSize: "18px", textAlign: "center", margin: "-4% 0 4% 0" }}>
+                    {stateMessage}
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </Slide>
           </div>
-
           <div className="letsConnect">
             <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
-            <div className="logo-container">
-              <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
-                <IconContext.Provider
-                  value={{ color: "white", size: "70px", className: "linkedInLogo" }}
+            <Slide>
+              <div className="logo-container">
+                <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
+                  <IconContext.Provider
+                    value={{ color: "white", size: "70px", className: "linkedInLogo" }}
+                  >
+                    <div>
+                      <SlSocialLinkedin />
+                    </div>
+                  </IconContext.Provider>
+                </a>
+                <a
+                  href="https://www.upwork.com/freelancers/~01b07aa7234690ca70?viewMode=1"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <div>
-                    <SlSocialLinkedin />
-                  </div>
-                </IconContext.Provider>
-              </a>
-              <a
-                href="https://www.upwork.com/freelancers/~01b07aa7234690ca70?viewMode=1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <IconContext.Provider
-                  value={{ color: "white", size: "70px", className: "upworkLogo" }}
-                >
-                  <div>
-                    <SiUpwork />
-                  </div>
-                </IconContext.Provider>
-              </a>
-              <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
-                <IconContext.Provider
-                  value={{ color: "white", size: "67px", className: "githubLogo" }}
-                >
-                  <div>
-                    <AiFillGithub />
-                  </div>
-                </IconContext.Provider>
-              </a>
-            </div>
+                  <IconContext.Provider
+                    value={{ color: "white", size: "70px", className: "upworkLogo" }}
+                  >
+                    <div>
+                      <SiUpwork />
+                    </div>
+                  </IconContext.Provider>
+                </a>
+                <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
+                  <IconContext.Provider
+                    value={{ color: "white", size: "67px", className: "githubLogo" }}
+                  >
+                    <div>
+                      <AiFillGithub />
+                    </div>
+                  </IconContext.Provider>
+                </a>
+              </div>
+            </Slide>
           </div>
-        </Roll>
+        </>
       )}
     </div>
   );
