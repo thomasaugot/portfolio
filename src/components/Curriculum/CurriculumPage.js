@@ -116,13 +116,6 @@ function CurriculumPage() {
             >
               <button className="blueBtn">View my resume</button>
             </a>
-
-            <img
-              src={require("../../shapes/shape__one.png")}
-              className="shapes"
-              alt="shape"
-              style={{ top: "290vh", position: "absolute", left: "15vw", overflow: "hidden" }}
-            />
           </div>
         </>
       )}

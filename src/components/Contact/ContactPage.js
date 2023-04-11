@@ -59,12 +59,6 @@ function ContactPage() {
       {isVisible && (
         <>
           <div>
-            <img
-              src={require("../../shapes/shape__two.png")}
-              className="shapes"
-              alt="shape"
-              style={{ top: "450vh", left: "55vw", overflow: "hidden", position: "absolute" }}
-            />
             <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
             <form onSubmit={sendEmail} className="contactForm">
