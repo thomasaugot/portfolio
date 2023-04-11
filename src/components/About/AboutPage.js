@@ -24,9 +24,9 @@ function AboutPage() {
             help businesses increase their online presence and visibility.
             <br />
             <br />
-            With experience in both front- and backend development, I found myself a particular
-            taste for design and user experience. I enjoy browsing libraries, keeping up with web
-            design trends, searching for new cool effects and integrate them to my projects.
+            With experience in both front- and backend development, I have found myself particularly
+            interested in design and user experience. I enjoy browsing libraries, keeping up with
+            web design trends, and searching for new, cool effects to integrate into my projects.
           </p>
         </Slide>
         <Slide direction={"up"}>
