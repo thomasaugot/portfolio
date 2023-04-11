@@ -18,12 +18,6 @@ function Footer() {
     <div className="Footer" ref={ref}>
       {isVisible && (
         <Fade>
-          <img
-            src={require("../../shapes/shape__one.png")}
-            className="shapes"
-            alt="shape"
-            style={{ top: "400vh", left: "-10vw", overflow: "hidden", position: "absolute" }}
-          />
           <br></br>
           <br></br>
           <br></br>

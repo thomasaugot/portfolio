@@ -28,8 +28,9 @@
 .homepageP {
   color: $text2;
   font-family: $caveat-font;
-  font-size: $font-size-rgl;
+  font-size: $font-size-sm;
   margin-bottom: 2vh;
+  margin-top: 4vh;
   font-weight: lighter;
 }
 
@@ -126,7 +127,7 @@
 @media only screen and (min-width: 992px) {
   .Homepage {
     @include bootstrapScroll();
-    padding: 10% 10% 8% 10%;
+    padding: 10% 10% 8% 18%;
     overflow-y: hidden;
     height: 100vh;
   }
@@ -145,19 +146,14 @@
 
   .topContent {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 7% 0 2% 0;
   }
 
   .homepageTitle {
     width: fit-content;
     font-size: 4em;
-  }
-
-  .firstColumn {
-    display: flex;
-    flex-direction: column;
   }
 
   .hompagebtmDiv {
@@ -168,5 +164,6 @@
   .homepageP {
     margin-top: 5%;
     margin-bottom: 0;
+    font-size: $font-size-rgl;
   }
 }

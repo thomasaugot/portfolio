@@ -26,25 +26,23 @@ function HomePage() {
             style={{ top: "-50vh", position: "absolute", left: "45vw", overflow: "hidden" }}
           />
           <div className="topContent">
-            <div className="firstColumn">
-              <div className="titleDiv">
-                <h1
-                  className="animate__animated animate__fadeInLeft homepageTitle"
-                  style={{ textDecoration: "none" }}
-                >
-                  &lt; Hi! I am Thomas,
-                </h1>
-                <h1
-                  className="animate__animated animate__fadeInLeft animate__delay-1s homepageTitle bluetext"
-                  style={{ textDecoration: "none" }}
-                >
-                  Web Developer /&gt;
-                </h1>
-              </div>
-              <p className="homepageP">
-                I bring your project to life using the latest development technologies
-              </p>
+            <div className="titleDiv">
+              <h1
+                className="animate__animated animate__fadeInLeft homepageTitle"
+                style={{ textDecoration: "none" }}
+              >
+                &lt; Hi! I am Thomas,
+              </h1>
+              <h1
+                className="animate__animated animate__fadeInLeft animate__delay-1s homepageTitle bluetext"
+                style={{ textDecoration: "none" }}
+              >
+                Web Developer /&gt;
+              </h1>
             </div>
+            <p className="homepageP">
+              I bring your project to life using the latest development technologies
+            </p>
             <br></br>
           </div>
           <a href="#AboutPage" className="linkAbout">

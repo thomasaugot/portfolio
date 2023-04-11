@@ -19,14 +19,8 @@ function CurriculumPage() {
     <div className="CurriculumPage" id="CurriculumPage" ref={ref}>
       {isVisible && (
         <>
-          <img
-            src={require("../../shapes/shape__two.png")}
-            className="shapes"
-            alt="shape"
-            style={{ top: "180vh", left: "75vw", position: "absolute", overflow: "hidden" }}
-          />
           <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-          <div className="stack">
+          <div className="stack" style={{ overflow: "hidden", Width: "100%" }}>
             <Marquee gradientColor={"yellow"} speed={60}>
               <img
                 height="70"

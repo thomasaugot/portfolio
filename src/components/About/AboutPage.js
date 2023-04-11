@@ -18,13 +18,12 @@ function AboutPage() {
     <div className="AboutPage" id="AboutPage" ref={ref}>
       {isVisible && (
         <>
-          <Slide direction={"up"}>
+          <Slide direction={"down"} delay={100}>
             <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           </Slide>
           <br></br>
-
-          <div style={{ display: "flex", alignItems: "flex-start" }}>
-            <Slide direction={"up"} delay={100}>
+          <div className="about__content">
+            <Slide direction={"down"}>
               <p>
                 I am a French web developer based on the beautiful island of Fuerteventura, where
                 the summer never ends. After 10 years of travelling around the world, I found myself
@@ -45,7 +44,7 @@ function AboutPage() {
                 web design trends, searching for new cool effects and integrate them to my projects.
               </p>
             </Slide>
-            <Slide direction={"up"} delay={300}>
+            <Slide direction={"up"}>
               <img src={require("./profile.png")} alt="profile" className="profilePicture" />
             </Slide>
           </div>

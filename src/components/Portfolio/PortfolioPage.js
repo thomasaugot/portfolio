@@ -95,49 +95,47 @@ function PortfolioPage() {
         <>
           <h1>My projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
-          <Slide direction={"down"}>
-            <div className="portfolioContent">
-              {projects.map((project, index) => (
-                <div key={project.id}>
-                  <ReactCardFlip
-                    isFlipped={activeCardIndex === index}
-                    flipDirection="horizontal"
-                    className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
-                    alignHeight={true}
-                  >
-                    <div className="card-front card" onClick={() => handleCardClick(index)}>
-                      <img src={project.capture1} alt="project" />
-                      <h1 className="card-title">{project.name}</h1>
-                      <p>{project.description}</p>
-                      <h4>more details</h4>
-                      <div className="page__dots">
-                        <TbPointFilled />
-                        <TbPoint />
-                      </div>
+          <div className="portfolioContent">
+            {projects.map((project, index) => (
+              <div key={project.id}>
+                <ReactCardFlip
+                  isFlipped={activeCardIndex === index}
+                  flipDirection="horizontal"
+                  className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                  alignHeight={true}
+                >
+                  <div className="card-front card" onClick={() => handleCardClick(index)}>
+                    <img src={project.capture1} alt="project" />
+                    <h1 className="card-title">{project.name}</h1>
+                    <p>{project.description}</p>
+                    <h4>more details</h4>
+                    <div className="page__dots">
+                      <TbPointFilled />
+                      <TbPoint />
                     </div>
-                    <div className="card-back card" onClick={() => handleCardClick(index)}>
-                      <h2>Tech Stack:</h2>
-                      {project.stack}
-                      <div className="project__buttons">
-                        <a href={project.linkRepo} class="blueBtn">
-                          View Code
-                        </a>
-                        <a href={project.linkDemo} class="whiteBtn">
-                          Visit page
-                        </a>
-                      </div>
+                  </div>
+                  <div className="card-back card" onClick={() => handleCardClick(index)}>
+                    <h2>Tech Stack:</h2>
+                    {project.stack}
+                    <div className="project__buttons">
+                      <a href={project.linkRepo} class="blueBtn">
+                        View Code
+                      </a>
+                      <a href={project.linkDemo} class="whiteBtn">
+                        Visit page
+                      </a>
+                    </div>
 
-                      <h4>back</h4>
-                      <div className="page__dots">
-                        <TbPoint />
-                        <TbPointFilled />
-                      </div>
+                    <h4>back</h4>
+                    <div className="page__dots">
+                      <TbPoint />
+                      <TbPointFilled />
                     </div>
-                  </ReactCardFlip>
-                </div>
-              ))}
-            </div>
-          </Slide>
+                  </div>
+                </ReactCardFlip>
+              </div>
+            ))}
+          </div>
           <br></br>
         </>
       )}

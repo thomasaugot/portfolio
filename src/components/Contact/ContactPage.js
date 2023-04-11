@@ -63,7 +63,7 @@ function ContactPage() {
               src={require("../../shapes/shape__two.png")}
               className="shapes"
               alt="shape"
-              style={{ top: "450vh", left: "65vw", overflow: "hidden", position: "absolute" }}
+              style={{ top: "450vh", left: "55vw", overflow: "hidden", position: "absolute" }}
             />
             <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
@@ -114,7 +114,7 @@ function ContactPage() {
           <div className="letsConnect">
             <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
-            <Roll direction="left">
+            <Roll direction="left" className="roll">
               <div className="logo-container">
                 <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
                   <IconContext.Provider

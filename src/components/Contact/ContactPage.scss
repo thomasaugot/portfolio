@@ -59,7 +59,13 @@
 }
 
 /* Medium devices (Tablets, between 600px and 992px) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .roll {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
