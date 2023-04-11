@@ -8,7 +8,6 @@ import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import Loading from "../src/components/Loading/Loading";
 import { useEffect, useState } from "react";
 import ProgressBar from "react-progressbar-on-scroll";
-import { Link, Element } from "react-scroll";
 
 function App() {
   const [loading, setLoading] = useState(true);
