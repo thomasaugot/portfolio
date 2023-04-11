@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Slide } from "react-awesome-reveal";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
 import { SiUpwork } from "react-icons/si";
 import { IconContext } from "react-icons";
+import { Roll } from "react-awesome-reveal";
 import "./ContactPage.scss";
 
 function ContactPage() {
@@ -67,56 +67,54 @@ function ContactPage() {
             />
             <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
-            <Slide>
-              <form onSubmit={sendEmail} className="contactForm">
-                <label for="name">Name</label>
-                <input
-                  className="inputForm"
-                  id="name"
-                  type="text"
-                  name="from_name"
-                  placeholder="Your name"
-                  required
-                />
-                <label for="email">Email</label>
-                <input
-                  className="inputForm"
-                  id="email"
-                  type="email"
-                  name="reply_to"
-                  placeholder="Your email"
-                  required
-                />
-                <label for="message">Message</label>
-                <textarea
-                  className="inputForm"
-                  id="message"
-                  name="message"
-                  placeholder="Your message here"
-                  rows="8"
-                  required
-                />
-                <div className="submitDiv">
-                  <button
-                    type="submit"
-                    className="blueBtn contactFormBtn"
-                    style={{ textAlign: "center", margin: "30px 0", padding: "5px 30px" }}
-                  >
-                    Send
-                  </button>
-                  <br />
-                  {isSubmitting ? "Sending message..." : ""}
-                  <div style={{ fontSize: "18px", textAlign: "center", margin: "-4% 0 4% 0" }}>
-                    {stateMessage}
-                  </div>
+            <form onSubmit={sendEmail} className="contactForm">
+              <label for="name">Name</label>
+              <input
+                className="inputForm"
+                id="name"
+                type="text"
+                name="from_name"
+                placeholder="Your name"
+                required
+              />
+              <label for="email">Email</label>
+              <input
+                className="inputForm"
+                id="email"
+                type="email"
+                name="reply_to"
+                placeholder="Your email"
+                required
+              />
+              <label for="message">Message</label>
+              <textarea
+                className="inputForm"
+                id="message"
+                name="message"
+                placeholder="Your message here"
+                rows="8"
+                required
+              />
+              <div className="submitDiv">
+                <button
+                  type="submit"
+                  className="blueBtn contactFormBtn"
+                  style={{ textAlign: "center", margin: "30px 0", padding: "5px 30px" }}
+                >
+                  Send
+                </button>
+                <br />
+                {isSubmitting ? "Sending message..." : ""}
+                <div style={{ fontSize: "18px", textAlign: "center", margin: "-4% 0 4% 0" }}>
+                  {stateMessage}
                 </div>
-              </form>
-            </Slide>
+              </div>
+            </form>
           </div>
           <div className="letsConnect">
             <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
-            <Slide>
+            <Roll direction="left">
               <div className="logo-container">
                 <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
                   <IconContext.Provider
@@ -150,7 +148,7 @@ function ContactPage() {
                   </IconContext.Provider>
                 </a>
               </div>
-            </Slide>
+            </Roll>
           </div>
         </>
       )}

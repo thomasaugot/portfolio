@@ -1,7 +1,7 @@
-import Carousel from "react-bootstrap/Carousel";
 import { useInView } from "react-intersection-observer";
-import { keyframes } from "@emotion/react";
-import Reveal from "react-awesome-reveal";
+import Slide from "react-awesome-reveal";
+import ReactCardFlip from "react-card-flip";
+import { TbPointFilled, TbPoint } from "react-icons/tb";
 
 import "./PortfolioPage.scss";
 import { useEffect, useState } from "react";
@@ -17,7 +17,7 @@ function PortfolioPage() {
       description:
         "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
       stack:
-        "Tech stack: React, SCSS/SASS, Typescript. The app offers a dark/light mode switch. I am currently developing the backend to enable account creation & save collections of todos.",
+        "React, SCSS/SASS, Typescript. The app offers a dark/light mode switch. I am currently developing the backend to enable account creation & save collections of todos.",
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
@@ -29,7 +29,7 @@ function PortfolioPage() {
       name: "Farmhouse Table",
       description: "A restaurant website integrating Google Maps API and a reservation form",
       stack:
-        "Tech stack: React, SCSS/SASS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
+        "React, SCSS/SASS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
@@ -42,7 +42,7 @@ function PortfolioPage() {
       description:
         "A full-stack MERN sort of social media app I created to connect people so they can travel to festivals together",
       stack:
-        "Tech stack: MongoDB, Express.js, React.js, Node.js, REST API (built by me), Postman. The app is fully responsive, following the mobile first workflow",
+        "MongoDB, Express.js, React.js, Node.js, REST API (built by me), Postman. The app is fully responsive, following the mobile first workflow",
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
@@ -54,7 +54,7 @@ function PortfolioPage() {
       name: "The Broke Globetrotter",
       description:
         " An app created in pairs, gathering collections of free stuff to do in cities worldwide featuring back-end technologies, for broke travellers (story of my life..!)",
-      stack: "Tech stack: MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman",
+      stack: "MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman",
       linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
       linkDemo: "https://the-broke-globetrotter.adaptable.app/",
     },
@@ -66,7 +66,7 @@ function PortfolioPage() {
       name: "Pickle Rick vs Rats - The Game",
       description: "My first coding project, a cool Javascript shooting game, kill the angry rats!",
       stack:
-        "Tech stack: HTML, CSS, Javascript. Since you need a keypad for the commands, it is only playable on desktop",
+        "HTML, CSS, Javascript. Since you need a keypad for the commands, it is only playable on desktop",
       linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
       linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
     },
@@ -83,16 +83,11 @@ function PortfolioPage() {
     }
   }, [inView]);
 
-  const customAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: translate3d(-200px, -100px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-`;
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
+
+  const handleCardClick = (index) => {
+    setActiveCardIndex(index === activeCardIndex ? null : index);
+  };
 
   return (
     <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
@@ -100,46 +95,49 @@ function PortfolioPage() {
         <>
           <h1>My projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
-          <Reveal keyframes={customAnimation}>
+          <Slide direction={"down"}>
             <div className="portfolioContent">
-              {projects.map((project) => {
-                return (
-                  <div className="portfolioItem">
-                    <Carousel className="carousel noBootstrap" interval={null}>
-                      <Carousel.Item className="noBootstrap carouselItem">
-                        <div
-                          class="card"
-                          id={project.id}
-                          style={{ border: "transparent 1px solid" }}
-                        >
-                          <img src={project.capture1} alt="..." />
-                          <h5 class="card-title bg-transparent">{project.name}</h5>
-                          <p class="card-text bg-transparent">{project.description}</p>
-                        </div>
-                      </Carousel.Item>
-                      <Carousel.Item className="bg-transparent carouselItem">
-                        <div class="card" style={{ border: "transparent 1px solid" }}>
-                          <img src={project.capture2} alt="..." />
-                          <p class="card-text">{project.stack}</p>
-                        </div>
-                      </Carousel.Item>
-                      <Carousel.Item className="bg-transparent carouselItem">
-                        <div class="card" style={{ border: "transparent 1px solid" }}>
-                          <img src={project.capture3} alt="..." />
-                          <a href={project.linkRepo} class="blueBtn">
-                            View Code
-                          </a>
-                          <a href={project.linkDemo} class="whiteBtn">
-                            Visit page
-                          </a>
-                        </div>
-                      </Carousel.Item>
-                    </Carousel>
-                  </div>
-                );
-              })}
+              {projects.map((project, index) => (
+                <div key={project.id}>
+                  <ReactCardFlip
+                    isFlipped={activeCardIndex === index}
+                    flipDirection="horizontal"
+                    className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                    alignHeight={true}
+                  >
+                    <div className="card-front card" onClick={() => handleCardClick(index)}>
+                      <img src={project.capture1} alt="project" />
+                      <h1 className="card-title">{project.name}</h1>
+                      <p>{project.description}</p>
+                      <h4>more details</h4>
+                      <div className="page__dots">
+                        <TbPointFilled />
+                        <TbPoint />
+                      </div>
+                    </div>
+                    <div className="card-back card" onClick={() => handleCardClick(index)}>
+                      <h2>Tech Stack:</h2>
+                      {project.stack}
+                      <div className="project__buttons">
+                        <a href={project.linkRepo} class="blueBtn">
+                          View Code
+                        </a>
+                        <a href={project.linkDemo} class="whiteBtn">
+                          Visit page
+                        </a>
+                      </div>
+
+                      <h4>back</h4>
+                      <div className="page__dots">
+                        <TbPoint />
+                        <TbPointFilled />
+                      </div>
+                    </div>
+                  </ReactCardFlip>
+                </div>
+              ))}
             </div>
-          </Reveal>
+          </Slide>
           <br></br>
         </>
       )}

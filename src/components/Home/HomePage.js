@@ -46,10 +46,6 @@ function HomePage() {
               </p>
             </div>
             <br></br>
-
-            <div className="secondColumn">
-              <img src={require("./profile-picture.png")} alt="profile" className="profilePicure" />
-            </div>
           </div>
           <a href="#AboutPage" className="linkAbout">
             <div class="container">
