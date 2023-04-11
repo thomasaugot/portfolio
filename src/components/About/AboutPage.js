@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./AboutPage.scss";
 import { Slide } from "react-awesome-reveal";
 
