@@ -1,5 +1,4 @@
 import { useInView } from "react-intersection-observer";
-import Slide from "react-awesome-reveal";
 import ReactCardFlip from "react-card-flip";
 import { TbPointFilled, TbPoint } from "react-icons/tb";
 
