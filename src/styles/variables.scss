@@ -41,4 +41,5 @@ $font-size-lrg: 3em;
 @mixin bootstrapScroll {
   height: fit-content;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }

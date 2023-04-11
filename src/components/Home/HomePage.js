@@ -23,7 +23,7 @@ function HomePage() {
             src={require("../../shapes/shape__two.png")}
             className="shapes"
             alt="shape"
-            style={{ top: "-50vh", position: "absolute", left: "45vw", overflow: "hidden" }}
+            style={{ top: "-40vh", position: "absolute", left: "45vw", overflow: "hidden" }}
           />
           <div className="topContent">
             <div className="titleDiv">
