@@ -2,12 +2,13 @@
 
 .header {
   height: $header-height;
-  background: rgb(26, 25, 25);
-  opacity: 0.6;
+  background: rgba(26, 25, 25, 0.8);
   color: $text2;
   position: fixed;
   z-index: 1000;
   width: 100%;
+  backdrop-filter: blur(2px);
+  margin-top: 3px;
 
   &__content {
     max-width: 1920px;
@@ -78,6 +79,8 @@
   &--open {
     transition: 0.2s ease top;
     right: 0;
+    backdrop-filter: blur(2px);
+    background: rgba(26, 25, 25, 0.8);
   }
 
   &__item {
