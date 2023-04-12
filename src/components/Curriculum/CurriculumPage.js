@@ -110,7 +110,7 @@ function CurriculumPage() {
             </a>
             <br></br>
             <a
-              href="https://drive.google.com/file/d/1WGdCcFDWfJ0V-aeLkNFlnW2hYIyFQH7E/view?usp=share_link"
+              href="https://drive.google.com/file/d/1LahYFUcqsSHQxDYjGwoDG3DMzLaeGzI-/view?usp=share_link"
               target="_blank"
               rel="noreferrer"
             >
