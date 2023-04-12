@@ -3,6 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 import "./HomePage.scss";
 import { useEffect, useState } from "react";
+import GridLines from "../GridLines/GridLines";
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +20,7 @@ function HomePage() {
     <div className="Homepage" id="HomePage" ref={ref}>
       {isVisible && (
         <Fade>
+          <GridLines />
           <img
             src={require("../../shapes/shape__two.png")}
             className="shapes"
