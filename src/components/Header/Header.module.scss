@@ -57,7 +57,7 @@
     }
     & > svg {
       display: block;
-      font-size: 32px;
+      font-size: 40px;
     }
   }
 }
@@ -89,7 +89,7 @@
     transition: 0.3s ease color;
     &:hover {
       color: $primary;
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 

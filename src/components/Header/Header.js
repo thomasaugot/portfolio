@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
-
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineCloseSquare } from "react-icons/ai";
+import { MdMenu, MdClose } from "react-icons/md";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,7 +36,7 @@ const Header = () => {
         </div>
         <div>
           <button className={styles.header__toggler} onClick={menuToggler}>
-            {!menuOpen ? <BiMenuAltRight /> : <AiOutlineCloseSquare />}
+            {!menuOpen ? <MdMenu /> : <MdClose />}
           </button>
         </div>
       </div>
