@@ -84,6 +84,14 @@ function CurriculumPage() {
                 title="REST"
               />
               <img height="70" src={require("./git-logo.png")} alt="Git" title="Git" />
+              <img
+                height="70"
+                src={require("./Tailwind_CSS.png")}
+                alt="Tailwind CSS"
+                title="Tailwind CSS"
+              />
+              <img height="70" src={require("./gitlab.png")} alt="Gitlab" title="Gitlab" />
+              <img height="70" src={require("./redux.png")} alt="Redux" title="Redux" />
             </Marquee>
           </div>
 
@@ -94,7 +102,7 @@ function CurriculumPage() {
           <h1>Certifications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <h2>Ironhack</h2>
           <p>
-            9-week web development Bootcamp, during which I was taught the following technologies:{" "}
+            9-week web development Bootcamp, during which I was taught the following technologies:
             <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
             <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version control:
             Git/ Github
