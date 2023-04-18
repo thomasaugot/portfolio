@@ -93,6 +93,7 @@
     &:hover {
       color: $primary;
       transform: scale(0.9);
+      filter: drop-shadow(4px 4px 3px #ffff00);
     }
   }
 
