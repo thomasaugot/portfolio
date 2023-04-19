@@ -104,12 +104,6 @@ function ContactPage() {
                 </div>
               </div>
             </form>
-            <img
-              src={require("../../shapes/shape__two.png")}
-              className="shapes"
-              alt="shape"
-              style={{ bottom: "-430vh", position: "absolute", left: "15vw", overflowX: "hidden" }}
-            />
           </div>
           <div className="letsConnect">
             <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>

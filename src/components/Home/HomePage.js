@@ -21,12 +21,6 @@ function HomePage() {
       {isVisible && (
         <Fade>
           <GridLines />
-          <img
-            src={require("../../shapes/shape__two.png")}
-            className="shapes"
-            alt="shape"
-            style={{ top: "-40vh", position: "absolute", left: "45vw", overflow: "hidden" }}
-          />
           <div className="topContent">
             <div className="titleDiv">
               <h1
@@ -54,12 +48,6 @@ function HomePage() {
               <div class="chevron"></div>
             </div>
           </a>
-          <img
-            src={require("../../shapes/shape__one.png")}
-            className="shapes"
-            alt="shape"
-            style={{ top: "85vh", position: "absolute", left: "2vw", overflow: "hidden" }}
-          />
         </Fade>
       )}
     </div>

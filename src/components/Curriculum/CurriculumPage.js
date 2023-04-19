@@ -91,7 +91,7 @@ function CurriculumPage() {
                 title="Tailwind CSS"
               />
               <img height="70" src={require("./gitlab.png")} alt="Gitlab" title="Gitlab" />
-              <img height="70" src={require("./redux.png")} alt="Redux" title="Redux" />
+              {/* <img height="70" src={require("./redux.png")} alt="Redux" title="Redux" /> */}
             </Marquee>
           </div>
 

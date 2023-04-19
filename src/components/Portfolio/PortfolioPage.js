@@ -1,9 +1,14 @@
 import { useInView } from "react-intersection-observer";
 import ReactCardFlip from "react-card-flip";
 import { TbPointFilled, TbPoint } from "react-icons/tb";
+import { EffectCoverflow, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { useEffect, useState } from "react";
 
 import "./PortfolioPage.scss";
-import { useEffect, useState } from "react";
 
 function PortfolioPage() {
   const projects = [
@@ -73,7 +78,7 @@ function PortfolioPage() {
 
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.2, // set threshold to 20%
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -82,11 +87,30 @@ function PortfolioPage() {
     }
   }, [inView]);
 
+  const [isMobile, setIsMobile] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleCardClick = (index) => {
     setActiveCardIndex(index === activeCardIndex ? null : index);
   };
+
+  const slidesPerView = isMobile
+    ? 1
+    : window.innerWidth >= 768 && window.innerWidth <= 1024
+    ? 2
+    : 3;
 
   return (
     <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
@@ -95,47 +119,114 @@ function PortfolioPage() {
           <h1>My projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
           <div className="portfolioContent">
-            {projects.map((project, index) => (
-              <div key={project.id}>
-                <ReactCardFlip
-                  isFlipped={activeCardIndex === index}
-                  flipDirection="horizontal"
-                  className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
-                  alignHeight={true}
-                >
-                  <div className="card-front card" onClick={() => handleCardClick(index)}>
-                    <img src={project.capture1} alt="project" />
-                    <h1 className="card-title">{project.name}</h1>
-                    <p>{project.description}</p>
-                    <h4>more details</h4>
-                    <div className="page__dots">
-                      <TbPointFilled />
-                      <TbPoint />
-                    </div>
-                  </div>
-                  <div className="card-back card" onClick={() => handleCardClick(index)}>
-                    <h2>Tech Stack:</h2>
-                    {project.stack}
-                    <div className="project__buttons">
-                      <a href={project.linkRepo} class="blueBtn">
-                        View Code
-                      </a>
-                      <a href={project.linkDemo} class="whiteBtn">
-                        Visit page
-                      </a>
-                    </div>
+            {isMobile ? (
+              <div className="project-cards-container">
+                {projects.map((project, index) => (
+                  <div>
+                    <ReactCardFlip
+                      isFlipped={activeCardIndex === index}
+                      flipDirection="horizontal"
+                      className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                      alignHeight={true}
+                    >
+                      <div className="card-front card" onClick={() => handleCardClick(index)}>
+                        <img src={project.capture1} alt="project" />
+                        <h1 className="card-title">{project.name}</h1>
+                        <p>{project.description}</p>
+                        <h4>more details</h4>
+                        <div className="page__dots">
+                          <TbPointFilled />
+                          <TbPoint />
+                        </div>
+                      </div>
+                      <div className="card-back card" onClick={() => handleCardClick(index)}>
+                        <h2>Tech Stack:</h2>
+                        {project.stack}
+                        <div className="project__buttons">
+                          <a href={project.linkRepo} class="blueBtn">
+                            View Code
+                          </a>
+                          <a href={project.linkDemo} class="whiteBtn">
+                            Visit page
+                          </a>
+                        </div>
 
-                    <h4>back</h4>
-                    <div className="page__dots">
-                      <TbPoint />
-                      <TbPointFilled />
-                    </div>
+                        <h4>back</h4>
+                        <div className="page__dots">
+                          <TbPoint />
+                          <TbPointFilled />
+                        </div>
+                      </div>
+                    </ReactCardFlip>
                   </div>
-                </ReactCardFlip>
+                ))}
               </div>
-            ))}
+            ) : (
+              <Swiper
+                effect={"coverflow"}
+                initialSlide={2}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={slidesPerView}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                navigation={true} // add this prop
+                pagination={{ clickable: true }}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
+              >
+                {projects.map((project, index) => (
+                  <SwiperSlide key={project.id}>
+                    <div>
+                      <ReactCardFlip
+                        isFlipped={activeCardIndex === index}
+                        flipDirection="horizontal"
+                        className={`project-card ${
+                          index === activeCardIndex ? "flipped" : ""
+                        } card`}
+                        alignHeight={true}
+                      >
+                        <div className="card-front card" onClick={() => handleCardClick(index)}>
+                          <img src={project.capture1} alt="project" />
+                          <h1 className="card-title">{project.name}</h1>
+                          <p>{project.description}</p>
+                          <h4>more details</h4>
+                          <div className="page__dots">
+                            <TbPointFilled />
+                            <TbPoint />
+                          </div>
+                        </div>
+                        <div className="card-back card" onClick={() => handleCardClick(index)}>
+                          <h2>Tech Stack:</h2>
+                          {project.stack}
+                          <div className="project__buttons">
+                            <a href={project.linkRepo} class="blueBtn">
+                              View Code
+                            </a>
+                            <a href={project.linkDemo} class="whiteBtn">
+                              Visit page
+                            </a>
+                          </div>
+
+                          <h4>back</h4>
+                          <div className="page__dots">
+                            <TbPoint />
+                            <TbPointFilled />
+                          </div>
+                        </div>
+                      </ReactCardFlip>
+                    </div>
+                  </SwiperSlide>
+                ))}
+                <div class="swiper-pagination"></div>
+              </Swiper>
+            )}
           </div>
-          <br></br>
         </>
       )}
     </div>
