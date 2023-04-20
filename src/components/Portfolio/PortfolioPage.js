@@ -15,8 +15,6 @@ function PortfolioPage() {
     {
       id: 5,
       capture1: require("./mobile-overlay.png"),
-      capture2: require("./mobile-overlay.png"),
-      capture3: require("./mobile-overlay.png"),
       name: "Todayzzz Todos",
       description:
         "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
@@ -28,8 +26,6 @@ function PortfolioPage() {
     {
       id: 4,
       capture1: require("./farmhouse (2).png"),
-      capture2: require("./farmhouse (1).png"),
-      capture3: require("./farmhouse.png"),
       name: "Farmhouse Table",
       description: "A restaurant website integrating Google Maps API and a reservation form",
       stack:
@@ -40,21 +36,27 @@ function PortfolioPage() {
     {
       id: 1,
       capture1: require("./partymates1.png"),
-      capture2: require("./partymates2.png"),
-      capture3: require("./partymates3.png"),
       name: "Partymates",
       description:
-        "A full-stack MERN sort of social media app I created to connect people so they can travel to festivals together",
+        "A full-stack MERN sort of social media app I created to connect people so they can travel to festivals together. Users can create an account, save or subscribe to events and interact with other users",
       stack:
         "MongoDB, Express.js, React.js, Node.js, REST API (built by me), Postman. The app is fully responsive, following the mobile first workflow",
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
     {
+      id: 6,
+      capture1: require("./project-comp.png"),
+      name: "KP Project Component / Tailwind CSS",
+      description:
+        "A  fully responsive component I build for a crypto-currencies startup to learn Tailwind CSS, pixel-perfectly duplicating a Figma design",
+      stack: "React, Tailwind CSS, Typescript",
+      linkRepo: "https://github.com/thomasaugot/kp-projects-component",
+      linkDemo: "http://kp-project-component.com/",
+    },
+    {
       id: 2,
       capture1: require("./responsive-BGtrotter.png"),
-      capture2: require("./BGtrotterCapture3.png"),
-      capture3: require("./BGtrotterCapture2.png"),
       name: "The Broke Globetrotter",
       description:
         " An app created in pairs, gathering collections of free stuff to do in cities worldwide featuring back-end technologies, for broke travellers (story of my life..!)",
@@ -65,8 +67,6 @@ function PortfolioPage() {
     {
       id: 3,
       capture1: require("./game-capture1.png"),
-      capture2: require("./game-capture2.png"),
-      capture3: require("./game-capture3.png"),
       name: "Pickle Rick vs Rats - The Game",
       description: "My first coding project, a cool Javascript shooting game, kill the angry rats!",
       stack:
@@ -143,10 +143,20 @@ function PortfolioPage() {
                         <h2>Tech Stack:</h2>
                         {project.stack}
                         <div className="project__buttons">
-                          <a href={project.linkRepo} class="blueBtn">
+                          <a
+                            href={project.linkRepo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="blueBtn "
+                          >
                             View Code
                           </a>
-                          <a href={project.linkDemo} class="whiteBtn">
+                          <a
+                            href={project.linkDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="whiteBtn"
+                          >
                             Visit page
                           </a>
                         </div>
