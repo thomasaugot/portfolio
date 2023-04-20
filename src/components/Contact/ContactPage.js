@@ -110,7 +110,7 @@ function ContactPage() {
             <br></br>
 
             <div className="logo-container">
-              <Roll direction="left" className="roll" fraction={1} triggerOnce={true}>
+              <Roll direction="left" className="roll" fraction={1} triggerOnce={true} delay={500}>
                 <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
                   <IconContext.Provider
                     value={{ color: "white", size: "70px", className: "linkedInLogo" }}
@@ -121,7 +121,7 @@ function ContactPage() {
                   </IconContext.Provider>
                 </a>
               </Roll>
-              <Roll direction="left" className="roll" delay={400} fraction={1} triggerOnce={true}>
+              <Roll direction="left" className="roll" delay={1000} fraction={1} triggerOnce={true}>
                 <a
                   href="https://www.upwork.com/freelancers/~01b07aa7234690ca70?viewMode=1"
                   target="_blank"
@@ -136,7 +136,7 @@ function ContactPage() {
                   </IconContext.Provider>
                 </a>
               </Roll>
-              <Roll direction="left" className="roll" delay={800} fraction={1} triggerOnce={true}>
+              <Roll direction="left" className="roll" delay={1500} fraction={1} triggerOnce={true}>
                 <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
                   <IconContext.Provider
                     value={{ color: "white", size: "67px", className: "githubLogo" }}
