@@ -44,16 +44,16 @@ function PortfolioPage() {
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
-    {
-      id: 6,
-      capture1: require("./project-comp.png"),
-      name: "KP Project Component / Tailwind CSS",
-      description:
-        "A  fully responsive component I build for a crypto-currencies startup to learn Tailwind CSS, pixel-perfectly duplicating a Figma design",
-      stack: "React, Tailwind CSS, Typescript",
-      linkRepo: "https://github.com/thomasaugot/kp-projects-component",
-      linkDemo: "http://kp-project-component.com/",
-    },
+    // {
+    //   id: 6,
+    //   capture1: require("./project-comp.png"),
+    //   name: "KP Project Component / Tailwind CSS",
+    //   description:
+    //     "A  fully responsive component I build for a crypto-currencies startup to learn Tailwind CSS, pixel-perfectly duplicating a Figma design",
+    //   stack: "React, Tailwind CSS, Typescript",
+    //   linkRepo: "https://github.com/thomasaugot/kp-projects-component",
+    //   linkDemo: "http://kp-project-component.com/",
+    // },
     {
       id: 2,
       capture1: require("./responsive-BGtrotter.png"),
