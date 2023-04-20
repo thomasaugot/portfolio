@@ -108,8 +108,9 @@ function ContactPage() {
           <div className="letsConnect">
             <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
-            <Roll direction="left" className="roll">
-              <div className="logo-container">
+
+            <div className="logo-container">
+              <Roll direction="left" className="roll" fraction={1} triggerOnce={true}>
                 <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
                   <IconContext.Provider
                     value={{ color: "white", size: "70px", className: "linkedInLogo" }}
@@ -119,6 +120,8 @@ function ContactPage() {
                     </div>
                   </IconContext.Provider>
                 </a>
+              </Roll>
+              <Roll direction="left" className="roll" delay={400} fraction={1} triggerOnce={true}>
                 <a
                   href="https://www.upwork.com/freelancers/~01b07aa7234690ca70?viewMode=1"
                   target="_blank"
@@ -132,6 +135,8 @@ function ContactPage() {
                     </div>
                   </IconContext.Provider>
                 </a>
+              </Roll>
+              <Roll direction="left" className="roll" delay={800} fraction={1} triggerOnce={true}>
                 <a href="https://github.com/thomasaugot" target="_blank" rel="noreferrer">
                   <IconContext.Provider
                     value={{ color: "white", size: "67px", className: "githubLogo" }}
@@ -141,8 +146,8 @@ function ContactPage() {
                     </div>
                   </IconContext.Provider>
                 </a>
-              </div>
-            </Roll>
+              </Roll>
+            </div>
           </div>
         </>
       )}

@@ -4,12 +4,12 @@ import { Slide } from "react-awesome-reveal";
 function AboutPage() {
   return (
     <div className="AboutPage" id="AboutPage">
-      <Slide direction={"down"} delay={100}>
+      <Slide direction={"down"} delay={100} triggerOnce={true} fraction={1}>
         <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </Slide>
       <br></br>
       <div className="about__content">
-        <Slide direction={"down"}>
+        <Slide direction={"down"} triggerOnce={true} fraction={1}>
           <p>
             I am a French web developer based on the beautiful island of Fuerteventura, where the
             summer never ends. After 10 years of travelling around the world, I found myself a
@@ -29,7 +29,7 @@ function AboutPage() {
             web design trends, and searching for new, cool effects to integrate into my projects.
           </p>
         </Slide>
-        <Slide direction={"up"}>
+        <Slide direction={"up"} triggerOnce={true} fraction={1}>
           <img src={require("./profile.png")} alt="profile" className="profilePicture" />
         </Slide>
       </div>
