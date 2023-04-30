@@ -46,12 +46,15 @@ function CurriculumPage() {
                 alt="Typescript"
                 title="Typescript"
               />
+              <img height="70" src={require("./nextjs.png")} alt="Next JS" title="Next JS" />
+              <img height="70" src={require("./figma.png")} alt="Figma" title="Figma" />
               <img
                 height="70"
                 src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png"
                 alt="Bootstrap"
                 title="Bootstrap"
               />
+              <img height="70" src={require("./npm.png")} alt="NPM" title="NPM" />
               <img
                 height="70"
                 src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
@@ -59,6 +62,7 @@ function CurriculumPage() {
                 title="JavaScript"
               />
               <img height="70" src={require("./react-logo.png")} alt="React" title="React" />
+              <img height="70" src={require("./MUI.png")} alt="Material UI" title="Material UI" />
               <img
                 height="70"
                 src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
@@ -91,7 +95,6 @@ function CurriculumPage() {
                 title="Tailwind CSS"
               />
               <img height="70" src={require("./gitlab.png")} alt="Gitlab" title="Gitlab" />
-              {/* <img height="70" src={require("./redux.png")} alt="Redux" title="Redux" /> */}
             </Marquee>
           </div>
 
