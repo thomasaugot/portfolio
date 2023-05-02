@@ -23,6 +23,16 @@ function PortfolioPage() {
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
+    // {
+    //   id: 6,
+    //   capture1: require("./project-comp.png"),
+    //   name: "Kingpad landing page",
+    //   description:
+    //     "A  complex, fully responsive landing page I build for a crypto startup pixel-perfectly duplicating a Figma design",
+    //   stack: "Next.JS, Tailwind CSS, Typescript, Material UI",
+    //   linkRepo: "https://github.com/thomasaugot/kp-next.js",
+    //   linkDemo: "https://kingpad.finance/",
+    // },
     {
       id: 4,
       capture1: require("./farmhouse (2).png"),
@@ -44,16 +54,6 @@ function PortfolioPage() {
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
-    // {
-    //   id: 6,
-    //   capture1: require("./project-comp.png"),
-    //   name: "KP Project Component / Tailwind CSS",
-    //   description:
-    //     "A  fully responsive component I build for a crypto-currencies startup to learn Tailwind CSS, pixel-perfectly duplicating a Figma design",
-    //   stack: "React, Tailwind CSS, Typescript",
-    //   linkRepo: "https://github.com/thomasaugot/kp-projects-component",
-    //   linkDemo: "http://kp-project-component.com/",
-    // },
     {
       id: 2,
       capture1: require("./responsive-BGtrotter.png"),
