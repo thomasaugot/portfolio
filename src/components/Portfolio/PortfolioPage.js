@@ -25,7 +25,7 @@ function PortfolioPage() {
     },
     // {
     //   id: 6,
-    //   capture1: require("./project-comp.png"),
+    //   capture1: require("./kingpad.png"),
     //   name: "Kingpad landing page",
     //   description:
     //     "A  complex, fully responsive landing page I build for a crypto startup pixel-perfectly duplicating a Figma design",
