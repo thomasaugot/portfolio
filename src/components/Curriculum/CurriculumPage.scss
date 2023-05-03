@@ -27,10 +27,10 @@
     font-family: $caveat-font;
     margin-top: 1vh;
   }
+
   img {
     margin: 15px 15px;
     padding: 5px;
-    height: 70px;
   }
 
   .stack {
@@ -40,7 +40,26 @@
     margin-left: -15vw;
     width: 150%;
     overflow-x: hidden;
+    align-items: flex-end !important;
   }
+}
+
+.marquee-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.marquee-item img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.img-container {
+  height: 70px;
+}
+
+.subtitle {
+  padding-top: 50px;
 }
 
 /* Medium devices (Tablets, between 600px and 992px) */

@@ -2,7 +2,6 @@
 
 .ContactPage {
   @include bootstrapScroll();
-  // background-repeat: no-repeat;
   padding: 20% 10% 8% 10%;
   opacity: 0.9;
   padding: 10%;
@@ -24,6 +23,9 @@ label {
   border-radius: 8px;
   padding: 7px 5px;
   margin: 7px 0 0 0;
+  &:focus {
+    box-shadow: 2px -2px 4px 1px $primary;
+  }
 }
 
 .submitDiv {

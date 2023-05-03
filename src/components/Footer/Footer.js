@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Footer.scss";
 import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
+import BGAnimation from "../FooterBG/FooterBG";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,10 +19,9 @@ function Footer() {
     <div className="Footer" ref={ref}>
       {isVisible && (
         <Fade>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          <div style={{ textAlign: "center" }}>
+            <BGAnimation />
+          </div>
           <a href="#HomePage">
             <div class="containerToTop rotate">
               <div class="chevron"></div>

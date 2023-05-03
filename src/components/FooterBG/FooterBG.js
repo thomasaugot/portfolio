@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "./GridLines.scss";
+import "./FooterBG.scss";
 
-const GridLines = () => {
+const BGAnimation = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const GridLines = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="canva" />;
+  return <canvas ref={canvasRef} className="canva-footer" />;
 };
 
-export default GridLines;
+export default BGAnimation;

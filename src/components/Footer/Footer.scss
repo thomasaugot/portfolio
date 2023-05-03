@@ -1,5 +1,12 @@
 @import "../../styles/variables.scss";
 
+.Footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .containerToTop {
   display: flex;
   justify-content: center;

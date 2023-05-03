@@ -27,7 +27,8 @@ function AboutPage() {
             <br />
             With experience in both front- and backend development, I have found myself particularly
             interested in design and user experience. I enjoy browsing libraries, keeping up with
-            web design trends, and searching for new, cool effects to integrate into my projects.
+            web design trends, and searching for creative ways of solving complex challenges through
+            my code.
           </p>
         </Slide>
         <Slide direction={"up"} triggerOnce={true} fraction={1}>

@@ -20,134 +20,182 @@ function CurriculumPage() {
       {isVisible && (
         <>
           <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-          <div className="stack" style={{ overflow: "hidden", Width: "100%" }}>
+          <div
+            className="stack"
+            style={{
+              overflow: "hidden",
+              Width: "100%",
+            }}
+          >
             <Marquee gradientColor={"yellow"} speed={50}>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
-                  alt="HTML"
-                  title="HTML"
-                />
-                <div>HTML</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
+                    alt="HTML"
+                    title="HTML"
+                  />
+                </div>
+
+                <div className="subtitle">HTML</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
-                  alt="CSS"
-                  title="CSS"
-                />
-                <div>CSS</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
+                    alt="CSS"
+                    title="CSS"
+                  />
+                </div>
+                <div className="subtitle">CSS</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
-                  alt="JavaScript"
-                  title="JavaScript"
-                />
-                <div>Javascript</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
+                    alt="JavaScript"
+                    title="JavaScript"
+                  />
+                </div>
+                <div className="subtitle">Javascript</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://avatars.githubusercontent.com/u/317889?s=200&v=4"
-                  alt="SCSS"
-                  title="SCSS"
-                />
-                <div>SCSS</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://avatars.githubusercontent.com/u/317889?s=200&v=4"
+                    alt="SCSS"
+                    title="SCSS"
+                  />
+                </div>
+                <div className="subtitle">SCSS</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src={require("./typescript-logo.png")}
-                  alt="Typescript"
-                  title="Typescript"
-                />
-                <div>Typescript</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src={require("./typescript-logo.png")}
+                    alt="Typescript"
+                    title="Typescript"
+                  />
+                </div>
+                <div className="subtitle">Typescript</div>
               </div>
-              <div>
-                <img height="70" src={require("./nextjs.png")} alt="Next JS" title="Next JS" />
-                <div>Next.js</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img height="70" src={require("./nextjs.png")} alt="Next JS" title="Next JS" />
+                </div>
+                <div className="subtitle">Next.js</div>
               </div>
-              <div>
-                <img height="70" src={require("./figma.png")} alt="Figma" title="Figma" />
-                <div>Figma</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img height="70" src={require("./figma.png")} alt="Figma" title="Figma" />
+                </div>
+                <div className="subtitle">Figma</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png"
-                  alt="Bootstrap"
-                  title="Bootstrap"
-                />
-                <div>Bootstrap</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/183898054-b3d693d4-dafb-4808-a509-bab54cf5de34.png"
+                    alt="Bootstrap"
+                    title="Bootstrap"
+                  />
+                </div>
+                <div className="subtitle">Bootstrap</div>
               </div>
-              <div>
-                <img height="70" src={require("./npm.png")} alt="NPM" title="NPM" />
-                <div>NPM</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img height="70" src={require("./npm.png")} alt="NPM" title="NPM" />
+                </div>
+                <div className="subtitle">NPM</div>
               </div>
-              <div>
-                <img height="70" src={require("./react-logo.png")} alt="React" title="React" />
-                <div>React</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img height="70" src={require("./react-logo.png")} alt="React" title="React" />
+                </div>
+                <div className="subtitle">React</div>
               </div>
-              <div>
-                <img height="70" src={require("./MUI.png")} alt="Material UI" title="Material UI" />
-                <div>Material UI</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src={require("./MUI.png")}
+                    alt="Material UI"
+                    title="Material UI"
+                  />
+                </div>
+                <div className="subtitle">Material UI</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
-                  alt="Node.js"
-                  title="Node.js"
-                />
-                <div>Node.js</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
+                    alt="Node.js"
+                    title="Node.js"
+                  />
+                </div>
+                <div className="subtitle">Node.js</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png"
-                  alt="Express"
-                  title="Express"
-                />
-                <div>Express.js</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png"
+                    alt="Express"
+                    title="Express"
+                  />
+                </div>
+                <div className="subtitle">Express.js</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
-                  alt="mongoDB"
-                  title="mongoDB"
-                />
-                <div>MongoDB</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
+                    alt="mongoDB"
+                    title="mongoDB"
+                  />
+                </div>
+                <div className="subtitle">MongoDB</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png"
-                  alt="REST"
-                  title="REST"
-                />
-                <div>REST API</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png"
+                    alt="REST"
+                    title="REST"
+                  />
+                </div>
+                <div className="subtitle">REST API</div>
               </div>
-              <div>
-                <img height="70" src={require("./git-logo.png")} alt="Git" title="Git" />
-                <div>GIT</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img height="70" src={require("./git-logo.png")} alt="Git" title="Git" />
+                </div>
+                <div className="subtitle">GIT</div>
               </div>
-              <div>
-                <img
-                  height="70"
-                  src={require("./Tailwind_CSS.png")}
-                  alt="Tailwind CSS"
-                  title="Tailwind CSS"
-                />
-                <div>Tailwind CSS</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src={require("./Tailwind_CSS.png")}
+                    alt="Tailwind CSS"
+                    title="Tailwind CSS"
+                  />
+                </div>
+                <div className="subtitle">Tailwind CSS</div>
               </div>
-              <div>
-                <img height="70" src={require("./gitlab.png")} alt="Gitlab" title="Gitlab" />
-                <div>Gitlab</div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img height="70" src={require("./gitlab.png")} alt="Gitlab" title="Gitlab" />
+                </div>
+                <div className="subtitle">Gitlab</div>
               </div>
             </Marquee>
           </div>
