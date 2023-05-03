@@ -37,7 +37,7 @@ function HomePage() {
                 Web Developer /&gt;
               </h1>
             </div>
-            <JackInTheBox delay={1500}>
+            <JackInTheBox delay={1500} triggerOnce>
               <p className="homepageP">
                 I bring your project to life using the latest development technologies
               </p>
