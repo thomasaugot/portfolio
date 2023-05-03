@@ -11,9 +11,10 @@ function AboutPage() {
       <div className="about__content">
         <Slide direction={"down"} triggerOnce={true} fraction={1}>
           <p>
-            I am a French web developer based on the beautiful island of Fuerteventura, where the
-            summer never ends. After 10 years of travelling around the world, I found myself a
-            passion for coding and quit my old job to enrol in a web development Bootcamp.
+            I am a French web developer with a specialization in React, currently based on the
+            beautiful island of Fuerteventura, where the summer never ends. After 10 years of
+            travelling around the world, I found myself a passion for coding and quit my old job to
+            enrol in a web development Bootcamp.
             <br />
             <br />
             Although I spent most of my professional career in the hospitality industry, which

@@ -120,12 +120,8 @@ function CurriculumPage() {
               <button className="whiteBtn">Show credential</button>
             </a>
             <br></br>
-            <a
-              href="https://drive.google.com/file/d/1LahYFUcqsSHQxDYjGwoDG3DMzLaeGzI-/view?usp=share_link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="blueBtn">View my resume</button>
+            <a href="./CV Thomas Augot.pdf" download className="blueBtn">
+              Download my resume
             </a>
           </div>
         </>
