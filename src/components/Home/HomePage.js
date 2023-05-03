@@ -24,13 +24,13 @@ function HomePage() {
           <div className="topContent">
             <div className="titleDiv">
               <h1
-                className="animate__animated animate__fadeInLeft animate__delay-1s homepageTitle"
+                className="animate__animated animate__fadeInLeft animate__delay-0s homepageTitle"
                 style={{ textDecoration: "none" }}
               >
                 &lt; Hi! I am Thomas,
               </h1>
               <h1
-                className="animate__animated animate__fadeInLeft animate__delay-2s homepageTitle bluetext"
+                className="animate__animated animate__fadeInLeft animate__delay-1s homepageTitle bluetext"
                 style={{ textDecoration: "none" }}
               >
                 Web Developer /&gt;

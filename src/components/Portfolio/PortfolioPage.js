@@ -23,16 +23,17 @@ function PortfolioPage() {
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
-    // {
-    //   id: 6,
-    //   capture1: require("./kingpad.png"),
-    //   name: "Kingpad landing page",
-    //   description:
-    //     "A  complex, fully responsive landing page I build for a crypto startup pixel-perfectly duplicating a Figma design",
-    //   stack: "Next.JS, Tailwind CSS, Typescript, Material UI",
-    //   linkRepo: "https://github.com/thomasaugot/kp-next.js",
-    //   linkDemo: "https://kingpad.finance/",
-    // },
+    {
+      id: 6,
+      capture1: require("./kingpad.png"),
+      name: "Kingpad",
+      description:
+        "A  complex, fully responsive landing page I build for a crypto startup pixel-perfectly duplicating a Figma design",
+      stack:
+        "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
+      linkRepo: "https://github.com/thomasaugot/kp-next.js",
+      linkDemo: "https://kingpad.finance/",
+    },
     {
       id: 4,
       capture1: require("./farmhouse (2).png"),
@@ -147,7 +148,7 @@ function PortfolioPage() {
                             href={project.linkRepo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="blueBtn "
+                            className="blueBtn "
                           >
                             View Code
                           </a>
@@ -155,7 +156,7 @@ function PortfolioPage() {
                             href={project.linkDemo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="whiteBtn"
+                            className="whiteBtn"
                           >
                             Visit page
                           </a>
@@ -174,7 +175,7 @@ function PortfolioPage() {
             ) : (
               <Swiper
                 effect={"coverflow"}
-                initialSlide={2}
+                initialSlide={1}
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={slidesPerView}
@@ -185,7 +186,7 @@ function PortfolioPage() {
                   modifier: 1,
                   slideShadows: true,
                 }}
-                navigation={true} // add this prop
+                navigation={true}
                 pagination={{ clickable: true }}
                 modules={[EffectCoverflow, Pagination]}
                 className="mySwiper"
