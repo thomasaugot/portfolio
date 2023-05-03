@@ -1,5 +1,5 @@
 import "animate.css";
-import { Fade } from "react-awesome-reveal";
+import { Fade, JackInTheBox } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 import "./HomePage.scss";
 import { useEffect, useState } from "react";
@@ -16,6 +16,7 @@ function HomePage() {
       setIsVisible(true);
     }
   }, [inView]);
+
   return (
     <div className="Homepage" id="HomePage" ref={ref}>
       {isVisible && (
@@ -36,9 +37,11 @@ function HomePage() {
                 Web Developer /&gt;
               </h1>
             </div>
-            <p className="homepageP">
-              I bring your project to life using the latest development technologies
-            </p>
+            <JackInTheBox delay={1500}>
+              <p className="homepageP">
+                I bring your project to life using the latest development technologies
+              </p>
+            </JackInTheBox>
             <br></br>
           </div>
           <a href="#AboutPage" className="linkAbout">
