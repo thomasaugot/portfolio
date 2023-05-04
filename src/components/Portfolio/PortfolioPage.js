@@ -28,7 +28,7 @@ function PortfolioPage() {
       capture1: require("./kingpad.png"),
       name: "Kingpad",
       description:
-        "A  complex, fully responsive landing page I build for a crypto startup pixel-perfectly duplicating a Figma design",
+        "A  complex, fully responsive landing page I build in collaboration with a team of designers & developers for a crypto startup, pixel-perfectly duplicating a Figma design",
       stack:
         "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
