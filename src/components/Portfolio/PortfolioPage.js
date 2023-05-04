@@ -32,7 +32,7 @@ function PortfolioPage() {
       stack:
         "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
-      linkDemo: "https://kingpad.finance/",
+      linkDemo: "https://kingpad-v1-1-new-figma.vercel.app/",
     },
     {
       id: 4,
