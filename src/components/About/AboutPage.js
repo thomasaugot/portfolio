@@ -2,16 +2,32 @@ import React from "react";
 import { Slide } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 import profileImage from "./profile.png";
+import { useEffect, useState } from "react";
 import "./AboutPage.scss";
 
 function AboutPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.8,
+    threshold: 0.6,
   });
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Check initial viewport width
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className={`AboutPage ${inView ? "visible" : ""}`} ref={ref} id="AboutPage">
+    <div className={`AboutPage ${isDesktop && inView ? "visible" : ""}`} ref={ref} id="AboutPage">
       <Slide direction="down" triggerOnce={true} fraction={1} delay={100}>
         <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </Slide>

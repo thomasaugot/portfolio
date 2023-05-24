@@ -12,7 +12,6 @@
 }
 
 .AboutPage {
-  opacity: 0;
   p {
     font-size: $font-size-sm;
     margin: 1vh;
@@ -22,10 +21,6 @@
     font-family: $caveat-font;
     margin-top: 1.2vh;
   }
-}
-
-.AboutPage.visible {
-  opacity: 1;
 }
 
 .profilePicture {
@@ -57,6 +52,11 @@
 @media only screen and (min-width: 992px) {
   .AboutPage {
     padding: 5% 10%;
+    opacity: 0;
+  }
+
+  .AboutPage.visible {
+    opacity: 1;
   }
 
   .profilePicture {

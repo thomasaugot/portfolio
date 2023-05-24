@@ -14,7 +14,8 @@ function ContactPage() {
 
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.8,
+    triggerOnce: true,
+    threshold: 0.7,
   });
 
   useEffect(() => {
