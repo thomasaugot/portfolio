@@ -223,7 +223,7 @@ function CurriculumPage() {
             </a>
             <br></br>
             <a
-              href="https://drive.google.com/file/d/199gtfp4kk0LhrljUxYupEBD1BibBfoBd/view?usp=share_link"
+              href="https://drive.google.com/file/d/112Q93ZQRS83YXY9S3jy6L0ksDfZV7WoL/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
