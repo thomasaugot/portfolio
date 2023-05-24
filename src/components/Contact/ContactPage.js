@@ -14,7 +14,7 @@ function ContactPage() {
 
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.8,
   });
 
   useEffect(() => {
@@ -109,7 +109,7 @@ function ContactPage() {
             <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
 
-            <div className="logo-container">
+            <div className={`logo-container ${inView ? "visible" : ""}`}>
               <Roll direction="left" className="roll" fraction={1} triggerOnce={true} delay={500}>
                 <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
                   <IconContext.Provider

@@ -3,7 +3,6 @@
 .ContactPage {
   @include bootstrapScroll();
   padding: 20% 10% 8% 10%;
-  opacity: 0.9;
   padding: 10%;
   color: $text2;
   height: fit-content;
@@ -34,9 +33,14 @@ label {
 }
 
 .logo-container {
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo-container.visible {
+  opacity: 1;
 }
 
 .linkedInLogo {
