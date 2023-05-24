@@ -8,14 +8,14 @@ import "./AboutPage.scss";
 function AboutPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: 0.5,
   });
 
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024); // Adjust the breakpoint as needed
+      setIsDesktop(window.innerWidth >= 1024);
     };
 
     handleResize(); // Check initial viewport width
