@@ -197,6 +197,17 @@ function CurriculumPage() {
                 </div>
                 <div className="subtitle">Gitlab</div>
               </div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src={require("./jest.png")}
+                    alt="Jest Testing"
+                    title="Jest Testing"
+                  />
+                </div>
+                <div className="subtitle">Jest</div>
+              </div>
             </Marquee>
           </div>
 
