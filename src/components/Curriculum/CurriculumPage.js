@@ -197,7 +197,7 @@ function CurriculumPage() {
                 </div>
                 <div className="subtitle">Gitlab</div>
               </div>
-              <div className="marquee-item">
+              {/* <div className="marquee-item">
                 <div className="img-container">
                   <img
                     height="70"
@@ -207,7 +207,7 @@ function CurriculumPage() {
                   />
                 </div>
                 <div className="subtitle">Jest</div>
-              </div>
+              </div> */}
             </Marquee>
           </div>
 
