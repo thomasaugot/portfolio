@@ -19,16 +19,27 @@ function PortfolioPage() {
       description:
         "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
       stack:
-        "React, SCSS/SASS, Typescript. The app offers a dark/light mode switch. I am currently developing the backend to enable account creation & save collections of todos.",
+        "React, SCSS, Typescript. The app offers a dark/light mode switch. I am planning to develop the backend to enable account creation & save collections of todos.",
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
+    },
+    {
+      id: 7,
+      capture1: require("./eurafrique.png"),
+      name: "Eurafrique",
+      description:
+        "A fully responsive, multilingual website (French, English, Spanish and Arabic) I am developing for the association Eurafrique.eu. I am also taking part in the designing process. ",
+      stack:
+        "React, react-router, SCSS, i18next (for the multilingual functionality), useContext (for State management) & Cpanel (for the hosting). The server is still under planning.",
+      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
+      linkDemo: "https://eurafrique.netlify.app/",
     },
     {
       id: 6,
       capture1: require("./kingpad.png"),
       name: "Kingpad",
       description:
-        "A  complex, fully responsive landing page I build in collaboration with a team of designers & developers for a crypto startup, pixel-perfectly duplicating a Figma design",
+        "A  complex, fully responsive landing page I built in collaboration with a team of designers & developers for a crypto startup, pixel-perfectly duplicating a Figma design",
       stack:
         "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
@@ -40,7 +51,7 @@ function PortfolioPage() {
       name: "Farmhouse Table",
       description: "A restaurant website integrating Google Maps API and a reservation form",
       stack:
-        "React, SCSS/SASS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
+        "React, SCSS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
