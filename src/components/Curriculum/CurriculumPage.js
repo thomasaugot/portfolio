@@ -208,6 +208,17 @@ function CurriculumPage() {
                 </div>
                 <div className="subtitle">Jest</div>
               </div> */}
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src={require("./react-native.png")}
+                    alt="React Native"
+                    title="React Native"
+                  />
+                </div>
+                <div className="subtitle">React Native</div>
+              </div>
             </Marquee>
           </div>
 

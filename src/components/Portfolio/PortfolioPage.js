@@ -13,15 +13,14 @@ import "./PortfolioPage.scss";
 function PortfolioPage() {
   const projects = [
     {
-      id: 5,
-      capture1: require("./mobile-overlay.png"),
-      name: "Todayzzz Todos",
+      id: 8,
+      capture1: require("./cheftom.png"),
+      name: "Chef Tom",
       description:
-        "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
-      stack:
-        "React, SCSS, Typescript. The app offers a dark/light mode switch. I am planning to develop the backend to enable account creation & save collections of todos.",
-      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
-      linkDemo: "https://todayzzz-todos.netlify.app/",
+        "Beside coding, I love cooking. So I built my own first Native app where I can keep my best recipes! Introducing: Tom Chef",
+      stack: "React-Native, useContext for State management",
+      linkRepo: "https://github.com/thomasaugot/recipes-react-native",
+      linkDemo: "https://github.com/thomasaugot/recipes-react-native",
     },
     {
       id: 7,
@@ -54,6 +53,17 @@ function PortfolioPage() {
         "React, SCSS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
+    },
+    {
+      id: 5,
+      capture1: require("./mobile-overlay.png"),
+      name: "Todayzzz Todos",
+      description:
+        "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
+      stack:
+        "React, SCSS, Typescript. The app offers a dark/light mode switch. I am planning to develop the backend to enable account creation & save collections of todos.",
+      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
+      linkDemo: "https://todayzzz-todos.netlify.app/",
     },
     {
       id: 1,
