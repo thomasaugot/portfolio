@@ -17,7 +17,7 @@ function PortfolioPage() {
       capture1: require("./cheftom.png"),
       name: "Chef Tom",
       description:
-        "Beside coding, I love cooking. So I built my own first Native app where I can keep my best recipes! Introducing: Tom Chef",
+        "Beside coding, I love cooking. So I built my own first Native app where I can keep my best recipes!",
       stack: "React-Native, useContext for State management",
       linkRepo: "https://github.com/thomasaugot/recipes-react-native",
       linkDemo: "https://github.com/thomasaugot/recipes-react-native",
