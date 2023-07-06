@@ -27,9 +27,9 @@ function PortfolioPage() {
       capture1: require("./eurafrique.png"),
       name: "Eurafrique",
       description:
-        "A fully responsive, multilingual website (French, English, Spanish and Arabic) I am developing for the association Eurafrique.eu. I am also taking part in the designing process. ",
+        "A fully responsive, multilingual website (French, English, Spanish and Arabic) I am developing for the association Eurafrique.eu.",
       stack:
-        "React, react-router, SCSS, i18next (for the multilingual functionality), useContext (for State management) & Cpanel (for the hosting). The server is still under planning.",
+        "React, react-router, SCSS, i18next (for the multilingual functionality), useContext (for State management) & Cpanel (for the hosting). The backend is built using Supabase (Backend as a Service / BaaS)",
       linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
       linkDemo: "https://eurafrique.netlify.app/",
     },
@@ -56,12 +56,12 @@ function PortfolioPage() {
     },
     {
       id: 5,
-      capture1: require("./mobile-overlay.png"),
+      capture1: require("./todos.png"),
       name: "Todayzzz Todos",
       description:
-        "!!UNDER CONSTRUCTION!! A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
+        "A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
       stack:
-        "React, SCSS, Typescript. The app offers a dark/light mode switch. I am planning to develop the backend to enable account creation & save collections of todos.",
+        "React, SCSS, Typescript. I wanted to challenge myself with the drag & drop feature and got it working! The app offers a dark/light mode switch.",
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
