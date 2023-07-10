@@ -3,7 +3,6 @@ import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
-import { SiUpwork } from "react-icons/si";
 import { IconContext } from "react-icons";
 import { Roll } from "react-awesome-reveal";
 import "./ContactPage.scss";
