@@ -34,7 +34,7 @@ function HomePage() {
                 className="animate__animated animate__fadeInRight animate__delay-1s homepageTitle bluetext"
                 style={{ textDecoration: "none" }}
               >
-                Web Developer /&gt;
+                Full-Stack Developer /&gt;
               </h1>
             </div>
             <Fade>

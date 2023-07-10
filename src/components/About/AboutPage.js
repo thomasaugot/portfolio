@@ -35,10 +35,10 @@ function AboutPage() {
       <div className="about__content">
         <Slide direction="down" triggerOnce={true} fraction={1}>
           <p>
-            I am a French web developer with a specialization in React, currently based on the
-            beautiful island of Fuerteventura, where the summer never ends. After 10 years of
-            travelling around the world, I found myself a passion for coding and after losing my old
-            job I decided to enroll in a web development Bootcamp.
+            I am a French Full-Stack developer with a specialization in React.js, currently based on
+            the beautiful island of Fuerteventura. After 10 years of travelling around the world, I
+            found myself a passion for coding and after losing my old job I decided to enroll in a
+            web development bootcamp at Ironhack.
             <br />
             <br />
             Although I spent most of my professional career in the hospitality industry, which
@@ -46,17 +46,18 @@ function AboutPage() {
             opportunity to travel and gain new experiences, I had always dreamed of a more flexible
             career in which I could think creatively and learn new things every day. With everything
             moving towards the digital world, I believe that I can make a meaningful contribution to
-            help businesses increase their online presence and visibility.
+            help people and businesses increase their online presence and visibility.
             <br />
             <br />
-            With experience in both front- and backend development, I have found myself particularly
-            interested in design and user experience. I enjoy browsing libraries, keeping up with
-            web design trends, and searching for creative ways of solving complex challenges through
-            my code.
+            With experience in both front- and back-end development, I have found myself
+            particularly interested in design and user experience. I enjoy browsing libraries,
+            keeping up with web design trends, and searching for creative ways of solving complex
+            challenges through my code. Eager to become a front-end wizard one day, I also recently
+            started using serverless technologies so I can focus on what I call "the fun part".
             <br />
             <br />
-            To explore a bit more, I also started learning and building native apps, see my work
-            below!
+            To explore a bit more, I also learned and started building native mobile apps using
+            React Native CLI & Expo, see my work below!
           </p>
         </Slide>
         <Slide direction="up" triggerOnce={true} fraction={1}>

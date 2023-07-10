@@ -236,25 +236,55 @@ function CurriculumPage() {
           <br></br>
           <br></br>
           <br></br>
+          <br></br>
+          <br></br>
 
           <h1>Certifications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-          <h2>Ironhack</h2>
-          <p>
-            9-week web development Bootcamp, during which I was taught the following technologies:
-            <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
-            <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version control:
-            Git/ Github
-          </p>
-          <br></br>
-          <div className="curriculum__buttons">
-            <a
-              href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <button className="whiteBtn">Show credential</button>
-            </a>
+          <div className="certifications-container">
+            <div className="certification-item">
+              <h2>Full-Stack Web Development, MERN - Ironhack</h2>
+              <p>
+                9-week web development bootcamp, during which I was taught the following
+                technologies:
+                <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
+                <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version
+                control: Git/ Github
+              </p>
+              <br></br>
+              <div className="curriculum__buttons">
+                <a
+                  href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <button className="whiteBtn">Show credential</button>
+                </a>
+              </div>
+              <br></br>
+            </div>
             <br></br>
+            <div>
+              <h2>React Native Development - Udemy</h2>
+              <p>
+                28-hour course covering mobile apps development using :<br></br>- React Native CLI{" "}
+                <br></br>- Expo
+                <br></br>- Android & iOS specifics
+                <br></br>- SQLite
+              </p>
+              <br></br>
+              <div className="curriculum__buttons">
+                <a
+                  href="https://www.udemy.com/certificate/UC-19a32e00-feb2-4ccf-b645-e68d820d637d/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <button className="whiteBtn">Show credential</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <br></br>
+          {/* <div className="resume-container">
             <a
               href="https://drive.google.com/file/d/112Q93ZQRS83YXY9S3jy6L0ksDfZV7WoL/view?usp=sharing"
               target="_blank"
@@ -262,7 +292,7 @@ function CurriculumPage() {
             >
               <button className="blueBtn">View my resume</button>
             </a>
-          </div>
+          </div> */}
         </>
       )}
     </div>

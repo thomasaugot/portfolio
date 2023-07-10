@@ -62,6 +62,21 @@
   padding-top: 50px;
 }
 
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.certification-item {
+  width: 100%;
+}
+
+.resume-container {
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+}
+
 /* Medium devices (Tablets, between 600px and 992px) */
 @media only screen and (min-width: 600px) {
   .CurriculumPage {
@@ -92,7 +107,16 @@
   }
 
   .curriculum__buttons {
-    display: flex;
     align-items: center;
+  }
+
+  .certifications-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .certification-item {
+    width: 50%;
   }
 }
