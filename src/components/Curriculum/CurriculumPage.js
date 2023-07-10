@@ -223,6 +223,18 @@ function CurriculumPage() {
                 <div className="img-container">
                   <img
                     height="70"
+                    src={require("./expo.png")}
+                    alt="Expo"
+                    title="Expo"
+                    style={{ borderRadius: 20 }}
+                  />
+                </div>
+                <div className="subtitle">Expo</div>
+              </div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
                     src={require("./supabase.png")}
                     alt="BaaS with Supabase"
                     title="BaaS with Supabase"
