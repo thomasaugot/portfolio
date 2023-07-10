@@ -17,6 +17,7 @@ body {
 .App {
   -webkit-animation: color-change-2x 6s linear infinite alternate both;
   animation: color-change-2x 6s linear infinite alternate both;
+  overflow-x: hidden;
 }
 
 @-webkit-keyframes color-change-2x {
@@ -42,6 +43,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: hidden;
   .intro {
     font-size: 38px;
     text-align: center;

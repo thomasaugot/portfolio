@@ -4,7 +4,7 @@
 .Homepage {
   @include bootstrapScroll();
   padding: 20% 10% 8% 10%;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -19,6 +19,7 @@
   font-size: 3em;
   width: 80vw;
   font-weight: bolder;
+  overflow: hidden;
 }
 
 .bluetext {
