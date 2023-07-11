@@ -61,7 +61,7 @@ function PortfolioPage() {
       description:
         "A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
       stack:
-        "React, SCSS, Typescript. I wanted to challenge myself with the drag & drop feature and got it working! The app offers a dark/light mode switch.",
+        "React, SCSS, Typescript. I wanted to challenge myself with the drag & drop feature and got it working! The app offers a dark/light mode switch. I also created a BaaS (Backend as a Service) server on Supabase, the app is now interacting with an API",
       linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
