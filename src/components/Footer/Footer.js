@@ -33,9 +33,8 @@ function Footer() {
           <br></br>
 
           <p style={{ textAlign: "center", color: "white" }}>
-            Copyright © 2023 <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>.
+            2023 © <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>.
           </p>
-
           <br></br>
         </Fade>
       )}

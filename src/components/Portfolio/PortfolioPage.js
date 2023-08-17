@@ -18,9 +18,20 @@ function PortfolioPage() {
       name: "Chef Tom",
       description:
         "Beside coding, I love cooking. So I built my own first Native app where I can keep my best recipes!",
-      stack: "React-Native, useContext for State management",
+      stack:
+        "React-Native, useContext for State management. Since I built this app to practice mobile development only, it isn't published",
       linkRepo: "https://github.com/thomasaugot/recipes-react-native",
-      linkDemo: "https://github.com/thomasaugot/recipes-react-native",
+    },
+    {
+      id: 6,
+      capture1: require("./kingpad.png"),
+      name: "Kingpad",
+      description:
+        "A fully responsive landing-page I built for Kingworld Finance, collaborating with a team of designers & developers, pixel-perfectly duplicating a Figma design",
+      stack:
+        "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
+      linkRepo: "https://github.com/thomasaugot/kp-next.js",
+      linkDemo: "https://kingpad-v1-1-new-figma.vercel.app/",
     },
     {
       id: 7,
@@ -32,17 +43,6 @@ function PortfolioPage() {
         "React, react-router, SCSS, i18next (for the multilingual functionality), useContext (for State management) & Cpanel (for the hosting). The backend is built using Supabase (Backend as a Service / BaaS)",
       linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
       linkDemo: "https://eurafrique.netlify.app/",
-    },
-    {
-      id: 6,
-      capture1: require("./kingpad.png"),
-      name: "Kingpad",
-      description:
-        "A  complex, fully responsive landing page I built in collaboration with a team of designers & developers for a crypto startup, pixel-perfectly duplicating a Figma design",
-      stack:
-        "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
-      linkRepo: "https://github.com/thomasaugot/kp-next.js",
-      linkDemo: "https://kingpad-v1-1-new-figma.vercel.app/",
     },
     {
       id: 4,
@@ -173,16 +173,17 @@ function PortfolioPage() {
                           >
                             View Code
                           </a>
-                          <a
-                            href={project.linkDemo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="whiteBtn"
-                          >
-                            Visit page
-                          </a>
+                          {project.id !== 8 && (
+                            <a
+                              href={project.linkDemo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="whiteBtn"
+                            >
+                              Visit page
+                            </a>
+                          )}
                         </div>
-
                         <h4>back</h4>
                         <div className="page__dots">
                           <TbPoint />
@@ -240,9 +241,16 @@ function PortfolioPage() {
                             <a href={project.linkRepo} class="blueBtn">
                               View Code
                             </a>
-                            <a href={project.linkDemo} class="whiteBtn">
-                              Visit page
-                            </a>
+                            {project.id !== 8 && (
+                              <a
+                                href={project.linkDemo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="whiteBtn"
+                              >
+                                Visit page
+                              </a>
+                            )}
                           </div>
 
                           <h4>back</h4>

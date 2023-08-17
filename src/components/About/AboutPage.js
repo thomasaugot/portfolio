@@ -8,7 +8,7 @@ import "./AboutPage.scss";
 function AboutPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.7,
   });
 
   const [isDesktop, setIsDesktop] = useState(false);
@@ -37,8 +37,8 @@ function AboutPage() {
           <p>
             I am a French Full-Stack developer with a specialization in React.js, currently based on
             the beautiful island of Fuerteventura. After 10 years of travelling around the world, I
-            found myself a passion for coding and after losing my old job I decided to enroll in a
-            web development bootcamp at Ironhack.
+            found myself a passion for coding so I decided to enroll in a web development bootcamp
+            at Ironhack.
             <br />
             <br />
             Although I spent most of my professional career in the hospitality industry, which
@@ -56,8 +56,8 @@ function AboutPage() {
             started using serverless technologies so I can focus on what I call "the fun part".
             <br />
             <br />
-            To explore a bit more, I also learned and started building native mobile apps using
-            React Native CLI & Expo, see my work below!
+            Recently, I also started learning and building native mobile apps using React Native CLI
+            & Expo.
           </p>
         </Slide>
         <Slide direction="up" triggerOnce={true} fraction={1}>
