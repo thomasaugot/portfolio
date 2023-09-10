@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import "./HomePage.scss";
 import { useEffect, useState } from "react";
 import HeaderBG from "../HeaderBG/HeaderBG";
+import { useTranslation } from "react-i18next";
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,6 +18,8 @@ function HomePage() {
     }
   }, [inView]);
 
+  const { t } = useTranslation();
+
   return (
     <div className="Homepage" id="HomePage" ref={ref}>
       {isVisible && (
@@ -28,18 +31,18 @@ function HomePage() {
                 className="animate__animated animate__fadeInLeft animate__delay-0s homepageTitle"
                 style={{ textDecoration: "none" }}
               >
-                &lt; Hi! I am Thomas,
+                &lt; {t("Hi! I am Thomas,")}
               </h1>
               <h1
                 className="animate__animated animate__fadeInRight animate__delay-1s homepageTitle bluetext"
                 style={{ textDecoration: "none" }}
               >
-                Full-Stack Developer /&gt;
+                {t("Full-Stack Developer")} /&gt;
               </h1>
             </div>
             <Fade>
               <p className="animate__animated animate__fadeInLeft animate__delay-2s homepageP">
-                I bring your project to life using the latest development technologies
+                {t("I bring your project to life using the latest development technologies")}
               </p>
             </Fade>
             <br></br>
