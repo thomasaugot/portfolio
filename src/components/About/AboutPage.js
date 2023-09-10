@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import profileImage from "./profile.png";
 import { useEffect, useState } from "react";
 import "./AboutPage.scss";
+import { useTranslation } from "react-i18next";
 
 function AboutPage() {
   const [ref, inView] = useInView({
@@ -12,6 +13,8 @@ function AboutPage() {
   });
 
   const [isDesktop, setIsDesktop] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +32,7 @@ function AboutPage() {
   return (
     <div className={`AboutPage ${isDesktop && inView ? "visible" : ""}`} ref={ref} id="AboutPage">
       <Slide direction="down" triggerOnce={true} fraction={1} delay={100}>
-        <h1 style={{ marginTop: "2vh" }}>About me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h1 style={{ marginTop: "2vh" }}>{t("About me")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </Slide>
       <br />
       <div className="about__content">

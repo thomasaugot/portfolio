@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { MdMenu, MdClose } from "react-icons/md";
+import LanguagesMenu from "../LanguagesMenu/LanguagesMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,9 @@ const Header = () => {
               <a className={styles.nav__item} href="#ContactPage">
                 Contact
               </a>
+              <div className={`${styles.nav__item} no-hover-effect`}>
+                <LanguagesMenu />
+              </div>
             </nav>
           </div>
         </div>

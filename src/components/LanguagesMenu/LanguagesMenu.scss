@@ -1,0 +1,62 @@
+// LanguagesMenu.scss
+.languages-menu {
+  position: relative;
+  display: inline-block;
+  margin-top: -3px;
+
+  .flag-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 40px;
+    padding: 0;
+    .item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .active-flag {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .flag-button img {
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .flag-button p {
+    color: white;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: -25%;
+    z-index: 1;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu button {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .dropdown-menu button:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
