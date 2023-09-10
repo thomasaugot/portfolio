@@ -3,6 +3,7 @@ import "./Footer.scss";
 import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
 import BGAnimation from "../FooterBG/FooterBG";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +16,9 @@ function Footer() {
       setIsVisible(true);
     }
   }, [inView]);
+
+  const { t } = useTranslation();
+
   return (
     <div className="Footer" ref={ref}>
       {isVisible && (
@@ -28,7 +32,7 @@ function Footer() {
               <div class="chevron"></div>
               <div class="chevron"></div>
             </div>
-            <p style={{ textAlign: "center" }}>Back to Top</p>
+            <p style={{ textAlign: "center" }}>{t("Back to Top")}</p>
           </a>
           <br></br>
 

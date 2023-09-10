@@ -5,6 +5,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
 import { IconContext } from "react-icons";
 import { Roll } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 import "./ContactPage.scss";
 
 function ContactPage() {
@@ -16,6 +17,8 @@ function ContactPage() {
     triggerOnce: true,
     threshold: 0.9,
   });
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (inView) {
@@ -59,10 +62,10 @@ function ContactPage() {
       {isVisible && (
         <>
           <div>
-            <h1>Contact me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            <h1>{t("Contact me")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
             <form onSubmit={sendEmail} className="contactForm">
-              <label for="name">Name</label>
+              <label for="name">{t("Name")}</label>
               <input
                 className="inputForm"
                 id="name"
@@ -71,7 +74,7 @@ function ContactPage() {
                 placeholder="Your name"
                 required
               />
-              <label for="email">Email</label>
+              <label for="email">{t("Email")}</label>
               <input
                 className="inputForm"
                 id="email"
@@ -80,7 +83,7 @@ function ContactPage() {
                 placeholder="Your email"
                 required
               />
-              <label for="message">Message</label>
+              <label for="message">{t("Message")}</label>
               <textarea
                 className="inputForm"
                 id="message"
@@ -95,7 +98,7 @@ function ContactPage() {
                   className="blueBtn contactFormBtn"
                   style={{ textAlign: "center", margin: "30px 0", padding: "5px 30px" }}
                 >
-                  Send
+                  {t("Send")}
                 </button>
                 <br />
                 {isSubmitting ? "Sending message..." : ""}
@@ -106,7 +109,7 @@ function ContactPage() {
             </form>
           </div>
           <div className="letsConnect">
-            <h1>Let's connect!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            <h1>{t("Let's connect!")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <br></br>
 
             <div className={`logo-container ${inView ? "visible" : ""}`}>

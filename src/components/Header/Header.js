@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { MdMenu, MdClose } from "react-icons/md";
 import LanguagesMenu from "../LanguagesMenu/LanguagesMenu";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuToggler = () => setMenuOpen((p) => !p);
+  const { t } = useTranslation();
 
   return (
     <div className={styles.header}>
@@ -21,16 +23,16 @@ const Header = () => {
           >
             <nav className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}>
               <a className={styles.nav__item} href="#AboutPage">
-                About
+                {t("About")}
               </a>
               <a className={styles.nav__item} href="#CurriculumPage">
-                Curriculum
+                {t("Curriculum")}
               </a>
               <a className={styles.nav__item} href="#PortfolioPage">
-                Projects
+                {t("Projects")}
               </a>
               <a className={styles.nav__item} href="#ContactPage">
-                Contact
+                {t("Contact")}
               </a>
               <div className={`${styles.nav__item} no-hover-effect`}>
                 <LanguagesMenu />

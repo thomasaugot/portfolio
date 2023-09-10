@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./CurriculumPage.scss";
 import { useInView } from "react-intersection-observer";
 import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
 
 function CurriculumPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,11 +16,13 @@ function CurriculumPage() {
     }
   }, [inView]);
 
+  const { t } = useTranslation();
+
   return (
     <div className="CurriculumPage" id="CurriculumPage" ref={ref}>
       {isVisible && (
         <>
-          <h1>I build with...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <h1>{t("I build with...")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <div
             className="stack"
             style={{
@@ -263,16 +266,17 @@ function CurriculumPage() {
           <br></br>
           <br></br>
 
-          <h1>Certifications&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <h1>{t("Certifications")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <div className="certifications-container">
             <div className="certification-item">
-              <h2>Full-Stack Web Development, MERN - Ironhack</h2>
+              <h2>{t("Full-Stack Web Development, MERN - Ironhack")}</h2>
               <p>
-                9-week web development bootcamp, during which I was taught the following
-                technologies:
+                {t(
+                  "9-week web development bootcamp, during which I was taught the following technologies:"
+                )}
                 <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
-                <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>- Version
-                control: Git/ Github
+                <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>-{" "}
+                {t("Version control")}: Git/ Github
               </p>
               <br></br>
               <div className="curriculum__buttons">
@@ -281,17 +285,17 @@ function CurriculumPage() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <button className="whiteBtn">Show credential</button>
+                  <button className="whiteBtn">{t("Show credential")}</button>
                 </a>
               </div>
               <br></br>
             </div>
             <br></br>
             <div>
-              <h2>React Native Development - Udemy</h2>
+              <h2>{t("React Native Development - Udemy")}</h2>
               <p>
-                28-hour course covering mobile apps development using :<br></br>- React Native CLI{" "}
-                <br></br>- Expo
+                {t("28-hour course covering mobile apps development using :")}
+                <br></br>- React Native CLI <br></br>- Expo
                 <br></br>- Android & iOS specifics
                 <br></br>- SQLite
               </p>
@@ -302,7 +306,7 @@ function CurriculumPage() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <button className="whiteBtn">Show credential</button>
+                  <button className="whiteBtn">{t("Show credential")}</button>
                 </a>
               </div>
             </div>

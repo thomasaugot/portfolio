@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
-
+import { useTranslation } from "react-i18next";
 import "./PortfolioPage.scss";
 
 function PortfolioPage() {
@@ -103,6 +103,8 @@ function PortfolioPage() {
     threshold: 0.2,
   });
 
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (inView) {
       setIsVisible(true);
@@ -138,7 +140,7 @@ function PortfolioPage() {
     <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
       {isVisible && (
         <>
-          <h1>My projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <h1>{t("My projects")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
           <br></br>
           <div className="portfolioContent">
             {isMobile ? (
@@ -155,7 +157,7 @@ function PortfolioPage() {
                         <img src={project.capture1} alt="project" />
                         <h1 className="card-title">{project.name}</h1>
                         <p>{project.description}</p>
-                        <h4>more details</h4>
+                        <h4>{t("More details")}</h4>
                         <div className="page__dots">
                           <TbPointFilled />
                           <TbPoint />
@@ -171,7 +173,7 @@ function PortfolioPage() {
                             rel="noopener noreferrer"
                             className="blueBtn "
                           >
-                            View Code
+                            {t("View Code")}
                           </a>
                           {project.id !== 8 && (
                             <a
