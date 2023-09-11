@@ -28,7 +28,48 @@
   "Message": "Mensaje",
   "Send": "Enviar",
   "Let's connect!": "¡Sígueme!",
-  "Back to Top": "Inicio"
-
-
+  "Back to Top": "Inicio",
+  "back": "volver",
+  "projects": [
+    {
+      "name": "Chef Tom",
+      "description": "Además de la programación, me encanta cocinar. Así que construí mi propia primera aplicación nativa donde puedo guardar mis mejores recetas.",
+      "stack": "React-Native, useContext para la gestión del estado. Dado que construí esta aplicación solo para practicar el desarrollo móvil, no está publicada"
+    },
+    {
+      "name": "Kingpad",
+      "description": "Una página web completamente receptiva que construí para Kingworld Finance, colaborando con un equipo de diseñadores y desarrolladores, duplicando perfectamente un diseño de Figma.",
+      "stack": "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. La aplicación es completamente receptiva siguiendo la metodología móvil primero."
+    },
+    {
+      "name": "Eurafrique",
+      "description": "Un sitio web completamente receptivo y multilingüe (francés, inglés, español y árabe) que estoy desarrollando para la asociación Eurafrique.eu.",
+      "stack": "React, react-router, SCSS, i18next (para la funcionalidad multilingüe), useContext (para la gestión del estado) y Cpanel (para el alojamiento). El backend está construido con Supabase (Backend as a Service / BaaS)"
+    },
+    {
+      "name": "Farmhouse Table",
+      "description": "Un sitio web de restaurante que integra la API de Google Maps y un formulario de reserva.",
+      "stack": "React, SCSS, Typescript, Bootstrap, integración de API externa, diseños receptivos"
+    },
+    {
+      "name": "Todayzzz Todos",
+      "description": "Una aplicación de tareas simple con 'drag & drop' para organizar sus tareas diarias que construí para practicar Typescript y agregar algunas bibliotecas de React interesantes.",
+      "stack": "React, SCSS, Typescript. Quería desafiarme a mí mismo con la función de 'drag & drop', ¡y lo logré! La aplicación ofrece un interruptor de modo oscuro/claro. También creé un servidor Backend as a Service (BaaS) en Supabase, y ahora la aplicación interactúa con una API"
+    },
+    {
+      "name": "Partymates",
+      "description": "Una aplicación de redes sociales de tipo MERN que creé para conectar a las personas para que puedan viajar juntas a festivales. Los usuarios pueden crear una cuenta, guardar o suscribirse a eventos e interactuar con otros usuarios.",
+      "stack": "MongoDB, Express.js, React.js, Node.js, API REST (construida por mí), Postman. La aplicación es completamente receptiva, siguiendo la metodología móvil primero."
+    },
+    {
+      "name": "The Broke Globetrotter",
+      "description": "Una aplicación creada en colaboración, que recopila colecciones de cosas gratuitas para hacer en ciudades de todo el mundo, destacando tecnologías backend para viajeros con poco dinero (la historia de mi vida...!)",
+      "stack": "MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman"
+    },
+    {
+      "name": "Pickle Rick vs Rats - The Game",
+      "description": "Mi primer proyecto de codigo, un divertido juego de disparos en Javascript, ¡mata a las ratas!",
+      "stack": "HTML, CSS, Javascript. Dado que necesitas un teclado para los comandos, solo se puede jugar en computadoras."
+    }
+  ]
 }

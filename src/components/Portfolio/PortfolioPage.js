@@ -11,99 +11,10 @@ import { useTranslation } from "react-i18next";
 import "./PortfolioPage.scss";
 
 function PortfolioPage() {
-  const projects = [
-    {
-      id: 8,
-      capture1: require("./cheftom.png"),
-      name: "Chef Tom",
-      description:
-        "Beside coding, I love cooking. So I built my own first Native app where I can keep my best recipes!",
-      stack:
-        "React-Native, useContext for State management. Since I built this app to practice mobile development only, it isn't published",
-      linkRepo: "https://github.com/thomasaugot/recipes-react-native",
-    },
-    {
-      id: 6,
-      capture1: require("./kingpad.png"),
-      name: "Kingpad",
-      description:
-        "A fully responsive landing-page I built for Kingworld Finance, collaborating with a team of designers & developers, pixel-perfectly duplicating a Figma design",
-      stack:
-        "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. The app is fully responsive following the mobile-first workflow",
-      linkRepo: "https://github.com/thomasaugot/kp-next.js",
-      linkDemo: "https://kingpad-v1-1-new-figma.vercel.app/",
-    },
-    {
-      id: 7,
-      capture1: require("./eurafrique.png"),
-      name: "Eurafrique",
-      description:
-        "A fully responsive, multilingual website (French, English, Spanish and Arabic) I am developing for the association Eurafrique.eu.",
-      stack:
-        "React, react-router, SCSS, i18next (for the multilingual functionality), useContext (for State management) & Cpanel (for the hosting). The backend is built using Supabase (Backend as a Service / BaaS)",
-      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
-      linkDemo: "https://eurafrique.netlify.app/",
-    },
-    {
-      id: 4,
-      capture1: require("./farmhouse (2).png"),
-      name: "Farmhouse Table",
-      description: "A restaurant website integrating Google Maps API and a reservation form",
-      stack:
-        "React, SCSS, Typescript, Bootstrap, external API integration, responsive layouts. The app is fully responsive following the mobile-first workflow",
-      linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
-      linkDemo: "https://farmhouse-table.netlify.app/",
-    },
-    {
-      id: 5,
-      capture1: require("./todos.png"),
-      name: "Todayzzz Todos",
-      description:
-        "A simple drag & drop todo app to organize your daily tasks I built to practice Typescript, adding some cool React libraries",
-      stack:
-        "React, SCSS, Typescript. I wanted to challenge myself with the drag & drop feature and got it working! The app offers a dark/light mode switch. I also created a BaaS (Backend as a Service) server on Supabase, the app is now interacting with an API",
-      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
-      linkDemo: "https://todayzzz-todos.netlify.app/",
-    },
-    {
-      id: 1,
-      capture1: require("./partymates1.png"),
-      name: "Partymates",
-      description:
-        "A full-stack MERN sort of social media app I created to connect people so they can travel to festivals together. Users can create an account, save or subscribe to events and interact with other users",
-      stack:
-        "MongoDB, Express.js, React.js, Node.js, REST API (built by me), Postman. The app is fully responsive, following the mobile first workflow",
-      linkRepo: "https://github.com/thomasaugot/app-partymates-client",
-      linkDemo: "https://partymates.netlify.app/",
-    },
-    {
-      id: 2,
-      capture1: require("./responsive-BGtrotter.png"),
-      name: "The Broke Globetrotter",
-      description:
-        " An app created in pairs, gathering collections of free stuff to do in cities worldwide featuring back-end technologies, for broke travellers (story of my life..!)",
-      stack: "MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman",
-      linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
-      linkDemo: "https://the-broke-globetrotter.adaptable.app/",
-    },
-    {
-      id: 3,
-      capture1: require("./game-capture1.png"),
-      name: "Pickle Rick vs Rats - The Game",
-      description: "My first coding project, a cool Javascript shooting game, kill the angry rats!",
-      stack:
-        "HTML, CSS, Javascript. Since you need a keypad for the commands, it is only playable on desktop",
-      linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
-      linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
-    },
-  ];
-
-  const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
-
-  const { t } = useTranslation();
 
   useEffect(() => {
     if (inView) {
@@ -111,6 +22,7 @@ function PortfolioPage() {
     }
   }, [inView]);
 
+  const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
 
@@ -126,15 +38,89 @@ function PortfolioPage() {
     };
   }, []);
 
-  const handleCardClick = (index) => {
-    setActiveCardIndex(index === activeCardIndex ? null : index);
-  };
+  const projects = [
+    {
+      id: 8,
+      capture1: require("./cheftom.png"),
+      name: t("projects.0.name"),
+      description: t("projects.0.description"),
+      stack: t("projects.0.stack"),
+      linkRepo: "https://github.com/thomasaugot/recipes-react-native",
+    },
+    {
+      id: 6,
+      capture1: require("./kingpad.png"),
+      name: t("projects.1.name"),
+      description: t("projects.1.description"),
+      stack: t("projects.1.stack"),
+      linkRepo: "https://github.com/thomasaugot/kp-next.js",
+      linkDemo: "https://kingpad-v1-1-new-figma.vercel.app/",
+    },
+    {
+      id: 7,
+      capture1: require("./eurafrique.png"),
+      name: t("projects.2.name"),
+      description: t("projects.2.description"),
+      stack: t("projects.2.stack"),
+      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
+      linkDemo: "https://eurafrique.netlify.app/",
+    },
+    {
+      id: 4,
+      capture1: require("./farmhouse (2).png"),
+      name: t("projects.3.name"),
+      description: t("projects.3.description"),
+      stack: t("projects.3.stack"),
+      linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
+      linkDemo: "https://farmhouse-table.netlify.app/",
+    },
+    {
+      id: 5,
+      capture1: require("./todos.png"),
+      name: t("projects.4.name"),
+      description: t("projects.4.description"),
+      stack: t("projects.4.stack"),
+      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
+      linkDemo: "https://todayzzz-todos.netlify.app/",
+    },
+    {
+      id: 1,
+      capture1: require("./partymates1.png"),
+      name: t("projects.5.name"),
+      description: t("projects.5.description"),
+      stack: t("projects.5.stack"),
+      linkRepo: "https://github.com/thomasaugot/app-partymates-client",
+      linkDemo: "https://partymates.netlify.app/",
+    },
+    {
+      id: 2,
+      capture1: require("./responsive-BGtrotter.png"),
+      name: t("projects.6.name"),
+      description: t("projects.6.description"),
+      stack: t("projects.6.stack"),
+      linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
+      linkDemo: "https://the-broke-globetrotter.adaptable.app/",
+    },
+    {
+      id: 3,
+      capture1: require("./game-capture1.png"),
+      name: t("projects.7.name"),
+      description: t("projects.7.description"),
+      stack: t("projects.7.stack"),
+      linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
+      linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
+    },
+  ];
 
   const slidesPerView = isMobile
     ? 1
     : window.innerWidth >= 768 && window.innerWidth <= 1024
     ? 2
     : 3;
+
+  const handleCardClick = (index) => {
+    setActiveCardIndex(index === activeCardIndex ? null : index);
+  };
 
   return (
     <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
@@ -164,7 +150,7 @@ function PortfolioPage() {
                         </div>
                       </div>
                       <div className="card-back card" onClick={() => handleCardClick(index)}>
-                        <h2>Tech Stack:</h2>
+                        <h2>{t("Tech Stack")}:</h2>
                         {project.stack}
                         <div className="project__buttons">
                           <a
@@ -182,11 +168,11 @@ function PortfolioPage() {
                               rel="noopener noreferrer"
                               className="whiteBtn"
                             >
-                              Visit page
+                              {t("Visit page")}
                             </a>
                           )}
                         </div>
-                        <h4>back</h4>
+                        <h4>{t("back")}</h4>
                         <div className="page__dots">
                           <TbPoint />
                           <TbPointFilled />
@@ -230,18 +216,18 @@ function PortfolioPage() {
                           <img src={project.capture1} alt="project" />
                           <h1 className="card-title">{project.name}</h1>
                           <p>{project.description}</p>
-                          <h4>more details</h4>
+                          <h4>{t("More details")}</h4>
                           <div className="page__dots">
                             <TbPointFilled />
                             <TbPoint />
                           </div>
                         </div>
                         <div className="card-back card" onClick={() => handleCardClick(index)}>
-                          <h2>Tech Stack:</h2>
+                          <h2>{t("Tech Stack")}:</h2>
                           {project.stack}
                           <div className="project__buttons">
                             <a href={project.linkRepo} class="blueBtn">
-                              View Code
+                              {t("View Code")}
                             </a>
                             {project.id !== 8 && (
                               <a
@@ -250,12 +236,12 @@ function PortfolioPage() {
                                 rel="noopener noreferrer"
                                 className="whiteBtn"
                               >
-                                Visit page
+                                {t("Visit page")}
                               </a>
                             )}
                           </div>
 
-                          <h4>back</h4>
+                          <h4>{t("back")}</h4>
                           <div className="page__dots">
                             <TbPoint />
                             <TbPointFilled />
