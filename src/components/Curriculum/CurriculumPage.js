@@ -285,7 +285,7 @@ function CurriculumPage() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <button className="whiteBtn">{t("Show credential")}</button>
+                  <button className="blueBtn">{t("Show credential")}</button>
                 </a>
               </div>
               <br></br>
@@ -306,7 +306,7 @@ function CurriculumPage() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <button className="whiteBtn">{t("Show credential")}</button>
+                  <button className="blueBtn">{t("Show credential")}</button>
                 </a>
               </div>
             </div>
