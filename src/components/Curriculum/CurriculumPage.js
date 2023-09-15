@@ -238,6 +238,30 @@ function CurriculumPage() {
                 <div className="img-container">
                   <img
                     height="70"
+                    src={require("./Xcode_14_icon.png")}
+                    alt="Xcode"
+                    title="Xcode"
+                    style={{ borderRadius: 20 }}
+                  />
+                </div>
+                <div className="subtitle">Xcode</div>
+              </div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
+                    src={require("./new-studio-logo-1.png")}
+                    alt="Android Studio"
+                    title="Android Studio"
+                    style={{ borderRadius: 20 }}
+                  />
+                </div>
+                <div className="subtitle">Android Studio</div>
+              </div>
+              <div className="marquee-item">
+                <div className="img-container">
+                  <img
+                    height="70"
                     src={require("./firebase.png")}
                     alt="Firebase"
                     title="Firebase"
