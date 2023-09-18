@@ -14,6 +14,7 @@ import HomePage from "./components/Home/HomePage";
 import Loading from "./components/Loading/Loading";
 import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import ProgressBar from "react-progressbar-on-scroll";
+import Testimonials from "./components/Testimonials/TestimonialsPage";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
@@ -58,6 +59,7 @@ function App() {
       <AboutPage />
       <CurriculumPage />
       <PortfolioPage />
+      <Testimonials />
       <ContactPage />
       <Footer />!
     </div>

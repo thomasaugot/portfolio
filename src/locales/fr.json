@@ -30,46 +30,50 @@
   "Let's connect!": "Suivez-moi!",
   "Back to Top": "Haut de page",
   "back": "retour",
-    "projects": [
-      {
-        "name": "Chef Tom",
-        "description": "En dehors de la programmation, j'adore cuisiner. J'ai donc développé ma toute première application native où je peux garder mes meilleures recettes !",
-        "stack": "React-Native, useContext pour la gestion des états. Puisque j'ai construit cette application pour pratiquer le développement mobile uniquement, elle n'est pas publiée"
-      },
-      {
-        "name": "Kingpad",
-        "description": "Une page entièrement responsive que j'ai développée pour Kingworld Finance, en collaboration avec une équipe de designers et de développeurs, en dupliquant parfaitement un design Figma",
-        "stack": "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. L'application est entièrement responsive suivant la méthode mobile-first"
-      },
-      {
-        "name": "Eurafrique",
-        "description": "Un site web entièrement responsif et multilingue (français, anglais, espagnol et arabe) que je développe pour l'association Eurafrique.eu.",
-        "stack": "React, react-router, SCSS, i18next (pour la fonctionnalité multilingue), useContext (pour la gestion de l'état) et Cpanel (pour l'hébergement). Le backend est construit avec Supabase (Backend as a Service / BaaS)"
-      },
-      {
-        "name": "Farmhouse Table",
-        "description": "Un site web de restaurant intégrant l'API Google Maps et un formulaire de réservation",
-        "stack": "React, SCSS, Typescript, Bootstrap, intégration d'API externe, mises en page responsives"
-      },
-      {
-        "name": "Todayzzz Todos",
-        "description": "Une application de tâches simple avec 'drag & drop' pour organiser vos tâches quotidiennes que j'ai construite pour pratiquer Typescript, en ajoutant quelques bibliothèques React intéressantes",
-        "stack": "React, SCSS, Typescript. J'ai voulu me challenger avec la fonction de 'drag & drop' et j'y suis parvenu ! L'application offre un commutateur de mode sombre/clair. J'ai également créé un serveur Backend as a Service (BaaS) sur Supabase, l'application interagit maintenant avec une API"
-      },
-      {
-        "name": "Partymates",
-        "description": "Une appli de type réseau social que j'ai créée pour connecter les gens afin qu'ils puissent voyager ensemble pour les festivals. Les utilisateurs peuvent créer un compte, s'abonner à des événements et interagir avec d'autres via la fonction de messagerie",
-        "stack": "MongoDB, Express.js, React.js, Node.js, API REST (construite par moi), Postman. L'application est entièrement responsive, suivant la méthodologie mobile-first"
-      },
-      {
-        "name": "The Broke Globetrotter",
-        "description": "Une application créée en collaboration avec un collègue de classe, regroupant des collections de choses gratuites à faire dans le monde entier, mettant en avant des technologies backend pour les voyageurs fauchés (l'histoire de ma vie...!)",
-        "stack": "MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman"
-      },
-      {
-        "name": "Pickle Rick vs Rats - The Game",
-        "description": "Mon premier projet de codage, un jeu de tir Javascript amusant, tuez les vilains rats !",
-        "stack": "HTML, CSS, Javascript. Comme vous avez besoin d'un clavier pour les commandes, il ne peut être joué que sur ordinateur de bureau"
-      }
-    ]
+  "Testimonials": "Témoignages",
+  "Thomas, in record time, has been able to create our website. He leads a team of professionals and fully satisfies us in these aspects. He shines through his technical knowledge in IT development, his responsiveness, his kindness, and especially his availability. We have appreciated all these qualities to the extent that we have asked him, along with other professionals, to lead the web marketing, social media communication, database development, in short, all of our IT projects. The entire Eurafrique community thanks him.": "Thomas, en un temps record, a su nous créer notre site internet, il dirige une équipe de professionnels et nous donne entière satisfaction sur ces points. Il brille par ses connaissances techniques en développement informatique, par sa réactivité, par sa gentillesse et surtout par sa disponibilité. Nous avons apprécié toutes ces qualités au point de lui demander de diriger avec d’autres professionnels, la partie web marketing, la communication sur les réseaux sociaux, l’élaboration de bases de données, en somme la totalité de nos projets informatiques. Toute la communauté Eurafrique le remercie.",
+  "See full document": "Voir document complet",
+  "Volunteer Coordinator, Association": "Coordinateur bénévoles, Association",
+  "projects": [
+    {
+      "name": "Chef Tom",
+      "description": "En dehors de la programmation, j'adore cuisiner. J'ai donc développé ma toute première application native où je peux garder mes meilleures recettes !",
+      "stack": "React-Native, useContext pour la gestion des états. Puisque j'ai construit cette application pour pratiquer le développement mobile uniquement, elle n'est pas publiée"
+    },
+    {
+      "name": "Kingpad",
+      "description": "Une page entièrement responsive que j'ai développée pour Kingworld Finance, en collaboration avec une équipe de designers et de développeurs, en dupliquant parfaitement un design Figma",
+      "stack": "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. L'application est entièrement responsive suivant la méthode mobile-first"
+    },
+    {
+      "name": "Eurafrique",
+      "description": "Un site web entièrement responsif et multilingue (français, anglais, espagnol et arabe) que je développe pour l'association Eurafrique.eu.",
+      "stack": "React, react-router, SCSS, i18next (pour la fonctionnalité multilingue), useContext (pour la gestion de l'état) et Cpanel (pour l'hébergement). Le backend est construit avec Supabase (Backend as a Service / BaaS)"
+    },
+    {
+      "name": "Farmhouse Table",
+      "description": "Un site web de restaurant intégrant l'API Google Maps et un formulaire de réservation",
+      "stack": "React, SCSS, Typescript, Bootstrap, intégration d'API externe, mises en page responsives"
+    },
+    {
+      "name": "Todayzzz Todos",
+      "description": "Une application de tâches simple avec 'drag & drop' pour organiser vos tâches quotidiennes que j'ai construite pour pratiquer Typescript, en ajoutant quelques bibliothèques React intéressantes",
+      "stack": "React, SCSS, Typescript. J'ai voulu me challenger avec la fonction de 'drag & drop' et j'y suis parvenu ! L'application offre un commutateur de mode sombre/clair. J'ai également créé un serveur Backend as a Service (BaaS) sur Supabase, l'application interagit maintenant avec une API"
+    },
+    {
+      "name": "Partymates",
+      "description": "Une appli de type réseau social que j'ai créée pour connecter les gens afin qu'ils puissent voyager ensemble pour les festivals. Les utilisateurs peuvent créer un compte, s'abonner à des événements et interagir avec d'autres via la fonction de messagerie",
+      "stack": "MongoDB, Express.js, React.js, Node.js, API REST (construite par moi), Postman. L'application est entièrement responsive, suivant la méthodologie mobile-first"
+    },
+    {
+      "name": "The Broke Globetrotter",
+      "description": "Une application créée en collaboration avec un collègue de classe, regroupant des collections de choses gratuites à faire dans le monde entier, mettant en avant des technologies backend pour les voyageurs fauchés (l'histoire de ma vie...!)",
+      "stack": "MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman"
+    },
+    {
+      "name": "Pickle Rick vs Rats - The Game",
+      "description": "Mon premier projet de codage, un jeu de tir Javascript amusant, tuez les vilains rats !",
+      "stack": "HTML, CSS, Javascript. Comme vous avez besoin d'un clavier pour les commandes, il ne peut être joué que sur ordinateur de bureau"
+    }
+  ]
 }

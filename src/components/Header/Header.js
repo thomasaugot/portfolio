@@ -31,6 +31,9 @@ const Header = () => {
               <a className={styles.nav__item} href="#PortfolioPage">
                 {t("Projects")}
               </a>
+              <a className={styles.nav__item} href="#TestimonialsPage">
+                {t("Testimonials")}
+              </a>
               <a className={styles.nav__item} href="#ContactPage">
                 {t("Contact")}
               </a>
