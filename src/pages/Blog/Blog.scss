@@ -1,0 +1,24 @@
+@import "../../styles/index.scss";
+@import "../../styles/variables.scss";
+
+.BlogPage {
+  @include bootstrapScroll();
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  padding: 5% 7%;
+  color: $text2;
+  height: fit-content;
+  overflow: hidden;
+  transition: 1s;
+  min-height: 100vh;
+
+  .back-link {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .articles {
+    width: 300px;
+    margin: 8% 0;
+  }
+}

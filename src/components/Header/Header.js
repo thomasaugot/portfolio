@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import { MdMenu, MdClose } from "react-icons/md";
 import LanguagesMenu from "../LanguagesMenu/LanguagesMenu";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,6 +38,9 @@ const Header = () => {
               <a className={styles.nav__item} href="#ContactPage">
                 {t("Contact")}
               </a>
+              <Link to="/blog" className={styles.nav__item}>
+                {t("Blog")}
+              </Link>
               <div className={`${styles.nav__item} no-hover-effect`}>
                 <LanguagesMenu />
               </div>

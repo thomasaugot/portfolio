@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.search__bar {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.search__input {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px $primary;
+}

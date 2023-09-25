@@ -1,0 +1,42 @@
+.Article-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px 1px white;
+  transition: all 0.4s ease-out 0s;
+  overflow: hidden;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px 2px white;
+  }
+  a {
+    width: 100%;
+  }
+  .article-title {
+    color: white;
+    font-size: 22px;
+    padding: 20px;
+    text-decoration: none;
+    line-height: 1.5;
+  }
+  img {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .Article-card {
+  }
+}
