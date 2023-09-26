@@ -5,12 +5,42 @@ $ubuntu-font: "Titillium Web", sans-serif;
 $caveat-font: "Titillium Web", sans-serif;
 
 $bg: #e7f6f2;
-$bg2: #2c3333;
+$bg2: #212121;
 $bg3: #a5c9ca;
 
-$text: #2c3333;
+$text: #212121;
 $text2: #e7f6f2;
-$primary: #ffff00;
+$primary: #03dac6;
+
+$primary-start: rgba(102, 255, 0, 1);
+$primary-end: rgba(3, 218, 198, 1);
+
+.gradient-text {
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+}
+
+.gradient-underline {
+  position: relative;
+}
+
+.gradient-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 350px;
+  height: 5px;
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+  opacity: 0.7;
+  z-index: 1;
+}
 
 $spacing-sm: 8px;
 $spacing-md: 16px;

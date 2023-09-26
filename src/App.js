@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LanguageDetector from "i18next-browser-languagedetector";
 import enTranslation from "./locales/en.json";
 import frTranslation from "./locales/fr.json";
@@ -15,6 +16,8 @@ import Loading from "./components/Loading/Loading";
 import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import ProgressBar from "react-progressbar-on-scroll";
 import Testimonials from "./components/Testimonials/TestimonialsPage";
+import BlogPage from "./pages/Blog/Blog";
+import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
@@ -52,17 +55,30 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <ProgressBar color={"yellow"} />
-      <Header />
-      <HomePage />
-      <AboutPage />
-      <CurriculumPage />
-      <PortfolioPage />
-      <Testimonials />
-      <ContactPage />
-      <Footer />!
-    </div>
+    <Router>
+      <div className="App">
+        <ProgressBar color={"skyblue"} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <HomePage />
+                <AboutPage />
+                <CurriculumPage />
+                <PortfolioPage />
+                <Testimonials />
+                <ContactPage />
+                <Footer />!
+              </>
+            }
+          />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:urlName" element={<ArticleContent />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

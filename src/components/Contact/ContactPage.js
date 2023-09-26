@@ -62,7 +62,7 @@ function ContactPage() {
       {isVisible && (
         <>
           <div>
-            <h1>{t("Contact me")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            <h1 className="gradient-underline">{t("Contact me")}</h1>
             <br></br>
             <form onSubmit={sendEmail} className="contactForm">
               <label for="name">{t("Name")}</label>
@@ -109,7 +109,7 @@ function ContactPage() {
             </form>
           </div>
           <div className="letsConnect">
-            <h1>{t("Let's connect!")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            <h1 className="gradient-underline">{t("Let's connect!")}</h1>
             <br></br>
 
             <div className={`logo-container ${inView ? "visible" : ""}`}>

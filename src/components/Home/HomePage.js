@@ -34,7 +34,7 @@ function HomePage() {
                 &lt; {t("Hi! I am Thomas,")}
               </h1>
               <h1
-                className="animate__animated animate__fadeInRight animate__delay-1s homepageTitle bluetext"
+                className="animate__animated animate__fadeInRight animate__delay-1s homepageTitle gradient-text"
                 style={{ textDecoration: "none" }}
               >
                 {t("Full-Stack Developer")} /&gt;

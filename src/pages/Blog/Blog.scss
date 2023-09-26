@@ -1,0 +1,67 @@
+@import "../../styles/index.scss";
+@import "../../styles/variables.scss";
+
+.BlogPage {
+  @include bootstrapScroll();
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  padding: 5% 7%;
+  color: $text2;
+  height: fit-content;
+  overflow: hidden;
+  transition: 1s;
+  min-height: 100vh;
+
+  .top-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      flex: 1;
+      max-width: fit-content;
+      position: absolute;
+      left: 39vw;
+    }
+  }
+
+  .back-link {
+    margin: 20px 0;
+  }
+
+  .articles {
+    width: 300px;
+    margin: 8% 0;
+  }
+
+  h3 {
+    text-align: center;
+    &:hover {
+      color: white;
+    }
+  }
+
+  .blog-intro {
+    width: 70vw;
+    margin-inline: auto;
+    margin-top: 50px;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .top-content {
+    flex-direction: row;
+  }
+}

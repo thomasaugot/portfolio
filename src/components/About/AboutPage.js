@@ -32,7 +32,9 @@ function AboutPage() {
   return (
     <div className={`AboutPage ${isDesktop && inView ? "visible" : ""}`} ref={ref} id="AboutPage">
       <Slide direction="down" triggerOnce={true} fraction={1} delay={100}>
-        <h1 style={{ marginTop: "2vh" }}>{t("About me")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h1 className="gradient-underline" style={{ marginTop: "2vh" }}>
+          {t("About me")}
+        </h1>
       </Slide>
       <br />
       <div className="about__content">

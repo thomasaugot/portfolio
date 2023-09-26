@@ -22,7 +22,7 @@ const HeaderBG = () => {
         vx: Math.random() - 0.5,
         vy: Math.random() - 0.5,
         size: cometSize,
-        color: "#FDB813",
+        color: "#03dac6",
       });
     }
 
