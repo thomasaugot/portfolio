@@ -99,7 +99,7 @@
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background-color: $primary;
+  background: linear-gradient(266deg, $primary-start, $primary-end);
 }
 
 .swiper-slide {
@@ -161,7 +161,7 @@
   .card-front:hover {
     box-shadow: 0 10px 20px white;
     h4 {
-      color: yellow;
+      color: linear-gradient(266deg, $primary-start 0%, $primary-end 100%);
       text-decoration: underline;
       transform: translateX(-50%) scale(1.2);
       text-underline-offset: 3px;
@@ -172,7 +172,7 @@
   .card-back:hover {
     box-shadow: 0 10px 20px white;
     h4 {
-      color: yellow;
+      color: linear-gradient(266deg, $primary-start 0%, $primary-end 100%);
       text-decoration: underline;
       cursor: pointer;
     }

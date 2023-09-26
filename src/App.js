@@ -57,7 +57,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ProgressBar color={"yellow"} />
+        <ProgressBar color={"skyblue"} />
         <Routes>
           <Route
             path="/"

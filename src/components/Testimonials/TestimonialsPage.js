@@ -36,7 +36,9 @@ function Testimonials() {
       id="TestimonialsPage"
     >
       <Slide direction="down" triggerOnce={true} fraction={1} delay={100}>
-        <h1 style={{ marginTop: "2vh" }}>{t("Testimonials")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h1 className="gradient-underline" style={{ marginTop: "2vh" }}>
+          {t("Testimonials")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </h1>
       </Slide>
       <br />
       <div className="testimonials__content">
@@ -70,7 +72,7 @@ function Testimonials() {
               rel="noreferrer"
               target="_blank"
             >
-              <button className="blueBtn">{t("See full document")}</button>
+              <button className="blueBtn gradient-bg">{t("See full document")}</button>
             </a>
           </div>
         </Slide>

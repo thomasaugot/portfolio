@@ -35,6 +35,8 @@
   "See full document": "Voir document complet",
   "Volunteer Coordinator, Association": "Coordinateur bénévoles, Association",
   "Back to the main page": "Retour à la page principale",
+  "NB: All articles are written in English to satisfy as many people as possible :)": "NB : Tous les articles sont rédigés en anglais pour satisfaire le plus grand nombre... :)",
+  "Like many before me, my short career as a full-stack web and mobile developer gave me the opportunity to do a lot of research in order to complete both personal and professional projects. I therefore decided to share some of the results of this research and offer articles aimed at documenting on various subjects related to development in general. Happy reading!": "Comme beaucoup avant moi, ma courte carrière de développeur web et mobile full-stack m'a donné l'opportunité de faire de nombreuses recherches afin de mener à bien des projets tant personnels que professionnels. J'ai donc décidé de partager les résultats de cette recherche et de proposer des articles visant à documenter divers sujets relatifs au développement en général. Bonne lecture!",
   "projects": [
     {
       "name": "Chef Tom",

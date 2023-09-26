@@ -38,9 +38,9 @@ const Header = () => {
               <a className={styles.nav__item} href="#ContactPage">
                 {t("Contact")}
               </a>
-              <Link to="/blog" className={styles.nav__item}>
+              {/* <Link to="/blog" className={styles.nav__item}>
                 {t("Blog")}
-              </Link>
+              </Link> */}
               <div className={`${styles.nav__item} no-hover-effect`}>
                 <LanguagesMenu />
               </div>

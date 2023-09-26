@@ -22,7 +22,9 @@ function CurriculumPage() {
     <div className="CurriculumPage" id="CurriculumPage" ref={ref}>
       {isVisible && (
         <>
-          <h1>{t("I build with...")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <div className="gradient-underline">
+            <h1>{t("I build with...")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          </div>
           <div
             className="stack"
             style={{
@@ -290,7 +292,9 @@ function CurriculumPage() {
           <br></br>
           <br></br>
 
-          <h1>{t("Certifications")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <div className="gradient-underline">
+            <h1>{t("Certifications")}</h1>
+          </div>
           <div className="certifications-container">
             <div className="certification-item">
               <h2>{t("Full-Stack Web Development, MERN - Ironhack")}</h2>
@@ -309,7 +313,7 @@ function CurriculumPage() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <button className="blueBtn">{t("Show credential")}</button>
+                  <button className="blueBtn gradient-bg">{t("Show credential")}</button>
                 </a>
               </div>
               <br></br>
@@ -330,7 +334,7 @@ function CurriculumPage() {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <button className="blueBtn">{t("Show credential")}</button>
+                  <button className="blueBtn gradient-bg">{t("Show credential")}</button>
                 </a>
               </div>
             </div>

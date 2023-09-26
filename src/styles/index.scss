@@ -22,18 +22,18 @@ body {
 
 @-webkit-keyframes color-change-2x {
   0% {
-    background: rgba(25, 23, 21);
+    background: #212121;
   }
   100% {
-    background: rgb(26, 27, 27);
+    background: #292828;
   }
 }
 @keyframes color-change-2x {
   0% {
-    background: rgba(0, 0, 0, 1);
+    background: #212121;
   }
   100% {
-    background: rgb(26, 27, 27);
+    background: #292828;
   }
 }
 
@@ -90,20 +90,17 @@ button {
 h1 {
   font-size: 3em;
   font-family: $caveat-font;
-  text-decoration: underline;
-  text-decoration-color: $primary;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 10px;
+  margin-bottom: 30px;
 }
 
 .blueBtn {
   border-radius: 5px;
-  background-color: $primary;
   padding: 5px 20px;
   color: $text;
   font-weight: bold;
   margin: 10px 10px 10px 10px;
   border: solid 1px transparent;
+  background: linear-gradient(266deg, $primary-start, $primary-end);
   &:hover {
     border: 1px solid rgb(247, 248, 248);
     box-shadow: 5px 5px 10px -5px;
@@ -117,7 +114,7 @@ h1 {
 .whiteBtn {
   border-radius: 5px;
   border: solid white 1px;
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 5px 21.5px;
   color: $text2;
   margin: 0 10px;

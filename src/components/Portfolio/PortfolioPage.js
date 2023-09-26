@@ -126,7 +126,7 @@ function PortfolioPage() {
     <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
       {isVisible && (
         <>
-          <h1>{t("My projects")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <h1 className="gradient-underline">{t("My projects")}</h1>
           <br></br>
           <div className="portfolioContent">
             {isMobile ? (
@@ -153,23 +153,19 @@ function PortfolioPage() {
                         <h2>{t("Tech Stack")}:</h2>
                         {project.stack}
                         <div className="project__buttons">
-                          <a
-                            href={project.linkRepo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="blueBtn "
+                          <button
+                            className="blueBtn gradient-bg"
+                            onClick={() => window.open(project.linkRepo, "_blank")}
                           >
                             {t("View Code")}
-                          </a>
+                          </button>
                           {project.id !== 8 && (
-                            <a
-                              href={project.linkDemo}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                            <button
                               className="whiteBtn"
+                              onClick={() => window.open(project.linkDemo, "_blank")}
                             >
                               {t("Visit page")}
-                            </a>
+                            </button>
                           )}
                         </div>
                         <h4>{t("back")}</h4>
@@ -251,7 +247,7 @@ function PortfolioPage() {
                     </div>
                   </SwiperSlide>
                 ))}
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination gradient-bg"></div>
               </Swiper>
             )}
           </div>
