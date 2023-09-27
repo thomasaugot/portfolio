@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./Blog.scss";
 import Loading from "../../components/Loading/Loading";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { IoMdArrowRoundBack } from "react-icons/io";
+// import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
 import BGAnimation from "../../components/FooterBG/FooterBG";
 import supabase from "../../api/supabase";
 import ArticleCard from "./Articles/ArticleCard/ArticleCard";
-//import Searchbar from "../../components/Searchbar/Searchbar";
+import HeaderBlog from "../../components/HeaderBlog/HeaderBlog";
+// import Searchbar from "../../components/Searchbar/Searchbar";
 
 const BlogPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -63,24 +63,22 @@ const BlogPage = () => {
       ) : (
         <>
           <div className="BlogPage">
+            <HeaderBlog />
             <div className="top-content">
-              <h1 className="blog-title gradient-underline">Blog</h1>
-              <Link to="/" className="back-link">
-                <IoMdArrowRoundBack />
-                &nbsp;&nbsp;
-                {t("Back to the main page")}
-              </Link>
+              <h1 className="blog-title gradient-underline-blog">React & Roll: Tom's dev blog</h1>
+              <div className="blog-intro">
+                <p>
+                  {t(
+                    "Like many before me, my short career as a full-stack web and mobile developer gave me the opportunity to do a lot of research in order to complete both personal and professional projects. I therefore decided to share some of the results of this research and offer articles aimed at documenting on various subjects related to development in general. Happy reading!"
+                  )}
+                </p>
+                <p>
+                  {t(
+                    "NB: All articles are written in English to satisfy as many people as possible :)"
+                  )}
+                </p>
+              </div>
             </div>
-            <p className="blog-intro">
-              {t(
-                "Like many before me, my short career as a full-stack web and mobile developer gave me the opportunity to do a lot of research in order to complete both personal and professional projects. I therefore decided to share some of the results of this research and offer articles aimed at documenting on various subjects related to development in general. Happy reading!"
-              )}
-            </p>
-            <p className="blog-intro">
-              {t(
-                "NB: All articles are written in English to satisfy as many people as possible :)"
-              )}
-            </p>
             {/* <div className="search__bar__section">
               <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             </div> */}
