@@ -57,7 +57,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ProgressBar color={"skyblue"} />
+        <ProgressBar color={"#03dac6"} gradient={true} gradientColor={"rgba(102, 255, 0, 1)"} />
         <Routes>
           <Route
             path="/"
