@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-pascal-case */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from "react";
 import "./Blog.scss";
 import Loading from "../../components/Loading/Loading";
@@ -7,8 +9,8 @@ import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
 import BGAnimation from "../../components/FooterBG/FooterBG";
 import supabase from "../../api/supabase";
-import ArticleCard from "./Articles/ArticleCard/ArticleCard";
 import HeaderBlog from "../../components/HeaderBlog/HeaderBlog";
+import Card_WhichBaaSToChooseIn2023 from "./Articles/which-baas-to-choose-in-2023/Card_WhichBaaSToChooseIn2023";
 // import Searchbar from "../../components/Searchbar/Searchbar";
 
 const BlogPage = () => {
@@ -83,9 +85,8 @@ const BlogPage = () => {
               <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             </div> */}
             <div className="articles">
-              {articles?.map((item) => (
-                <ArticleCard key={item.id} {...item} />
-              ))}
+              {/* eslint-disable-next-line react/jsx-pascal-case */}
+              <Card_WhichBaaSToChooseIn2023 {...articles[0]} />
             </div>
             <h3>Thanks for visiting!</h3>
           </div>

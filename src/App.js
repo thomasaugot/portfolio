@@ -17,7 +17,7 @@ import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import ProgressBar from "react-progressbar-on-scroll";
 import Testimonials from "./components/Testimonials/TestimonialsPage";
 import BlogPage from "./pages/Blog/Blog";
-import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
+import WhichBaaSToChooseIn2023 from "./pages/Blog/Articles/which-baas-to-choose-in-2023/Content_WhichBaaSToChooseIn2023";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
@@ -75,7 +75,7 @@ function App() {
             }
           />
           <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:urlName" element={<ArticleContent />} />
+          <Route path="/blog/which-baas-to-choose-in-2023" element={<WhichBaaSToChooseIn2023 />} />
         </Routes>
       </div>
     </Router>

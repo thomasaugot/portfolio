@@ -74,3 +74,8 @@ $font-size-lrg: 3em;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+.article-content {
+  min-height: 100vh;
+  padding: 7vh 7vw;
+}

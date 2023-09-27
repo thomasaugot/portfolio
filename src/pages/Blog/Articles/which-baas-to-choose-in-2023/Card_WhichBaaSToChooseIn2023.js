@@ -1,8 +1,7 @@
-import React from "react";
-import "./ArticleCard.scss";
 import { Link } from "react-router-dom";
+import "./Card_WhichBaaSToChooseIn2023.scss";
 
-const ArticleCard = ({ id, title, images, body, style, urlName, created_at }) => {
+const Card_WhichBaaSToChooseIn2023 = ({ id, title, images, body, style, urlName, created_at }) => {
   const formatDate = (date) => {
     const newDate = new Date(date);
     const day = newDate.getDate();
@@ -19,7 +18,7 @@ const ArticleCard = ({ id, title, images, body, style, urlName, created_at }) =>
 
   return (
     <Link to={`/blog/${urlName}`} state={{ articleProps: props }}>
-      <div className={`Article-card ${style}`} key={id}>
+      <div className={`CardBaas ${style}`} key={id}>
         <div className="article-images">
           {images.map((image, index) => (
             <img key={index} className="article-image" src={image} alt="article" />
@@ -33,4 +32,4 @@ const ArticleCard = ({ id, title, images, body, style, urlName, created_at }) =>
   );
 };
 
-export default ArticleCard;
+export default Card_WhichBaaSToChooseIn2023;
