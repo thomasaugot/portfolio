@@ -13,7 +13,7 @@ const HeaderBlogMain = () => {
       <a className="menu-back" href="/">
         <IoMdArrowRoundBack />
         &nbsp;&nbsp;
-        {t("Back to the main page")}
+        {t("Back")}
       </a>
       <div className="social-blog">
         <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
