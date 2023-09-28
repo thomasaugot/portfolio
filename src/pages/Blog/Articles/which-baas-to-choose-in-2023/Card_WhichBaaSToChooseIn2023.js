@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Card_WhichBaaSToChooseIn2023.scss";
 
-const Card_WhichBaaSToChooseIn2023 = ({ id, title, images, body, style, urlName, created_at }) => {
+const Card_WhichBaaSToChooseIn2023 = ({ id, title, urlName, created_at }) => {
   const formatDate = (date) => {
     const newDate = new Date(date);
     const day = newDate.getDate();
@@ -14,15 +14,13 @@ const Card_WhichBaaSToChooseIn2023 = ({ id, title, images, body, style, urlName,
   };
 
   const formattedDate = formatDate(created_at);
-  const props = { id, title, images, body, style, urlName, created_at: formattedDate };
+  const props = { id, title, urlName, created_at: formattedDate };
 
   return (
     <Link to={`/blog/${urlName}`} state={{ articleProps: props }}>
-      <div className={`CardBaas ${style}`} key={id}>
+      <div className={`CardBaas`} key={id}>
         <div className="article-images">
-          {images.map((image, index) => (
-            <img key={index} className="article-image" src={image} alt="article" />
-          ))}
+          <img className="article-image" src={require("./code.jpg")} alt="article" />
         </div>
         <h4>{formattedDate}</h4>
         <h1 className="article-title">{title}&nbsp;&nbsp;&nbsp;</h1>

@@ -6,17 +6,16 @@ import Loading from "../../components/Loading/Loading";
 import { useTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import { Fade } from "react-awesome-reveal";
-import BGAnimation from "../../components/FooterBG/FooterBG";
 import supabase from "../../api/supabase";
-import HeaderBlog from "../../components/HeaderBlog/HeaderBlog";
+import HeaderBlogMain from "../../components/HeaderBlog/HeaderBlogMain";
 import Card_WhichBaaSToChooseIn2023 from "./Articles/which-baas-to-choose-in-2023/Card_WhichBaaSToChooseIn2023";
+import FooterArticles from "../../components/Footer/FooterArticles";
 // import Searchbar from "../../components/Searchbar/Searchbar";
 
 const BlogPage = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const { ref, inView } = useInView({
+  const [setIsVisible] = useState(false);
+  const { inView } = useInView({
     threshold: 0.2, // set threshold to 20%
   });
   const [articles, setArticles] = useState([]);
@@ -32,7 +31,7 @@ const BlogPage = () => {
     }, 2000);
 
     return () => clearTimeout(timeout);
-  }, [inView]);
+  }, [inView, setIsVisible]);
 
   const { t } = useTranslation();
 
@@ -65,7 +64,7 @@ const BlogPage = () => {
       ) : (
         <>
           <div className="BlogPage">
-            <HeaderBlog />
+            <HeaderBlogMain />
             <div className="top-content">
               <h1 className="blog-title gradient-underline-blog">React & Roll: Tom's dev blog</h1>
               <div className="blog-intro">
@@ -90,20 +89,8 @@ const BlogPage = () => {
             </div>
             <h3>Thanks for visiting!</h3>
           </div>
-          <div className="Footer" ref={ref}>
-            !
-            {isVisible && (
-              <Fade>
-                <div style={{ textAlign: "center" }}>
-                  <BGAnimation />
-                </div>
-                <p style={{ textAlign: "center", color: "white" }}>
-                  2023 © <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>.
-                </p>
-                <br></br>
-              </Fade>
-            )}
-          </div>
+          <br />
+          <FooterArticles />
         </>
       )}
     </>

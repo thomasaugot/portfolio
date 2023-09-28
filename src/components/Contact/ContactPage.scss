@@ -107,7 +107,7 @@ label {
     margin: 5vh 2vw;
     padding-bottom: 12px;
     &:hover {
-      transform: scale(0.6) rotate(-20deg);
+      transform: scale(0.6);
       transition: 1s;
     }
   }
@@ -115,7 +115,7 @@ label {
   .githubLogo {
     margin: 5vh 2vw;
     &:hover {
-      transform: scale(0.6) rotate(-20deg);
+      transform: scale(0.6);
       transition: 1s;
     }
   }

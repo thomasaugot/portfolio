@@ -5,15 +5,15 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
-const HeaderBlog = () => {
+const HeaderBlogContent = () => {
   const { t } = useTranslation();
 
   return (
     <div className="header">
-      <a className="menu-back" href="/">
+      <a className="menu-back" href="/blog">
         <IoMdArrowRoundBack />
         &nbsp;&nbsp;
-        {t("Back to the main page")}
+        {t("Back to menu")}
       </a>
       <div className="social-blog">
         <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">
@@ -35,4 +35,4 @@ const HeaderBlog = () => {
   );
 };
 
-export default HeaderBlog;
+export default HeaderBlogContent;

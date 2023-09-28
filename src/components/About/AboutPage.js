@@ -46,7 +46,7 @@ function AboutPage() {
             <br />
             <br />
             {t(
-              "Although I spent most of my professional career in the hospitality industry, which allowed me to develop excellent soft and interpersonal skills while also giving me the opportunity to travel and gain new experiences, I had always dreamed of a more flexible career in which I could think creatively and learn new things every day. With everything moving towards the digital world, I believe that I can make a meaningful contribution to help people and businesses increase their online presence and visibility."
+              "Although I spent most of my professional career in hospitality, which gave me the opportunity to travel, work anywhere and experience the life of a globetrotter, I had always dreamed of something more flexible, in which I could think creatively, feel proud of and learn new things every day. With everything moving towards the digital world, I believe that I can make a meaningful contribution to help businesses, people and whoever needs it increase their online presence and visibility."
             )}
             <br />
             <br />
