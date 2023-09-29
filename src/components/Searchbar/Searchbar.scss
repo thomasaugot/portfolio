@@ -13,4 +13,7 @@
   border: none;
   border-radius: 25px;
   box-shadow: 2px 2px 5px $primary-start;
+  @media only screen and (max-width: 600px) {
+    width: 80vw;
+  }
 }
