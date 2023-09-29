@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -18,6 +19,7 @@ import ProgressBar from "react-progressbar-on-scroll";
 import Testimonials from "./components/Testimonials/TestimonialsPage";
 import BlogPage from "./pages/Blog/Blog";
 import WhichBaaSToChooseIn2023 from "./pages/Blog/Articles/which-baas-to-choose-in-2023/Content_WhichBaaSToChooseIn2023";
+import Content_PublishNewVersionAppStore from "./pages/Blog/Articles/publish-new-version-apple/Content_PublishNewVersionAppStore";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
@@ -76,6 +78,10 @@ function App() {
           />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/which-baas-to-choose-in-2023" element={<WhichBaaSToChooseIn2023 />} />
+          <Route
+            path="/blog/releasing-a-new-version-of-a-react-native-mobile-app-on-the-apple-app-store"
+            element={<Content_PublishNewVersionAppStore />}
+          />
         </Routes>
       </div>
     </Router>

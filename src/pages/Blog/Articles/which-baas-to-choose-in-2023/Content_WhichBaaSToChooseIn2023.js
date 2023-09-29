@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import HeaderBlogContent from "../../../../components/HeaderBlog/HeaderBlogContent";
-import "./Content_WhichBaasToChooseIn2023.scss";
+import "../Content_Articles.scss";
 import { Roll } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 import FooterArticles from "../../../../components/Footer/FooterArticles";
@@ -19,10 +19,10 @@ const Content_WhichBaasToChooseIn2023 = () => {
   }, [inView, setIsVisible]);
 
   return (
-    <div className="article-content Content_WhichBaasToChooseIn2023">
+    <div className="article-content Content">
       <HeaderBlogContent />
       <h1 className="gradient-text">Which BaaS (Backend as a Service) to choose in 2023?</h1>
-      <img src={require("./code.jpg")} alt="screen with code" className="intro-img" />
+      <img src={require("./assets/code.jpg")} alt="screen with code" className="intro-img" />
       <p className="intro">
         In today's rapidly evolving tech landscape, choosing the right Backend as a Service (BaaS)
         is crucial for any application's success. BaaS provides a streamlined approach to backend
@@ -85,7 +85,7 @@ const Content_WhichBaasToChooseIn2023 = () => {
       <div className="pros-cons-block">
         <Roll direction="right" fraction={1} triggerOnce={true} delay={500}>
           <img
-            src={require("./aws.png")}
+            src={require("./assets/aws.png")}
             alt="aws"
             className="logo-blog-right"
             style={{ width: "auto", height: "100px" }}
@@ -122,7 +122,7 @@ const Content_WhichBaasToChooseIn2023 = () => {
       <div className="pros-cons-block">
         <Roll direction="left" fraction={1} triggerOnce={true} delay={500}>
           <img
-            src={require("./backendless.png")}
+            src={require("./assets/backendless.png")}
             alt="backendless"
             className="logo-blog-left"
             style={{ width: "auto", height: "160px" }}
@@ -152,7 +152,7 @@ const Content_WhichBaasToChooseIn2023 = () => {
       <div className="pros-cons-block">
         <Roll direction="left" fraction={1} triggerOnce={true} delay={500}>
           <img
-            src={require("./parse.png")}
+            src={require("./assets/parse.png")}
             alt="parse"
             className="logo-blog-right"
             style={{ width: "auto", height: "180px" }}
@@ -223,7 +223,7 @@ const Content_WhichBaasToChooseIn2023 = () => {
       <div className="pros-cons-block">
         <Roll direction="left" fraction={1} triggerOnce={true} delay={500}>
           <img
-            src={require("./hasura.png")}
+            src={require("./assets/hasura.png")}
             alt="parse"
             className="logo-blog-right"
             style={{ width: "auto", height: "120px" }}
@@ -260,7 +260,7 @@ const Content_WhichBaasToChooseIn2023 = () => {
       <div className="pros-cons-block">
         <Roll direction="left" fraction={1} triggerOnce={true} delay={500}>
           <img
-            src={require("./azure.png")}
+            src={require("./assets/azure.png")}
             alt="parse"
             className="logo-blog-left"
             style={{ width: "auto", height: "140px" }}
@@ -312,6 +312,8 @@ const Content_WhichBaasToChooseIn2023 = () => {
       </p>
       <h6>By Thomas Augot, September 2023</h6>
       <FooterArticles />
+      <br />
+      <br />
     </div>
   );
 };

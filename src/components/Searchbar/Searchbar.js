@@ -9,7 +9,7 @@ function Searchbar({ searchTerm, setSearchTerm }) {
     <div className="search__bar">
       <input
         type="text"
-        placeholder="search by keyword"
+        placeholder="Search by keyword, tags, ..."
         value={searchTerm}
         onChange={handleChange}
         className="search__input"

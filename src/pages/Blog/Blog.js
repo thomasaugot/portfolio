@@ -4,13 +4,13 @@ import React, { useState, useEffect } from "react";
 import "./Blog.scss";
 import Loading from "../../components/Loading/Loading";
 import { useTranslation } from "react-i18next";
-// import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import supabase from "../../api/supabase";
 import HeaderBlogMain from "../../components/HeaderBlog/HeaderBlogMain";
 import Card_WhichBaaSToChooseIn2023 from "./Articles/which-baas-to-choose-in-2023/Card_WhichBaaSToChooseIn2023";
 import FooterArticles from "../../components/Footer/FooterArticles";
-// import Searchbar from "../../components/Searchbar/Searchbar";
+import Card_PublishNewVersionAppStore from "./Articles/publish-new-version-apple/Card_PublishNewVersionAppStore";
+import Searchbar from "../../components/Searchbar/Searchbar";
 
 const BlogPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +19,7 @@ const BlogPage = () => {
     threshold: 0.2, // set threshold to 20%
   });
   const [articles, setArticles] = useState([]);
-  // const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     if (inView) {
@@ -53,10 +53,6 @@ const BlogPage = () => {
     renderArticles();
   }, []);
 
-  // const filteredArticles = articles.filter((item) => {
-  //   return item?.title?.toLowerCase().includes(searchTerm.toLowerCase());
-  // });
-
   return (
     <>
       {isLoading ? (
@@ -80,17 +76,27 @@ const BlogPage = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="search__bar__section">
+            <div className="search__bar__section">
               <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            </div> */}
+            </div>
             <div className="articles">
-              {/* eslint-disable-next-line react/jsx-pascal-case */}
-              <Card_WhichBaaSToChooseIn2023 {...articles[0]} />
+              {articles.map((article, index) => {
+                if (!searchTerm || article.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                  if (article.title.toLowerCase().includes(searchTerm)) {
+                    return <Card_WhichBaaSToChooseIn2023 key={index} {...article} />;
+                  } else if (article.title.toLowerCase().includes(searchTerm)) {
+                    return <Card_PublishNewVersionAppStore key={index} {...article} />;
+                  }
+                }
+                return null;
+              })}
             </div>
             <h3>Thanks for visiting!</h3>
           </div>
           <br />
+          <br />
           <FooterArticles />
+          <br />
         </>
       )}
     </>

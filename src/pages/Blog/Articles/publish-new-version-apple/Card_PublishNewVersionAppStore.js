@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Card_Articles.scss";
 
-const Card_WhichBaaSToChooseIn2023 = ({ id, title, urlName, created_at, tags, image }) => {
+const Card_PublishNewVersionAppStore = ({ id, title, urlName, created_at, tags, image }) => {
   const formatDate = (date) => {
     const newDate = new Date(date);
     const day = newDate.getDate();
@@ -31,11 +31,10 @@ const Card_WhichBaaSToChooseIn2023 = ({ id, title, urlName, created_at, tags, im
             ))}
           </div>
         </div>
-
         <p>Read article</p>
       </div>
     </Link>
   );
 };
 
-export default Card_WhichBaaSToChooseIn2023;
+export default Card_PublishNewVersionAppStore;

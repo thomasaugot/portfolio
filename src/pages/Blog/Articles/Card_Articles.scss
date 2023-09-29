@@ -1,18 +1,26 @@
-.CardBaas {
-  width: 300px;
+@import "../../../styles/variables.scss";
+
+.CardArticle {
+  width: 350px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 1rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 10px 1px white;
   transition: all 0.4s ease-out 0s;
   overflow: hidden;
+  height: 550px;
   &:hover {
     transform: scale(1.1);
     box-shadow: 2px 2px 20px 2px white;
+    color: white;
+    p {
+      color: $primary-end;
+    }
   }
   @media only screen and (max-width: 600px) {
-    width: 90vw;
+    width: 80vw;
   }
   a {
     width: 100%;
@@ -20,7 +28,7 @@
   .article-title {
     color: white;
     font-size: 22px;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     text-decoration: none;
     line-height: 1.5;
   }
@@ -32,9 +40,23 @@
     text-align: center;
     padding-top: 10px;
   }
+
   h4 {
     margin-left: 20px;
     margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: 20px;
+    h6 {
+      padding: 3px 5px;
+      color: black;
+      border-radius: 5px;
+      margin-right: 3px;
+    }
   }
 }
 

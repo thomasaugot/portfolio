@@ -1,6 +1,6 @@
-@import "../../../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
-.Content_WhichBaasToChooseIn2023 {
+.Content {
   color: white;
   text-align: center;
   padding: 0 !important;
@@ -8,12 +8,15 @@
   h1 {
     padding-top: 150px;
     margin-inline: auto;
-    @media (max-width: 1023px) {
-      width: 90vw;
-    }
+    max-width: 90vw;
   }
 
-  .intro,
+  .intro {
+    margin-inline: auto;
+    margin-block: 60px;
+    width: 70vw;
+  }
+
   .paragraph {
     margin-inline: auto;
     margin-block: 20px;
