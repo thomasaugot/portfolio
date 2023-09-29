@@ -25,12 +25,6 @@ const BlogPage = () => {
     if (inView) {
       setIsVisible(true);
     }
-    // Hide the loading component after 3 seconds
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timeout);
   }, [inView, setIsVisible]);
 
   const { t } = useTranslation();
