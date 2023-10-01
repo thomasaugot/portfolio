@@ -1,7 +1,8 @@
+import React from "react";
+import "./ArticleCard.scss";
 import { Link } from "react-router-dom";
-import "../Card_Articles.scss";
 
-const Card_PublishNewVersionAppStore = ({ id, title, urlName, created_at, tags, image }) => {
+const ArticleCard = ({ id, title, image, urlName, content, tags, created_at }) => {
   const formatDate = (date) => {
     const newDate = new Date(date);
     const day = newDate.getDate();
@@ -14,7 +15,7 @@ const Card_PublishNewVersionAppStore = ({ id, title, urlName, created_at, tags, 
   };
 
   const formattedDate = formatDate(created_at);
-  const props = { id, title, urlName, created_at: formattedDate, tags, image };
+  const props = { id, title, urlName, created_at: formattedDate, tags, image, content };
 
   return (
     <Link to={`/blog/${urlName}`} state={{ articleProps: props }}>
@@ -31,10 +32,11 @@ const Card_PublishNewVersionAppStore = ({ id, title, urlName, created_at, tags, 
             ))}
           </div>
         </div>
+
         <p>Read article</p>
       </div>
     </Link>
   );
 };
 
-export default Card_PublishNewVersionAppStore;
+export default ArticleCard;

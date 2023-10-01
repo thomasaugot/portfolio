@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "../../../../styles/variables.scss";
 
 .Content {
   color: white;
@@ -39,6 +39,8 @@
       position: absolute;
       left: 200px;
       top: 40px;
+      width: auto;
+      height: 120px;
       @media (max-width: 1023px) {
         display: none;
       }
@@ -48,6 +50,8 @@
       position: absolute;
       right: 200px;
       top: 60px;
+      width: auto;
+      height: 120px;
       @media (max-width: 1023px) {
         display: none;
       }

@@ -18,13 +18,32 @@ import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import ProgressBar from "react-progressbar-on-scroll";
 import Testimonials from "./components/Testimonials/TestimonialsPage";
 import BlogPage from "./pages/Blog/Blog";
-import WhichBaaSToChooseIn2023 from "./pages/Blog/Articles/which-baas-to-choose-in-2023/Content_WhichBaaSToChooseIn2023";
-import Content_PublishNewVersionAppStore from "./pages/Blog/Articles/publish-new-version-apple/Content_PublishNewVersionAppStore";
+import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
+import supabase from "../src/api/supabase";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
+  const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const { data, error } = await supabase.from("articles").select("*");
+
+        if (error) {
+          throw new Error(error.message);
+        } else {
+          setArticles(data);
+          setIsLoading(false);
+        }
+      } catch (error) {
+        console.error("Failed to retrieve users by ID:", error.message);
+      }
+    };
+
+    fetchArticles();
+
     const rootElement = document.documentElement;
     rootElement.setAttribute("translate", "no");
 
@@ -76,12 +95,8 @@ function App() {
               </>
             }
           />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/which-baas-to-choose-in-2023" element={<WhichBaaSToChooseIn2023 />} />
-          <Route
-            path="/blog/releasing-a-new-version-of-a-react-native-mobile-app-on-the-apple-app-store"
-            element={<Content_PublishNewVersionAppStore />}
-          />
+          <Route path="/blog" element={<BlogPage articles={articles} isLoading={isLoading} />} />
+          <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
         </Routes>
       </div>
     </Router>

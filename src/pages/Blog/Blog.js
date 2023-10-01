@@ -1,24 +1,17 @@
-/* eslint-disable react/jsx-pascal-case */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from "react";
 import "./Blog.scss";
-import Loading from "../../components/Loading/Loading";
+import HeaderBlogMain from "../../components/HeaderBlog/HeaderBlogMain";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
-import supabase from "../../api/supabase";
-import HeaderBlogMain from "../../components/HeaderBlog/HeaderBlogMain";
-import Card_WhichBaaSToChooseIn2023 from "./Articles/which-baas-to-choose-in-2023/Card_WhichBaaSToChooseIn2023";
-import FooterArticles from "../../components/Footer/FooterArticles";
-import Card_PublishNewVersionAppStore from "./Articles/publish-new-version-apple/Card_PublishNewVersionAppStore";
+import ArticleCard from "./Articles/ArticleCard/ArticleCard";
 import Searchbar from "../../components/Searchbar/Searchbar";
+import FooterArticles from "../../components/Footer/FooterArticles";
 
-const BlogPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
+const BlogPage = ({ articles }) => {
   const [setIsVisible] = useState(false);
   const { inView } = useInView({
     threshold: 0.2, // set threshold to 20%
   });
-  const [articles, setArticles] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -29,24 +22,11 @@ const BlogPage = () => {
 
   const { t } = useTranslation();
 
-  const renderArticles = async () => {
-    try {
-      const { data, error } = await supabase.from("articles").select("*");
+  const filteredArticles = articles?.filter((item) => {
+    return item?.title?.toLowerCase().includes(searchTerm.toLowerCase());
+  });
 
-      if (error) {
-        throw new Error(error.message);
-      } else {
-        setArticles(data);
-        setIsLoading(false);
-      }
-    } catch (error) {
-      console.error("Failed to retrieve users by ID:", error.message);
-    }
-  };
-
-  useEffect(() => {
-    renderArticles();
-  }, []);
+  console.log("Filtered articles:", filteredArticles);
 
   return (
     <>
@@ -70,22 +50,11 @@ const BlogPage = () => {
         <div className="search__bar__section">
           <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </div>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <div className="articles">
-            {articles.map((article, index) => {
-              if (!searchTerm || article.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-                if (article.title.toLowerCase().includes(searchTerm)) {
-                  return <Card_WhichBaaSToChooseIn2023 key={index} {...article} />;
-                } else if (article.title.toLowerCase().includes(searchTerm)) {
-                  return <Card_PublishNewVersionAppStore key={index} {...article} />;
-                }
-              }
-              return null;
-            })}
-          </div>
-        )}
+        <div className="articles">
+          {filteredArticles?.map((articleItem) => (
+            <ArticleCard key={articleItem.id} {...articleItem} />
+          ))}
+        </div>
         <h3>Thanks for visiting!</h3>
       </div>
       <br />
