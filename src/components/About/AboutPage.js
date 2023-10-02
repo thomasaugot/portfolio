@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Slide } from "react-awesome-reveal";
 import { useInView } from "react-intersection-observer";
 import profileImage from "./profile.png";
@@ -11,6 +11,12 @@ function AboutPage() {
     triggerOnce: true,
     threshold: 0.7,
   });
+
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    aboutRef.current = document.getElementById("AboutPage");
+  }, []);
 
   const [isDesktop, setIsDesktop] = useState(false);
 

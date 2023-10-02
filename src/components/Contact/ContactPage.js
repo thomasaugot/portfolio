@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -19,6 +19,12 @@ function ContactPage() {
   });
 
   const { t } = useTranslation();
+
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    aboutRef.current = document.getElementById("ContactPage");
+  }, []);
 
   useEffect(() => {
     if (inView) {

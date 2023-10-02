@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./CurriculumPage.scss";
 import { useInView } from "react-intersection-observer";
 import Marquee from "react-fast-marquee";
@@ -17,6 +17,12 @@ function CurriculumPage() {
   }, [inView]);
 
   const { t } = useTranslation();
+
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    aboutRef.current = document.getElementById("CurriculumPage");
+  }, []);
 
   return (
     <div className="CurriculumPage" id="CurriculumPage" ref={ref}>

@@ -1,19 +1,15 @@
 import "./HeaderBlog.scss";
-import { useTranslation } from "react-i18next";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 const HeaderBlogMain = () => {
-  const { t } = useTranslation();
-
   return (
     <div className="header">
       <a className="menu-back" href="/">
         <IoMdArrowRoundBack />
-        &nbsp;&nbsp;
-        {t("Back")}
+        &nbsp;&nbsp; Back
       </a>
       <div className="social-blog">
         <a href="https://www.linkedin.com/in/thomas-augot" target="_blank" rel="noreferrer">

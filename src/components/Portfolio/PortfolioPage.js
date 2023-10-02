@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./PortfolioPage.scss";
 
@@ -15,6 +15,12 @@ function PortfolioPage() {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
+
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    aboutRef.current = document.getElementById("PortfolioPage");
+  }, []);
 
   useEffect(() => {
     if (inView) {

@@ -22,6 +22,7 @@
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     & > div {
       flex: 1;
@@ -90,12 +91,18 @@
     color: inherit;
     height: 100%;
     transition: 0.3s ease color;
+    cursor: pointer;
     &:not(:last-child) {
       &:hover {
         color: $primary;
         transform: scale(0.9);
         filter: drop-shadow(4px 4px 3px $primary-start);
       }
+    }
+    &.active {
+      color: $primary;
+      transform: scale(0.9);
+      filter: drop-shadow(4px 4px 3px $primary-start);
     }
   }
 

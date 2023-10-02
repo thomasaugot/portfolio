@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Testimonials.scss";
 import { useInView } from "react-intersection-observer";
 import { Slide } from "react-awesome-reveal";
@@ -15,6 +15,12 @@ function Testimonials() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   const { t } = useTranslation();
+
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    aboutRef.current = document.getElementById("Testimonials");
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
