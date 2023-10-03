@@ -113,12 +113,12 @@ const Header = () => {
           <div className={`${styles.nav__item} no-hover-effect`}>
             <LanguagesMenu />
           </div>
-        </nav>
-      </div>
-      <div>
-        <button className={styles.header__toggler} onClick={menuToggler}>
-          {!menuOpen ? <MdMenu /> : <MdClose />}
-        </button>
+        </nav>{" "}
+        <div>
+          <button className={styles.header__toggler} onClick={menuToggler}>
+            {!menuOpen ? <MdMenu /> : <MdClose />}
+          </button>
+        </div>
       </div>
     </div>
   );
