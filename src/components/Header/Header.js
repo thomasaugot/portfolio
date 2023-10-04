@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Header.module.scss";
-import { MdMenu, MdClose } from "react-icons/md";
+import "./Header.scss";
 import LanguagesMenu from "../LanguagesMenu/LanguagesMenu";
 import { useTranslation } from "react-i18next";
 import { Link as ScrollLink } from "react-scroll";
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const menuToggler = () => setMenuOpen((p) => !p);
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useState("");
 
@@ -50,16 +48,29 @@ const Header = () => {
     };
   }, []);
 
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div className={styles.header}>
-      <div className={styles.header__content}>
-        <nav className={`${styles.nav} ${menuOpen ? styles[`nav--open`] : {}}`}>
+    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+      <div className="navbar-container">
+        <input type="checkbox" checked={menuOpen} onChange={handleMenuToggle} id="menu-toggle" />
+        <label htmlFor="menu-toggle" className="hamburger-lines">
+          <span className="line line1"></span>
+          <span className="line line2"></span>
+          <span className="line line3"></span>
+        </label>
+        <div className="menu-items">
           <ScrollLink
             to="AboutPage"
             smooth={true}
             duration={500}
-            className={`${styles.nav__item} ${activeLink === "AboutPage" ? styles.active : ""}`}
-            onClick={() => setActiveLink("AboutPage")}
+            className={`nav-item ${activeLink === "AboutPage" ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveLink("AboutPage");
+            }}
           >
             {t("About")}
           </ScrollLink>
@@ -67,10 +78,11 @@ const Header = () => {
             to="CurriculumPage"
             smooth={true}
             duration={500}
-            className={`${styles.nav__item} ${
-              activeLink === "CurriculumPage" ? styles.active : ""
-            }`}
-            onClick={() => setActiveLink("CurriculumPage")}
+            className={`nav-item ${activeLink === "CurriculumPage" ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveLink("CurriculumPage");
+            }}
           >
             {t("Curriculum")}
           </ScrollLink>
@@ -78,8 +90,11 @@ const Header = () => {
             to="PortfolioPage"
             smooth={true}
             duration={500}
-            className={`${styles.nav__item} ${activeLink === "PortfolioPage" ? styles.active : ""}`}
-            onClick={() => setActiveLink("PortfolioPage")}
+            className={`nav-item ${activeLink === "PortfolioPage" ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveLink("PortfolioPage");
+            }}
           >
             {t("Projects")}
           </ScrollLink>
@@ -87,10 +102,11 @@ const Header = () => {
             to="TestimonialsPage"
             smooth={true}
             duration={500}
-            className={`${styles.nav__item} ${
-              activeLink === "TestimonialsPage" ? styles.active : ""
-            }`}
-            onClick={() => setActiveLink("TestimonialsPage")}
+            className={`nav-item ${activeLink === "TestimonialsPage" ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveLink("TestimonialsPage");
+            }}
           >
             {t("Testimonials")}
           </ScrollLink>
@@ -98,29 +114,30 @@ const Header = () => {
             to="ContactPage"
             smooth={true}
             duration={500}
-            className={`${styles.nav__item} ${activeLink === "ContactPage" ? styles.active : ""}`}
-            onClick={() => setActiveLink("ContactPage")}
+            className={`nav-item ${activeLink === "ContactPage" ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveLink("ContactPage");
+            }}
           >
             {t("Contact")}
           </ScrollLink>
           <Link
             to="/blog"
-            className={`${styles.nav__item} ${activeLink === "blog" ? styles.active : ""}`}
-            onClick={() => setActiveLink("blog")}
+            className={`nav-item ${activeLink === "blog" ? "active" : ""}`}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveLink("blog");
+            }}
           >
             {t("Blog")}
           </Link>
-          <div className={`${styles.nav__item} no-hover-effect`}>
+          <div className={`nav-item no-hover-effect`}>
             <LanguagesMenu />
           </div>
-        </nav>{" "}
-        <div>
-          <button className={styles.header__toggler} onClick={menuToggler}>
-            {!menuOpen ? <MdMenu /> : <MdClose />}
-          </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
