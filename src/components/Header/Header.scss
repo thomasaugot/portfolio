@@ -118,7 +118,7 @@
       }
 
       .menu-items {
-        padding-top: 100px;
+        padding-block: 100px;
         backdrop-filter: blur(2px);
         background: rgba(26, 25, 25, 0.9);
         height: 100vh;
@@ -132,10 +132,10 @@
 
         .nav-item {
           display: block;
-          padding: $spacing-md;
+          padding-inline: $spacing-md !important;
+          padding-bottom: 0 !important;
           text-decoration: none;
           color: inherit;
-          height: 100%;
           transition: 0.3s ease color;
           cursor: pointer;
           &:not(:last-child) {

@@ -10,14 +10,14 @@
 
 .portfolioContent {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
 }
 
 .card {
   border-radius: 15px;
-  height: 500px !important;
+  height: 520px !important;
   margin: 1vh 0;
   padding: 24px;
   box-shadow: 8px 8px 15px -8px black;
@@ -105,37 +105,42 @@
 .swiper-slide {
   width: 100%;
   min-height: 400px;
-
-  @media (min-width: 768px) {
-    width: 50%;
-  }
-
-  @media (min-width: 1024px) {
-    width: 33.33%;
-  }
 }
 
 /* Medium devices (Tablets, between 600px and 992px) */
 @media only screen and (min-width: 600px) {
   .portfolioContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
     margin: 0;
     padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45vw !important;
   }
 
   .card-front,
   .card-back {
-    width: 40vw;
+    width: 45vw;
     height: 700px;
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Smaller desktops (between 992px and 1024px) */
 @media only screen and (min-width: 992px) {
+  .portfolioContent {
+    margin-inline: auto;
+  }
+
+  .card {
+    width: 33vw !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
   .PortfolioPage {
     @include bootstrapScroll();
     padding: 5% 10%;
@@ -145,16 +150,19 @@
   .portfolioContent {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
+    max-width: 1280px;
     margin: 0;
     padding: 0;
+    margin-inline: auto;
+  }
+
+  .card {
+    width: 100% !important;
   }
 
   .card-front,
   .card-back {
-    width: 350px;
+    width: 25vw;
     height: 700px;
   }
 
