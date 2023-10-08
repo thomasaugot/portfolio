@@ -10,12 +10,13 @@ import LikesBlog from "../../../../components/LikesBlog/LikesBlog";
 const ArticleContent = () => {
   const location = useLocation();
   const { articleProps } = location.state;
+  const articleId = articleProps?.id;
 
   return (
     <div className="Content">
       <HeaderBlogContent />
       <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(articleProps.content) }} />
-      <LikesBlog articleId={articleProps.id} />
+      <LikesBlog articleId={articleId} />
       <FooterArticles />
       <br />
       <br />
