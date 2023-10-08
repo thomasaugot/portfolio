@@ -59,7 +59,7 @@
   }
 
   h2 {
-    margin-top: 30px;
+    margin-top: 50px;
     max-width: 90vw;
     margin-inline: auto;
   }
@@ -77,5 +77,39 @@
     @media (max-width: 1023px) {
       text-align: center;
     }
+  }
+
+  .bash {
+    margin-inline: auto;
+    padding: 15px;
+    background-color: #18181a;
+    color: white;
+    font-size: 16px;
+    overflow: auto;
+    border-radius: 5px;
+    width: 30vw;
+    margin-block: 20px;
+    text-align: left;
+    white-space: pre;
+    white-space: pre-wrap;
+  }
+
+  .code {
+    margin-inline: auto;
+    padding: 15px;
+    background-color: #18181a;
+    width: 60vw;
+    color: white;
+    font-size: 16px;
+    overflow: auto;
+    border-radius: 5px;
+    margin-block: 20px;
+    text-align: left;
+    white-space: pre;
+    white-space: pre-wrap;
+  }
+
+  .link-to-demo {
+    text-decoration: underline;
   }
 }
