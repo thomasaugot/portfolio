@@ -14,6 +14,7 @@ const BlogPage = ({ articles }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (inView) {
       setIsVisible(true);
     }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Use useParams to get the articleUrl
+import { useParams } from "react-router-dom";
 import "./ArticleContent.scss";
 import HeaderBlogContent from "../../../../components/HeaderBlog/HeaderBlogContent";
 import DOMPurify from "dompurify";
@@ -24,6 +24,8 @@ const ArticleContent = () => {
           throw new Error(error.message);
         } else if (data && data.length > 0) {
           setArticle(data[0]);
+          // Scroll to the top of the page
+          window.scrollTo(0, 0);
         }
       } catch (error) {
         console.error("Failed to retrieve article content:", error.message);
@@ -33,14 +35,18 @@ const ArticleContent = () => {
     fetchArticleContent();
   }, [articleUrl]);
 
+  const renderArticleContent = () => {
+    if (!article) {
+      return <Loading />;
+    }
+
+    return <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.content) }} />;
+  };
+
   return (
     <div className="Content">
       <HeaderBlogContent />
-      {article ? (
-        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.content) }} />
-      ) : (
-        <Loading />
-      )}
+      {renderArticleContent()}
       {article && <LikesBlog articleId={article.id} />}
       <FooterArticles />
       <br />
