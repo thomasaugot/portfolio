@@ -77,28 +77,32 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <ProgressBar color={"#03dac6"} gradient={true} gradientColor={"rgba(102, 255, 0, 1)"} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <HomePage />
-                <AboutPage />
-                <CurriculumPage />
-                <PortfolioPage />
-                <Testimonials />
-                <ContactPage />
-                <Footer />!
-              </>
-            }
-          />
-          <Route path="/blog" element={<BlogPage articles={articles} isLoading={isLoading} />} />
-          <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
-        </Routes>
-      </div>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="App">
+          <ProgressBar color={"#03dac6"} gradient={true} gradientColor={"rgba(102, 255, 0, 1)"} />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <HomePage />
+                  <AboutPage />
+                  <CurriculumPage />
+                  <PortfolioPage />
+                  <Testimonials />
+                  <ContactPage />
+                  <Footer />!
+                </>
+              }
+            />
+            <Route path="/blog" element={<BlogPage articles={articles} isLoading={isLoading} />} />
+            <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
+          </Routes>
+        </div>
+      )}
     </Router>
   );
 }

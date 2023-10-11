@@ -1,4 +1,3 @@
-import { useInView } from "react-intersection-observer";
 import ReactCardFlip from "react-card-flip";
 import { TbPointFilled, TbPoint } from "react-icons/tb";
 import { EffectCoverflow, Pagination } from "swiper";
@@ -6,29 +5,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./PortfolioPage.scss";
+import { motion } from "framer-motion";
 
 function PortfolioPage() {
   const { t } = useTranslation();
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
 
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    aboutRef.current = document.getElementById("PortfolioPage");
-  }, []);
-
-  useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
-
-  const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
 
@@ -129,15 +113,103 @@ function PortfolioPage() {
   };
 
   return (
-    <div className="PortfolioPage" id="PortfolioPage" ref={ref}>
-      {isVisible && (
-        <>
-          <h1 className="gradient-underline">{t("My projects")}</h1>
-          <br></br>
-          <div className="portfolioContent">
-            {isMobile ? (
-              <div className="project-cards-container">
-                {projects.map((project, index) => (
+    <div className="PortfolioPage" id="PortfolioPage">
+      <motion.div
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.5,
+          ease: "easeOut",
+        }}
+      >
+        <h1 className="gradient-underline">{t("My projects")}</h1>
+      </motion.div>
+      <br></br>
+      <motion.div
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.7,
+          ease: "easeOut",
+        }}
+      >
+        <div className="portfolioContent">
+          {isMobile ? (
+            <div className="project-cards-container">
+              {projects.map((project, index) => (
+                <div>
+                  <ReactCardFlip
+                    isFlipped={activeCardIndex === index}
+                    flipDirection="horizontal"
+                    className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                    alignHeight={true}
+                  >
+                    <div className="card-front card" onClick={() => handleCardClick(index)}>
+                      <img src={project.capture1} alt="project" />
+                      <h1 className="card-title">{project.name}</h1>
+                      <p>{project.description}</p>
+                      <h4>{t("More details")}</h4>
+                      <div className="page__dots">
+                        <TbPointFilled />
+                        <TbPoint />
+                      </div>
+                    </div>
+                    <div className="card-back card" onClick={() => handleCardClick(index)}>
+                      <h2>{t("Tech Stack")}:</h2>
+                      {project.stack}
+                      <div className="project__buttons">
+                        <button
+                          className="blueBtn gradient-bg"
+                          onClick={() => window.open(project.linkRepo, "_blank")}
+                        >
+                          {t("View Code")}
+                        </button>
+                        {project.id !== 8 && (
+                          <button
+                            className="whiteBtn"
+                            onClick={() => window.open(project.linkDemo, "_blank")}
+                          >
+                            {t("Visit page")}
+                          </button>
+                        )}
+                      </div>
+                      <h4>{t("back")}</h4>
+                      <div className="page__dots">
+                        <TbPoint />
+                        <TbPointFilled />
+                      </div>
+                    </div>
+                  </ReactCardFlip>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <Swiper
+              effect={"coverflow"}
+              initialSlide={1}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={slidesPerView}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              navigation={true}
+              pagination={{ clickable: true }}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper"
+            >
+              {projects.map((project, index) => (
+                <SwiperSlide key={project.id}>
                   <div>
                     <ReactCardFlip
                       isFlipped={activeCardIndex === index}
@@ -159,21 +231,21 @@ function PortfolioPage() {
                         <h2>{t("Tech Stack")}:</h2>
                         {project.stack}
                         <div className="project__buttons">
-                          <button
-                            className="blueBtn gradient-bg"
-                            onClick={() => window.open(project.linkRepo, "_blank")}
-                          >
+                          <a href={project.linkRepo} class="blueBtn">
                             {t("View Code")}
-                          </button>
+                          </a>
                           {project.id !== 8 && (
-                            <button
+                            <a
+                              href={project.linkDemo}
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="whiteBtn"
-                              onClick={() => window.open(project.linkDemo, "_blank")}
                             >
                               {t("Visit page")}
-                            </button>
+                            </a>
                           )}
                         </div>
+
                         <h4>{t("back")}</h4>
                         <div className="page__dots">
                           <TbPoint />
@@ -182,83 +254,13 @@ function PortfolioPage() {
                       </div>
                     </ReactCardFlip>
                   </div>
-                ))}
-              </div>
-            ) : (
-              <Swiper
-                effect={"coverflow"}
-                initialSlide={1}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={slidesPerView}
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
-                navigation={true}
-                pagination={{ clickable: true }}
-                modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
-              >
-                {projects.map((project, index) => (
-                  <SwiperSlide key={project.id}>
-                    <div>
-                      <ReactCardFlip
-                        isFlipped={activeCardIndex === index}
-                        flipDirection="horizontal"
-                        className={`project-card ${
-                          index === activeCardIndex ? "flipped" : ""
-                        } card`}
-                        alignHeight={true}
-                      >
-                        <div className="card-front card" onClick={() => handleCardClick(index)}>
-                          <img src={project.capture1} alt="project" />
-                          <h1 className="card-title">{project.name}</h1>
-                          <p>{project.description}</p>
-                          <h4>{t("More details")}</h4>
-                          <div className="page__dots">
-                            <TbPointFilled />
-                            <TbPoint />
-                          </div>
-                        </div>
-                        <div className="card-back card" onClick={() => handleCardClick(index)}>
-                          <h2>{t("Tech Stack")}:</h2>
-                          {project.stack}
-                          <div className="project__buttons">
-                            <a href={project.linkRepo} class="blueBtn">
-                              {t("View Code")}
-                            </a>
-                            {project.id !== 8 && (
-                              <a
-                                href={project.linkDemo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="whiteBtn"
-                              >
-                                {t("Visit page")}
-                              </a>
-                            )}
-                          </div>
-
-                          <h4>{t("back")}</h4>
-                          <div className="page__dots">
-                            <TbPoint />
-                            <TbPointFilled />
-                          </div>
-                        </div>
-                      </ReactCardFlip>
-                    </div>
-                  </SwiperSlide>
-                ))}
-                <div class="swiper-pagination gradient-bg"></div>
-              </Swiper>
-            )}
-          </div>
-        </>
-      )}
+                </SwiperSlide>
+              ))}
+              <div class="swiper-pagination gradient-bg"></div>
+            </Swiper>
+          )}
+        </div>
+      </motion.div>
     </div>
   );
 }

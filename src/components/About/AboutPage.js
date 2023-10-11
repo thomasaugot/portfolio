@@ -1,17 +1,11 @@
 import React, { useRef } from "react";
-import { Slide } from "react-awesome-reveal";
-import { useInView } from "react-intersection-observer";
 import profileImage from "./profile.png";
 import { useEffect, useState } from "react";
 import "./AboutPage.scss";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 function AboutPage() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.7,
-  });
-
   const aboutRef = useRef(null);
 
   useEffect(() => {
@@ -36,15 +30,35 @@ function AboutPage() {
   }, []);
 
   return (
-    <div className={`AboutPage ${isDesktop && inView ? "visible" : ""}`} ref={ref} id="AboutPage">
-      <Slide direction="down" triggerOnce={true} fraction={1} delay={100}>
+    <div className={`AboutPage ${isDesktop ? "visible" : ""}`} id="AboutPage">
+      <motion.div
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.5,
+          ease: "easeOut",
+        }}
+      >
         <h1 className="gradient-underline" style={{ marginTop: "2vh" }}>
           {t("About me")}
         </h1>
-      </Slide>
+      </motion.div>
       <br />
       <div className="about__content">
-        <Slide direction="down" triggerOnce={true} fraction={1}>
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 40,
+            delay: 0.7,
+            ease: "easeOut",
+          }}
+        >
           <p>
             {t(
               "I am a French Full-Stack developer with a specialization in React.js, currently based on the beautiful island of Fuerteventura. After 10 years of travelling around the world, I found myself a passion for coding so I decided to enroll in a web development bootcamp at Ironhack."
@@ -65,10 +79,21 @@ function AboutPage() {
               "Recently, I also started learning and building native mobile apps using React Native CLI & Expo."
             )}
           </p>
-        </Slide>
-        <Slide direction="up" triggerOnce={true} fraction={1}>
+        </motion.div>
+        <motion.div
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 40,
+            delay: 1.3,
+            ease: "easeOut",
+          }}
+          whileHover={{ scale: 1.9 }}
+        >
           <img src={profileImage} alt="profile" className="profilePicture" />
-        </Slide>
+        </motion.div>
       </div>
     </div>
   );

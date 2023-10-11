@@ -1,26 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Testimonials.scss";
-import { useInView } from "react-intersection-observer";
-import { Slide } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { IconContext } from "react-icons";
+import { motion } from "framer-motion";
 
 function Testimonials() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.7,
-  });
-
   const [isDesktop, setIsDesktop] = useState(false);
 
   const { t } = useTranslation();
-
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    aboutRef.current = document.getElementById("Testimonials");
-  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,19 +24,35 @@ function Testimonials() {
   }, []);
 
   return (
-    <div
-      className={`TestimonialsPage ${isDesktop && inView ? "visible" : ""}`}
-      ref={ref}
-      id="TestimonialsPage"
-    >
-      <Slide direction="down" triggerOnce={true} fraction={1} delay={100}>
+    <div className={`TestimonialsPage ${isDesktop ? "visible" : ""}`} id="TestimonialsPage">
+      <motion.div
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.5,
+          ease: "easeOut",
+        }}
+      >
         <h1 className="gradient-underline" style={{ marginTop: "2vh" }}>
           {t("Testimonials")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </h1>
-      </Slide>
+      </motion.div>
       <br />
-      <div className="testimonials__content">
-        <Slide direction="down" triggerOnce={true} fraction={1}>
+      <motion.div
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 100, opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.7,
+          ease: "easeOut",
+        }}
+      >
+        <div className="testimonials__content">
           <div className="testimonial-container">
             <IconContext.Provider value={{ size: "5em" }}>
               <RiDoubleQuotesL />
@@ -68,7 +72,7 @@ function Testimonials() {
                 target="_blank"
               >
                 RIEHL Rémy
-              </a>{" "}
+              </a>
               - {t("Volunteer Coordinator, Association")} Eurafrique
             </p>
           </div>
@@ -81,8 +85,8 @@ function Testimonials() {
               <button className="blueBtn gradient-bg">{t("See full document")}</button>
             </a>
           </div>
-        </Slide>
-      </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
