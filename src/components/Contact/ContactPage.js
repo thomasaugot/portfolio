@@ -62,13 +62,13 @@ function ContactPage() {
         </motion.div>
         <br></br>
         <motion.div
-          whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ x: 1, opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",
             stiffness: 40,
-            delay: 0.7,
+            delay: 0.4,
             ease: "easeOut",
           }}
         >
@@ -136,13 +136,13 @@ function ContactPage() {
 
         <div className={`logo-container visible`}>
           <motion.div
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ x: 1, opacity: 1 }}
+            initial={{ x: "110%", opacity: 0 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
               stiffness: 40,
-              delay: 0.7,
+              delay: 0.4,
               ease: "easeOut",
             }}
             className="text-gradient"
@@ -158,13 +158,13 @@ function ContactPage() {
             </a>
           </motion.div>
           <motion.div
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ x: 1, opacity: 1 }}
+            initial={{ x: "110%", opacity: 0 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
               stiffness: 40,
-              delay: 0.9,
+              delay: 0.6,
               ease: "easeOut",
             }}
             className="text-gradient"

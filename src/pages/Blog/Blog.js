@@ -6,6 +6,7 @@ import ArticleCard from "./Articles/ArticleCard/ArticleCard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import FooterArticles from "../../components/Footer/FooterArticles";
 import Loading from "../../components/Loading/Loading";
+import { motion } from "framer-motion";
 
 const BlogPage = ({ articles, isLoading }) => {
   const [setIsVisible] = useState(false);
@@ -43,20 +44,65 @@ const BlogPage = ({ articles, isLoading }) => {
           <div className="BlogPage">
             <HeaderBlogMain />
             <div className="top-content">
-              <h1 className="blog-title gradient-underline-blog">
+              <motion.h1
+                whileInView={{ x: 1, opacity: 1 }}
+                initial={{ x: "-100%", opacity: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  type: "spring",
+                  stiffness: 40,
+                  delay: 0.4,
+                  ease: "easeOut",
+                }}
+                className="blog-title gradient-underline-blog"
+              >
                 &lt; Exploring Javascript And Beyond /&gt;
-              </h1>
+              </motion.h1>
               <div className="blog-intro">
-                <p>Welcome to my blog!</p>
-                <p>
+                <motion.p
+                  whileInView={{ x: 1, opacity: 1 }}
+                  initial={{ x: "-100%", opacity: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 40,
+                    delay: 0.6,
+                    ease: "easeOut",
+                  }}
+                >
+                  Welcome to my blog!
+                </motion.p>
+                <motion.p
+                  whileInView={{ x: 1, opacity: 1 }}
+                  initial={{ x: "-100%", opacity: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 40,
+                    delay: 0.8,
+                    ease: "easeOut",
+                  }}
+                >
                   Like many before me, my little career as a full-stack web and mobile developer
                   gave me the opportunity to do a lot of research in order to complete both personal
                   and professional projects. Focusing mostly on Javascript and its frameworks such
                   as React or React Native, I hope to contribute by sharing some of the results of
                   this research and offer articles on various subjects related to development in
                   general.
-                </p>
-                <p>Happy reading!</p>
+                </motion.p>
+                <motion.p
+                  whileInView={{ x: 1, opacity: 1 }}
+                  initial={{ x: "-100%", opacity: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 40,
+                    delay: 1.0,
+                    ease: "easeOut",
+                  }}
+                >
+                  Happy reading!
+                </motion.p>
               </div>
             </div>
             <div className="search__bar__section">
@@ -64,7 +110,18 @@ const BlogPage = ({ articles, isLoading }) => {
             </div>
             <div className="articles">
               {filteredArticles?.map((articleItem) => (
-                <ArticleCard key={articleItem.id} {...articleItem} />
+                <motion.div
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0.7, opacity: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    delay: articleItem.delay,
+                  }}
+                >
+                  <ArticleCard key={articleItem.id} {...articleItem} />
+                </motion.div>
               ))}
             </div>
             <h3>Thanks for visiting!</h3>

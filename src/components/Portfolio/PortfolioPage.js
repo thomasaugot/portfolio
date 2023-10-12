@@ -121,7 +121,7 @@ function PortfolioPage() {
         transition={{
           type: "spring",
           stiffness: 40,
-          delay: 0.5,
+          delay: 0.4,
           ease: "easeOut",
         }}
       >
@@ -129,21 +129,29 @@ function PortfolioPage() {
       </motion.div>
       <br></br>
       <motion.div
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.5, opacity: 0 }}
         viewport={{ once: true }}
         transition={{
           type: "spring",
-          stiffness: 40,
-          delay: 0.7,
-          ease: "easeOut",
+          stiffness: 50,
+          delay: 0.4,
         }}
       >
         <div className="portfolioContent">
           {isMobile ? (
             <div className="project-cards-container">
               {projects.map((project, index) => (
-                <div>
+                <motion.div
+                  whileInView={{ scale: 1 }}
+                  initial={{ scale: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    delay: 0.4,
+                  }}
+                  className="marquee-item"
+                >
                   <ReactCardFlip
                     isFlipped={activeCardIndex === index}
                     flipDirection="horizontal"
@@ -186,7 +194,7 @@ function PortfolioPage() {
                       </div>
                     </div>
                   </ReactCardFlip>
-                </div>
+                </motion.div>
               ))}
             </div>
           ) : (
@@ -209,52 +217,66 @@ function PortfolioPage() {
               className="mySwiper"
             >
               {projects.map((project, index) => (
-                <SwiperSlide key={project.id}>
-                  <div>
-                    <ReactCardFlip
-                      isFlipped={activeCardIndex === index}
-                      flipDirection="horizontal"
-                      className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
-                      alignHeight={true}
-                    >
-                      <div className="card-front card" onClick={() => handleCardClick(index)}>
-                        <img src={project.capture1} alt="project" />
-                        <h1 className="card-title">{project.name}</h1>
-                        <p>{project.description}</p>
-                        <h4>{t("More details")}</h4>
-                        <div className="page__dots">
-                          <TbPointFilled />
-                          <TbPoint />
+                <motion.div
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 50,
+                    delay: 0.4,
+                  }}
+                  className="marquee-item"
+                >
+                  <SwiperSlide key={project.id}>
+                    <div>
+                      <ReactCardFlip
+                        isFlipped={activeCardIndex === index}
+                        flipDirection="horizontal"
+                        className={`project-card ${
+                          index === activeCardIndex ? "flipped" : ""
+                        } card`}
+                        alignHeight={true}
+                      >
+                        <div className="card-front card" onClick={() => handleCardClick(index)}>
+                          <img src={project.capture1} alt="project" />
+                          <h1 className="card-title">{project.name}</h1>
+                          <p>{project.description}</p>
+                          <h4>{t("More details")}</h4>
+                          <div className="page__dots">
+                            <TbPointFilled />
+                            <TbPoint />
+                          </div>
                         </div>
-                      </div>
-                      <div className="card-back card" onClick={() => handleCardClick(index)}>
-                        <h2>{t("Tech Stack")}:</h2>
-                        {project.stack}
-                        <div className="project__buttons">
-                          <a href={project.linkRepo} class="blueBtn">
-                            {t("View Code")}
-                          </a>
-                          {project.id !== 8 && (
-                            <a
-                              href={project.linkDemo}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="whiteBtn"
-                            >
-                              {t("Visit page")}
+                        <div className="card-back card" onClick={() => handleCardClick(index)}>
+                          <h2>{t("Tech Stack")}:</h2>
+                          {project.stack}
+                          <div className="project__buttons">
+                            <a href={project.linkRepo} class="blueBtn">
+                              {t("View Code")}
                             </a>
-                          )}
-                        </div>
+                            {project.id !== 8 && (
+                              <a
+                                href={project.linkDemo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="whiteBtn"
+                              >
+                                {t("Visit page")}
+                              </a>
+                            )}
+                          </div>
 
-                        <h4>{t("back")}</h4>
-                        <div className="page__dots">
-                          <TbPoint />
-                          <TbPointFilled />
+                          <h4>{t("back")}</h4>
+                          <div className="page__dots">
+                            <TbPoint />
+                            <TbPointFilled />
+                          </div>
                         </div>
-                      </div>
-                    </ReactCardFlip>
-                  </div>
-                </SwiperSlide>
+                      </ReactCardFlip>
+                    </div>
+                  </SwiperSlide>
+                </motion.div>
               ))}
               <div class="swiper-pagination gradient-bg"></div>
             </Swiper>

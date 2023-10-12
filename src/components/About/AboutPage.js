@@ -38,7 +38,7 @@ function AboutPage() {
         transition={{
           type: "spring",
           stiffness: 40,
-          delay: 0.5,
+          delay: 0.4,
           ease: "easeOut",
         }}
       >
@@ -61,33 +61,28 @@ function AboutPage() {
         >
           <p>
             {t(
-              "I am a French Full-Stack developer with a specialization in React.js, currently based on the beautiful island of Fuerteventura. After 10 years of travelling around the world, I found myself a passion for coding so I decided to enroll in a web development bootcamp at Ironhack."
+              "I am a Full-Stack developer from France, specializing in React.js, currently based in sunny Fuerteventura."
             )}
             <br />
             <br />
             {t(
-              "Although I spent most of my professional career in hospitality, which gave me the opportunity to travel, work anywhere and experience the life of a globetrotter, I had always dreamed of something more flexible, in which I could think creatively, feel proud of and learn new things every day. With everything moving towards the digital world, I believe that I can make a meaningful contribution to help businesses, people and whoever needs it increase their online presence and visibility."
+              "Being an ex-globetrotter, I bring a global perspective and the ability to tackle any challenges. As everything transitions to the digital realm, I am dedicated to making a meaningful contribution to enhance online presence and visibility for businesses and individuals alike."
             )}
             <br />
             <br />
             {t(
-              "With experience in both front- and back-end development, I have found myself particularly interested in design and user experience. I enjoy browsing libraries, keeping up with web design trends, and searching for creative ways of solving complex challenges through my code. Eager to become a front-end wizard one day, I also recently started using serverless technologies so I can focus on what I consider the fun part."
-            )}
-            <br />
-            <br />
-            {t(
-              "Recently, I also started learning and building native mobile apps using React Native CLI & Expo."
+              "I enjoy working on both the front-end and back-end, crafting seamless digital experiences. Keeping up with the latest trends helps me ensure my work aligns with modern design and follows the best practices in web development."
             )}
           </p>
         </motion.div>
         <motion.div
-          whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: "100%", opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",
-            stiffness: 40,
-            delay: 1.3,
+            stiffness: 20,
+            delay: 1.0,
             ease: "easeOut",
           }}
           whileHover={{ scale: 1.9 }}

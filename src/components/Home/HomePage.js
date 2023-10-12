@@ -12,14 +12,13 @@ function HomePage() {
         <HeaderBG />
         <div className="titleDiv">
           <motion.div
-            animate={{ rotate: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: 100, opacity: 0, rotate: -100 }}
+            whileInView={{ x: 1, opacity: 1 }}
+            initial={{ x: "-100%", opacity: 0 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
               stiffness: 40,
-              delay: 0.5,
+              delay: 0.4,
               ease: "easeOut",
             }}
           >
@@ -28,14 +27,13 @@ function HomePage() {
             </h1>
           </motion.div>
           <motion.div
-            animate={{ rotate: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            initial={{ y: 100, opacity: 0, rotate: 40 }}
+            whileInView={{ x: 1, opacity: 1 }}
+            initial={{ x: "-100%", opacity: 0 }}
             viewport={{ once: true }}
             transition={{
               type: "spring",
               stiffness: 40,
-              delay: 0.5,
+              delay: 0.7,
               ease: "easeOut",
             }}
           >
@@ -45,14 +43,13 @@ function HomePage() {
           </motion.div>
         </div>
         <motion.div
-          animate={{ rotate: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: 100, opacity: 0, rotate: 100 }}
+          whileInView={{ x: 1, opacity: 1 }}
+          initial={{ x: "-100%", opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",
             stiffness: 40,
-            delay: 0.5,
+            delay: 1.0,
             ease: "easeOut",
           }}
         >
@@ -62,13 +59,25 @@ function HomePage() {
         </motion.div>
         <br></br>
       </div>
-      <a href="#AboutPage" className="linkAbout">
-        <div class="container">
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-        </div>
-      </a>
+      {/* <motion.a
+        whileInView={{ x: 1, opacity: 1 }}
+        initial={{ x: "-20%", opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.4,
+          ease: "easeOut",
+        }}
+      >
+        <a href="#AboutPage" className="linkAbout">
+          <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div>
+        </a>
+      </motion.a> */}
     </div>
   );
 }

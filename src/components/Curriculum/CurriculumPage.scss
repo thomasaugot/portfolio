@@ -56,10 +56,29 @@
 .certifications-container {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 .certification-item {
-  width: 100%;
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 8px 8px 15px -8px black;
+  text-align: left;
+  background-color: transparent !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+
+  &:hover {
+    box-shadow: 0 5px 20px white;
+  }
+
+  .curriculum__buttons {
+    margin-block: 2vh;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .resume-container {
@@ -72,6 +91,10 @@
 @media only screen and (min-width: 600px) {
   .CurriculumPage {
     padding: 10% 10% 15% 10%;
+
+    .certification-item {
+      height: 350px;
+    }
   }
 }
 

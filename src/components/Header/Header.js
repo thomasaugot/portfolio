@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 70; // Adjusted for header height
+      const scrollPosition = window.scrollY + 70;
 
       if (isElementInViewport("AboutPage", scrollPosition)) {
         setActiveLink("AboutPage");
