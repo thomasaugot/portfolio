@@ -7,6 +7,7 @@ import FooterArticles from "../../../../components/Footer/FooterArticles";
 import LikesBlog from "../../../../components/LikesBlog/LikesBlog";
 import supabase from "../../../../api/supabase";
 import Loading from "../../../../components/Loading/Loading";
+import NewsletterSubscription from "../../../../components/Newsletter/Newsletter";
 
 const ArticleContent = () => {
   const { articleUrl } = useParams();
@@ -48,6 +49,7 @@ const ArticleContent = () => {
       <HeaderBlogContent />
       {renderArticleContent()}
       {article && <LikesBlog articleId={article.id} />}
+      <NewsletterSubscription />
       <FooterArticles />
       <br />
       <br />

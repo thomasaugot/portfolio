@@ -1,26 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Blog.scss";
 import HeaderBlogMain from "../../components/HeaderBlog/HeaderBlogMain";
-import { useInView } from "react-intersection-observer";
 import ArticleCard from "./Articles/ArticleCard/ArticleCard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import FooterArticles from "../../components/Footer/FooterArticles";
 import Loading from "../../components/Loading/Loading";
 import { motion } from "framer-motion";
 
-const BlogPage = ({ articles, isLoading }) => {
-  const [setIsVisible] = useState(false);
-  const { inView } = useInView({
-    threshold: 0.2,
-  });
+const BlogPage = ({ articles }) => {
   const [searchTerm, setSearchTerm] = useState("");
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView, setIsVisible]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const filteredArticles = articles?.filter((item) => {
     const searchTermLower = searchTerm.toLowerCase();
@@ -34,6 +23,14 @@ const BlogPage = ({ articles, isLoading }) => {
         (tagsLower && tagsLower.some((tag) => tag.includes(searchTermLower))))
     );
   });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>

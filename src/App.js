@@ -24,7 +24,6 @@ import supabase from "../src/api/supabase";
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
   const [articles, setArticles] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -35,7 +34,6 @@ function App() {
           throw new Error(error.message);
         } else {
           setArticles(data);
-          setIsLoading(false);
         }
       } catch (error) {
         console.error("Failed to retrieve users by ID:", error.message);
@@ -77,32 +75,28 @@ function App() {
 
   return (
     <Router>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <div className="App">
-          <ProgressBar color={"#03dac6"} gradient={true} gradientColor={"rgba(102, 255, 0, 1)"} />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Header />
-                  <HomePage />
-                  <AboutPage />
-                  <CurriculumPage />
-                  <PortfolioPage />
-                  <Testimonials />
-                  <ContactPage />
-                  <Footer />!
-                </>
-              }
-            />
-            <Route path="/blog" element={<BlogPage articles={articles} isLoading={isLoading} />} />
-            <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
-          </Routes>
-        </div>
-      )}
+      <div className="App">
+        <ProgressBar color={"#03dac6"} gradient={true} gradientColor={"rgba(102, 255, 0, 1)"} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <HomePage />
+                <AboutPage />
+                <CurriculumPage />
+                <PortfolioPage />
+                <Testimonials />
+                <ContactPage />
+                <Footer />!
+              </>
+            }
+          />
+          <Route path="/blog" element={<BlogPage articles={articles} />} />
+          <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
