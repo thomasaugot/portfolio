@@ -12,126 +12,67 @@
 
 
 
-<h1 class="gradient-text">Create a React Contact Form with Email.js</h1>
 
-<img src="https://example.com/?raw=true" class="intro-img" />
+<h1 class="gradient-text">Save yourself hours of coding with these CSS generators</h1>
 
-<h2 class="gradient-text">Introduction</h2>
+<img src="https://raw.githubusercontent.com/thomasaugot/portfolio/29e21d3612eec9474501edbb0d4f5e74f320a487/src/pages/Blog/Articles/assets/illustration.PNG?raw=true" class="intro-img"/>
 
-<p class="paragraph">In this tutorial, I'll walk you through creating a contact form in a React application and integrating Email.js to send emails with the form data.<br/> Email.js is a platform that allows developers to easily integrate email sending capabilities into their applications or websites using JavaScript. It provides a simple and efficient way to send emails directly from the client-side (front-end) of a web application, without the need for a back-end server to handle the email sending process.</p>
-
-<h2 class="gradient-text">Prerequisites</h2>
-
-<p class="paragraph">To complete this tutorial, you'll need:</p>
-
-<p>
-- Node.js and npm (Node Package Manager) installed on your machine<br/>
-- Basic knowledge of React<br/>
-- An email.js account
+<p class="intro">
+  In the fast-paced world of web development, efficiency is key. Writing CSS from scratch can be time-consuming and repetitive. Thankfully, there are several CSS generators available that can significantly speed up your workflow and save you hours of coding. In this article, we'll explore a curated list of CSS generators that offer quick and easy solutions for creating animations, gradients, shapes, shadows, and more. I hope it will help fellow developers like it helped me!
 </p>
 
-<h2 class="gradient-text">Step 1: Set up a React application</h2>
+<h2 class="gradient-text">1. Animate.css</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://animate.style/">Animate.css</a>: Animate.css is a popular CSS animation library that provides a plethora of pre-built animations to bring your web pages to life effortlessly. Simply add the desired CSS class to your HTML element, and watch it animate.
+</p>
 
-<p class="paragraph">Create a new React application using Create React App:</p>
+<h2 class="gradient-text">2. React Awesome Reveal</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://www.npmjs.com/package/react-awesome-reveal">React Awesome Reveal</a>: This NPM package allows you to easily add stunning scroll animations to your React applications. It offers various animation effects, making your website more engaging and visually appealing.
+</p>
 
-<pre class="bash">
-  npx create-react-app emailjs-contact-form
-  cd emailjs-contact-form
-</pre>
+<h2 class="gradient-text">3. Animista</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://animista.net/">Animista</a>: Animista is a CSS animation generator that lets you explore and create various CSS animations. With an intuitive interface, you can customize animations to suit your project's needs.
+</p>
 
-<h2 class="gradient-text">Step 2: Create a ContactForm component</h2>
+<h2 class="gradient-text">4. CSS Gradient</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://cssgradient.io/">CSS Gradient</a>: Creating stunning gradients is a breeze with CSS Gradient. This tool allows you to generate CSS code for gradients with multiple color stops, angles, and styles, enabling you to design eye-catching backgrounds.
+</p>
 
-<p class="paragraph">Inside the /src folder, create a new file named ContactForm.js and add the following code:</p>
+<h2 class="gradient-text">5. SVG Wave Generator</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://www.softr.io/tools/svg-wave-generator">SVG Wave Generator</a>: The SVG Wave Generator by Softr enables you to create SVG waves with customizations like amplitude, frequency, and more. It's great for adding dynamic visuals to your web design.
+</p>
 
-<pre class="code">
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
+<h2 class="gradient-text">6. SVG Shape Generator</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://www.softr.io/tools/svg-shape-generator">SVG Shape Generator</a>: Softr's SVG Shape Generator allows you to craft SVG shapes effortlessly. Customize the shape properties to suit your project's requirements.
+</p>
 
-const ContactForm = () =&gt; {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [stateMessage, setStateMessage] = useState(null);
+<h2 class="gradient-text">7. Fancy Border Radius</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://9elements.github.io/fancy-border-radius/">Fancy Border Radius</a>: This tool helps you create visually appealing border radius styles for your web elements. Experiment with different border styles to find the perfect fit.
+</p>
 
-  const sendEmail = (e) =&gt; {
-    e.persist();
-    e.preventDefault();
-    setIsSubmitting(true);
+<h2 class="gradient-text">8. Neumorphism</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://neumorphism.io/">Neumorphism</a>: Neumorphism is a design trend that mimics soft shadows and light to create a digital version of skeuomorphism. Use this generator to apply Neumorphic styles to your elements.
+</p>
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) =&gt; {
-          setStateMessage('Message sent!');
-          setIsSubmitting(false);
-          setTimeout(() =&gt; {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        },
-        (error) =&gt; {
-          setStateMessage('Something went wrong, please try again later');
-          setIsSubmitting(false);
-          setTimeout(() =&gt; {
-            setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
-        }
-      );
-    
-    // Clears the form after sending the email
-    e.target.reset();
-  };
+<h2 class="gradient-text">9. CSSmatic - Box Shadow Generator</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://www.cssmatic.com/box-shadow">CSSmatic - Box Shadow Generator</a>: This tool allows you to visually generate box shadow CSS for your elements. Adjust settings to get the shadow effect you desire.
+</p>
 
-  return (
-    &lt;form onSubmit={sendEmail}&gt;
-      &lt;label&gt;Name&lt;/label&gt;
-      &lt;input type=&quot;text&quot; name=&quot;user_name&quot; /&gt;
-      &lt;label&gt;Email&lt;/label&gt;
-      &lt;input type=&quot;email&quot; name=&quot;user_email&quot; /&gt;
-      &lt;label&gt;Message&lt;/label&gt;
-      &lt;textarea name=&quot;message&quot; /&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Send&quot; disabled={isSubmitting} /&gt;
-      {stateMessage &amp;&amp; &lt;p&gt;{stateMessage}&lt;/p&gt;}
-    &lt;/form&gt;
-  );
-};
+<h2 class="gradient-text">10. Framer Motion (my personal favorite)</h2>
+<p class="paragraph">
+  <a class="gradient-text" href="https://www.framer.com/motion/animation/">Framer Motion</a>: Framer Motion is a production-ready motion library for React that makes it simple to create captivating animations and gestures. It's perfect for adding smooth transitions and interactions to your web applications.
+</p>
 
-export default ContactForm;
-</pre>
+<p class="conclusion">
+  These CSS generators are powerful tools that can significantly boost your productivity as a web developer. By utilizing them, you can streamline your CSS workflow, achieve eye-catching designs, and ultimately save valuable time. Experiment with these generators and incorporate them into your projects to take your web development skills to the next level and get the coolest effects. I personally use them over and over :)
+</p>
 
-<h2 class="gradient-text">Step 3: Integrate the ContactForm component</h2>
-<p class="paragraph">In your /src/App.js file, import and integrate the ContactForm component:</p>
-
-<pre class="code">
-import React from 'react';
-import ContactForm from './ContactForm';
-import './App.css';
-
-function App() {
-  return (
-    &lt;div className=&quot;App&quot;&gt;
-      &lt;h1&gt;Contact Us&lt;/h1&gt;
-      &lt;ContactForm /&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default App;
-</pre>
-
-<h2 class="gradient-text">Step 4: Configure Email.js</h2>
-<p class="paragraph">Sign up for an Email.js account if you haven't already. Get your service ID, template ID, and user ID from Email.js Dashboard.</p>
-<h2 class="gradient-text">Step 5: Test the contact form</h2>
-<p class="paragraph">Run your React application:</p>
-
-<pre class="bash">
-  npm start
-</pre>
-
-<p class="paragraph">Fill out the contact form and click the "Submit" button. Check your email for the received message.</p>
-<h2 class="gradient-text">Conclusion</h2>
-<p class="conclusion">You've successfully created a contact form in a React application and integrated Email.js to send emails. This approach allows you to easily handle user inquiries or feedback on your website.</p>
-<p class="conclusion">Feel free to customize the contact form's appearance and functionality according to your project's requirements.</p>
-<h6>Last updated: October 2023</h6>
+<h6>Last updated:  October 2023</h6>
