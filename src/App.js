@@ -26,6 +26,8 @@ function App() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
     const fetchArticles = async () => {
       try {
         const { data, error } = await supabase.from("articles").select("*");
