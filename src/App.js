@@ -20,6 +20,7 @@ import Testimonials from "./components/Testimonials/TestimonialsPage";
 import BlogPage from "./pages/Blog/Blog";
 import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
 import supabase from "../src/api/supabase";
+import Mockarticle from "./pages/Blog/Articles/ArticleContent/Mockarticle";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
@@ -91,12 +92,14 @@ function App() {
                 <PortfolioPage />
                 <Testimonials />
                 <ContactPage />
-                <Footer />!
+                <Footer />
+                <br />
               </>
             }
           />
           <Route path="/blog" element={<BlogPage articles={articles} />} />
           <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
+          <Route path="/blog/mockarticle" element={<Mockarticle />} />
         </Routes>
       </div>
     </Router>
