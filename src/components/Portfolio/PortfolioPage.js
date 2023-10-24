@@ -53,7 +53,7 @@ function PortfolioPage() {
       description: t("projects.2.description"),
       stack: t("projects.2.stack"),
       linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
-      linkDemo: "https://eurafrique.netlify.app/",
+      linkDemo: "https://eurafrique-eu.vercel.app/",
     },
     {
       id: 4,
