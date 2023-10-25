@@ -18,265 +18,187 @@ const Mockarticle = () => {
   // <pre class="bash"></pre> for bash snippets
   // <pre class="code"></pre> for code snippets
   return (
-    <div className="Content">
-      <HeaderBlogMain />
-      <h1 class="gradient-text">Optimizing Performance in React Native</h1>
-      <img
-        src="https://raw.githubusercontent.com/thomasaugot/portfolio/88291bfce5f35a76e1aa65a2e1c48f1358c2c04c/src/pages/Blog/Articles/assets/optimize.PNG?raw=true"
-        class="intro-img"
-        alt="illustration"
-      />
-      <p class="intro">
-        React Native is an excellent choice for building cross-platform mobile applications.
-        However, as your app grows and evolves, it's easy to encounter performance bottlenecks.
-        Fortunately, there are effective strategies and tools that can help you overcome these
-        challenges. In this article, we'll explore a variety of methods that will empower you to
-        take control of your app's performance. From leveraging the power of React Native's built-in
-        components to using advanced memoization techniques and profiling tools, you'll learn how to
-        create smooth and responsive mobile experiences.
-      </p>
-      <h2 class="gradient-text">Use React Native's FlatList</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> React Native's FlatList is a performant component for rendering lists. It renders
-        only the items that are currently visible on the screen, and it recycles items as you
-        scroll.
-      </p>
-      <p class="paragraph">
-        For more information about Flatlist, visit the official React Native documentation{" "}
-      </p>
-      <a class="link-content" href="https://reactnative.dev/docs/flatlist">
-        here
-      </a>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Import FlatList from 'react-native'. Create a data source and pass it to the data prop of
-        FlatList. Implement a renderItem function that specifies how each item should be rendered.
-        Add keyExtractor to specify a unique key for each item. Customize the appearance and
-        behavior using various props such as ItemSeparatorComponent, ListEmptyComponent, and more.
-      </p>
-      <p class="paragraph">
-        <b>Limits:</b>
-        <br /> While FlatList optimizes rendering for long lists, it may not be suitable for all UI
-        components. Consider when to use SectionList or other components based on your app's
-        requirements.
-      </p>
-      <h2 class="gradient-text">Memoization with React.memo</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> React.memo is a higher-order component (HOC) in React that memoizes functional
-        components. It prevents re-renders when the component's props remain unchanged.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Wrap a functional component with React.memo to create a memoized version. Control re-renders
-        by defining a custom comparison function for props using the areEqual parameter.
-        {/* <pre class="code">const ExpensiveComponent = ({ data }) =&gt; {
-  // Imagine this component is computation-heavy
-  const result = data * 2;
+<div className="Content">
+<h1 class="gradient-text">Supabase in React/React-Native for Beginners: The Basics</h1>
+<img src="../assets/supabase.png" class="intro-img" alt="illustration" />
+<p class="intro">Supabase is an open-source platform that streamlines modern application development by providing a comprehensive development stack. It encompasses a powerful relational database, user authentication services, real-time capabilities, RESTful APIs, file storage, and fine-grained security control. As an open-source solution, it offers flexibility, scalability, and rapid development, making it a favored choice for developers. With real-time features and an active community, Supabase simplifies complex development tasks, allowing developers to focus on creating the core features of their applications.</p>
+<h2 class="gradient-text">Basic Setup</h2>
+<p class="paragraph">To integrate Supabase into our project, here are the steps to follow:</p>
+<p class="paragraph">1. Install the package:</p>
+<pre class="bash">npm install @supabase/supabase-js</pre>
+<p class="paragraph">2. Create the supabase.js file; include the following content:
+</p>
+<pre class="code">
+import 'react-native-url-polyfill/auto';
+import {createClient} from '@supabase/supabase-js';
+import Config from 'react-native-config'; // this line for the environment variables configuration
 
-  return (
-    &lt;div&gt;
-      &lt;h1&gt;Result: {result}&lt;/h1&gt;
-    &lt;/div&gt;
-  );
-};
+const supabaseUrl = Config.SUPABASE_URL;
+const supabaseAnonKey = Config.SUPABASE_KEY;
 
-// Without React.memo, ExpensiveComponent re-renders with every parent render
-// With React.memo, it re-renders only when the &quot;data&quot; prop changes
-const MemoizedExpensiveComponent = React.memo(ExpensiveComponent);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: false,
+  },
+});
+</pre>
+<p class="paragraph">3. Set the environment variables (preferably in the .env file to keep them secret). You can find them in the project dashboard on Supabase, under the "settings" and then "api" tab:
+</p>
+<img src="../assets/api-variables.png" class="intro-img" alt="illustration" />
+<pre class="code">
+// .env
 
-const App = () =&gt; {
-  const [value, setValue] = React.useState(10);
+SUPABASE_URL=********************************************
+SUPABASE_KEY=********************************************
+</pre>
 
-  return (
-    &lt;div&gt;
-      &lt;button onClick={() =&gt; setValue(value + 1)}&gt;Increment&lt;/button&gt;
-      &lt;MemoizedExpensiveComponent data={value} /&gt;
-    &lt;/div&gt;
-  );
-};
+4. Finally, I imported the client created in the file where I make my API calls:
 
-export default App;</pre> */}
-        <b>Limits:</b>
-        <br /> Memoization is most effective for pure presentational components. Be cautious with
-        components that contain complex logic or side effects.
-      </p>
-      <h2 class="gradient-text">Harnessing useMemo and useCallback</h2>
-      <p class="paragraph">
-        useMemo is a React hook that's all about optimizing your calculations. It allows you to
-        memoize the result of a computation, ensuring that it's only recalculated when its
-        dependencies change. Memoization, in this context, means storing the result of a function
-        call and returning the cached result when the same inputs occur again. Consider a scenario
-        where you're performing complex calculations or fetching data from an API within a
-        component. Without useMemo, these calculations or fetch operations might be triggered with
-        every render, even when the component's state or props haven't changed. This can lead to
-        inefficient usage of computational resources and unnecessary re-renders. By using useMemo,
-        you can store the result of these calculations and only recompute them when the specified
-        dependencies change. This is especially handy for expensive operations that shouldn't be
-        repeated unless necessary.
-      </p>
-      {/* <pre class="code">const expensiveCalculation = (input) =&gt; {
-  // Expensive computation logic
-};
+<pre class="code">
+import {supabase} from './supabase';
+</pre>
 
-const MyComponent = ({ data }) =&gt; {
-  const result = useMemo(() =&gt; expensiveCalculation(data), [data]);
+<p class="paragraph">Configuration is complete; nothing more to do! :)</p>
 
-  return &lt;div&gt;{result}&lt;/div&gt;;
-};</pre>
+<h2 class="gradient-text">Databases with Supabase</h2>
 
-<p class="paragraph">useCallback is closely related to useMemo, but its primary focus is on optimizing function references. When you define a function inside a component, it's recreated with every render. This means that if you pass that function as a prop to child components or use it as a dependency in other hooks, it can trigger re-renders unnecessarily.
-Here's where useCallback shines. It memoizes the function reference, ensuring that it remains constant unless its dependencies change. This is incredibly useful when dealing with callbacks for event handlers or functions that are used as dependencies in useEffect.</p>
-<pre class="code">const MyComponent = ({ onClick }) =&gt; {
-  const handleClick = useCallback(() =&gt; {
-    // Handle click
-  }, []);
+<p class="paragraph">Supabase is built on PostgreSQL, a powerful relational database. You can access your database through the "Database" tab in the dashboard.
+</p>
 
-  return &lt;button onClick={handleClick}&gt;Click me&lt;/button&gt;;
-};</pre> */}
-      <h2 class="gradient-text">Use Profiling Tools</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Profiling tools such as React DevTools allow you to measure performance and identify
-        performance bottlenecks in your app.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Install and set up React DevTools in your development environment. Record and analyze
-        performance profiles. Identify components causing excessive re-renders, and optimize them.
-        <b>Limits:</b>
-        <br /> Profiling tools provide insights into performance bottlenecks, but they don't provide
-        direct solutions. Optimizing your app based on profiling data is essential.
-      </p>
-      <h2 class="gradient-text">Optimize Item Components</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Optimizing item components involves making them lightweight, avoiding heavy
-        computations, and minimizing side effects.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Ensure item components only contain the necessary logic for rendering. Avoid complex
-        computations and side effects inside item components. Optimize rendering for complex
-        components.
-        <b>Limits:</b>
-        <br /> Item components must balance between reusability and complexity. Careful
-        consideration is required for more complex items.
-      </p>
-      <h2 class="gradient-text">Streamline Network Requests</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Streamlining network requests involves optimizing API calls by techniques such as
-        caching, batching, and loading data incrementally.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Implement caching strategies to reduce unnecessary network requests. Consider batching
-        multiple requests to reduce the overhead of making numerous small requests. Implement lazy
-        loading or pagination for large data sets.
-        <b>Limits:</b>
-        <br /> These strategies depend on your app's specific requirements and the APIs you interact
-        with.
-      </p>
-      <h2 class="gradient-text">Efficient State Management</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Efficient state management involves minimizing frequent state updates, which can lead
-        to unnecessary re-renders.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Carefully manage state updates and avoid excessive re-renders. Use hooks like useMemo and
-        useCallback to memoize values and functions. Implement shouldComponentUpdate when using
-        class components.
-        <b>Limits:</b>
-        <br /> Over-optimizing state management can lead to complex code. Balance between
-        performance and maintainability.
-      </p>
-      <h2 class="gradient-text">Content Optimization</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Content optimization involves optimizing the content within list items by employing
-        techniques like lazy loading for images and other resources.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Lazy load images to avoid blocking rendering of other components. Optimize content within
-        items, such as text and icons, for quick rendering.
-        <b>Limits:</b>
-        <br /> Content optimization varies depending on the nature of the content and the components
-        involved.
-      </p>
-      <h2 class="gradient-text">Implement Pagination</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Implementing pagination or infinite scrolling allows you to handle large data sets
-        effectively without loading all data at once.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Break your data into smaller chunks or pages. Load data incrementally as the user scrolls,
-        and manage the loaded data efficiently.
-        <b>Limits:</b>
-        <br /> Pagination is beneficial for long lists but may not be suitable for all types of
-        data.
-      </p>
-      <h2 class="gradient-text">Use useEffect Wisely</h2>
-      <p class="paragraph">
-        <b>What it does:</b>
-        <br /> Understanding the impact of useEffect on re-renders and ensuring correct dependency
-        management to avoid unnecessary re-renders.
-      </p>
-      <p class="paragraph">
-        <b>How to use it:</b>
-        <br />
-        Be aware that useEffect can trigger re-renders if not managed properly. Define dependencies
-        correctly to ensure that the effect only runs when necessary.
-        {/* <pre class="code">import React, { useState, useEffect } from 'react';
+<img src="../assets/supabase accueil.png" class="intro-img" alt="illustration" />
 
-const App = () =&gt; {
-  const [count, setCount] = useState(0);
+<h2 class="gradient-text">Creating Tables and Schemas</h2>
+<p class="paragraph">To create tables and schemas, click on the "SQL Editor" tab and use SQL queries to define your data structure (procedure described in the next section). You can also directly go to the 'Table Editor' tab and click 'New table' to add columns or rows to a table by clicking the green 'Insert' button.
+</p>
 
-  // The effect function is executed after the component renders
-  useEffect(() =&gt; {
-    document.title = `Count: ${count}`;
+<img src="../assets/tables.png" class="intro-img" alt="illustration" />
 
-    // This function will be called when the component unmounts or when count changes
-    return () =&gt; {
-      document.title = 'React App'; // Cleanup code
-    };
-  }, [count]);
+<h2 class="gradient-text">Writing SQL Queries</h2>
+<p class="paragraph">SQL queries allow you to send commands, e.g., to add a table or a column. At Supabase, the interface offers an AI tool for generating these queries. To use the AI integration in the Supabase SQL Editor, simply click the "AI" button in the toolbar. This will open the AI sidebar, where you can enter your description in natural language or your SQL query. The AI will then generate the corresponding SQL query or suggestions to improve your query.
+</p>
+<p class="paragraph">Here's an example of using the Supabase SQL Editor to generate an SQL query from natural language:
+</p>
+<p class="paragraph">Access the "databases" tab in the Supabase dashboard and click the "SQL Editor" tab.
+Click the "AI" button in the toolbar.
+In the AI sidebar, enter the following natural language description: <br>
+"Select all buildings created in the last 30 days." <br>
+Click the "Generate SQL" button.
+The AI will generate the following SQL query: <br>
+</p>
 
-  return (
-    &lt;div&gt;
-      &lt;h1&gt;Count: {count}&lt;/h1&gt;
-      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Increment&lt;/button&gt;
-    &lt;/div&gt;
-  );
-};
+<pre class="code">
+SELECT * FROM users
+WHERE created_at > NOW() - INTERVAL '30 days';
+</pre>
 
-export default App;</pre> */}
-        <b>
-          Limits:<b></b>
-          <br />
-        </b>
-        <br /> Incorrectly managing dependencies can lead to bugs or suboptimal performance.
-      </p>
-      <p class="conclusion">
-        In conclusion, optimizing performance in a React Native app is crucial for delivering a
-        smooth and responsive user experience. By implementing the techniques and best practices
-        discussed in this comprehensive guide, you can significantly enhance your app's speed and
-        efficiency.
-      </p>
+<p class="paragraph">Click 'RUN SQL' to execute the query.</p>
+
+<p class="paragraph">Another example, to add a "role" column containing only possible fields 'admin', 'employé', 'propriétaire', 'locataire', 'visiteur', enter the following command:
+</p>
+
+<pre class="code">
+-- Add a new column called "role" to the "user" table with a text data type
+alter table "user"
+add column role text;
+
+-- Add a constraint to the "role" column to only allow the values 'Role 1', 'Role 2', 'Role 3', or 'Role 4'
+alter table "user"
+add constraint role_constraint check (role in ('admin', 'employé', 'propriétaire', 'locataire', 'visiteur'));
+</pre>
+
+<img src="../assets/tempsnip.png" class="intro-img" alt="illustration" />
+
+<h2 class="gradient-text">User Authentication</h2>
+<p class="paragraph">The authentication system used here is the one integrated into Supabase. Although by default, there is a 'user' table to make the authentication feature work (under the "auth" schema) in Supabase, I usually create a second one under the "public" schema to customize the assigned fields. Thus, using an SQL query I launched from the "SQL Editor", I am able to send the basic information contained in the default 'user' table to my custom 'user' table, by which I manage to add certain information to each user in addition to what is collected by the default table. Here is the SQL query, including Row Level Security (RLS) explained below:
+</p>
+
+<pre class="code">
+-- Create a table for public profiles
+CREATE TABLE USERS (
+  id UUID REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,
+  created_at TIMESTAMP WITH TIME ZONE,
+  full_name TEXT,
+  email TEXT,
+  phone TEXT,
+  role TEXT CHECK (role IN ('admin', 'employé', 'propriétaire', 'locataire', 'visiteur')),
+);
+
+ALTER TABLE USERS ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public profiles are viewable by everyone." ON USERS
+  FOR SELECT USING (TRUE);
+
+CREATE POLICY "Users can insert their own profile." ON USERS
+  FOR INSERT WITH CHECK (auth.uid() = id);
+
+CREATE POLICY "Users can update own profile." ON USERS
+  FOR UPDATE USING (auth.uid() = id);
+
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER AS $$
+BEGIN
+  INSERT INTO public.USERS (id, full_name, email, phone)
+  VALUES (NEW.id, NEW.raw_user_meta_data->>'full_name', NEW.raw_user_meta_data->>'email', NEW.raw_user_meta_data->>'phone');
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+</pre>
+<p class="paragraph">Thanks to this, I can store a lot of data in addition to the default ones, such as the user's "role," phone, etc.
+</p>
+<p class="paragraph">The "Auth" tab allows you to manage user authentication. You can configure registration, login, and profile management.
+</p>
+<p class="paragraph">In "Auth" > "OAuth," you can configure authentication through third-party providers such as Google, Facebook, or GitHub. Make sure you have created applications with these providers beforehand. By integrating authentication mechanisms with third-party providers, you facilitate access to your application.
+</p>
+
+<img src="../assets/auth.png" class="intro-img" alt="illustration" />
+
+<h2 class="gradient-text">API Endpoint Configuration</h2>
+<p class="paragraph">The "API" tab allows you to configure REST API endpoints for interacting with data and the application. After completing the imports described earlier in the "Basic Configuration" section, you only need to make API calls as already provided in the "API" tab of the Supabase project:
+</p>
+
+<img src="../assets/api-calls-supabase.png" class="intro-img" alt="illustration" />
+
+<h2 class="gradient-text">RLS (Row-Level Security)</h2>
+<p class="paragraph">Another feature of Supabase is Row-Level Security (RLS). RLS represents a powerful mechanism that allows you to restrict access to data in your tables based on rules defined at the row level. This ensures that only authorized users can view and modify data assigned to them. Here's how to configure RLS in Supabase:
+</p>
+<p class="paragraph">Create tables with security columns: To use RLS, start by creating tables with columns that allow you to define security rules. For example, you can have an "owner" column that records the user who owns the row.
+</p>
+<p class="paragraph">Create security policies: Once your tables are configured, you can create security policies. This is done using the WITH (security_barrier = true) clause in the CREATE POLICY statement:
+</p>
+
+<pre class="code">
+CREATE POLICY my_policy
+  ON my_table
+  FOR SELECT
+  USING (user_id = current_user_id())
+  WITH CHECK (user_id = current_user_id());
+</pre>
+<p class="paragraph">In this example, my_policy is the name of your policy, my_table is the relevant table, SELECT indicates that this policy applies to select operations (you can also use INSERT, UPDATE, or DELETE), user_id is the column defining the owners, and current_user_id() returns the ID of the currently logged-in user.
+</p>
+<p class="paragraph">Activate security policies: The policies you create are not enabled by default. To activate them, use the ALTER TABLE command:
+</p>
+<pre class="code">
+ALTER TABLE my_table ENABLE ROW LEVEL SECURITY;
+</pre>
+<p class="paragraph">Configure user roles: Finally, assign roles to users who need to comply with these policies. A role can have multiple associated policies. You can assign a role to a user using the GRANT command:
+</p>
+<pre class="code">
+GRANT my_role TO my_user
+</pre>
+<p class="paragraph">Test policies: Once you have configured policies and roles, you can test them to ensure they work as intended. Log in as a user and try to access data for which security rules have been defined.
+</p>
+<p class="paragraph">Handling exceptions: You can also manage exceptions using the ON clause in your policies. For example, you can allow an administrator to access all data without any restrictions.
+</p>
+<p class="conclusion">With all this, you're already set to start with Supabase basics. Using such services is considerably time-saving and literally saves you from building an entire custom backend. Therefore, being a frontend fan, I use it on most of my work! For more information, refer to the official Supabase documentation on their website: https://supabase.com/docs
+</p>
       <NewsletterSubscription />
       <FooterArticles />
       <br />
