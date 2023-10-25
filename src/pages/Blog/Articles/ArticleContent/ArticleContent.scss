@@ -122,4 +122,13 @@
   .link-content {
     text-decoration: underline !important;
   }
+
+  .img-bigger {
+    width: 60vw;
+    margin-top: 30px;
+    border-radius: 5px;
+    @media (max-width: 1023px) {
+      width: 90vw;
+    }
+  }
 }
