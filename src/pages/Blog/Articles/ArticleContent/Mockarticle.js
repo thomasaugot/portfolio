@@ -20,6 +20,7 @@
 //   return (
 // <div className="Content">
 // <h1 class="gradient-text">Supabase in React/React-Native for Beginners: The Basics</h1>
+//  <img class="img-bigger" src="...?raw=true" class="intro-img" alt="illustration" />
 // <img src="https://raw.githubusercontent.com/thomasaugot/portfolio/b5f0beedf2e9c42091e8a38ebcecf6d3a7454fa4/src/pages/Blog/Articles/assets/supabase.png?raw=true" class="intro-img" alt="illustration" />
 // <p class="intro">Supabase is an open-source platform that streamlines modern application development by providing a comprehensive development stack. It encompasses a powerful relational database, user authentication services, real-time capabilities, RESTful APIs, file storage, and fine-grained security control. As an open-source solution, it offers flexibility, scalability, and rapid development, making it a favored choice for developers. With real-time features and an active community, Supabase simplifies complex development tasks, allowing developers to focus on creating the core features of their applications.</p>
 // <h2 class="gradient-text">Basic Setup</h2>
