@@ -4,12 +4,13 @@
   background: rgba(26, 25, 25, 0.8);
   color: $text2;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   backdrop-filter: blur(2px);
   display: flex;
   height: 90px;
   position: fixed;
   margin-top: 5px;
+  left: 0;
 
   .menu-back {
     display: flex;
