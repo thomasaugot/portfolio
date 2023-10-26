@@ -133,7 +133,7 @@ function PortfolioPage() {
           {projects.map((project, index) => (
             <motion.div
               whileInView={{ scale: 1, opacity: 1 }}
-              initial={{ scale: 0.5, opacity: 0 }}
+              initial={{ scale: 0.8, opacity: 0 }}
               viewport={{ once: true }}
               transition={{
                 type: "spring",
@@ -189,7 +189,7 @@ function PortfolioPage() {
       ) : (
         <motion.div
           whileInView={{ scale: 1, opacity: 1 }}
-          initial={{ scale: 0.5, opacity: 0 }}
+          initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",

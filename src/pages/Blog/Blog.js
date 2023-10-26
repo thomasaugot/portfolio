@@ -107,7 +107,7 @@ const BlogPage = ({ articles }) => {
             {filteredArticles?.map((articleItem) => (
               <motion.div
                 whileInView={{ scale: 1, opacity: 1 }}
-                initial={{ scale: 0.7, opacity: 0 }}
+                initial={{ scale: 0.8, opacity: 0 }}
                 viewport={{ once: true }}
                 transition={{
                   type: "spring",

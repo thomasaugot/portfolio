@@ -306,7 +306,7 @@ function CurriculumPage() {
       <div className="certifications-container">
         <motion.div
           whileInView={{ scale: 1, opacity: 1 }}
-          initial={{ scale: 0.5, opacity: 0 }}
+          initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",
@@ -342,7 +342,7 @@ function CurriculumPage() {
         <br></br>
         <motion.div
           whileInView={{ scale: 1, opacity: 1 }}
-          initial={{ scale: 0.5, opacity: 0 }}
+          initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "spring",
