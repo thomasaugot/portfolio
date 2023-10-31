@@ -61,17 +61,17 @@ function AboutPage() {
         >
           <p>
             {t(
-              "I am a Full-Stack developer from France, specializing in React.js, currently based in sunny Fuerteventura."
+              "Hi there! I am Thomas, a Full-Stack developer hailing from France and currently soaking up the sunny vibes of Fuerteventura. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web development."
             )}
             <br />
             <br />
             {t(
-              "Being an ex-globetrotter, I bring a global perspective and the ability to tackle any challenges. As everything transitions to the digital realm, I am dedicated to making a meaningful contribution to enhance online presence and visibility for businesses and individuals alike."
+              "In this ever-evolving digital landscape, my mission is crystal clear: elevate online presence and visibility for businesses and individuals alike. Whether it's crafting seamless front-end magic or diving deep into the back-end abyss, I enjoy creating remarkable digital experiences. Staying on the cutting edge of tech trends ensures that my work is always in sync with modern design principles and the best practices in web development."
             )}
             <br />
             <br />
             {t(
-              "I enjoy working on both the front-end and back-end, crafting seamless digital experiences. Keeping up with the latest trends helps me ensure my work aligns with modern design and follows the best practices in web development."
+              "While my playground primarily revolves around Javascript and its captivating frameworks, I am never confined by boundaries and always seek to expand my skillset!"
             )}
           </p>
         </motion.div>
