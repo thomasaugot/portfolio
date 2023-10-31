@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
+import { BsMedium } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import { useTranslation } from "react-i18next";
 import "./ContactPage.scss";
@@ -175,6 +176,28 @@ function ContactPage() {
               >
                 <div>
                   <AiFillGithub />
+                </div>
+              </IconContext.Provider>
+            </a>
+          </motion.div>
+          <motion.div
+            whileInView={{ x: 1, opacity: 1 }}
+            initial={{ x: "110%", opacity: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              stiffness: 40,
+              delay: 0.8,
+              ease: "easeOut",
+            }}
+            className="text-gradient"
+          >
+            <a href="https://medium.com/@thomasaugot" target="_blank" rel="noreferrer">
+              <IconContext.Provider
+                value={{ color: "white", size: "67px", className: "githubLogo" }}
+              >
+                <div>
+                  <BsMedium />
                 </div>
               </IconContext.Provider>
             </a>
