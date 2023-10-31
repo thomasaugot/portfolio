@@ -1,222 +1,179 @@
 /* eslint-disable no-lone-blocks */
-// import "./ArticleContent.scss";
-// import "../../Blog.scss";
-// import HeaderBlogMain from "../../../../components/HeaderBlog/HeaderBlogMain";
-// import FooterArticles from "../../../../components/Footer/FooterArticles";
-// import NewsletterSubscription from "../../../../components/Newsletter/Newsletter";
+import "./ArticleContent.scss";
+import "../../Blog.scss";
+import HeaderBlogMain from "../../../../components/HeaderBlog/HeaderBlogMain";
+import FooterArticles from "../../../../components/Footer/FooterArticles";
+import NewsletterSubscription from "../../../../components/Newsletter/Newsletter";
 
-// const Mockarticle = () => {
-// this file is only to format my articles before importing them into my database as raw text
-// if images don't load, add ?raw=true at the end of the url
+const Mockarticle = () => {
+  // this file is only to format my articles before importing them into my database as raw text
+  // if images don't load, add ?raw=true at the end of the url
 
-// Template:
-// <h1 class="gradient-text"></h1>
-// <img src="https://example.com/?raw=true" class="intro-img" alt="illustration" />
-// <img src="https://example.com/?raw=true" class="img-bigger" alt="illustration" />
-// <h2 class="gradient-text"></h2>
-// <p class="paragraph"></p>
-// <p class="conclusion"></p>
-// <h6>Last updated:  September 2023</h6>
-// <pre class="bash"></pre> for bash snippets
-// <pre class="code"></pre> for code snippets
-//   return (
-// <div className="Content">
-{
-  /* <h1 class="gradient-text">Supabase in React/React-Native for Beginners: The Basics</h1>
-<img src="https://raw.githubusercontent.com/thomasaugot/portfolio/b5f0beedf2e9c42091e8a38ebcecf6d3a7454fa4/src/pages/Blog/Articles/assets/supabase.png?raw=true" class="intro-img" alt="illustration" />
-<p class="intro">Supabase is an open-source platform that streamlines modern application development by providing a comprehensive development stack. It encompasses a powerful relational database, user authentication services, real-time capabilities, RESTful APIs, file storage, and fine-grained security control. As an open-source solution, it offers flexibility, scalability, and rapid development, making it a favored choice for developers. With real-time features and an active community, Supabase simplifies complex development tasks, allowing developers to focus on creating the core features of their applications.</p>
-<h2 class="gradient-text">Basic Setup</h2>
-<p class="paragraph">To integrate Supabase into our project, here are the steps to follow:</p>
-<p class="paragraph">1. Install the package:</p>
-<pre class="bash">npm install @supabase/supabase-js</pre>
-<p class="paragraph">2. Create the supabase.js file; include the following content:
-</p>
-<pre class="code">
-import 'react-native-url-polyfill/auto';
-import {createClient} from '@supabase/supabase-js';
-import Config from 'react-native-config'; // this line for the environment variables configuration
-
-const supabaseUrl = Config.SUPABASE_URL;
-const supabaseAnonKey = Config.SUPABASE_KEY;
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: false,
-  },
-});
-</pre>
-<p class="paragraph">3. Set the environment variables (preferably in the .env file to keep them secret). You can find them in the project dashboard on Supabase, under the "settings" and then "api" tab:
-</p>
-<img class="img-bigger" src="https://raw.githubusercontent.com/thomasaugot/portfolio/ac4bfdb14d9fce4363e50fb5336ac9b91d759f99/src/pages/Blog/Articles/assets/api-variables.png?raw=true" class="intro-img" alt="illustration" />
-<pre class="code">
-// .env
-
-SUPABASE_URL=********************************************
-SUPABASE_KEY=********************************************
-</pre>
-
-4. Finally, I imported the client created in the file where I make my API calls:
-
-<pre class="code">
-import {supabase} from './supabase';
-</pre>
-
-<p class="paragraph">Configuration is complete; nothing more to do! :)</p>
-
-<h2 class="gradient-text">Databases with Supabase</h2>
-
-<p class="paragraph">Supabase is built on PostgreSQL, a powerful relational database. You can access your database through the "Database" tab in the dashboard.
-</p>
-
-<img class="img-bigger" src="https://raw.githubusercontent.com/thomasaugot/portfolio/ac4bfdb14d9fce4363e50fb5336ac9b91d759f99/src/pages/Blog/Articles/assets/supabase%20accueil.png?raw=true" class="intro-img" alt="illustration" />
-
-<h2 class="gradient-text">Creating Tables and Schemas</h2>
-<p class="paragraph">To create tables and schemas, click on the "SQL Editor" tab and use SQL queries to define your data structure (procedure described in the next section). You can also directly go to the 'Table Editor' tab and click 'New table' to add columns or rows to a table by clicking the green 'Insert' button.
-</p>
-
-<img class="img-bigger" src="https://raw.githubusercontent.com/thomasaugot/portfolio/ac4bfdb14d9fce4363e50fb5336ac9b91d759f99/src/pages/Blog/Articles/assets/tables.png?raw=true" class="intro-img" alt="illustration" />
-
-<h2 class="gradient-text">Writing SQL Queries</h2>
-<p class="paragraph">SQL queries allow you to send commands, e.g., to add a table or a column. At Supabase, the interface offers an AI tool for generating these queries. To use the AI integration in the Supabase SQL Editor, simply click the "AI" button in the toolbar. This will open the AI sidebar, where you can enter your description in natural language or your SQL query. The AI will then generate the corresponding SQL query or suggestions to improve your query.
-</p>
-<p class="paragraph">Here's an example of using the Supabase SQL Editor to generate an SQL query from natural language:
-</p>
-<p class="paragraph">Access the "databases" tab in the Supabase dashboard and click the "SQL Editor" tab.
-Click the "AI" button in the toolbar.
-In the AI sidebar, enter the following natural language description: <br>
-"Select all buildings created in the last 30 days." <br>
-Click the "Generate SQL" button.
-The AI will generate the following SQL query: <br>
-</p>
-
-<pre class="code">
-SELECT * FROM users
-WHERE created_at > NOW() - INTERVAL '30 days';
-</pre>
-
-<p class="paragraph">Click 'RUN SQL' to execute the query.</p>
-
-<p class="paragraph">Another example, to add a "role" column containing only possible fields 'admin', 'employé', 'propriétaire', 'locataire', 'visiteur', enter the following command:
-</p>
-
-<pre class="code">
--- Add a new column called "role" to the "user" table with a text data type
-alter table "user"
-add column role text;
-
--- Add a constraint to the "role" column to only allow the values 'Role 1', 'Role 2', 'Role 3', or 'Role 4'
-alter table "user"
-add constraint role_constraint check (role in ('admin', 'employé', 'propriétaire', 'locataire', 'visiteur'));
-</pre>
-
-<img class="img-bigger" src="https://raw.githubusercontent.com/thomasaugot/portfolio/ac4bfdb14d9fce4363e50fb5336ac9b91d759f99/src/pages/Blog/Articles/assets/tempsnip.png?raw=true" class="intro-img" alt="illustration" />
-
-<h2 class="gradient-text">User Authentication</h2>
-<p class="paragraph">The authentication system used here is the one integrated into Supabase. Although by default, there is a 'user' table to make the authentication feature work (under the "auth" schema) in Supabase, I usually create a second one under the "public" schema to customize the assigned fields. Thus, using an SQL query I launched from the "SQL Editor", I am able to send the basic information contained in the default 'user' table to my custom 'user' table, by which I manage to add certain information to each user in addition to what is collected by the default table. Here is the SQL query, including Row Level Security (RLS) explained below:
-</p>
-
-<pre class="code">
--- Create a table for public profiles
-CREATE TABLE USERS (
-  id UUID REFERENCES auth.users ON DELETE CASCADE NOT NULL PRIMARY KEY,
-  created_at TIMESTAMP WITH TIME ZONE,
-  full_name TEXT,
-  email TEXT,
-  phone TEXT,
-  role TEXT CHECK (role IN ('admin', 'employé', 'propriétaire', 'locataire', 'visiteur')),
-);
-
-ALTER TABLE USERS ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Public profiles are viewable by everyone." ON USERS
-  FOR SELECT USING (TRUE);
-
-CREATE POLICY "Users can insert their own profile." ON USERS
-  FOR INSERT WITH CHECK (auth.uid() = id);
-
-CREATE POLICY "Users can update own profile." ON USERS
-  FOR UPDATE USING (auth.uid() = id);
-
-DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
-
-CREATE OR REPLACE FUNCTION public.handle_new_user()
-RETURNS TRIGGER AS $$
-BEGIN
-  INSERT INTO public.USERS (id, full_name, email, phone)
-  VALUES (NEW.id, NEW.raw_user_meta_data->>'full_name', NEW.raw_user_meta_data->>'email', NEW.raw_user_meta_data->>'phone');
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
-
-CREATE TRIGGER on_auth_user_created
-  AFTER INSERT ON auth.users
-  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
-</pre>
-<p class="paragraph">Thanks to this, I can store a lot of data in addition to the default ones, such as the user's "role," phone, etc.
-</p>
-<p class="paragraph">The "Auth" tab allows you to manage user authentication. You can configure registration, login, and profile management.
-</p>
-<p class="paragraph">In "Auth" > "OAuth," you can configure authentication through third-party providers such as Google, Facebook, or GitHub. Make sure you have created applications with these providers beforehand. By integrating authentication mechanisms with third-party providers, you facilitate access to your application.
-</p>
-
-<img class="img-bigger" src="https://raw.githubusercontent.com/thomasaugot/portfolio/ac4bfdb14d9fce4363e50fb5336ac9b91d759f99/src/pages/Blog/Articles/assets/auth.png?raw=true" class="intro-img" alt="illustration" />
-
-<h2 class="gradient-text">API Endpoint Configuration</h2>
-<p class="paragraph">The "API" tab allows you to configure REST API endpoints for interacting with data and the application. After completing the imports described earlier in the "Basic Configuration" section, you only need to make API calls as already provided in the "API" tab of the Supabase project:
-</p>
-
-<img class="img-bigger" src="https://raw.githubusercontent.com/thomasaugot/portfolio/ac4bfdb14d9fce4363e50fb5336ac9b91d759f99/src/pages/Blog/Articles/assets/api-calls-supabase.png?raw=true" class="intro-img" alt="illustration" />
-
-<h2 class="gradient-text">RLS (Row-Level Security)</h2>
-<p class="paragraph">Another feature of Supabase is Row-Level Security (RLS). RLS represents a powerful mechanism that allows you to restrict access to data in your tables based on rules defined at the row level. This ensures that only authorized users can view and modify data assigned to them. Here's how to configure RLS in Supabase:
-</p>
-<p class="paragraph">Create tables with security columns: To use RLS, start by creating tables with columns that allow you to define security rules. For example, you can have an "owner" column that records the user who owns the row.
-</p>
-<p class="paragraph">Create security policies: Once your tables are configured, you can create security policies. This is done using the WITH (security_barrier = true) clause in the CREATE POLICY statement:
-</p>
-
-<pre class="code">
-CREATE POLICY my_policy
-  ON my_table
-  FOR SELECT
-  USING (user_id = current_user_id())
-  WITH CHECK (user_id = current_user_id());
-</pre>
-<p class="paragraph">In this example, my_policy is the name of your policy, my_table is the relevant table, SELECT indicates that this policy applies to select operations (you can also use INSERT, UPDATE, or DELETE), user_id is the column defining the owners, and current_user_id() returns the ID of the currently logged-in user.
-</p>
-<p class="paragraph">Activate security policies: The policies you create are not enabled by default. To activate them, use the ALTER TABLE command:
-</p>
-<pre class="code">
-ALTER TABLE my_table ENABLE ROW LEVEL SECURITY;
-</pre>
-<p class="paragraph">Configure user roles: Finally, assign roles to users who need to comply with these policies. A role can have multiple associated policies. You can assign a role to a user using the GRANT command:
-</p>
-<pre class="code">
-GRANT my_role TO my_user
-</pre>
-<p class="paragraph">Test policies: Once you have configured policies and roles, you can test them to ensure they work as intended. Log in as a user and try to access data for which security rules have been defined.
-</p>
-<p class="paragraph">Handling exceptions: You can also manage exceptions using the ON clause in your policies. For example, you can allow an administrator to access all data without any restrictions.
-</p>
-<h2 class="gradient-text">Storage</h2>
-<p class="paragraph">Supabase's storage system allows you to securely store and serve files like images and documents, much like AWS S3. It's a convenient solution for managing user uploads and application assets. You should use it to simplify file handling, reduce infrastructure complexity, and ensure seamless scalability as your application grows. It handles file storage and retrieval tasks, making it an integral part of Supabase's all-in-one backend services.</p>
-<img src="https://example.com/?raw=true" class="img-bigger" alt="illustration" />
-<h2 class="gradient-text">Edge Functions</h2>
-<p class="paragraph">Edge Functions in Supabase are serverless functions that run at the edge of the network, allowing you to execute code in response to HTTP requests. They provide a way to build custom APIs, handle authentication, and implement business logic without managing server infrastructure. Think of Edge Functions as mini-programs that can be triggered by web requests, performing specific tasks or computations and then returning a response. You can use them to create dynamic and customizable behavior for your applications, making your backend more flexible and powerful without needing to set up and maintain your own servers. Edge Functions simplify the development process by abstracting away many backend complexities.
-<p class="paragraph">A use-case for these functions --> File Handling: Edge Functions can manage file uploads and downloads. For example, you could create a function to resize and optimize images when they are uploaded, ensuring your application serves appropriately sized images.</p>
-</p>
-<img src="https://example.com/?raw=true" class="img-bigger" alt="illustration" />
-<p class="conclusion">With all this, you're already set to start with Supabase basics. Using such services is considerably time-saving and literally saves you from building an entire custom backend. Therefore, being a frontend fan, I use it on most of my work! For more information, refer to the official Supabase documentation on their website: https://supabase.com/docs
-</p> <h6>Last updated: October 2023</h6>
+  // Template:
+  // <h1 class="gradient-text"></h1>
+  // <img src="https://example.com/?raw=true" class="intro-img" alt="illustration" />
+  // <img src="https://example.com/?raw=true" class="img-bigger" alt="illustration" />
+  // <h2 class="gradient-text"></h2>
+  // <p class="paragraph"></p>
+  // <p class="conclusion"></p>
+  // <h6>Last updated:  September 2023</h6>
+  // <pre class="bash"></pre> for bash snippets
+  // <pre class="code"></pre> for code snippets
+  return (
+    <div className="Content">
+      <HeaderBlogMain />
+      <h1 class="gradient-text">Making My React Native App More Secure in 2023</h1>
+      <img src="https://example.com/?raw=true" class="intro-img" alt="illustration" />
+      <p class="intro">
+        Even more nowadays, it's essential to grasp the fundamental aspects of securing your React
+        Native application. We'll explore some common security concerns that as developers we might
+        encounter during our development adventures and, more importantly, how to navigate them.
+        <br />
+        <br />
+        <b class="gradient-text">Storing Sensitive Information</b>
+        <br />
+        <br />
+        In the world of app development, you'll often find yourself dealing with sensitive
+        information. Whether it's connecting to external APIs, integrating third-party
+        authentication, or tapping into open platforms for features like notifications and
+        analytics, sensitive data is always part of the equation. These secrets need a secure home
+        within your app. The golden rule here is never to store sensitive keys or secrets in your
+        app's code. Anything tucked away in your code could potentially be accessed by anyone who
+        examines your app bundle. That's a security no-no. So, what should you do instead?
+        <br />
+        To secure your API endpoints, you can turn to tools like react-native-dotenv and
+        react-native-config. They offer a safe space to store sensitive information securely. When
+        it comes to application secrets from external platforms like Facebook or Google, avoid
+        embedding them in your code. Instead, consider alternatives to asynchronous storage.
+        <br />
+        <br />
+        <b class="gradient-text">Deep Linking</b>
+        <br />
+        <br />
+        Deep linking is an ingenious way of directing users straight into specific parts of your
+        native app from external sources. It's like having a secret tunnel that leads to your app's
+        hidden gems. However, this convenient feature can also pose security risks if not handled
+        properly. Deep links are not inherently secure because anyone can configure their own URL
+        schemes.
+        <br />
+        Imagine sending a deep link with sensitive data; it's akin to leaving your front door
+        unlocked. Therefore, avoid sending anything sensitive via deep links. To enhance deep link
+        security, consider Apple's Universal Links in iOS. They are a safer alternative, ensuring
+        that your app is launched securely when a Universal Link is opened. This way, you can enjoy
+        the convenience of deep linking without compromising security.
+        <br />
+        <br />
+        These are just a few of the common security pitfalls to watch out for when developing your
+        React Native app. As a developer, taking these steps to protect sensitive information and
+        handle deep linking securely will set you on the right path to building a robust and secure
+        app. The journey has just begun, and there's more to explore on our quest for a secure React
+        Native app. So, stay with me as we delve into the intricacies of React Native security, one
+        step at a time and explain some of the core concepts in Cybersecurity as of 2023.
+      </p>
+      <h2 class="gradient-text">Password Strength: Building Fortified Locks</h2>
+      <p class="paragraph">
+        Password strength is all about how tough your fortress's gate is. When you create a
+        password, you're essentially designing a lock for your online accounts. A strong password is
+        like a solid steel gate with a complex combination lock. It's hard for intruders to guess or
+        crack it. It usually includes a mix of uppercase and lowercase letters, numbers, and special
+        characters. On the other hand, a weak password is like a wooden gate with a simple latch.
+        It's easier for someone to break in. So, to protect your accounts, aim for strong, unique
+        passwords like "P@$$w0rd#123" instead of something simple like "password123."
+      </p>
+      <h2 class="gradient-text">Token-Based Authentication: A Secure Handshake</h2>
+      <p class="paragraph">
+        Token-based authentication is like using a digital keycard to access a secure building.
+        Instead of sharing your secret password, you get a token (a temporary access code) after
+        proving your identity. This token grants you access, and it's a safer and more convenient
+        way to log in. For example, when you log into various apps without revealing your actual
+        password, you're likely using token-based authentication.
+      </p>
+      <h2 class="gradient-text">Encryption: Shielding Sensitive Data</h2>
+      <p class="paragraph">
+        Encryption is like putting your sensitive information in a high-security vault before
+        sending it across the internet. It's a way to scramble your data into a code that only
+        someone with the right "key" can unscramble. Imagine sending a top-secret message in a
+        locked box, and only the intended recipient has the key to unlock it. This ensures that even
+        if hackers intercept your data, they can't make sense of it. It's like sending a love letter
+        in a secret code that only your partner can decode. A common example is HTTPS, which
+        encrypts your data when you shop online, so your credit card details stay safe.
+      </p>
+      <h2 class="gradient-text">Secure API Endpoints: Fortifying the Doors</h2>
+      <p class="paragraph">
+        API endpoints are like doors to your application, and you want to make sure they are
+        well-guarded. To secure these entry points, you set up guards, just like security personnel
+        at a nightclub. You define who's allowed in and what they can do. For instance, you may have
+        a guest list that only permits certain people to enter the club. In the digital world,
+        securing API endpoints means authenticating users, ensuring they have the right permissions,
+        and protecting against unauthorized access. It's like verifying the identity of visitors and
+        making sure they follow the rules. For example, when you log in to a social media app, the
+        API checks if you have the right credentials (username and password) before letting you
+        access your account. This way, only authorized users can interact with your app's data.
+      </p>
+      <h2 class="gradient-text">OAuth and Social Login: Simplifying Registration</h2>
+      <p class="paragraph">
+        Think of OAuth like a valet key for your car. When you give your car's valet key to a
+        parking attendant, they can park your car but can't access your trunk or glove compartment.
+        In a similar way, OAuth allows you to grant limited access to your online accounts, like
+        social media or email, without revealing your password. When you log in to a website using
+        your Google or Facebook account, you're using OAuth. Instead of sharing your login details,
+        the site asks Google or Facebook, "Hey, can we verify this user?" You then authenticate with
+        Google or Facebook, and they tell the website, "Yes, this person checks out." It's a bit
+        like showing your ID at the entrance of a club to prove you're old enough to get in. OAuth
+        keeps your credentials safe while letting you use your accounts on multiple websites.
+      </p>
+      <h2 class="gradient-text">Multi-Factor Authentication (MFA): Double the Defense</h2>
+      <p class="paragraph">
+        MFA is like having multiple locks on your front door. It adds extra layers of security to
+        your online accounts beyond just a password. Imagine, you log in to your email, and it asks
+        for your password (that's one lock). But then, MFA comes into play. It might also ask for a
+        one-time code sent to your phone (that's another lock), or it could prompt you to use your
+        fingerprint or face scan (yet another lock). It ensures that even if someone cracks your
+        password, they can't get in without the additional keys. Think of MFA as a safety net, like
+        having a PIN for your bank card in addition to the card itself. It significantly reduces the
+        risk of unauthorized access to your accounts.
+      </p>
+      <h2 class="gradient-text">Code Obfuscation: Hiding My Secrets</h2>
+      <p class="paragraph">
+        Think of code obfuscation as a secret language for your app. It's like taking the source
+        code that makes your app run and translating it into something only your app can understand.
+        This hidden translation makes it incredibly difficult for anyone to reverse engineer your
+        app's code and figure out how it works. It's like trying to read a novel in a language
+        you've never seen before. Obfuscating your code makes it much more challenging for hackers
+        to find vulnerabilities and exploit them. For example, if your app connects to a server,
+        obfuscation can hide the details of how it communicates, making it less likely for malicious
+        actors to intercept sensitive data or find weaknesses in your code. In essence, code
+        obfuscation is like putting your app's secrets into a locked box, and only your app knows
+        the combination.
+      </p>
+      <h2 class="gradient-text">Penetration Testing and Security Audits: Testing the Waters</h2>
+      <p class="paragraph">
+        Imagine your React Native app as a castle. You've built high walls, a moat, and locked the
+        gates. However, you want to be sure it's truly secure. That's where penetration testing and
+        security audits come in. Penetration testing is like hiring a team of ethical hackers who
+        try to find ways to breach your defenses. They simulate real-world attacks to discover
+        vulnerabilities. These experts use the same techniques malicious hackers might use, but with
+        your permission. A security audit, on the other hand, is like a thorough inspection of your
+        castle. It involves reviewing your app's code, configurations, and security measures to
+        identify weaknesses. This process ensures you haven't accidentally left a hidden entrance
+        open or overlooked a security gap. Together, these methods help you fortify your app's
+        defenses and keep the bad guys out.
+      </p>
+      <p class="conclusion">
+        While researching ways to enhance my React Native app's cybersecurity, I've realized that
+        it's not just about writing code; it's about securing it too. From focusing on password
+        strength, token-based authentication, encryption, secure API endpoints, OAuth and social
+        login, Multi-Factor Authentication, code obfuscation, or even regular security testing, it's
+        essential to provide a more secure experience for your users. Remember, cybersecurity is an
+        ongoing journey, and staying updated is key to keeping an app secure.
+      </p>
+      <h6>Last updated: October 2023</h6>
       <NewsletterSubscription />
       <FooterArticles />
       <br />
-      <br /> */
-}
-//     </div>
-//   );
-// };
+      <br />
+    </div>
+  );
+};
 
-// export default Mockarticle;
+export default Mockarticle;
