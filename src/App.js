@@ -17,33 +17,33 @@ import Loading from "./components/Loading/Loading";
 import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import ProgressBar from "react-progressbar-on-scroll";
 import Testimonials from "./components/Testimonials/TestimonialsPage";
-import BlogPage from "./pages/Blog/Blog";
-import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
-import supabase from "../src/api/supabase";
-import Mockarticle from "./pages/Blog/Articles/ArticleContent/Mockarticle";
+// import BlogPage from "./pages/Blog/Blog";
+// import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
+// import supabase from "../src/api/supabase";
+// import Mockarticle from "./pages/Blog/Articles/ArticleContent/Mockarticle";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
-  const [articles, setArticles] = useState([]);
+  // const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    // Scroll to the top of the page
-    window.scrollTo(0, 0);
-    const fetchArticles = async () => {
-      try {
-        const { data, error } = await supabase.from("articles").select("*");
+    // // Scroll to the top of the page
+    // window.scrollTo(0, 0);
+    // const fetchArticles = async () => {
+    //   try {
+    //     const { data, error } = await supabase.from("articles").select("*");
 
-        if (error) {
-          throw new Error(error.message);
-        } else {
-          setArticles(data);
-        }
-      } catch (error) {
-        console.error("Failed to retrieve users by ID:", error.message);
-      }
-    };
+    //     if (error) {
+    //       throw new Error(error.message);
+    //     } else {
+    //       setArticles(data);
+    //     }
+    //   } catch (error) {
+    //     console.error("Failed to retrieve users by ID:", error.message);
+    //   }
+    // };
 
-    fetchArticles();
+    // fetchArticles();
 
     const rootElement = document.documentElement;
     rootElement.setAttribute("translate", "no");
@@ -97,9 +97,9 @@ function App() {
               </>
             }
           />
-          <Route path="/blog" element={<BlogPage articles={articles} />} />
+          {/* <Route path="/blog" element={<BlogPage articles={articles} />} />
           <Route path="/blog/:articleUrl" element={<ArticleContent articles={articles} />} />
-          <Route path="/blog/mockarticle" element={<Mockarticle />} />
+          <Route path="/blog/mockarticle" element={<Mockarticle />} /> */}
         </Routes>
       </div>
     </Router>
