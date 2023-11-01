@@ -102,20 +102,17 @@
 @media only screen and (min-width: 992px) {
   .CurriculumPage {
     padding: 5% 10%;
-  }
-  .stack {
-    padding-bottom: 3vh;
-  }
-
-  .stack {
-    img {
-      width: 90px;
-      height: auto;
-      margin-bottom: 2vh;
-      margin: 15px 45px;
-      &:hover {
-        transform: scale(1.4);
-        transition: 1s;
+    .stack {
+      padding-bottom: 3vh;
+      img {
+        width: 90px;
+        height: auto;
+        margin-bottom: 2vh;
+        margin: 15px 45px;
+        &:hover {
+          transform: scale(1.4);
+          transition: 1s;
+        }
       }
     }
   }

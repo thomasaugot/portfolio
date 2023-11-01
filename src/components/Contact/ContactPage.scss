@@ -47,7 +47,7 @@ label {
   margin: 5vh 5vw;
   padding-bottom: 14px;
   &:hover {
-    transform: scale(0.6) rotate(-20deg);
+    transform: scale(0.8);
     transition: 1s;
   }
 }
@@ -55,7 +55,7 @@ label {
 .githubLogo {
   margin: 5vh 5vw;
   &:hover {
-    transform: scale(0.6) rotate(20deg);
+    transform: scale(0.8);
     transition: 1s;
   }
 }
@@ -63,7 +63,7 @@ label {
 .upworkLogo {
   margin: 5vh 5vw;
   &:hover {
-    transform: scale(0.6) rotate(20deg);
+    transform: scale(0.8);
     transition: 1s;
   }
 }
@@ -123,7 +123,7 @@ label {
   .upworkLogo {
     margin: 5vh 5vw;
     &:hover {
-      transform: scale(0.6) rotate(20deg);
+      transform: scale(0.6);
       transition: 1s;
     }
   }
