@@ -21,7 +21,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: $header-height;
     background-color: transparent;
     z-index: 101; // Ensure it overlays navbar
@@ -49,9 +49,23 @@
         }
         &.active {
           color: $primary;
+          transition: transform 0.3s;
           transform: scale(0.9);
           filter: drop-shadow(4px 4px 3px $primary-start);
         }
+      }
+    }
+
+    .medium-link {
+      margin-top: 9px;
+      padding-inline: $spacing-lg !important;
+      width: 105px;
+      height: auto;
+      &:hover {
+        transition: transform 0.3s;
+        color: $primary;
+        transform: scale(0.9);
+        filter: drop-shadow(4px 4px 3px $primary-start);
       }
     }
   }
@@ -135,7 +149,7 @@
           padding-bottom: 0 !important;
           text-decoration: none;
           color: inherit;
-          transition: 0.3s ease color;
+          transition: transform 0.3s;
           cursor: pointer;
           &:not(:last-child) {
             &:hover {
@@ -149,6 +163,11 @@
             transform: scale(0.9);
             filter: drop-shadow(4px 4px 3px $primary-start);
           }
+        }
+        .medium-link {
+          padding-inline: $spacing-md !important;
+          margin-block: 25px;
+          width: 85px;
         }
       }
     }

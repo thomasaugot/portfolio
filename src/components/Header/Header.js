@@ -3,7 +3,8 @@ import "./Header.scss";
 import LanguagesMenu from "../LanguagesMenu/LanguagesMenu";
 import { useTranslation } from "react-i18next";
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
+import { BsMedium } from "react-icons/bs";
+import { IconContext } from "react-icons";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -122,16 +123,13 @@ const Header = () => {
           >
             {t("Contact")}
           </ScrollLink>
-          <Link
-            to="/blog"
-            className={`nav-item ${activeLink === "blog" ? "active" : ""}`}
-            onClick={() => {
-              setMenuOpen(false);
-              setActiveLink("blog");
-            }}
-          >
-            {t("Blog")}
-          </Link>
+          <a href="https://medium.com/@thomasaugot" target="_blank" rel="noreferrer">
+            <IconContext.Provider value={{ color: "white", className: "medium-link" }}>
+              <div>
+                <BsMedium />
+              </div>
+            </IconContext.Provider>
+          </a>
           <div className={`nav-item no-hover-effect`}>
             <LanguagesMenu />
           </div>
