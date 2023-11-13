@@ -30,12 +30,13 @@ function PortfolioPage() {
 
   const projects = [
     {
-      id: 8,
-      capture1: require("./cheftom.png"),
-      name: t("projects.0.name"),
-      description: t("projects.0.description"),
-      stack: t("projects.0.stack"),
-      linkRepo: "https://github.com/thomasaugot/recipes-react-native",
+      id: 5,
+      capture1: require("./todos.png"),
+      name: t("projects.4.name"),
+      description: t("projects.4.description"),
+      stack: t("projects.4.stack"),
+      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
+      linkDemo: "https://todayzzz-todos.netlify.app/",
     },
     {
       id: 6,
@@ -65,13 +66,12 @@ function PortfolioPage() {
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
     {
-      id: 5,
-      capture1: require("./todos.png"),
-      name: t("projects.4.name"),
-      description: t("projects.4.description"),
-      stack: t("projects.4.stack"),
-      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
-      linkDemo: "https://todayzzz-todos.netlify.app/",
+      id: 8,
+      capture1: require("./cheftom.png"),
+      name: t("projects.0.name"),
+      description: t("projects.0.description"),
+      stack: t("projects.0.stack"),
+      linkRepo: "https://github.com/thomasaugot/recipes-react-native",
     },
     {
       id: 1,

@@ -22,16 +22,7 @@ function CurriculumPage() {
       >
         <h1>{t("I build with...")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </motion.div>
-      <motion.div
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: 50, opacity: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          type: "spring",
-          stiffness: 40,
-          delay: 0.4,
-          ease: "easeOut",
-        }}
+      <div
         className="stack"
         style={{
           overflow: "hidden",
@@ -48,7 +39,6 @@ function CurriculumPage() {
                 title="HTML"
               />
             </div>
-
             <div className="subtitle">HTML</div>
           </div>
           <div className="marquee-item">
@@ -182,6 +172,17 @@ function CurriculumPage() {
           </div>
           <div className="marquee-item">
             <div className="img-container">
+              <img
+                height="70"
+                src="https://github.com/thomasaugot/thomasaugot/raw/main/postgrsql.png"
+                alt="PostgrSQL"
+                title="PostgrSQL"
+              />
+            </div>
+            <div className="subtitle">PostgrSQL</div>
+          </div>
+          <div className="marquee-item">
+            <div className="img-container">
               <img height="70" src={require("./git-logo.png")} alt="Git" title="Git" />
             </div>
             <div className="subtitle">GIT</div>
@@ -203,17 +204,17 @@ function CurriculumPage() {
             </div>
             <div className="subtitle">Gitlab</div>
           </div>
-          {/* <div className="marquee-item">
-                <div className="img-container">
-                  <img
-                    height="70"
-                    src={require("./jest.png")}
-                    alt="Jest Testing"
-                    title="Jest Testing"
-                  />
-                </div>
-                <div className="subtitle">Jest</div>
-              </div> */}
+          <div className="marquee-item">
+            <div className="img-container">
+              <img
+                height="70"
+                src={require("./jest.png")}
+                alt="Jest Testing"
+                title="Jest Testing"
+              />
+            </div>
+            <div className="subtitle">Jest</div>
+          </div>
           <div className="marquee-item">
             <div className="img-container">
               <img
@@ -280,7 +281,7 @@ function CurriculumPage() {
             <div className="subtitle">Supabase</div>
           </div>
         </Marquee>
-      </motion.div>
+      </div>
 
       <br></br>
       <br></br>

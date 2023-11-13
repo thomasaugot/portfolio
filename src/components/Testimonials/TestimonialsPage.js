@@ -77,13 +77,13 @@ function Testimonials() {
             </p>
           </div>
           <div className="curriculum__buttons testimonial-link">
-            <a
+            {/* <a
               href="https://drive.google.com/file/d/1-sRrc2sL9f4tcI6uzJ4rjQck6DmSmiHj/view?usp=sharing"
               rel="noreferrer"
               target="_blank"
             >
               <button className="blueBtn gradient-bg">{t("See full document")}</button>
-            </a>
+            </a> */}
           </div>
         </div>
       </motion.div>

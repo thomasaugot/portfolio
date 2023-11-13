@@ -48,7 +48,7 @@
     {
       "name": "Eurafrique",
       "description": "Un site web entièrement responsif et multilingue (français, anglais, espagnol et arabe) que je développe pour l'association Eurafrique.eu.",
-      "stack": "React, react-router, SCSS, i18next (pour la fonctionnalité multilingue), useContext (pour la gestion de l'état) et Cpanel (pour l'hébergement). Le backend est construit avec Supabase (Backend as a Service / BaaS)"
+      "stack": "React, react-router, SCSS, i18next (pour la fonctionnalité multilingue), React Context API (pour la gestion de l'état) et Cpanel (pour l'hébergement). Le backend est construit avec Supabase (Backend as a Service / BaaS)"
     },
     {
       "name": "Farmhouse Table",
@@ -57,8 +57,8 @@
     },
     {
       "name": "Todayzzz Todos",
-      "description": "Une application de tâches simple avec 'drag & drop' pour organiser vos tâches quotidiennes que j'ai construite pour pratiquer Typescript, en ajoutant quelques bibliothèques React intéressantes",
-      "stack": "React, SCSS, Typescript. J'ai voulu me challenger avec la fonction de 'drag & drop' et j'y suis parvenu ! L'application offre un commutateur de mode sombre/clair. J'ai également créé un serveur Backend as a Service (BaaS) sur Supabase, l'application interagit maintenant avec une API"
+      "description": "Une application avec 'drag & drop' pour organiser vos tâches quotidiennes que j'ai construite pour pratiquer PostgrSQL, Typescript, SCSS et Jest",
+      "stack": "React, SCSS, Typescript et Jest pour le frontend. J'ai voulu me challenger avec la fonction de 'drag & drop' et j'y suis parvenu ! L'application offre un commutateur de mode sombre/clair. Le serveur est construit avec PostgrSQL et Axios."
     },
     {
       "name": "Partymates",
