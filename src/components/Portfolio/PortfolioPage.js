@@ -30,13 +30,13 @@ function PortfolioPage() {
 
   const projects = [
     {
-      id: 5,
-      capture1: require("./todos.png"),
-      name: t("projects.4.name"),
-      description: t("projects.4.description"),
-      stack: t("projects.4.stack"),
-      linkRepo: "https://github.com/thomasaugot/typescript-todo-app",
-      linkDemo: "https://todayzzz-todos.netlify.app/",
+      id: 7,
+      capture1: require("./eurafrique.png"),
+      name: t("projects.2.name"),
+      description: t("projects.2.description"),
+      stack: t("projects.2.stack"),
+      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
+      linkDemo: "https://eurafrique-eu.vercel.app/",
     },
     {
       id: 6,
@@ -48,13 +48,14 @@ function PortfolioPage() {
       linkDemo: "https://kingpad-v1-1-new-figma.vercel.app/",
     },
     {
-      id: 7,
-      capture1: require("./eurafrique.png"),
-      name: t("projects.2.name"),
-      description: t("projects.2.description"),
-      stack: t("projects.2.stack"),
-      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
-      linkDemo: "https://eurafrique-eu.vercel.app/",
+      id: 5,
+      capture1: require("./todos.png"),
+      name: t("projects.4.name"),
+      description: t("projects.4.description"),
+      stack: t("projects.4.stack"),
+      linkRepo:
+        "https://github.com/thomasaugot/typescript-todo-app-frontend/tree/postgrsql-link-setup",
+      linkDemo: "https://todayzzz-todos.netlify.app/",
     },
     {
       id: 4,
