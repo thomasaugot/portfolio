@@ -13,13 +13,17 @@
 
 .chevron-container {
   text-align: center;
+  &:hover {
+    background-color: linear-gradient(266deg, $primary-start, $primary-end);
+  }
 }
 
 .chevron-icon {
   margin-bottom: 0.5em;
+  width: 300px;
 }
 
 a:hover .chevron-icon {
-  transition: 0.8s;
+  transition: 0.7s;
   transform: rotate(-720deg);
 }

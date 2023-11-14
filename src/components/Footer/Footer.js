@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
 import BGAnimation from "../FooterBG/FooterBG";
 import { useTranslation } from "react-i18next";
-import { BsChevronDoubleUp } from "react-icons/bs";
+import { BiSolidChevronsUp } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
 function Footer() {
@@ -30,8 +30,8 @@ function Footer() {
           </div>
           <a href="#HomePage">
             <div className="chevron-container">
-              <IconContext.Provider value={{ className: "chevron-icon", size: "2.5em" }}>
-                <BsChevronDoubleUp />
+              <IconContext.Provider value={{ className: "chevron-icon", size: "2.7em" }}>
+                <BiSolidChevronsUp />
               </IconContext.Provider>
             </div>
             <p style={{ textAlign: "center" }}>{t("Back to Top")}</p>
