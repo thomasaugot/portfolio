@@ -22,7 +22,16 @@ function CurriculumPage() {
       >
         <h1>{t("I build with...")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </motion.div>
-      <div
+      <motion.div
+        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ y: 50, opacity: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          stiffness: 40,
+          delay: 0.4,
+          ease: "easeOut",
+        }}
         className="stack"
         style={{
           overflow: "hidden",
@@ -281,7 +290,7 @@ function CurriculumPage() {
             <div className="subtitle">Supabase</div>
           </div>
         </Marquee>
-      </div>
+      </motion.div>
 
       <br></br>
       <br></br>

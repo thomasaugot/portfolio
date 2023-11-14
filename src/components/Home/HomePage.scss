@@ -11,166 +11,47 @@
 .topContent {
   display: flex;
   flex-direction: column;
-  margin: 20% 0 5% 0;
-}
-
-.homepageTitle {
-  color: $text2;
-  font-size: 3em;
-  width: 80vw;
-  font-weight: bolder;
-  overflow: hidden;
-}
-
-.bluetext {
-  color: $primary;
-}
-
-.homepageP {
-  color: $text2;
-  font-family: $caveat-font;
-  font-size: $font-size-sm;
-  margin-bottom: 2vh;
-  margin-top: 4vh;
-  font-weight: lighter;
-}
-
-.container {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  margin-top: 50%;
-}
-
-.chevron {
-  position: absolute;
-  width: $base * 3.5;
-  height: $base * 0.8;
-  opacity: 0;
-  transform: scale(0.3);
-  animation: move-chevron 3s ease-out infinite;
-}
-
-.chevron:first-child {
-  animation: move-chevron 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-  animation: move-chevron 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-  content: "";
-  position: absolute;
-  top: 0;
   height: 100%;
-  width: 50%;
-  background: $primary;
-}
-
-.chevron:before {
-  left: 0;
-  transform: skewY(30deg);
-}
-
-.chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skewY(-30deg);
-}
-
-.linkAbout {
-  z-index: 3;
-}
-
-.linkDiv {
-  z-index: 3;
-  position: relative;
-}
-
-@keyframes move-chevron {
-  25% {
-    opacity: 1;
-  }
-  33.3% {
-    opacity: 1;
-    transform: translateY($base * 3.8);
-  }
-  66.6% {
-    opacity: 1;
-    transform: translateY($base * 5.2);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY($base * 8) scale(0.5);
-  }
-}
-
-/* Medium devices (Tablets, between 600px and 992px) */
-@media only screen and (min-width: 600px) {
-  .chevron {
-    margin: 0;
+  @media only screen and (min-width: 992px) {
+    height: 90%;
+    margin-left: 10%;
   }
 
-  .homepageTitle {
-    font-size: 8vw;
-  }
-
-  .homepageP {
-    margin-top: 4vh;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .Homepage {
-    @include bootstrapScroll();
-    padding: 10% 10% 8% 18%;
-    overflow-y: hidden;
-    height: 100vh;
-  }
-
-  .chevron {
-    margin: 0;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 4%;
-  }
-
-  .topContent {
+  .titleDiv {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 7% 0 2% 0;
-  }
+    text-align: left;
 
-  .homepageTitle {
-    width: fit-content;
-    font-size: 4em;
-  }
-
-  .hompagebtmDiv {
-    display: flex;
-    flex-direction: row;
+    .mainTitle {
+      font-size: 3em;
+      font-weight: bolder;
+      overflow: hidden;
+      max-width: 80vw;
+      @extend .gradient-text;
+      @media only screen and (min-width: 600px) {
+        font-size: 5em;
+        max-width: 70vw;
+      }
+      @media only screen and (min-width: 992px) {
+        font-size: 4em;
+      }
+    }
   }
 
   .homepageP {
-    margin-top: 5%;
-    margin-bottom: 0;
-    font-size: $font-size-rgl;
-  }
-
-  .linkAbout,
-  .chevron,
-  .container {
-    display: none;
+    color: $text2;
+    font-family: $caveat-font;
+    font-size: $font-size-sm;
+    margin-bottom: 2vh;
+    margin-top: 4vh;
+    font-weight: lighter;
+    @media only screen and (min-width: 600px) {
+      font-size: 2em;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 1.5em;
+    }
   }
 }
