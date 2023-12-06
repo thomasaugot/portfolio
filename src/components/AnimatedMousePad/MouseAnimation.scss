@@ -8,8 +8,10 @@
 }
 
 canvas {
-  width: 100vw;
+  width: 110vw;
   height: 100vh;
-  margin: -10px;
+  margin-inline: 0;
+  margin-block: 0;
+  margin-left: -50px;
   padding: -50px;
 }
