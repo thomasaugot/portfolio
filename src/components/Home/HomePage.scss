@@ -29,6 +29,7 @@
       font-weight: bolder;
       overflow: hidden;
       max-width: 80vw;
+      // -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
       @extend .gradient-text;
       @media only screen and (min-width: 600px) {
         font-size: 5em;

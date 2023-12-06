@@ -46,6 +46,7 @@ label {
 .linkedInLogo {
   margin: 5vh 5vw;
   padding-bottom: 14px;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
   &:hover {
     transform: scale(0.8);
     transition: 1s;
@@ -54,6 +55,7 @@ label {
 
 .githubLogo {
   margin: 5vh 5vw;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
   &:hover {
     transform: scale(0.8);
     transition: 1s;
@@ -62,6 +64,7 @@ label {
 
 .upworkLogo {
   margin: 5vh 5vw;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
   &:hover {
     transform: scale(0.8);
     transition: 1s;

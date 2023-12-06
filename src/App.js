@@ -17,6 +17,8 @@ import Loading from "./components/Loading/Loading";
 import PortfolioPage from "./components/Portfolio/PortfolioPage";
 import ProgressBar from "react-progressbar-on-scroll";
 import Testimonials from "./components/Testimonials/TestimonialsPage";
+import MouseAnimation from "./components/AnimatedMousePad/MouseAnimation";
+// import MouseAnimation from "./components/AnimatedMousePad/MouseAnimation";
 // import BlogPage from "./pages/Blog/Blog";
 // import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
 // import supabase from "../src/api/supabase";
@@ -85,6 +87,7 @@ function App() {
             path="/"
             element={
               <>
+                <MouseAnimation />
                 <Header />
                 <HomePage />
                 <AboutPage />

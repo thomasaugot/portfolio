@@ -9,6 +9,8 @@
   height: fit-content;
   overflow: hidden;
   transition: 1s;
+  position: relative;
+  z-index: 10;
 }
 
 .AboutPage {

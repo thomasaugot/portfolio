@@ -6,6 +6,7 @@
   color: $text2;
   overflow: hidden;
   height: fit-content;
+  position: relative;
 }
 
 .CurriculumPage {
@@ -38,6 +39,8 @@
 .marquee-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-inline: 20px;
 }
 
 .marquee-item img {
@@ -50,7 +53,27 @@
 }
 
 .subtitle {
-  padding-top: 50px;
+  padding-top: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .service-item {
+    position: relative;
+    border-radius: 15px;
+    padding: 24px 0;
+    box-shadow: 0 5px 20px black;
+    text-align: center;
+    background-color: transparent !important;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 5px 20px white;
+    }
+  }
 }
 
 .certifications-container {
@@ -62,7 +85,7 @@
 .certification-item {
   border-radius: 15px;
   padding: 24px;
-  box-shadow: 8px 8px 15px -8px black;
+  box-shadow: 0 5px 20px black;
   text-align: left;
   background-color: transparent !important;
   position: relative;
@@ -95,6 +118,21 @@
     .certification-item {
       height: 350px;
     }
+
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .service-item {
+        height: 300px;
+        width: 42vw;
+        margin-inline: 4vw;
+        &:nth-child(2) {
+          align-self: flex-end;
+        }
+      }
+    }
   }
 }
 
@@ -102,6 +140,7 @@
 @media only screen and (min-width: 992px) {
   .CurriculumPage {
     padding: 5% 10%;
+
     .stack {
       padding-bottom: 3vh;
       img {
