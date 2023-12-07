@@ -13,7 +13,7 @@ const MouseAnimation = () => {
       target,
       animateHeader = true;
 
-    function initHeader() {
+    const initHeader = () => {
       width = window.innerWidth;
       height = window.innerHeight;
       target = { x: width / 2, y: height / 2 };
@@ -69,17 +69,17 @@ const MouseAnimation = () => {
         let c = new Circle(points[i], 2 + Math.random() * 2, "rgba(102, 255, 0, 1)");
         points[i].circle = c;
       }
-    }
+    };
 
-    function addListeners() {
+    const addListeners = () => {
       if (!("ontouchstart" in window)) {
         window.addEventListener("mousemove", mouseMove);
       }
       window.addEventListener("scroll", scrollCheck);
       window.addEventListener("resize", resize);
-    }
+    };
 
-    function mouseMove(e) {
+    const mouseMove = (e) => {
       let posx = 0,
         posy = 0;
       if (e.pageX || e.pageY) {
@@ -91,29 +91,29 @@ const MouseAnimation = () => {
       }
       target.x = posx;
       target.y = posy;
-    }
+    };
 
-    function scrollCheck() {
+    const scrollCheck = () => {
       if (document.body.scrollTop > height) animateHeader = false;
       else animateHeader = true;
-    }
+    };
 
-    function resize() {
+    const resize = () => {
       width = window.innerWidth;
       height = window.innerHeight;
       largeHeader.style.height = height + "px";
       canvas.width = width;
       canvas.height = height;
-    }
+    };
 
-    function initAnimation() {
+    const initAnimation = () => {
       animate();
       for (let i in points) {
         shiftPoint(points[i]);
       }
-    }
+    };
 
-    function animate() {
+    const animate = () => {
       if (animateHeader) {
         ctx.clearRect(0, 0, width, height);
         for (let i in points) {
@@ -136,9 +136,9 @@ const MouseAnimation = () => {
         }
       }
       requestAnimationFrame(animate);
-    }
+    };
 
-    function shiftPoint(p) {
+    const shiftPoint = (p) => {
       TweenLite.to(p, 1 + 1 * Math.random(), {
         x: p.originX - 50 + Math.random() * 100,
         y: p.originY - 50 + Math.random() * 100,
@@ -147,18 +147,18 @@ const MouseAnimation = () => {
           shiftPoint(p);
         },
       });
-    }
+    };
 
-    function drawLines(p) {
+    const drawLines = (p) => {
       if (!p.active) return;
       for (let i in p.closest) {
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(p.closest[i].x, p.closest[i].y);
-        ctx.strokeStyle = "rgba(156,217,249," + p.active + ")";
+        ctx.strokeStyle = "rgba(3, 218, 198," + p.active + ")";
         ctx.stroke();
       }
-    }
+    };
 
     function Circle(pos, rad, color) {
       let _this = this;
@@ -173,19 +173,21 @@ const MouseAnimation = () => {
         if (!_this.active) return;
         ctx.beginPath();
         ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-        ctx.fillStyle = "rgba(156,217,249," + _this.active + ")";
+        ctx.fillStyle = "rgba(102, 255, 0," + _this.active + ")";
         ctx.fill();
       };
     }
 
-    function getDistance(p1, p2) {
+    const getDistance = (p1, p2) => {
       return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
-    }
+    };
 
+    // Call the initialization functions
     initHeader();
     initAnimation();
     addListeners();
 
+    // Cleanup listeners when the component is unmounted
     return () => {
       window.removeEventListener("mousemove", mouseMove);
       window.removeEventListener("scroll", scrollCheck);

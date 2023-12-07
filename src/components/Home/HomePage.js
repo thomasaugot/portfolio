@@ -1,5 +1,4 @@
 import "./HomePage.scss";
-import HeaderBG from "../HeaderBG/HeaderBG";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
@@ -9,7 +8,6 @@ function HomePage() {
   return (
     <div className="Homepage" id="HomePage">
       <div className="topContent">
-        <HeaderBG />
         <div className="titleDiv">
           <motion.div
             whileInView={{ x: 1, opacity: 1 }}

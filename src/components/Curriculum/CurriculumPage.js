@@ -39,7 +39,7 @@ function CurriculumPage() {
           <h2>{t("Frontend Development")}</h2>
           <p>
             {t(
-              "Crafting performant user interfaces from scratch with HTML, CSS, Typescript and JavaScript for a seamless user experience."
+              "Crafting user interfaces from scratch with the most performant technologies such as React.js or Next.js for a seamless user experience."
             )}
           </p>
           <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
@@ -266,7 +266,7 @@ function CurriculumPage() {
           <h2>{t("Mobile App Development")}</h2>
           <p>
             {t(
-              "Building intuitive mobile applications for iOS and Android using native development tools."
+              "Developing intuitive mobile applications for iOS and Android using native development tools."
             )}
           </p>
           <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
@@ -395,7 +395,6 @@ function CurriculumPage() {
               {t("28-hour course covering mobile apps development using :")}
               <br></br>- React Native CLI <br></br>- Expo
               <br></br>- Android & iOS specifics
-              <br></br>- SQLite
             </p>
           </div>
           <br></br>

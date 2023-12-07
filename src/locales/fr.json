@@ -1,6 +1,5 @@
 {
   "About": "À propos",
-  "Curriculum": "Compétences",
   "Projects": "Projets",
   "Contact": "Contact",
   "Hi! I am Thomas,": "Bonjour! Je suis Thomas,",
@@ -34,6 +33,13 @@
   "See full document": "Voir document complet",
   "Volunteer Coordinator, Association": "Coordinateur bénévoles, Association",
   "Back": "Retour",
+  "Skills & Services": "Compétences & Services",
+  "Frontend Development": "Développement Frontend",
+  "Backend Development": "Développement Backend",
+  "Building robust server-side applications using technologies like Node.js, Express, SQL, noSQL databases and cloud services.": "Construction d'applications robustes côté serveur à l'aide de technologies telles que Node.js, Express, des bases de données SQL et noSQL, et des services cloud.",
+  "Mobile App Development": "Développement d'Applications Mobiles",
+  "Developing intuitive mobile applications for iOS and Android using native development tools.": "Développement d'applications mobiles intuitives pour iOS et Android en utilisant des outils de développement natifs.",
+  "Crafting user interfaces from scratch with the most performant technologies such as React.js or Next.js for a seamless user experience.": "Conception d'interfaces utilisateur avec les technologies les plus performantes telles que React.js ou Next.js pour une expérience utilisateur fluide.",
   "projects": [
     {
       "name": "Chef Tom",

@@ -79,7 +79,7 @@
 .certifications-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .certification-item {
@@ -126,7 +126,7 @@
 
       .service-item {
         height: 300px;
-        width: 42vw;
+        width: 550px;
         margin-inline: 4vw;
         &:nth-child(2) {
           align-self: flex-end;
@@ -143,6 +143,7 @@
 
     .stack {
       padding-bottom: 3vh;
+
       img {
         width: 90px;
         height: auto;
@@ -160,6 +161,10 @@
     align-items: center;
   }
 
+  .service-item {
+    height: 280px !important;
+  }
+
   .certifications-container {
     display: flex;
     flex-direction: row;
@@ -168,5 +173,6 @@
 
   .certification-item {
     width: 50%;
+    height: 320px !important;
   }
 }
