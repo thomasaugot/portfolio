@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Footer.scss";
 import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
-import BGAnimation from "../FooterBG/FooterBG";
+// import BGAnimation from "../FooterBG/FooterBG";
 import { useTranslation } from "react-i18next";
 import { BiSolidChevronsUp } from "react-icons/bi";
 import { IconContext } from "react-icons";
@@ -25,9 +25,7 @@ function Footer() {
     <div className="Footer" ref={ref}>
       {isVisible && (
         <Fade>
-          <div style={{ textAlign: "center" }}>
-            <BGAnimation />
-          </div>
+          <div style={{ textAlign: "center" }}>{/* <BGAnimation /> */}</div>
           <a href="#HomePage">
             <div className="chevron-container">
               <IconContext.Provider value={{ className: "chevron-icon", size: "2.7em" }}>

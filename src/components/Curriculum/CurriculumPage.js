@@ -317,6 +317,17 @@ function CurriculumPage() {
               </div>
               <div className="subtitle">Android Studio</div>
             </div>
+            <div className="marquee-item">
+              <div className="img-container">
+                <img
+                  height="70"
+                  src={require("./flutterflow.png")}
+                  alt="Flutterflow"
+                  title="Flutterflow"
+                />
+              </div>
+              <div className="subtitle">Flutterflow</div>
+            </div>
           </Marquee>
         </motion.div>
       </div>

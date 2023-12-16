@@ -1,5 +1,4 @@
 import ReactCardFlip from "react-card-flip";
-import { TbPointFilled, TbPoint } from "react-icons/tb";
 import { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -152,15 +151,17 @@ function PortfolioPage() {
                   <img src={project.capture1} alt="project" />
                   <h1 className="card-title">{project.name}</h1>
                   <p>{project.description}</p>
-                  <h4>{t("More details")}</h4>
                   <div className="page__dots">
-                    <TbPointFilled />
-                    <TbPoint />
+                    <img
+                      src={require("../../assets/flip-icon.png")}
+                      alt="flip-icon"
+                      className="flip-icon"
+                    />
                   </div>
                 </div>
                 <div className="card-back card" onClick={() => handleCardClick(index)}>
                   <h2>{t("Tech Stack")}:</h2>
-                  {project.stack}
+                  <p>{project.stack}</p>
                   <div className="project__buttons">
                     <button
                       className="blueBtn gradient-bg"
@@ -176,11 +177,6 @@ function PortfolioPage() {
                         {t("Visit page")}
                       </button>
                     )}
-                  </div>
-                  <h4>{t("back")}</h4>
-                  <div className="page__dots">
-                    <TbPoint />
-                    <TbPointFilled />
                   </div>
                 </div>
               </ReactCardFlip>
@@ -240,15 +236,17 @@ function PortfolioPage() {
                         <img src={project.capture1} alt="project" />
                         <h1 className="card-title">{project.name}</h1>
                         <p>{project.description}</p>
-                        <h4>{t("More details")}</h4>
                         <div className="page__dots">
-                          <TbPointFilled />
-                          <TbPoint />
+                          <img
+                            src={require("../../assets/flip-icon.png")}
+                            alt="flip-icon"
+                            className="flip-icon"
+                          />
                         </div>
                       </div>
                       <div className="card-back card" onClick={() => handleCardClick(index)}>
                         <h2>{t("Tech Stack")}:</h2>
-                        {project.stack}
+                        <p>{project.stack}</p>
                         <div className="project__buttons">
                           <a href={project.linkRepo} class="blueBtn">
                             {t("View Code")}
@@ -263,12 +261,6 @@ function PortfolioPage() {
                               {t("Visit page")}
                             </a>
                           )}
-                        </div>
-
-                        <h4>{t("back")}</h4>
-                        <div className="page__dots">
-                          <TbPoint />
-                          <TbPointFilled />
                         </div>
                       </div>
                     </ReactCardFlip>

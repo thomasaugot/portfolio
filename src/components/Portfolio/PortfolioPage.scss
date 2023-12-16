@@ -6,6 +6,19 @@
   height: fit-content;
   color: $text2;
   overflow: hidden;
+
+  p {
+    color: white;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .flip-icon {
+    width: 75px;
+    height: auto;
+  }
 }
 
 .portfolioContent {
@@ -44,6 +57,7 @@
     text-decoration: none;
     font-size: 28px;
     padding: 20px 0;
+    color: white;
   }
   h4 {
     position: absolute;
@@ -51,6 +65,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 18px;
+    color: white;
   }
 
   .page__dots {
