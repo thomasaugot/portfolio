@@ -89,7 +89,6 @@ function App() {
               <>
                 <MouseAnimation />
                 <Header />
-                <MouseAnimation />
                 <HomePage />
                 <AboutPage />
                 <CurriculumPage />
