@@ -6,6 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 import { BiSolidChevronsUp } from "react-icons/bi";
 import { IconContext } from "react-icons";
+import { IoHeart } from "react-icons/io5";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +37,8 @@ function Footer() {
           </a>
           <br></br>
           <p style={{ textAlign: "center", color: "white" }}>
-            2023 © <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>.
+            Crafted with <IoHeart size="25px" /> by
+            <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>
           </p>
           <br></br>
         </Fade>

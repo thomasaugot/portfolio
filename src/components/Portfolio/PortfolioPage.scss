@@ -21,6 +21,10 @@
   }
 }
 
+.swiper-wrapper {
+  padding: 20px 0;
+}
+
 .portfolioContent {
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +144,7 @@
   .card-front,
   .card-back {
     width: 45vw;
-    height: 700px;
+    height: 690px;
   }
 }
 
