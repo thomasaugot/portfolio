@@ -10,9 +10,10 @@ function HomePage() {
       <div className="topContent">
         <div className="titleDiv">
           <motion.div
-            whileInView={{ x: 1, opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             initial={{ x: "-100%", opacity: 0 }}
-            viewport={{ once: true }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{
               type: "spring",
               stiffness: 40,
@@ -21,13 +22,14 @@ function HomePage() {
             }}
           >
             <h1 className="mainTitle gradient-text" style={{ textDecoration: "none" }}>
-              &lt; {t("Hi! I am Thomas,")}
+              {t("Hi! I am Thomas,")}
             </h1>
           </motion.div>
           <motion.div
-            whileInView={{ x: 1, opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             initial={{ x: "-100%", opacity: 0 }}
-            viewport={{ once: true }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{
               type: "spring",
               stiffness: 40,
@@ -36,13 +38,14 @@ function HomePage() {
             }}
           >
             <h1 className="mainTitle gradient-text" style={{ textDecoration: "none" }}>
-              {t("Full-Stack Developer")} /&gt;
+              {t("Full-Stack Developer")}
             </h1>
           </motion.div>
           <motion.div
-            whileInView={{ x: 1, opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             initial={{ x: "-100%", opacity: 0 }}
-            viewport={{ once: true }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{
               type: "spring",
               stiffness: 40,
