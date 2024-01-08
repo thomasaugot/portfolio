@@ -31,7 +31,7 @@ function ContactPage() {
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
-          }, 5000); // hide message after 5 seconds
+          }, 5000);
         },
         (error) => {
           setStateMessage("Something went wrong, please try again later");
