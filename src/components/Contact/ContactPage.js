@@ -1,5 +1,4 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
+import { useRef, useState } from "react";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { AiFillGithub } from "react-icons/ai";
 import { BsMedium } from "react-icons/bs";
@@ -7,12 +6,14 @@ import { IconContext } from "react-icons";
 import { useTranslation } from "react-i18next";
 import "./ContactPage.scss";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 function ContactPage() {
   const [stateMessage, setStateMessage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { t } = useTranslation();
+  const form = useRef();
 
   function sendEmail(e) {
     e.persist();
@@ -22,7 +23,7 @@ function ContactPage() {
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
-        e.target,
+        form.current,
         process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
@@ -73,7 +74,7 @@ function ContactPage() {
             ease: "easeOut",
           }}
         >
-          <form onSubmit={sendEmail} className="contactForm">
+          <form onSubmit={sendEmail} ref={form} className="contactForm">
             <label for="name">{t("Name")}</label>
             <input
               className="inputForm"
