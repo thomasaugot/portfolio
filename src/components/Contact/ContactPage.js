@@ -20,12 +20,7 @@ function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
+      .sendForm("service_arvg63a", "contact_form_portfolio", form.current, "VBM1o0PyZ2HE0pcXO")
       .then(
         (result) => {
           setStateMessage("Message sent !");
