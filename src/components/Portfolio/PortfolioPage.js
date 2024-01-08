@@ -44,7 +44,7 @@ function PortfolioPage() {
       description: t("projects.1.description"),
       stack: t("projects.1.stack"),
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
-      linkDemo: "https://kingpad.finance/",
+      linkDemo: "https://kp-next-js.vercel.app/",
     },
     {
       id: 5,
