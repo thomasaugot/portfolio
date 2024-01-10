@@ -37,7 +37,7 @@ function Footer() {
           </a>
           <br></br>
           <p style={{ textAlign: "center", color: "white" }}>
-            Crafted with <IoHeart size="25px" /> by
+            Crafted with <IoHeart className="heart-icon" size="25px" /> by
             <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>
           </p>
           <br></br>

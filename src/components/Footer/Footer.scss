@@ -27,3 +27,24 @@ a:hover .chevron-icon {
   transition: 0.7s;
   transform: rotate(-720deg);
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.heart-icon {
+  animation: pulse 1.5s infinite;
+  transition: color 0.3s ease;
+}
+
+.Footer:hover .heart-icon {
+  color: $primary-end;
+}
