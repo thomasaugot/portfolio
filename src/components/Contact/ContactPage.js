@@ -9,37 +9,47 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 function ContactPage() {
-  const [stateMessage, setStateMessage] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  const [stateMessage, setStateMessage] = useState(null);
+  const emailRef = useRef();
+  const nameRef = useRef();
+  const messageRef = useRef();
   const { t } = useTranslation();
-  const form = useRef();
 
-  function sendEmail(e) {
-    e.persist();
+  const sendMessage = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    const templateParams = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value,
+    };
     emailjs
-      .sendForm("service_arvg63a", "contact_form_portfolio", form.current, "VBM1o0PyZ2HE0pcXO")
+      .send(
+        process.env.REACT_APP_TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        templateParams,
+        "tJE4pvbpWA5LNecY3"
+      )
       .then(
-        (result) => {
-          setStateMessage("Message sent !");
+        function (response) {
+          setStateMessage("Message envoyé!");
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
-          }, 5000);
+          }, 5000); // hide message after 5 seconds
         },
-        (error) => {
-          setStateMessage("Something went wrong, please try again later");
+        function (error) {
+          setStateMessage("Echec lors de l'envoi, veuillez réessayer");
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
           }, 5000); // hide message after 5 seconds
         }
       );
-    //clears the form after sending the email
-    e.target.reset();
-  }
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    messageRef.current.value = "";
+  };
 
   return (
     <div className="ContactPage" id="ContactPage">
@@ -69,7 +79,7 @@ function ContactPage() {
             ease: "easeOut",
           }}
         >
-          <form onSubmit={sendEmail} ref={form} className="contactForm">
+          <form onSubmit={sendMessage} className="contactForm">
             <label for="name">{t("Name")}</label>
             <input
               className="inputForm"
@@ -77,6 +87,7 @@ function ContactPage() {
               type="text"
               name="from_name"
               placeholder="Your name"
+              ref={nameRef}
               required
             />
             <label for="email">{t("Email")}</label>
@@ -86,6 +97,7 @@ function ContactPage() {
               type="email"
               name="reply_to"
               placeholder="Your email"
+              ref={emailRef}
               required
             />
             <label for="message">{t("Message")}</label>
@@ -95,6 +107,7 @@ function ContactPage() {
               name="message"
               placeholder="Your message here"
               rows="8"
+              ref={messageRef}
               required
             />
             <div className="submitDiv">
