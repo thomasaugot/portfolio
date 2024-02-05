@@ -3,56 +3,53 @@
 
 .Homepage {
   @include bootstrapScroll();
-  padding: 17% 10% 8% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   height: 100vh;
+  margin-top: $header-height;
 }
 
-.topContent {
+.title-block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  @media only screen and (min-width: 992px) {
-    height: 90%;
-    margin-left: 10%;
-  }
+  align-items: flex-start;
+  text-align: left;
 
-  .titleDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+  .title-item {
+    font-size: 12vw;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 80px;
+    word-wrap: break-word;
+    max-width: 85vw;
 
-    .mainTitle {
-      font-size: 3em;
-      font-weight: bolder;
-      overflow: hidden;
-      max-width: 80vw;
-      // -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
-      @extend .gradient-text;
-      @media only screen and (min-width: 600px) {
-        font-size: 5em;
-        max-width: 70vw;
-      }
-      @media only screen and (min-width: 992px) {
-        font-size: 4em;
-      }
-    }
-  }
-
-  .homepageP {
-    color: $text2;
-    font-family: $caveat-font;
-    font-size: $font-size-sm;
-    margin-bottom: 2vh;
-    margin-top: 4vh;
-    font-weight: lighter;
     @media only screen and (min-width: 600px) {
-      font-size: 2em;
+      font-size: 10vw;
+      margin-bottom: 21vh;
     }
+
     @media only screen and (min-width: 992px) {
-      font-size: 1.5em;
+      font-size: 4vw;
+      margin-bottom: 4vh;
+      max-width: 80vw;
+    }
+  }
+
+  .title-item:last-child {
+    font-size: 4vw;
+    margin-bottom: 0;
+    margin-top: 10vh;
+
+    @media only screen and (min-width: 600px) {
+      font-size: 3vw;
+      margin-top: 6vh;
+    }
+
+    @media only screen and (min-width: 992px) {
+      font-size: 1.5vw;
+      margin-top: 6vh;
     }
   }
 }
