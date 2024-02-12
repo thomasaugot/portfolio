@@ -19,8 +19,16 @@ function ContactPage() {
     e.persist();
     e.preventDefault();
     setIsSubmitting(true);
+
+    const templateParams = {
+      to_name: "Thomas",
+      from_name: form.current.from_name.value,
+      email: form.current.email.value,
+      message: form.current.message.value,
+    };
+
     emailjs
-      .sendForm("service_arvg63a", "contact_form_portfolio", form.current, "tJE4pvbpWA5LNecY3")
+      .send("service_arvg63a", "contact_form_portfolio", templateParams, "tJE4pvbpWA5LNecY3")
       .then(
         (result) => {
           setStateMessage("Message sent !");
@@ -37,7 +45,8 @@ function ContactPage() {
           }, 5000); // hide message after 5 seconds
         }
       );
-    //clears the form after sending the email
+
+    // Clear the form after sending the email
     e.target.reset();
   }
 
@@ -70,7 +79,7 @@ function ContactPage() {
           }}
         >
           <form onSubmit={sendEmail} ref={form} className="contactForm">
-            <label for="name">{t("Name")}</label>
+            <label htmlFor="name">{t("Name")}</label>
             <input
               className="inputForm"
               id="name"
@@ -79,16 +88,16 @@ function ContactPage() {
               placeholder="Your name"
               required
             />
-            <label for="email">{t("Email")}</label>
+            <label htmlFor="email">{t("Email")}</label>
             <input
               className="inputForm"
               id="email"
               type="email"
-              name="reply_to"
+              name="email"
               placeholder="Your email"
               required
             />
-            <label for="message">{t("Message")}</label>
+            <label htmlFor="message">{t("Message")}</label>
             <textarea
               className="inputForm"
               id="message"
