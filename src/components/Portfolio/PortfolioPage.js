@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./PortfolioPage.scss";
 import { motion } from "framer-motion";
+import React from "react";
 
 function PortfolioPage() {
   const { t } = useTranslation();
@@ -29,74 +30,91 @@ function PortfolioPage() {
 
   const projects = [
     {
-      id: 7,
-      capture1: require("./eurafrique.png"),
-      name: t("projects.2.name"),
-      description: t("projects.2.description"),
-      stack: t("projects.2.stack"),
-      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
-      linkDemo: "https://eurafrique-eu.vercel.app/",
-    },
-    {
       id: 6,
       capture1: require("./kingpad.png"),
       name: t("projects.1.name"),
       description: t("projects.1.description"),
-      stack: t("projects.1.stack"),
+      stack: ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma"],
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
       linkDemo: "https://kp-next-js.vercel.app/",
     },
     {
-      id: 5,
-      capture1: require("./todos.png"),
-      name: t("projects.4.name"),
-      description: t("projects.4.description"),
-      stack: t("projects.4.stack"),
-      linkRepo:
-        "https://github.com/thomasaugot/typescript-todo-app-frontend/tree/postgrsql-link-setup",
-      linkDemo: "https://todayzzz-todos.netlify.app/",
+      id: 2,
+      capture1: require("./cmdurand.png"),
+      name: t("projects.8.name"),
+      description: t("projects.8.description"),
+      stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS"],
+      linkRepo: "https://github.com/thomasaugot/charpente-menuiserie-durand",
+      linkDemo: "https://www.cmdurand.fr/",
     },
     {
       id: 4,
       capture1: require("./farmhouse (2).png"),
       name: t("projects.3.name"),
       description: t("projects.3.description"),
-      stack: t("projects.3.stack"),
+      stack: ["React", "SCSS", "Typescript", "Bootstrap", "Google maps API"],
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
     {
-      id: 8,
-      capture1: require("./cheftom.png"),
-      name: t("projects.0.name"),
-      description: t("projects.0.description"),
-      stack: t("projects.0.stack"),
-      linkRepo: "https://github.com/thomasaugot/recipes-react-native",
+      id: 5,
+      capture1: require("./todos.png"),
+      name: t("projects.4.name"),
+      description: t("projects.4.description"),
+      stack: ["React", "SCSS", "Typescript", "Jest", "PostgrSQL", "Axios"],
+      linkRepo:
+        "https://github.com/thomasaugot/typescript-todo-app-frontend/tree/postgrsql-link-setup",
+      linkDemo: "https://todayzzz-todos.netlify.app/",
     },
+    {
+      id: 7,
+      capture1: require("./eurafrique.png"),
+      name: t("projects.2.name"),
+      description: t("projects.2.description"),
+      stack: [
+        "React",
+        "react-router",
+        "SCSS",
+        "i18next",
+        "React Context API",
+        "Cpanel",
+        "Supabase",
+      ],
+      linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
+      linkDemo: "https://eurafrique-eu.vercel.app/",
+    },
+    // {
+    //   id: 8,
+    //   capture1: require("./cheftom.png"),
+    //   name: t("projects.0.name"),
+    //   description: t("projects.0.description"),
+    //   stack: ["React-Native", "React Context API"]
+    //   linkRepo: "https://github.com/thomasaugot/recipes-react-native",
+    // },
     {
       id: 1,
       capture1: require("./partymates1.png"),
       name: t("projects.5.name"),
       description: t("projects.5.description"),
-      stack: t("projects.5.stack"),
+      stack: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "Postman"],
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
-    {
-      id: 2,
-      capture1: require("./responsive-BGtrotter.png"),
-      name: t("projects.6.name"),
-      description: t("projects.6.description"),
-      stack: t("projects.6.stack"),
-      linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
-      linkDemo: "https://the-broke-globetrotter.adaptable.app/",
-    },
+    // {
+    //   id: 2,
+    //   capture1: require("./responsive-BGtrotter.png"),
+    //   name: t("projects.6.name"),
+    //   description: t("projects.6.description"),
+    //   stack: ["MongoDB", "Express.js", "Node.js", "Bootstrap", "Handlebars", "Postman"],
+    //   linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
+    //   linkDemo: "https://the-broke-globetrotter.adaptable.app/",
+    // },
     {
       id: 3,
       capture1: require("./game-capture1.png"),
       name: t("projects.7.name"),
       description: t("projects.7.description"),
-      stack: t("projects.7.stack"),
+      stack: ["HTML", "CSS", "Javascript"],
       linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
       linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
     },
@@ -125,7 +143,7 @@ function PortfolioPage() {
           ease: "easeOut",
         }}
       >
-        <h1 className="gradient-underline">{t("My projects")}</h1>
+        <h1 className="gradient-underline">{t("Featured Projects")}</h1>
       </motion.div>
       <br></br>
       {isMobile ? (
@@ -150,7 +168,12 @@ function PortfolioPage() {
                 <div className="card-front card" onClick={() => handleCardClick(index)}>
                   <img src={project.capture1} alt="project" />
                   <h1 className="card-title">{project.name}</h1>
-                  <p>{project.description}</p>
+                  <div className="tech-stack">
+                    {project.stack.map((item, stackIndex) => (
+                      <p key={stackIndex}>{item}</p>
+                    ))}
+                  </div>
+
                   <div className="page__dots">
                     <img
                       src={require("../../assets/flip-icon.png")}
@@ -160,8 +183,7 @@ function PortfolioPage() {
                   </div>
                 </div>
                 <div className="card-back card" onClick={() => handleCardClick(index)}>
-                  <h2>{t("Tech Stack")}:</h2>
-                  <p>{project.stack}</p>
+                  <p className="item-description">{project.description}</p>
                   <div className="project__buttons">
                     <button
                       className="blueBtn gradient-bg"
@@ -235,7 +257,11 @@ function PortfolioPage() {
                       <div className="card-front card" onClick={() => handleCardClick(index)}>
                         <img src={project.capture1} alt="project" />
                         <h1 className="card-title">{project.name}</h1>
-                        <p>{project.description}</p>
+                        <div className="tech-stack">
+                          {project.stack.map((item, stackIndex) => (
+                            <p key={stackIndex}>{item}</p>
+                          ))}
+                        </div>
                         <div className="page__dots">
                           <img
                             src={require("../../assets/flip-icon.png")}
@@ -245,8 +271,7 @@ function PortfolioPage() {
                         </div>
                       </div>
                       <div className="card-back card" onClick={() => handleCardClick(index)}>
-                        <h2>{t("Tech Stack")}:</h2>
-                        <p>{project.stack}</p>
+                        <p className="item-description">{project.description}</p>
                         <div className="project__buttons">
                           <a href={project.linkRepo} class="blueBtn">
                             {t("View Code")}

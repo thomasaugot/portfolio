@@ -1,12 +1,12 @@
 {
   "About": "Acerca de",
-  "Projects": "Proyectos",
+  "Latest Projects": "Proyectos",
   "Contact": "Contacto",
   "Hi! I am Thomas,": "¡Hola! Soy Thomas,",
   "Full-Stack Developer": "Desarrollador Full-Stack",
   "I bring your project to life using the latest development technologies": "Le doy vida a su proyecto utilizando las últimas tecnologías de desarrollo",
   "About me": "Acerca de mi",
-  "Hi there! I am Thomas, a Full-Stack developer hailing from France and currently soaking up the sunny vibes of Fuerteventura. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web development.": "¡Hola! Soy Thomas, un desarrollador Full-Stack francés actualmente disfrutando de la vida isleña en la hermosa Fuerteventura. Como antiguo trotamundos, traigo una perspectiva global y un apetito insaciable por los desafíos al mundo del desarrollo web.",
+  "Hi there! I am Thomas, a Full-Stack developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web development.": "¡Hola! Soy Thomas, un desarrollador Full-Stack francés actualmente disfrutando de la vida isleña en la hermosa Fuerteventura. Como antiguo trotamundos, traigo una perspectiva global y un apetito insaciable por los desafíos al mundo del desarrollo web.",
   "In this ever-evolving digital landscape, my mission is crystal clear: elevate online presence and visibility for businesses and individuals alike. Whether it's crafting seamless front-end magic or diving deep into the back-end abyss, I enjoy creating remarkable digital experiences. Staying on the cutting edge of tech trends ensures that my work is always in sync with modern design principles and the best practices in web development.": "En este paisaje digital constantemente cambiando, mi misión es clara: elevar la presencia en línea y la visibilidad tanto para empresas como para individuos. Ya sea creando una magia front-end o sumergiéndome en las profundidades del back-end, disfruto creando experiencias digitales excepcionales. Mantenerme a la vanguardia de las tendencias tecnológicas asegura que mi trabajo esté siempre en sintonía con los principios de diseño modernos y las mejores prácticas en el desarrollo web.",
   "While my playground primarily revolves around Javascript and its captivating frameworks, I am never confined by boundaries and always seek to expand my skillset!": "Aunque mi campo de juego gira principalmente en torno a JavaScript y sus cautivadores frameworks, nunca me siento limitado por fronteras y siempre busco expandir mi conjunto de habilidades !",
   "I build with...": "Desarollo con...",
@@ -17,9 +17,10 @@
   "Mobile Development with React Native": "Desarollo móvil con React Native",
   "28-hour course covering mobile apps development using :": "28 horas de curso que cubre el desarrollo de aplicaciones móviles utilizando:",
   "Version control": "Control de version",
-  "My projects": "Mis proyectos",
+  "Featured Projects": "Proyectos destacados",
   "More details": "Más detalles",
   "View Code": "Ver código",
+  "Visit page": "Visitar pagina web",
   "Contact me": "Contacta conmigo",
   "Name": "Nombre",
   "Email": "Correo electrónico",
@@ -46,42 +47,55 @@
     {
       "name": "Chef Tom",
       "description": "Además de la programación, me encanta cocinar. Así que construí mi propia primera aplicación nativa donde puedo guardar mis mejores recetas.",
-      "stack": "React-Native, useContext para la gestión del estado. Dado que construí esta aplicación solo para practicar el desarrollo móvil, no está publicada"
+      "stack": ["React-Native", "React Context API"]
     },
     {
       "name": "Kingpad",
       "description": "Una página web completamente receptiva que construí para Kingworld Finance, colaborando con un equipo de diseñadores y desarrolladores, duplicando perfectamente un diseño de Figma.",
-      "stack": "Next.JS, Tailwind CSS, Typescript, Material UI, Figma. La aplicación es completamente receptiva siguiendo la metodología móvil primero."
+      "stack": ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma"]
     },
     {
       "name": "Eurafrique",
       "description": "Un sitio web completamente receptivo y multilingüe (francés, inglés, español y árabe) que estoy desarrollando para la asociación Eurafrique.eu.",
-      "stack": "React, react-router, SCSS, i18next (para la funcionalidad multilingüe), React Context API (para la gestión del estado) y Cpanel (para el alojamiento). El backend está construido con Supabase (Backend as a Service / BaaS)"
+      "stack": [
+        "React",
+        "react-router",
+        "SCSS",
+        "i18next",
+        "React Context API",
+        "Cpanel",
+        "Supabase"
+      ]
     },
     {
       "name": "Farmhouse Table",
       "description": "Un sitio web de restaurante que integra la API de Google Maps y un formulario de reserva.",
-      "stack": "React, SCSS, Typescript, Bootstrap, integración de API externa, diseños receptivos"
+      "stack": ["React", "SCSS", "Typescript", "Bootstrap", "Google maps API"]
     },
     {
       "name": "Todayzzz Todos",
       "description": "Una aplicación de tareas con 'drag & drop' para organizar sus tareas diarias que construí para practicar PostgrSQL, Typescript, Jest y SCSS.",
-      "stack": "React, SCSS, Typescript, Jest en el frontend. Quería desafiarme a mí mismo con la función de 'drag & drop', ¡y lo logré! La aplicación ofrece un interruptor de modo oscuro/claro. El Backend esta construido con SQL/PostgrSQL y Axios."
+      "stack": ["React", "SCSS", "Typescript", "Jest", "PostgrSQL", "Axios"]
     },
     {
       "name": "Partymates",
       "description": "Una aplicación de redes sociales de tipo MERN que creé para conectar a las personas para que puedan viajar juntas a festivales. Los usuarios pueden crear una cuenta, guardar o suscribirse a eventos e interactuar con otros usuarios.",
-      "stack": "MongoDB, Express.js, React.js, Node.js, API REST (construida por mí), Postman. La aplicación es completamente receptiva, siguiendo la metodología móvil primero."
+      "stack": ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "Postman"]
     },
     {
       "name": "The Broke Globetrotter",
       "description": "Una aplicación creada en colaboración, que recopila colecciones de cosas gratuitas para hacer en ciudades de todo el mundo, destacando tecnologías backend para viajeros con poco dinero (la historia de mi vida...!)",
-      "stack": "MongoDB, Express.js, Node.js, Bootstrap, Handlebars, Postman"
+      "stack": ["MongoDB", "Express.js", "Node.js", "Bootstrap", "Handlebars", "Postman"]
     },
     {
       "name": "Pickle Rick vs Rats - The Game",
       "description": "Mi primer proyecto de codigo, un divertido juego de disparos en Javascript, ¡mata a las ratas!",
-      "stack": "HTML, CSS, Javascript. Dado que necesitas un teclado para los comandos, solo se puede jugar en computadoras."
+      "stack": ["HTML", "CSS", "Javascript"]
+    },
+    {
+      "name": "Charpente Menuiserie Durand",
+      "description": "Un sitio web que diseñé y desarrollé para una empresa francesa de construción.",
+      "stack": ["Next.JS", "Tailwind CSS", "Framer Motion"]
     }
   ]
 }

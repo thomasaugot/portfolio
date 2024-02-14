@@ -61,7 +61,7 @@ function AboutPage() {
         >
           <p>
             {t(
-              "Hi there! I am Thomas, a Full-Stack developer hailing from France and currently soaking up the sunny vibes of Fuerteventura. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web development."
+              "Hi there! I am Thomas, a Full-Stack developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web development."
             )}
             <br />
             <br />

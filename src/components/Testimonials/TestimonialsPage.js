@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Testimonials.scss";
 import { useTranslation } from "react-i18next";
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import { IconContext } from "react-icons";
 import { motion } from "framer-motion";
 
@@ -62,9 +62,6 @@ function Testimonials() {
                 "Thomas, in record time, has been able to create our website. He leads a team of professionals and fully satisfies us in these aspects. He shines through his technical knowledge in IT development, his responsiveness, his kindness, and especially his availability. We have appreciated all these qualities to the extent that we have asked him, along with other professionals, to lead the web marketing, social media communication, database development, in short, all of our IT projects. The entire Eurafrique community thanks him."
               )}
             </p>
-            <IconContext.Provider value={{ className: "quote-icon", size: "5em" }}>
-              <RiDoubleQuotesR />
-            </IconContext.Provider>
             <p className="signature">
               <a
                 href="https://www.linkedin.com/in/remy-riehl-757b32139/"
@@ -76,15 +73,6 @@ function Testimonials() {
               - {t("Volunteer Coordinator, Association")} Eurafrique
             </p>
           </div>
-          {/* <div className="curriculum__buttons testimonial-link"> */}
-          {/* <a
-              href="https://drive.google.com/file/d/1-sRrc2sL9f4tcI6uzJ4rjQck6DmSmiHj/view?usp=sharing"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <button className="blueBtn gradient-bg">{t("See full document")}</button>
-            </a> */}
-          {/* </div> */}
           <div className="testimonial-container">
             <IconContext.Provider value={{ size: "5em" }}>
               <RiDoubleQuotesL />
@@ -94,9 +82,6 @@ function Testimonials() {
                 "Thomas Augot has been an outstanding asset to our team. His passion for development, creativity, and commitment make him a promising professional in the field. I highly recommend Thomas for any future opportunities in mobile development."
               )}
             </p>
-            <IconContext.Provider value={{ className: "quote-icon", size: "5em" }}>
-              <RiDoubleQuotesR />
-            </IconContext.Provider>
             <p className="signature">
               <a
                 href="https://www.linkedin.com/in/armand-petit-2b3994183/"

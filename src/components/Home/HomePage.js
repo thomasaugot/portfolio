@@ -2,6 +2,7 @@ import "./HomePage.scss";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTransition, animated } from "@react-spring/web";
+import MouseAnimation from "../AnimatedMousePad/MouseAnimation";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -67,6 +68,7 @@ function HomePage() {
 
   return (
     <div className="Homepage" id="HomePage">
+      <MouseAnimation />
       <div className="title-block">
         {transitions(({ innerHeight, ...rest }, item) => (
           <animated.div style={rest} onClick={reset} className="title-item gradient-text">

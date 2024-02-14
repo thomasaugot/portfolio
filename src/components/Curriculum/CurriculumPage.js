@@ -2,7 +2,6 @@ import "./CurriculumPage.scss";
 import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import MouseAnimation from "../AnimatedMousePad/MouseAnimation";
 
 function CurriculumPage() {
   const { t } = useTranslation();
@@ -35,7 +34,6 @@ function CurriculumPage() {
           }}
           className="service-item"
         >
-          <MouseAnimation />
           <h2>{t("Frontend Development")}</h2>
           <p>
             {t(
@@ -168,7 +166,6 @@ function CurriculumPage() {
           }}
           className="service-item"
         >
-          <MouseAnimation />
           <h2>{t("Backend Development")}</h2>
           <p>
             {t(
@@ -262,7 +259,6 @@ function CurriculumPage() {
           }}
           className="service-item"
         >
-          <MouseAnimation />
           <h2>{t("Mobile App Development")}</h2>
           <p>
             {t(

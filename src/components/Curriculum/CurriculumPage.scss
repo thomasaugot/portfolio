@@ -12,7 +12,6 @@
 .CurriculumPage {
   p {
     font-size: $font-size-sm;
-    margin: 1vh;
   }
   h2 {
     font-size: 1.5em;
@@ -64,14 +63,26 @@
   .service-item {
     position: relative;
     border-radius: 15px;
-    padding: 24px 0;
+    padding: 15px 0;
     box-shadow: 0 5px 20px black;
     text-align: center;
     background-color: transparent !important;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../../assets/item-bg.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     &:hover {
       box-shadow: 0 5px 20px white;
+    }
+
+    p {
+      max-width: 90%;
+      margin-inline: auto;
     }
   }
 }
@@ -92,6 +103,10 @@
   display: flex;
   flex-direction: column;
   height: 450px;
+  background-image: url("../../assets/item-bg.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   &:hover {
     box-shadow: 0 5px 20px white;
