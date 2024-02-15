@@ -199,7 +199,7 @@ function ContactPage() {
           >
             <a href="https://medium.com/@thomasaugot" target="_blank" rel="noreferrer">
               <IconContext.Provider
-                value={{ color: "white", size: "67px", className: "githubLogo" }}
+                value={{ color: "white", size: "67px", className: "mediumLogo" }}
               >
                 <div>
                   <BsMedium />
