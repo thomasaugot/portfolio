@@ -9,30 +9,60 @@
   height: fit-content;
   overflow: hidden;
   transition: 1s;
-}
 
-.TestimonialsPage {
+  &.visible {
+    opacity: 1;
+  }
+
   p {
     font-size: $font-size-sm;
     margin: 1vh;
   }
-  h2 {
-    font-size: 1.5em;
-    font-family: $caveat-font;
-    margin-top: 1.2vh;
-  }
 
   .testimonial__content {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 600px) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
 
   .testimonial-container {
     position: relative;
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 0 5px 20px black;
+    text-align: center;
+    background-color: transparent !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 85vw;
+    background-image: url("../../assets/item-bg.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media only screen and (min-width: 600px) {
+      width: 40vw;
+    }
+
+    @media only screen and (min-width: 992px) {
+      width: 30vw;
+    }
   }
 
   .testimonial-text {
     font-style: italic;
+    text-align: left;
+    margin-top: 45px;
   }
 
   .signature {
@@ -42,34 +72,8 @@
 
   .quote-icon {
     position: absolute;
-    right: 0;
-    bottom: 40px;
-  }
-
-  .testimonial-link {
-    text-align: center;
-    margin-top: 30px;
-  }
-}
-
-/* Medium devices (Tablets, between 600px and 992px) */
-@media only screen and (min-width: 600px) {
-  .testimonial__content {
-    flex-direction: row;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .TestimonialsPage {
-    padding: 5% 10%;
-    opacity: 0;
-
-    .testimonial__content {
-      flex-direction: row;
-    }
-  }
-  .TestimonialsPage.visible {
-    opacity: 1;
+    left: -20px;
+    top: -40px;
+    size: 50px;
   }
 }

@@ -391,7 +391,7 @@ function CurriculumPage() {
           transition={{
             type: "spring",
             stiffness: 50,
-            delay: 0.4,
+            delay: 0.6,
           }}
           className="certification-item"
         >

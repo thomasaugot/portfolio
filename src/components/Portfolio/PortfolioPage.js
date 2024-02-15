@@ -1,20 +1,20 @@
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ReactCardFlip from "react-card-flip";
 import { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./PortfolioPage.scss";
-import { motion } from "framer-motion";
-import React from "react";
 
 function PortfolioPage() {
   const { t } = useTranslation();
 
   const [isMobile, setIsMobile] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 1023);
@@ -26,6 +26,10 @@ function PortfolioPage() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, []);
+
+  useEffect(() => {
+    setIsVisible(true);
   }, []);
 
   const projects = [
@@ -61,7 +65,7 @@ function PortfolioPage() {
       capture1: require("./todos.png"),
       name: t("projects.4.name"),
       description: t("projects.4.description"),
-      stack: ["React", "SCSS", "Typescript", "Jest", "PostgrSQL", "Axios"],
+      stack: ["React", "SCSS", "Typescript", "Jest", "PostgrSQL", "React Context API"],
       linkRepo:
         "https://github.com/thomasaugot/typescript-todo-app-frontend/tree/postgrsql-link-setup",
       linkDemo: "https://todayzzz-todos.netlify.app/",
@@ -71,15 +75,7 @@ function PortfolioPage() {
       capture1: require("./eurafrique.png"),
       name: t("projects.2.name"),
       description: t("projects.2.description"),
-      stack: [
-        "React",
-        "react-router",
-        "SCSS",
-        "i18next",
-        "React Context API",
-        "Cpanel",
-        "Supabase",
-      ],
+      stack: ["React", "SCSS", "i18next", "React Context API", "Cpanel", "Supabase"],
       linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
       linkDemo: "https://eurafrique-eu.vercel.app/",
     },
@@ -120,21 +116,20 @@ function PortfolioPage() {
     },
   ];
 
-  const slidesPerView = isMobile
-    ? 1
-    : window.innerWidth >= 768 && window.innerWidth <= 1024
-    ? 2
-    : 3;
-
   const handleCardClick = (index) => {
     setActiveCardIndex(index === activeCardIndex ? null : index);
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="PortfolioPage" id="PortfolioPage">
-      <motion.div
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: 100, opacity: 0 }}
+      <motion.h1
+        whileInView={{ x: 1, opacity: 1 }}
+        initial={{ x: "-100%", opacity: 0 }}
         viewport={{ once: true }}
         transition={{
           type: "spring",
@@ -142,9 +137,10 @@ function PortfolioPage() {
           delay: 0.4,
           ease: "easeOut",
         }}
+        className="featured-projects-header gradient-underline"
       >
-        <h1 className="gradient-underline">{t("Featured Projects")}</h1>
-      </motion.div>
+        {t("Featured Projects")}
+      </motion.h1>
       <br></br>
       {isMobile ? (
         <div className="project-cards-container">
@@ -207,21 +203,20 @@ function PortfolioPage() {
         </div>
       ) : (
         <motion.div
-          whileInView={{ scale: 1, opacity: 1 }}
-          initial={{ scale: 0.8, opacity: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-            delay: 0.2,
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
           }}
+          className="desktop-swiper"
         >
           <Swiper
             effect={"coverflow"}
             initialSlide={1}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={slidesPerView}
+            slidesPerView={3}
             coverflowEffect={{
               rotate: 50,
               stretch: 0,
@@ -235,66 +230,57 @@ function PortfolioPage() {
             className="mySwiper"
           >
             {projects.map((project, index) => (
-              <motion.div
-                whileInView={{ scale: 1, opacity: 1 }}
-                initial={{ scale: 0.7, opacity: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  type: "spring",
-                  stiffness: 50,
-                  delay: 0.4,
-                }}
-                className="marquee-item"
-              >
-                <SwiperSlide key={project.id}>
-                  <div>
-                    <ReactCardFlip
-                      isFlipped={activeCardIndex === index}
-                      flipDirection="horizontal"
-                      className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
-                      alignHeight={true}
-                    >
-                      <div className="card-front card" onClick={() => handleCardClick(index)}>
-                        <img src={project.capture1} alt="project" />
-                        <h1 className="card-title">{project.name}</h1>
-                        <div className="tech-stack">
-                          {project.stack.map((item, stackIndex) => (
-                            <p key={stackIndex}>{item}</p>
-                          ))}
-                        </div>
-                        <div className="page__dots">
-                          <img
-                            src={require("../../assets/flip-icon.png")}
-                            alt="flip-icon"
-                            className="flip-icon"
-                          />
-                        </div>
+              <motion.div key={project.id} variants={itemVariants} className="swiper-slide">
+                <SwiperSlide>
+                  <ReactCardFlip
+                    isFlipped={activeCardIndex === index}
+                    flipDirection="horizontal"
+                    className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                    alignHeight={true}
+                  >
+                    {/* Card front */}
+                    <motion.div onClick={() => handleCardClick(index)} className="card-front card">
+                      {/* Content */}
+                      <img src={project.capture1} alt="project" />
+                      <h1 className="card-title">{project.name}</h1>
+                      <div className="tech-stack">
+                        {project.stack.map((item, stackIndex) => (
+                          <p key={stackIndex}>{item}</p>
+                        ))}
                       </div>
-                      <div className="card-back card" onClick={() => handleCardClick(index)}>
-                        <p className="item-description">{project.description}</p>
-                        <div className="project__buttons">
-                          <a href={project.linkRepo} class="blueBtn">
-                            {t("View Code")}
+                      <div className="page__dots">
+                        <img
+                          src={require("../../assets/flip-icon.png")}
+                          alt="flip-icon"
+                          className="flip-icon"
+                        />
+                      </div>
+                    </motion.div>
+
+                    {/* Card back */}
+                    <motion.div onClick={() => handleCardClick(index)} className="card-back card">
+                      {/* Content */}
+                      <p className="item-description">{project.description}</p>
+                      <div className="project__buttons">
+                        <a href={project.linkRepo} class="blueBtn">
+                          {t("View Code")}
+                        </a>
+                        {project.id !== 8 && (
+                          <a
+                            href={project.linkDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="whiteBtn"
+                          >
+                            {t("Visit page")}
                           </a>
-                          {project.id !== 8 && (
-                            <a
-                              href={project.linkDemo}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="whiteBtn"
-                            >
-                              {t("Visit page")}
-                            </a>
-                          )}
-                        </div>
+                        )}
                       </div>
-                    </ReactCardFlip>
-                  </div>
+                    </motion.div>
+                  </ReactCardFlip>
                 </SwiperSlide>
               </motion.div>
             ))}
-
-            <div class="swiper-pagination gradient-bg"></div>
           </Swiper>
         </motion.div>
       )}

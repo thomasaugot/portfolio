@@ -90,7 +90,7 @@
 .certifications-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .certification-item {
@@ -130,8 +130,13 @@
   .CurriculumPage {
     padding: 10% 10% 15% 10%;
 
-    .certification-item {
-      height: 350px;
+    .certifications-container {
+      align-items: center;
+
+      .certification-item {
+        height: 350px;
+        width: 550px;
+      }
     }
 
     .services-container {

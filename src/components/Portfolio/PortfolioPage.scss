@@ -170,12 +170,6 @@
     width: 45vw !important;
     margin-inline: auto;
   }
-
-  .card-front,
-  .card-back {
-    width: 45vw;
-    height: 690px;
-  }
 }
 
 /* Smaller desktops (between 992px and 1024px) */
@@ -185,7 +179,13 @@
   }
 
   .card {
-    width: 33vw !important;
+    width: 30vw !important;
+  }
+
+  .card-front,
+  .card-back {
+    width: 30vw;
+    height: 690px;
   }
 }
 

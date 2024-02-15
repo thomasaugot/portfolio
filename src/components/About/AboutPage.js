@@ -31,7 +31,7 @@ function AboutPage() {
 
   return (
     <div className={`AboutPage ${isDesktop ? "visible" : ""}`} id="AboutPage">
-      <motion.div
+      <motion.h1
         whileInView={{ y: 0, opacity: 1 }}
         initial={{ y: 100, opacity: 0 }}
         viewport={{ once: true }}
@@ -41,11 +41,11 @@ function AboutPage() {
           delay: 0.4,
           ease: "easeOut",
         }}
+        className="gradient-underline"
+        style={{ marginTop: "2vh" }}
       >
-        <h1 className="gradient-underline" style={{ marginTop: "2vh" }}>
-          {t("About me")}
-        </h1>
-      </motion.div>
+        {t("About me")}
+      </motion.h1>
       <br />
       <div className="about__content">
         <motion.div
