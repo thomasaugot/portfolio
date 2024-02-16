@@ -10,7 +10,7 @@ import { IconContext } from "react-icons";
 function LanguagesMenu() {
   const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
+  const [activeLanguage, setActiveLanguage] = useState(getInitialLanguage());
 
   useEffect(() => {
     setActiveLanguage(i18n.language);
@@ -24,6 +24,18 @@ function LanguagesMenu() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  function getInitialLanguage() {
+    const browserLanguage = navigator.language.split("-")[0];
+    switch (browserLanguage) {
+      case "fr":
+        return "fr";
+      case "es":
+        return "es";
+      default:
+        return "en";
+    }
+  }
 
   return (
     <div className="languages-menu">
