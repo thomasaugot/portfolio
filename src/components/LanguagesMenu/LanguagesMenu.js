@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import englishFlag from "../../assets/en.png";
 import frenchFlag from "../../assets/fr.png";
 import spanishFlag from "../../assets/es.png";
@@ -10,6 +10,11 @@ import { IconContext } from "react-icons";
 function LanguagesMenu() {
   const { i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    setActiveLanguage(i18n.language);
+  }, [i18n.language]);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -24,7 +29,7 @@ function LanguagesMenu() {
     <div className="languages-menu">
       <img
         src={
-          i18n.language === "fr" ? frenchFlag : i18n.language === "en" ? englishFlag : spanishFlag
+          activeLanguage === "fr" ? frenchFlag : activeLanguage === "en" ? englishFlag : spanishFlag
         }
         className="active-flag"
         alt="Flag"
