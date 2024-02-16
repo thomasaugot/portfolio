@@ -61,12 +61,12 @@ function AboutPage() {
         >
           <p>
             {t(
-              "Hi there! I am Thomas, a Full-Stack developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web development."
+              "Hi there! I am Thomas, a Full-Stack developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web and mobile development."
             )}
             <br />
             <br />
             {t(
-              "In this ever-evolving digital landscape, my mission is crystal clear: elevate online presence and visibility for businesses and individuals alike. Whether it's crafting seamless front-end magic or diving deep into the back-end abyss, I enjoy creating remarkable digital experiences. Staying on the cutting edge of tech trends ensures that my work is always in sync with modern design principles and the best practices in web development."
+              "In this ever-evolving digital landscape, my mission is crystal clear: elevate online presence and visibility for businesses and individuals alike. Whether it's crafting seamless front-end magic or diving deep into the back-end abyss, I enjoy creating remarkable digital experiences. Staying on the cutting edge of tech trends ensures that my work is always in sync with modern design principles and the best practices in web and mobile development."
             )}
             <br />
             <br />
@@ -85,7 +85,6 @@ function AboutPage() {
             delay: 1.0,
             ease: "easeOut",
           }}
-          whileHover={{ scale: 1.9 }}
         >
           <img src={profileImage} alt="profile" className="profilePicture" />
         </motion.div>

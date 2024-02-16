@@ -85,7 +85,7 @@ function ContactPage() {
               id="name"
               type="text"
               name="from_name"
-              placeholder="Your name"
+              placeholder={t("John Doe")}
               required
             />
             <label htmlFor="email">{t("Email")}</label>
@@ -94,7 +94,7 @@ function ContactPage() {
               id="email"
               type="email"
               name="email"
-              placeholder="Your email"
+              placeholder={t("yourname@example.com")}
               required
             />
             <label htmlFor="message">{t("Message")}</label>
@@ -102,7 +102,7 @@ function ContactPage() {
               className="inputForm"
               id="message"
               name="message"
-              placeholder="Your message here"
+              placeholder={t("What's on your mind? (besides pizza)")}
               rows="8"
               required
             />

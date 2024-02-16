@@ -9,13 +9,11 @@ import { IconContext } from "react-icons";
 
 function LanguagesMenu() {
   const { i18n } = useTranslation();
-  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeLanguage = (lng) => {
-    setActiveLanguage(lng);
-    setIsMenuOpen(false);
     i18n.changeLanguage(lng);
+    setIsMenuOpen(false); // Close the menu after selecting a language
   };
 
   const toggleMenu = () => {
@@ -23,10 +21,10 @@ function LanguagesMenu() {
   };
 
   return (
-    <div className="languages-menu" onClick={toggleMenu}>
+    <div className="languages-menu">
       <img
         src={
-          activeLanguage === "fr" ? frenchFlag : activeLanguage === "en" ? englishFlag : spanishFlag
+          i18n.language === "fr" ? frenchFlag : i18n.language === "en" ? englishFlag : spanishFlag
         }
         className="active-flag"
         alt="Flag"
@@ -36,7 +34,7 @@ function LanguagesMenu() {
         value={{ style: { verticalAlign: "middle", width: "30px", cursor: "pointer" } }}
         className="chevron-icon"
       >
-        <RxChevronDown size={20} />
+        <RxChevronDown size={20} onClick={toggleMenu} />{" "}
       </IconContext.Provider>
 
       <div
