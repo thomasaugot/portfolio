@@ -45,6 +45,8 @@
   "What's on your mind? (besides pizza)": "Qu'avez-vous en tête? (à part une bonne pizza)",
   "yourname@example.com": "votrenom@exemple.com",
   "John Doe": "Jean Dupont",
+  "Crafted with": "Développé avec",
+  "by": "par",
   "projects": [
     {
       "name": "Chef Tom",
