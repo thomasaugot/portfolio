@@ -13,10 +13,10 @@ function CurriculumPage() {
         initial={{ y: 50, opacity: 0 }}
         viewport={{ once: true }}
         transition={{
-          type: "spring",
+          type: "tween",
           stiffness: 40,
           delay: 0.4,
-          ease: "easeOut",
+          ease: "linear",
         }}
         className="gradient-underline"
       >
@@ -28,9 +28,10 @@ function CurriculumPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 50,
             delay: 0.4,
+            ease: "linear",
           }}
           className="service-item"
         >
@@ -160,9 +161,10 @@ function CurriculumPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 50,
             delay: 0.4,
+            ease: "linear",
           }}
           className="service-item"
         >
@@ -253,9 +255,10 @@ function CurriculumPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 50,
             delay: 0.4,
+            ease: "linear",
           }}
           className="service-item"
         >
@@ -337,10 +340,10 @@ function CurriculumPage() {
         initial={{ y: 50, opacity: 0 }}
         viewport={{ once: true }}
         transition={{
-          type: "spring",
+          type: "tween",
           stiffness: 40,
           delay: 0.4,
-          ease: "easeOut",
+          ease: "linear",
         }}
       >
         <div className="gradient-underline">
@@ -353,9 +356,10 @@ function CurriculumPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 50,
             delay: 0.4,
+            ease: "linear",
           }}
           className="certification-item"
         >
@@ -389,9 +393,10 @@ function CurriculumPage() {
           initial={{ scale: 0.8, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 50,
             delay: 0.6,
+            ease: "linear",
           }}
           className="certification-item"
         >

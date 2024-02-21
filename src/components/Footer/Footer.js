@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { BiSolidChevronsUp } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import { IoHeart } from "react-icons/io5";
+import AnimatedSquares from "../AnimatedSquares/AnimatedSquares";
 
 function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +27,7 @@ function Footer() {
     <div className="Footer" ref={ref}>
       {isVisible && (
         <Fade>
-          <div style={{ textAlign: "center" }}>{/* <BGAnimation /> */}</div>
+          <AnimatedSquares />
           <a href="#HomePage">
             <div className="chevron-container">
               <IconContext.Provider value={{ className: "chevron-icon", size: "2.7em" }}>

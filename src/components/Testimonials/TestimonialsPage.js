@@ -29,7 +29,7 @@ function Testimonials() {
         initial={{ y: 100, opacity: 0 }}
         viewport={{ once: true }}
         transition={{
-          type: "spring",
+          type: "tween",
           stiffness: 40,
           delay: 0.5,
           ease: "easeOut",
@@ -44,10 +44,10 @@ function Testimonials() {
           initial={{ y: 100, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 40,
             delay: 0.7,
-            ease: "easeOut",
+            ease: "linear",
           }}
           className="testimonial-container"
         >
@@ -75,10 +75,10 @@ function Testimonials() {
           initial={{ y: 100, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
-            type: "spring",
+            type: "tween",
             stiffness: 40,
             delay: 0.9,
-            ease: "easeOut",
+            ease: "linear",
           }}
           className="testimonial-container"
         >
