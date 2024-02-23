@@ -43,16 +43,6 @@ function HomePage() {
         () =>
           set([
             t("Hi! I am Thomas,"),
-            t("I bring your project to life using the latest development technologies"),
-          ]),
-        5000
-      )
-    );
-    ref.current.push(
-      setTimeout(
-        () =>
-          set([
-            t("Hi! I am Thomas,"),
             t("Full-Stack Developer"),
             t("I bring your project to life using the latest development technologies"),
           ]),
