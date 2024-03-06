@@ -1,0 +1,10 @@
+.likes {
+  margin: 4em;
+  span:not(:last-child) {
+    margin: 5px 15px;
+  }
+  span:last-child {
+    font-size: 18px;
+    margin: 5px;
+  }
+}

@@ -1,0 +1,17 @@
+.background-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100vh;
+  z-index: 0;
+}
+
+canvas {
+  width: 110vw;
+  height: 100vh;
+  margin-inline: 0;
+  margin-block: 0;
+  margin-left: -50px;
+  padding: -50px;
+}

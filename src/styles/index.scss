@@ -1,0 +1,129 @@
+@import "./variables.scss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ubuntu-font;
+  overflow-x: hidden;
+}
+
+.App {
+  -webkit-animation: color-change-2x 6s linear infinite alternate both;
+  animation: color-change-2x 6s linear infinite alternate both;
+  overflow-x: hidden;
+}
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #212121;
+  }
+  100% {
+    background: #292828;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #212121;
+  }
+  100% {
+    background: #292828;
+  }
+}
+
+main {
+  height: calc(100vh - #{$header-height});
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  .intro {
+    font-size: 38px;
+    text-align: center;
+    font-weight: 700;
+    color: $text2;
+    padding: $spacing-md $spacing-lg;
+    background: $bg2;
+    border-radius: $spacing-sm;
+    box-shadow: 0 0 10px $primary;
+    margin: 0 $spacing-md;
+    margin-top: -$header-height;
+
+    &__focus {
+      color: $primary;
+    }
+
+    @include breakpoint(md) {
+      font-size: 42px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text2;
+  &:hover {
+    color: $primary;
+  }
+}
+
+button {
+  // reset to default
+  font-family: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  letter-spacing: inherit;
+  color: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: $caveat-font;
+  margin-bottom: 50px;
+}
+
+.blueBtn {
+  border-radius: 5px;
+  padding: 5px 20px;
+  color: $text;
+  font-weight: bold;
+  margin: 10px 10px 10px 10px;
+  border: solid 1px transparent;
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+  &:hover {
+    border: 1px solid rgb(247, 248, 248);
+    box-shadow: 5px 5px 10px -5px;
+    color: $text;
+    transition: 0.4s;
+    cursor: pointer;
+    transform: scale(0.8);
+  }
+}
+
+.whiteBtn {
+  border-radius: 5px;
+  border: solid white 1px;
+  background-color: transparent !important;
+  padding: 5px 21.5px;
+  color: $text2;
+  margin: 0 10px;
+  &:hover {
+    border: 1px solid rgb(252, 254, 255);
+    box-shadow: 5px 5px 10px -5px;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+    transform: scale(0.8);
+  }
+}

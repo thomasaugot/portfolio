@@ -1,0 +1,178 @@
+@import "../../styles/variables.scss";
+
+.CurriculumPage {
+  @include bootstrapScroll();
+  padding: 20% 10% 15% 10%;
+  color: $text2;
+  overflow: hidden;
+  height: fit-content;
+  position: relative;
+}
+
+.CurriculumPage {
+  p {
+    font-size: $font-size-sm;
+    margin: 1vh;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-family: $caveat-font;
+    margin-top: 1vh;
+  }
+
+  img {
+    margin: 15px 15px;
+    padding: 5px;
+  }
+
+  .stack {
+    text-align: center;
+    display: flex;
+    margin-bottom: 1vh;
+    margin-left: -15vw;
+    width: 150%;
+    overflow-x: hidden;
+    align-items: flex-end !important;
+  }
+}
+
+.marquee-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: 20px;
+}
+
+.marquee-item img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.img-container {
+  height: 70px;
+}
+
+.subtitle {
+  padding-top: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .service-item {
+    position: relative;
+    border-radius: 15px;
+    padding: 24px 0;
+    box-shadow: 0 5px 20px black;
+    text-align: center;
+    background-color: transparent !important;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 5px 20px white;
+    }
+  }
+}
+
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certification-item {
+  border-radius: 15px;
+  padding: 24px;
+  box-shadow: 0 5px 20px black;
+  text-align: left;
+  background-color: transparent !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+
+  &:hover {
+    box-shadow: 0 5px 20px white;
+  }
+
+  .curriculum__buttons {
+    margin-block: 2vh;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.resume-container {
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .CurriculumPage {
+    padding: 10% 10% 15% 10%;
+
+    .certification-item {
+      height: 350px;
+    }
+
+    .services-container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .service-item {
+        height: 300px;
+        width: 550px;
+        margin-inline: 4vw;
+        &:nth-child(2) {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .CurriculumPage {
+    padding: 5% 10%;
+
+    .stack {
+      padding-bottom: 3vh;
+
+      img {
+        width: 90px;
+        height: auto;
+        margin-bottom: 2vh;
+        margin: 15px 45px;
+        &:hover {
+          transform: scale(1.4);
+          transition: 1s;
+        }
+      }
+    }
+  }
+
+  .curriculum__buttons {
+    align-items: center;
+  }
+
+  .service-item {
+    height: 280px !important;
+  }
+
+  .certifications-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .certification-item {
+    width: 50%;
+    height: 320px !important;
+  }
+}

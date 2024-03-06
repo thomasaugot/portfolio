@@ -1,0 +1,76 @@
+@import "../../styles/variables.scss";
+
+.TestimonialsPage {
+  @include bootstrapScroll();
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  padding: 10%;
+  color: $text2;
+  height: fit-content;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.TestimonialsPage {
+  p {
+    font-size: $font-size-sm;
+    margin: 1vh;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-family: $caveat-font;
+    margin-top: 1.2vh;
+  }
+}
+
+.testimonial__content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.testimonial-container {
+  position: relative;
+}
+
+.testimonial-text {
+  font-style: italic;
+}
+
+.signature {
+  text-align: right;
+  padding-top: 70px;
+}
+
+.quote-icon {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+
+.testimonial-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .testimonial__content {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .TestimonialsPage {
+    padding: 5% 10%;
+    opacity: 0;
+  }
+
+  .TestimonialsPage.visible {
+    opacity: 1;
+  }
+
+  .testimonial__content {
+    flex-direction: row;
+  }
+}

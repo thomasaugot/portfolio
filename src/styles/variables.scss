@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
+
+$ubuntu-font: "Titillium Web", sans-serif;
+$caveat-font: "Titillium Web", sans-serif;
+
+$bg: #e7f6f2;
+$bg2: #212121;
+$bg3: #a5c9ca;
+
+$text: #212121;
+$text2: #e7f6f2;
+$primary: #03dac6;
+
+$primary-start: rgba(102, 255, 0, 1);
+$primary-end: rgba(3, 218, 198, 1);
+
+.gradient-text {
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+}
+
+.gradient-underline {
+  position: relative;
+}
+
+.gradient-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 500px;
+  height: 5px;
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$base: 0.6rem;
+
+$header-height: 57px;
+
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 75em;
+
+$font-size-xs: 0.5em;
+$font-size-sm: 1em;
+$font-size-rgl: 1.5em;
+$font-size-lrg: 3em;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: $md) {
+      @content;
+    }
+  }
+}
+
+@mixin bootstrapScroll {
+  height: fit-content;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+.article-content {
+  min-height: 100vh;
+  padding: 7vh 7vw;
+}

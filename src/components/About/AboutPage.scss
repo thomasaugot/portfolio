@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+
+.AboutPage {
+  @include bootstrapScroll();
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  padding: 10%;
+  color: $text2;
+  height: fit-content;
+  overflow: hidden;
+  transition: 1s;
+  position: relative;
+  z-index: 10;
+}
+
+.AboutPage {
+  p {
+    font-size: $font-size-sm;
+    margin: 1vh;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-family: $caveat-font;
+    margin-top: 1.2vh;
+  }
+}
+
+.profilePicture {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 150px;
+  height: auto;
+  margin: 10px 0 15px 18vw;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .profilePicture {
+    display: block;
+    margin: 0 0 15px 40px;
+  }
+
+  .about__content {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .AboutPage {
+    padding: 5% 10%;
+    opacity: 0;
+  }
+
+  .AboutPage.visible {
+    opacity: 1;
+  }
+
+  .profilePicture {
+    display: block;
+    margin: 10px 0 15px 30px;
+  }
+
+  .about__content {
+    flex-direction: row;
+  }
+}

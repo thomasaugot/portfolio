@@ -1,0 +1,133 @@
+@import "../../styles/variables.scss";
+
+.ContactPage {
+  @include bootstrapScroll();
+  padding: 20% 10% 8% 10%;
+  padding: 10%;
+  color: $text2;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 7px;
+}
+
+.inputForm {
+  border-radius: 8px;
+  padding: 7px 5px;
+  margin: 7px 0 0 0;
+  &:focus {
+    box-shadow: 2px -2px 4px 1px white;
+  }
+}
+
+.submitDiv {
+  text-align: center;
+  margin: 0;
+}
+
+.logo-container {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container.visible {
+  opacity: 1;
+}
+
+.linkedInLogo {
+  margin: 5vh 5vw;
+  padding-bottom: 14px;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  &:hover {
+    transform: scale(0.8);
+    transition: 1s;
+  }
+}
+
+.githubLogo {
+  margin: 5vh 5vw;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  &:hover {
+    transform: scale(0.8);
+    transition: 1s;
+  }
+}
+
+.upworkLogo {
+  margin: 5vh 5vw;
+  -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  &:hover {
+    transform: scale(0.8);
+    transition: 1s;
+  }
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .roll {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .inputForm {
+    border-radius: 8px;
+    padding: 7px 5px;
+    margin: 7px 0 0 0;
+    width: 40vw;
+  }
+
+  .contactFormBtn {
+    width: 10vw;
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
+
+  .ContactPage {
+    display: flex;
+    padding: 5% 10%;
+  }
+
+  .letsConnect {
+    margin-left: 10vw;
+  }
+
+  .linkedInLogo {
+    margin: 5vh 2vw;
+    padding-bottom: 12px;
+    &:hover {
+      transform: scale(0.6);
+      transition: 1s;
+    }
+  }
+
+  .githubLogo {
+    margin: 5vh 2vw;
+    &:hover {
+      transform: scale(0.6);
+      transition: 1s;
+    }
+  }
+
+  .upworkLogo {
+    margin: 5vh 5vw;
+    &:hover {
+      transform: scale(0.6);
+      transition: 1s;
+    }
+  }
+}

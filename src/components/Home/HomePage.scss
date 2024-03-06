@@ -1,0 +1,58 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../../styles/variables.scss";
+
+.Homepage {
+  @include bootstrapScroll();
+  padding: 17% 10% 8% 10%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.topContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  @media only screen and (min-width: 992px) {
+    height: 90%;
+    margin-left: 10%;
+  }
+
+  .titleDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+    .mainTitle {
+      font-size: 3em;
+      font-weight: bolder;
+      overflow: hidden;
+      max-width: 80vw;
+      // -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+      @extend .gradient-text;
+      @media only screen and (min-width: 600px) {
+        font-size: 5em;
+        max-width: 70vw;
+      }
+      @media only screen and (min-width: 992px) {
+        font-size: 4em;
+      }
+    }
+  }
+
+  .homepageP {
+    color: $text2;
+    font-family: $caveat-font;
+    font-size: $font-size-sm;
+    margin-bottom: 2vh;
+    margin-top: 4vh;
+    font-weight: lighter;
+    @media only screen and (min-width: 600px) {
+      font-size: 2em;
+    }
+    @media only screen and (min-width: 992px) {
+      font-size: 1.5em;
+    }
+  }
+}

@@ -1,0 +1,208 @@
+@import "../../styles/variables.scss";
+
+.PortfolioPage {
+  @include bootstrapScroll();
+  padding: 10% 10% 8% 10%;
+  height: fit-content;
+  color: $text2;
+  overflow: hidden;
+
+  p {
+    color: white;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .flip-icon {
+    width: 75px;
+    height: auto;
+  }
+}
+
+.swiper-wrapper {
+  padding: 20px 0;
+}
+
+.portfolioContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card {
+  border-radius: 15px;
+  height: 520px !important;
+  margin: 1vh 0;
+  padding: 24px;
+  box-shadow: 0 5px 20px black;
+  text-align: center;
+  background-color: transparent !important;
+  position: relative;
+  perspective: 150em;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+  &:hover {
+    box-shadow: 0 5px 20px white;
+  }
+
+  &.flipped {
+    transform: rotateY(180deg);
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+  h1 {
+    text-decoration: none;
+    font-size: 28px;
+    padding: 20px 0;
+    color: white;
+  }
+  h4 {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+  }
+
+  .page__dots {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .project__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  backface-visibility: hidden;
+}
+
+.card-front:hover {
+  transform: translateY(-5px) rotateX(10deg);
+  box-shadow: 0 5px 20px white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mySwiper {
+  padding-bottom: 60px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 80px;
+  height: 4px;
+  background-color: #817a7a;
+  opacity: 0.5;
+  border-radius: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: linear-gradient(266deg, $primary-start, $primary-end);
+}
+
+.swiper-slide {
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Medium devices (Tablets, between 600px and 992px) */
+@media only screen and (min-width: 600px) {
+  .portfolioContent {
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45vw !important;
+    margin-inline: auto;
+  }
+
+  .card-front,
+  .card-back {
+    width: 45vw;
+    height: 690px;
+  }
+}
+
+/* Smaller desktops (between 992px and 1024px) */
+@media only screen and (min-width: 992px) {
+  .portfolioContent {
+    margin-inline: auto;
+  }
+
+  .card {
+    width: 33vw !important;
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .PortfolioPage {
+    @include bootstrapScroll();
+    padding: 5% 10%;
+    overflow-y: hidden;
+  }
+
+  .portfolioContent {
+    display: flex;
+    flex-direction: row;
+    max-width: 1280px;
+    margin: 0;
+    padding: 0;
+    margin-inline: auto;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+
+  .card-front,
+  .card-back {
+    width: 25vw;
+    height: 700px;
+  }
+
+  .card-front:hover {
+    box-shadow: 0 10px 20px white;
+    h4 {
+      color: linear-gradient(266deg, $primary-start 0%, $primary-end 100%);
+      text-decoration: underline;
+      transform: translateX(-50%) scale(1.2);
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .card-back:hover {
+    box-shadow: 0 10px 20px white;
+    h4 {
+      color: linear-gradient(266deg, $primary-start 0%, $primary-end 100%);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

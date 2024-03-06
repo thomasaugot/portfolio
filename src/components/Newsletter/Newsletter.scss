@@ -1,0 +1,30 @@
+.NewsletterSubscription {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px 1px white;
+  transition: all 0.4s ease-out 0s;
+  overflow: hidden;
+  margin-bottom: 70px;
+  height: 300px;
+}
+
+.NewsletterSubscription input[type="email"] {
+  width: 90%;
+  border-radius: 8px;
+  padding: 7px 5px;
+  margin: 7px 0;
+  &:focus {
+    box-shadow: 2px -2px 4px 1px white;
+  }
+}
+
+.feedback-message {
+  text-align: center;
+  font-size: 14px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  margin-top: -25px;
+}

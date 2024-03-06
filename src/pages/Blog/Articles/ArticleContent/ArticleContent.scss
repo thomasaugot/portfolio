@@ -1,0 +1,134 @@
+@import "../../../../styles/variables.scss";
+
+.Content {
+  color: white;
+  text-align: center;
+  padding: 0 !important;
+
+  h1 {
+    padding-top: 150px;
+    margin-inline: auto;
+    max-width: 90vw;
+  }
+
+  .intro {
+    margin-inline: auto;
+    margin-block: 60px;
+    width: 70vw;
+  }
+
+  .paragraph {
+    margin-inline: auto;
+    margin-block: 20px;
+    width: 70vw;
+  }
+
+  .intro-img {
+    width: 30vw;
+    margin-top: 30px;
+    border-radius: 5px;
+    @media (max-width: 1023px) {
+      width: 80vw;
+    }
+  }
+
+  .pros-cons-block {
+    position: relative;
+
+    .logo-blog-left {
+      position: absolute;
+      left: 200px;
+      top: 40px;
+      width: auto;
+      height: 120px;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    .logo-blog-right {
+      position: absolute;
+      right: 200px;
+      top: 60px;
+      width: auto;
+      height: 120px;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 50px;
+    max-width: 90vw;
+    margin-inline: auto;
+  }
+
+  .conclusion {
+    margin-inline: auto;
+    margin-block: 50px;
+    width: 85vw;
+  }
+
+  h6 {
+    text-align: right;
+    font-style: italic;
+    margin: 60px 7vw;
+    @media (max-width: 1023px) {
+      text-align: center;
+    }
+  }
+
+  .bash {
+    margin-inline: auto;
+    padding: 15px;
+    background-color: #18181a;
+    color: white;
+    font-size: 16px;
+    overflow: auto;
+    border-radius: 5px;
+    width: 30vw;
+    margin-block: 20px;
+    text-align: left;
+    white-space: pre;
+    white-space: pre-wrap;
+    @media (max-width: 1023px) {
+      width: 90vw;
+    }
+  }
+
+  .code {
+    margin-inline: auto;
+    padding: 15px;
+    background-color: #18181a;
+    width: 60vw;
+    color: white;
+    font-size: 16px;
+    overflow: auto;
+    border-radius: 5px;
+    margin-block: 20px;
+    text-align: left;
+    white-space: pre;
+    white-space: pre-wrap;
+    @media (max-width: 1023px) {
+      width: 90vw;
+    }
+  }
+
+  .link-to-demo {
+    text-decoration: underline;
+  }
+
+  .link-content {
+    text-decoration: underline !important;
+  }
+
+  .img-bigger {
+    width: 60vw;
+    margin-top: 30px;
+    border-radius: 5px;
+    @media (max-width: 1023px) {
+      width: 90vw;
+    }
+  }
+}
