@@ -85,6 +85,9 @@ button {
   font-size: inherit;
   text-align: inherit;
   padding: 0;
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
 h1 {
@@ -101,6 +104,9 @@ h1 {
   margin: 10px 10px 10px 10px;
   border: solid 1px transparent;
   background: linear-gradient(266deg, $primary-start, $primary-end);
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
   &:hover {
     border: 1px solid rgb(247, 248, 248);
     box-shadow: 5px 5px 10px -5px;
@@ -114,10 +120,13 @@ h1 {
 .whiteBtn {
   border-radius: 5px;
   border: solid white 1px;
-  background-color: transparent !important;
+  background-color: #292828 !important;
   padding: 5px 21.5px;
   color: $text2;
   margin: 0 10px;
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
   &:hover {
     border: 1px solid rgb(252, 254, 255);
     box-shadow: 5px 5px 10px -5px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import englishFlag from "../../assets/en.png";
 import frenchFlag from "../../assets/fr.png";
 import spanishFlag from "../../assets/es.png";
@@ -9,13 +9,16 @@ import { IconContext } from "react-icons";
 
 function LanguagesMenu() {
   const { i18n } = useTranslation();
-  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLanguage, setActiveLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    setActiveLanguage(i18n.language);
+  }, [i18n.language]);
 
   const changeLanguage = (lng) => {
-    setActiveLanguage(lng);
-    setIsMenuOpen(false);
     i18n.changeLanguage(lng);
+    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -23,7 +26,7 @@ function LanguagesMenu() {
   };
 
   return (
-    <div className="languages-menu" onClick={toggleMenu}>
+    <div className="languages-menu">
       <img
         src={
           activeLanguage === "fr" ? frenchFlag : activeLanguage === "en" ? englishFlag : spanishFlag
@@ -36,7 +39,7 @@ function LanguagesMenu() {
         value={{ style: { verticalAlign: "middle", width: "30px", cursor: "pointer" } }}
         className="chevron-icon"
       >
-        <RxChevronDown size={20} />
+        <RxChevronDown size={20} onClick={toggleMenu} />{" "}
       </IconContext.Provider>
 
       <div

@@ -16,12 +16,7 @@
 .AboutPage {
   p {
     font-size: $font-size-sm;
-    margin: 1vh;
-  }
-  h2 {
-    font-size: 1.5em;
-    font-family: $caveat-font;
-    margin-top: 1.2vh;
+    margin: 0 1vh 1vh 1vh;
   }
 }
 
@@ -31,6 +26,9 @@
   width: 150px;
   height: auto;
   margin: 10px 0 15px 18vw;
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
 .about__content {

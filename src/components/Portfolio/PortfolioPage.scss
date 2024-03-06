@@ -7,17 +7,41 @@
   color: $text2;
   overflow: hidden;
 
+  .item-description {
+    margin-top: 30px;
+  }
+
   p {
     color: white;
   }
 
   h2 {
     color: white;
+    margin-bottom: 20px;
   }
 
   .flip-icon {
     width: 75px;
     height: auto;
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+
+    p {
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: linear-gradient(266deg, $primary-start, $primary-end);
+      color: $text;
+      font-weight: 600;
+      margin-bottom: 0 !important;
+      -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    }
   }
 }
 
@@ -33,8 +57,8 @@
 }
 
 .card {
-  border-radius: 15px;
-  height: 520px !important;
+  border-radius: 15px !important;
+  height: 500px !important;
   margin: 1vh 0;
   padding: 24px;
   box-shadow: 0 5px 20px black;
@@ -44,6 +68,11 @@
   perspective: 150em;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  background-image: url("../../assets/item-bg.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 1s;
 
   &:hover {
     box-shadow: 0 5px 20px white;
@@ -94,12 +123,14 @@
   width: 100%;
   height: 700px;
   backface-visibility: hidden;
+  border-radius: 15px !important;
 }
 
 .card-front:hover {
   transform: translateY(-5px) rotateX(10deg);
   box-shadow: 0 5px 20px white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 15px !important;
 }
 
 .mySwiper {
@@ -140,12 +171,6 @@
     width: 45vw !important;
     margin-inline: auto;
   }
-
-  .card-front,
-  .card-back {
-    width: 45vw;
-    height: 690px;
-  }
 }
 
 /* Smaller desktops (between 992px and 1024px) */
@@ -155,7 +180,13 @@
   }
 
   .card {
-    width: 33vw !important;
+    width: 30vw !important;
+  }
+
+  .card-front,
+  .card-back {
+    width: 30vw;
+    height: 690px;
   }
 }
 

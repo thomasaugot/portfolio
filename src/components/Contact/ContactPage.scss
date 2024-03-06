@@ -7,6 +7,8 @@
   color: $text2;
   height: fit-content;
   overflow: hidden;
+  z-index: 0;
+  margin-bottom: 30vh;
 }
 
 .contactForm {
@@ -47,27 +49,54 @@ label {
   margin: 5vh 5vw;
   padding-bottom: 14px;
   -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  transition: transform 0.5s ease;
+
   &:hover {
-    transform: scale(0.8);
-    transition: 1s;
+    transform: rotate(720deg);
   }
 }
 
 .githubLogo {
   margin: 5vh 5vw;
   -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  transition: transform 0.5s ease-in-out;
+
   &:hover {
-    transform: scale(0.8);
-    transition: 1s;
+    animation: jump 0.8s infinite;
   }
 }
 
-.upworkLogo {
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.mediumLogo {
   margin: 5vh 5vw;
   -webkit-box-reflect: below -2px linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  transition: transform 0.5s ease;
+
   &:hover {
-    transform: scale(0.8);
-    transition: 1s;
+    animation: heartbeat 1s infinite;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -109,13 +138,9 @@ label {
   .linkedInLogo {
     margin: 5vh 2vw;
     padding-bottom: 12px;
-    &:hover {
-      transform: scale(0.6);
-      transition: 1s;
-    }
   }
 
-  .githubLogo {
+  .mediumLogo {
     margin: 5vh 2vw;
     &:hover {
       transform: scale(0.6);
