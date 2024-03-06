@@ -23,4 +23,4 @@ The application uses React and SCSS, and is fully responsive following the mobil
 ## Demo
 
 you can check the deployed app at :
-<br> https://portfolio-thomas-augot.netlify.app/
+<br> https://thomasaugot.com/
