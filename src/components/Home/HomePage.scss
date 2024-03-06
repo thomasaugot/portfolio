@@ -26,6 +26,11 @@
   align-items: flex-start;
   text-align: left;
   max-width: 80vw;
+  margin-top: -10%;
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 0;
+  }
 
   .title-item {
     font-size: 12vw;
@@ -38,12 +43,14 @@
     @media only screen and (min-width: 600px) {
       font-size: 10vw;
       margin-bottom: 21vh;
+      max-width: 60vw;
     }
 
     @media only screen and (min-width: 992px) {
       font-size: 4vw;
       margin-bottom: 4vh;
       max-width: 80vw;
+      margin-top: 0;
     }
   }
 
