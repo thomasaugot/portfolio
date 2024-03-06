@@ -9,6 +9,15 @@
   overflow: hidden;
   height: 100vh;
   margin-top: $header-height;
+  position: relative;
+}
+
+.mobile-deco {
+  width: 120vw;
+  height: auto;
+  position: absolute;
+  top: 15%;
+  right: -25%;
 }
 
 .title-block {

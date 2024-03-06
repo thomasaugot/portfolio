@@ -15,26 +15,8 @@ body {
 }
 
 .App {
-  -webkit-animation: color-change-2x 6s linear infinite alternate both;
-  animation: color-change-2x 6s linear infinite alternate both;
+  background-color: #212121;
   overflow-x: hidden;
-}
-
-@-webkit-keyframes color-change-2x {
-  0% {
-    background: #212121;
-  }
-  100% {
-    background: #292828;
-  }
-}
-@keyframes color-change-2x {
-  0% {
-    background: #212121;
-  }
-  100% {
-    background: #292828;
-  }
 }
 
 main {

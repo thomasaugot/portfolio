@@ -2,12 +2,13 @@ import "./HomePage.scss";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTransition, animated } from "@react-spring/web";
-import MouseAnimation from "../AnimatedMousePad/MouseAnimation";
+import mobileDeco from "../../assets/mobile-bg-item.png"
 
 function HomePage() {
   const { t } = useTranslation();
   const ref = useRef([]);
   const [items, set] = useState([]);
+  const [isDesktop, setIsDesktop] = useState(false);
   const transitions = useTransition(items, {
     from: {
       opacity: 0,
@@ -52,13 +53,26 @@ function HomePage() {
   }, [t]);
 
   useEffect(() => {
+      const handleResize = () => {
+        setIsDesktop(window.innerWidth >= 1024);
+      };
+  
+      handleResize(); // Check initial viewport width
+  
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+  }, []);
+
+  useEffect(() => {
     reset();
     return () => ref.current.forEach(clearTimeout);
   }, [reset]);
 
   return (
     <div className="Homepage" id="HomePage">
-      <MouseAnimation />
+        {!isDesktop ? <img className="mobile-deco" src={mobileDeco} alt="mobile-deco"/> : ""}
       <div className="title-block">
         {transitions(({ innerHeight, ...rest }, item) => (
           <animated.div style={rest} onClick={reset} className="title-item gradient-text">
