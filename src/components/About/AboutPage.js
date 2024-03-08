@@ -76,8 +76,8 @@ function AboutPage() {
           </p>
         </motion.div>
         <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
-          initial={{ x: "100%", opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, rotate: 0 }} // Add rotate: 0 to maintain the same rotation
+          initial={{ x: "100%", opacity: 0, rotate: 880 }} // Add rotate: 0 to maintain the same initial rotation
           viewport={{ once: true }}
           transition={{
             type: "spring",

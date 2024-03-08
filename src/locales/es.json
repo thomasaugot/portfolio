@@ -50,57 +50,36 @@
   "Developing intuitive mobile applications for iOS and Android using native development tools.": "Desarrollando aplicaciones móviles intuitivas para iOS y Android utilizando herramientas de desarrollo nativas.",
   "projects": [
     {
-      "name": "Chef Tom",
-      "description": "Además de la programación, me encanta cocinar. Así que construí mi propia primera aplicación nativa donde puedo guardar mis mejores recetas.",
-      "stack": ["React-Native", "React Context API"]
-    },
-    {
       "name": "Kingpad",
-      "description": "Una página web completamente receptiva que construí para Kingworld Finance, colaborando con un equipo de diseñadores y desarrolladores, duplicando perfectamente un diseño de Figma.",
-      "stack": ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma"]
-    },
-    {
-      "name": "Eurafrique",
-      "description": "Un sitio web completamente receptivo y multilingüe (francés, inglés, español y árabe) que estoy desarrollando para la asociación Eurafrique.eu.",
-      "stack": [
-        "React",
-        "react-router",
-        "SCSS",
-        "i18next",
-        "React Context API",
-        "Cpanel",
-        "Supabase"
-      ]
-    },
-    {
-      "name": "Farmhouse Table",
-      "description": "Un sitio web de restaurante que integra la API de Google Maps y un formulario de reserva.",
-      "stack": ["React", "SCSS", "Typescript", "Bootstrap", "Google maps API"]
-    },
-    {
-      "name": "Todayzzz Todos",
-      "description": "Una aplicación de tareas con 'drag & drop' para organizar sus tareas diarias que construí para practicar PostgrSQL, Typescript, Jest y SCSS.",
-      "stack": ["React", "SCSS", "Typescript", "Jest", "PostgrSQL", "Axios"]
-    },
-    {
-      "name": "Partymates",
-      "description": "Una aplicación de redes sociales de tipo MERN que creé para conectar a las personas para que puedan viajar juntas a festivales. Los usuarios pueden crear una cuenta, guardar o suscribirse a eventos e interactuar con otros usuarios.",
-      "stack": ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "Postman"]
-    },
-    {
-      "name": "The Broke Globetrotter",
-      "description": "Una aplicación creada en colaboración, que recopila colecciones de cosas gratuitas para hacer en ciudades de todo el mundo, destacando tecnologías backend para viajeros con poco dinero (la historia de mi vida...!)",
-      "stack": ["MongoDB", "Express.js", "Node.js", "Bootstrap", "Handlebars", "Postman"]
-    },
-    {
-      "name": "Pickle Rick vs Rats - The Game",
-      "description": "Mi primer proyecto de codigo, un divertido juego de disparos en Javascript, ¡mata a las ratas!",
-      "stack": ["HTML", "CSS", "Javascript"]
+      "description": "Una página web completamente receptiva que construí para Kingworld Finance, colaborando con un equipo de diseñadores y desarrolladores, duplicando perfectamente un diseño de Figma."
     },
     {
       "name": "Charpente Menuiserie Durand",
-      "description": "Un sitio web que diseñé y desarrollé para una empresa francesa de construción.",
-      "stack": ["Next.JS", "Tailwind CSS", "Framer Motion"]
+      "description": "Un sitio web que diseñé y desarrollé para una empresa francesa de construción."
+    },
+    {
+      "name": "Farmhouse Table",
+      "description": "Un sitio web de restaurante que integra la API de Google Maps y un formulario de reserva."
+    },
+    {
+      "name": "Attorneyster",
+      "description": "La página de inicio de un sitio web de servicios legales, creada como parte de un desafío de frontend que desarrollé para practicar Next.js y Tailwind CSS."
+    },
+    {
+      "name": "Todayzzz Todos",
+      "description": "Una aplicación de tareas con 'drag & drop' para organizar sus tareas diarias que construí para practicar PostgrSQL, Typescript, Jest y SCSS."
+    },
+    {
+      "name": "Eurafrique",
+      "description": "Un sitio web completamente receptivo y multilingüe (francés, inglés, español y árabe) que desarrollé para la asociación Eurafrique.eu."
+    },
+    {
+      "name": "Partymates",
+      "description": "Una aplicación de redes sociales de tipo MERN que creé para conectar a las personas para que puedan viajar juntas a festivales. Los usuarios pueden crear una cuenta, guardar o suscribirse a eventos e interactuar con otros usuarios."
+    },
+    {
+      "name": "Pickle Rick vs Rats - The Game",
+      "description": "Mi primer proyecto de codigo, un juego de disparos en Javascript, ¡mata las ratas!"
     }
   ]
 }

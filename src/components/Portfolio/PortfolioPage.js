@@ -34,83 +34,121 @@ function PortfolioPage() {
 
   const projects = [
     {
-      id: 6,
+      id: 1,
       capture1: require("./kingpad.png"),
-      name: t("projects.1.name"),
-      description: t("projects.1.description"),
-      stack: ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma"],
+      name: t("projects.0.name"),
+      description: t("projects.0.description"),
+      stack: [
+        "Next.JS",
+        "Tailwind CSS",
+        "Typescript",
+        "Material UI",
+        "Figma",
+        "Vercel",
+      ],
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
       linkDemo: "https://kp-next-js.vercel.app/",
     },
     {
       id: 2,
       capture1: require("./cmdurand.png"),
-      name: t("projects.8.name"),
-      description: t("projects.8.description"),
-      stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS"],
+      name: t("projects.1.name"),
+      description: t("projects.1.description"),
+      stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS", "Vercel"],
       linkRepo: "https://github.com/thomasaugot/charpente-menuiserie-durand",
       linkDemo: "https://www.cmdurand.fr/",
     },
     {
-      id: 4,
+      id: 3,
       capture1: require("./farmhouse (2).png"),
-      name: t("projects.3.name"),
-      description: t("projects.3.description"),
-      stack: ["React", "SCSS", "Typescript", "Bootstrap", "Google maps API"],
+      name: t("projects.2.name"),
+      description: t("projects.2.description"),
+      stack: [
+        "React.js",
+        "SCSS",
+        "Typescript",
+        "Bootstrap",
+        "Google maps API",
+        "Netlify",
+      ],
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
+    },
+    {
+      id: 4,
+      capture1: require("./attornester.png"),
+      name: t("projects.3.name"),
+      description: t("projects.3.description"),
+      stack: [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer motion",
+        "EmailJS",
+        "Figma",
+        "Vercel",
+      ],
+      linkRepo: "https://github.com/thomasaugot/attorneyster-nextjs",
+      linkDemo: "https://attorneyster-ta.vercel.app/",
     },
     {
       id: 5,
       capture1: require("./todos.png"),
       name: t("projects.4.name"),
       description: t("projects.4.description"),
-      stack: ["React", "SCSS", "Typescript", "Jest", "PostgrSQL", "React Context API"],
+      stack: [
+        "React.js",
+        "SCSS",
+        "Typescript",
+        "Jest",
+        "PostgreSQL",
+        "React Context API",
+        "Netlify",
+        "Adaptable.io",
+      ],
       linkRepo:
         "https://github.com/thomasaugot/typescript-todo-app-frontend/tree/postgrsql-link-setup",
       linkDemo: "https://todayzzz-todos.netlify.app/",
     },
     {
-      id: 7,
+      id: 6,
       capture1: require("./eurafrique.png"),
-      name: t("projects.2.name"),
-      description: t("projects.2.description"),
-      stack: ["React", "SCSS", "i18next", "React Context API", "Cpanel", "Supabase"],
+      name: t("projects.5.name"),
+      description: t("projects.5.description"),
+      stack: [
+        "React.js",
+        "SCSS",
+        "i18next",
+        "React Context API",
+        "Cpanel",
+        "Supabase",
+      ],
       linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
       linkDemo: "https://eurafrique-eu.vercel.app/",
     },
-    // {
-    //   id: 8,
-    //   capture1: require("./cheftom.png"),
-    //   name: t("projects.0.name"),
-    //   description: t("projects.0.description"),
-    //   stack: ["React-Native", "React Context API"]
-    //   linkRepo: "https://github.com/thomasaugot/recipes-react-native",
-    // },
     {
-      id: 1,
+      id: 7,
       capture1: require("./partymates1.png"),
-      name: t("projects.5.name"),
-      description: t("projects.5.description"),
-      stack: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "Postman"],
+      name: t("projects.6.name"),
+      description: t("projects.6.description"),
+      stack: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "REST API",
+        "Postman",
+        "Netlify",
+        "Adaptable.io",
+      ],
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
-    // {
-    //   id: 2,
-    //   capture1: require("./responsive-BGtrotter.png"),
-    //   name: t("projects.6.name"),
-    //   description: t("projects.6.description"),
-    //   stack: ["MongoDB", "Express.js", "Node.js", "Bootstrap", "Handlebars", "Postman"],
-    //   linkRepo: "https://github.com/project-web-app-cities/the-broke-globetrotter",
-    //   linkDemo: "https://the-broke-globetrotter.adaptable.app/",
-    // },
     {
-      id: 3,
+      id: 8,
       capture1: require("./game-capture1.png"),
       name: t("projects.7.name"),
       description: t("projects.7.description"),
-      stack: ["HTML", "CSS", "Javascript"],
+      stack: ["HTML", "CSS", "Javascript", "Netlify"],
       linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
       linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
     },
@@ -134,7 +172,7 @@ function PortfolioPage() {
         transition={{
           type: "spring",
           stiffness: 40,
-          delay: 0.4,
+          delay: 0.2,
           ease: "easeOut",
         }}
         className="featured-projects-header gradient-underline"
@@ -158,10 +196,15 @@ function PortfolioPage() {
               <ReactCardFlip
                 isFlipped={activeCardIndex === index}
                 flipDirection="horizontal"
-                className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                className={`project-card ${
+                  index === activeCardIndex ? "flipped" : ""
+                } card`}
                 alignHeight={true}
               >
-                <div className="card-front card" onClick={() => handleCardClick(index)}>
+                <div
+                  className="card-front card"
+                  onClick={() => handleCardClick(index)}
+                >
                   <img src={project.capture1} alt="project" />
                   <h1 className="card-title">{project.name}</h1>
                   <div className="tech-stack">
@@ -178,7 +221,10 @@ function PortfolioPage() {
                     />
                   </div>
                 </div>
-                <div className="card-back card" onClick={() => handleCardClick(index)}>
+                <div
+                  className="card-back card"
+                  onClick={() => handleCardClick(index)}
+                >
                   <p className="item-description">{project.description}</p>
                   <div className="project__buttons">
                     <button
@@ -230,16 +276,25 @@ function PortfolioPage() {
             className="mySwiper"
           >
             {projects.map((project, index) => (
-              <motion.div key={project.id} variants={itemVariants} className="swiper-slide">
+              <motion.div
+                key={project.id}
+                variants={itemVariants}
+                className="swiper-slide"
+              >
                 <SwiperSlide>
                   <ReactCardFlip
                     isFlipped={activeCardIndex === index}
                     flipDirection="horizontal"
-                    className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
+                    className={`project-card ${
+                      index === activeCardIndex ? "flipped" : ""
+                    } card`}
                     alignHeight={true}
                   >
                     {/* Card front */}
-                    <motion.div onClick={() => handleCardClick(index)} className="card-front card">
+                    <motion.div
+                      onClick={() => handleCardClick(index)}
+                      className="card-front card"
+                    >
                       {/* Content */}
                       <img src={project.capture1} alt="project" />
                       <h1 className="card-title">{project.name}</h1>
@@ -258,7 +313,10 @@ function PortfolioPage() {
                     </motion.div>
 
                     {/* Card back */}
-                    <motion.div onClick={() => handleCardClick(index)} className="card-back card">
+                    <motion.div
+                      onClick={() => handleCardClick(index)}
+                      className="card-back card"
+                    >
                       {/* Content */}
                       <p className="item-description">{project.description}</p>
                       <div className="project__buttons">

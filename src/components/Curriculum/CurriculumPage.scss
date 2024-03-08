@@ -9,6 +9,12 @@
   position: relative;
 }
 
+.certificate-logo {
+  position: absolute;
+  bottom: -75px;
+  right:-20%;
+}
+
 .CurriculumPage {
   p {
     font-size: $font-size-sm;
@@ -132,6 +138,12 @@
   .CurriculumPage {
     padding: 10% 10% 15% 10%;
 
+    .certificate-logo {
+      position: absolute;
+      bottom: -75px;
+      right:0%;
+    }
+
     .certifications-container {
       align-items: center;
 
@@ -162,6 +174,12 @@
 @media only screen and (min-width: 992px) {
   .CurriculumPage {
     padding: 5% 10%;
+
+    .certificate-logo {
+      position: absolute;
+      bottom: -75px;
+      right: 0;
+    }
 
     .stack {
       padding-bottom: 3vh;

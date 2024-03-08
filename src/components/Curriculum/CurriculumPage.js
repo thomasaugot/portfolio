@@ -3,6 +3,8 @@ import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
+import certificateLogo from "../../assets/certification-logo.png";
+
 function CurriculumPage() {
   const { t } = useTranslation();
 
@@ -41,7 +43,12 @@ function CurriculumPage() {
               "Crafting user interfaces from scratch with the most performant technologies such as React.js or Next.js for a seamless user experience."
             )}
           </p>
-          <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
+          <Marquee
+            gradientColor={"yellow"}
+            speed={40}
+            autoFill={true}
+            direction={"right"}
+          >
             <div className="marquee-item">
               <div className="img-container">
                 <img
@@ -88,13 +95,23 @@ function CurriculumPage() {
             </div>
             <div className="marquee-item">
               <div className="img-container">
-                <img height="70" src={require("./react-logo.png")} alt="React" title="React" />
+                <img
+                  height="70"
+                  src={require("./react-logo.png")}
+                  alt="React"
+                  title="React"
+                />
               </div>
               <div className="subtitle">React</div>
             </div>
             <div className="marquee-item">
               <div className="img-container">
-                <img height="70" src={require("./MUI.png")} alt="Material UI" title="Material UI" />
+                <img
+                  height="70"
+                  src={require("./MUI.png")}
+                  alt="Material UI"
+                  title="Material UI"
+                />
               </div>
               <div className="subtitle">Material UI</div>
             </div>
@@ -111,7 +128,12 @@ function CurriculumPage() {
             </div>
             <div className="marquee-item">
               <div className="img-container">
-                <img height="70" src={require("./nextjs.png")} alt="Next JS" title="Next JS" />
+                <img
+                  height="70"
+                  src={require("./nextjs.png")}
+                  alt="Next JS"
+                  title="Next JS"
+                />
               </div>
               <div className="subtitle">Next.js</div>
             </div>
@@ -150,7 +172,12 @@ function CurriculumPage() {
             </div>
             <div className="marquee-item">
               <div className="img-container">
-                <img height="70" src={require("./figma.png")} alt="Figma" title="Figma" />
+                <img
+                  height="70"
+                  src={require("./figma.png")}
+                  alt="Figma"
+                  title="Figma"
+                />
               </div>
               <div className="subtitle">Figma</div>
             </div>
@@ -244,7 +271,12 @@ function CurriculumPage() {
             </div>
             <div className="marquee-item">
               <div className="img-container">
-                <img height="70" src={require("./supabase.png")} alt="Supabase" title="Supabase" />
+                <img
+                  height="70"
+                  src={require("./supabase.png")}
+                  alt="Supabase"
+                  title="Supabase"
+                />
               </div>
               <div className="subtitle">Supabase</div>
             </div>
@@ -268,7 +300,12 @@ function CurriculumPage() {
               "Developing intuitive mobile applications for iOS and Android using native development tools."
             )}
           </p>
-          <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
+          <Marquee
+            gradientColor={"yellow"}
+            speed={40}
+            autoFill={true}
+            direction={"right"}
+          >
             <div className="marquee-item">
               <div className="img-container">
                 <img
@@ -352,29 +389,34 @@ function CurriculumPage() {
       </motion.div>
       <div className="certifications-container">
         <motion.div
-          whileInView={{ scale: 1, opacity: 1 }}
-          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: "-20vw", opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "tween",
-            stiffness: 50,
+            stiffness: 40,
             delay: 0.4,
             ease: "linear",
           }}
           className="certification-item"
         >
-          <div>
-            <h2>{t("Full-Stack Web Development, MERN")}</h2>
-            <h2 style={{ fontStyle: "italic" }}>Ironhack</h2>
-            <p>
-              {t(
-                "9-week web development bootcamp, during which I was taught the following technologies:"
-              )}
-              <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
-              <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>-{" "}
-              {t("Version control")}: Git/ Github
-            </p>
-          </div>
+          <h2>{t("Full-Stack Web Development, MERN")}</h2>
+          <h2 style={{ fontStyle: "italic" }}>Ironhack</h2>
+          <p>
+            {t(
+              "9-week web development bootcamp, during which I was taught the following technologies:"
+            )}
+            <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
+            <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs{" "}
+            <br></br>- {t("Version control")}: Git/ Github
+          </p>
+          <img
+            height="160"
+            src={certificateLogo}
+            alt="certificate logo"
+            className="certificate-logo"
+          />
+
           <br></br>
           <div className="curriculum__buttons">
             <a
@@ -382,20 +424,22 @@ function CurriculumPage() {
               rel="noreferrer"
               target="_blank"
             >
-              <button className="blueBtn gradient-bg">{t("Show credential")}</button>
+              <button className="blueBtn gradient-bg">
+                {t("Show credential")}
+              </button>
             </a>
           </div>
           <br></br>
         </motion.div>
         <br></br>
         <motion.div
-          whileInView={{ scale: 1, opacity: 1 }}
-          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: "20vw", opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "tween",
-            stiffness: 50,
-            delay: 0.6,
+            stiffness: 40,
+            delay: 0.4,
             ease: "linear",
           }}
           className="certification-item"
@@ -408,6 +452,12 @@ function CurriculumPage() {
               <br></br>- React Native CLI <br></br>- Expo
               <br></br>- Android & iOS specifics
             </p>
+            <img
+              height="160"
+              src={certificateLogo}
+              alt="certificate logo"
+              className="certificate-logo"
+            />
           </div>
           <br></br>
           <div className="curriculum__buttons">
@@ -416,22 +466,13 @@ function CurriculumPage() {
               rel="noreferrer"
               target="_blank"
             >
-              <button className="blueBtn gradient-bg">{t("Show credential")}</button>
+              <button className="blueBtn gradient-bg">
+                {t("Show credential")}
+              </button>
             </a>
           </div>
         </motion.div>
       </div>
-
-      <br></br>
-      {/* <div className="resume-container">
-            <a
-              href="https://drive.google.com/file/d/112Q93ZQRS83YXY9S3jy6L0ksDfZV7WoL/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="blueBtn">View my resume</button>
-            </a>
-          </div> */}
     </div>
   );
 }
