@@ -76,7 +76,7 @@ function PortfolioPage() {
     },
     {
       id: 4,
-      capture1: require("./attornester.png"),
+      capture1: require("./attorneyster.png"),
       name: t("projects.3.name"),
       description: t("projects.3.description"),
       stack: [
