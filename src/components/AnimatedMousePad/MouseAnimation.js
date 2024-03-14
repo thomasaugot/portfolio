@@ -26,8 +26,8 @@ const MouseAnimation = () => {
       canvas.height = height;
       ctx = canvas.getContext("2d");
 
-      const numPointsX = width < 600 ? 5 : 20;
-      const numPointsY = height < 600 ? 5 : 20;
+      const numPointsX = width < 600 ? 8 : 15;
+      const numPointsY = height < 600 ? 8 : 15;
 
       points = [];
       for (let x = 0; x < width; x = x + width / numPointsX) {
