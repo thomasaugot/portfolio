@@ -2,7 +2,6 @@ import "./HomePage.scss";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTransition, animated } from "@react-spring/web";
-import mobileDeco from "../../assets/mobile-bg-item.png";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -67,7 +66,7 @@ function HomePage() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isDesktop]);
 
   useEffect(() => {
     reset();

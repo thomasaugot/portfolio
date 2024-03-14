@@ -28,6 +28,10 @@ function App() {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     // // Scroll to the top of the page
     // window.scrollTo(0, 0);
     // const fetchArticles = async () => {
@@ -107,7 +111,7 @@ function App() {
                 <MouseAnimation />
                 <Header />
                 {isDesktop && <MouseAnimation />}
-                <HomePage isDesktop={isDesktop} />
+                <HomePage />
                 <AboutPage />
                 <CurriculumPage />
                 <PortfolioPage />
