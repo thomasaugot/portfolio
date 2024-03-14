@@ -26,11 +26,14 @@ const MouseAnimation = () => {
       canvas.height = height;
       ctx = canvas.getContext("2d");
 
+      const numPointsX = width < 600 ? 5 : 20;
+      const numPointsY = height < 600 ? 5 : 20;
+
       points = [];
-      for (let x = 0; x < width; x = x + width / 20) {
-        for (let y = 0; y < height; y = y + height / 20) {
-          let px = x + (Math.random() * width) / 20;
-          let py = y + (Math.random() * height) / 20;
+      for (let x = 0; x < width; x = x + width / numPointsX) {
+        for (let y = 0; y < height; y = y + height / numPointsY) {
+          let px = x + (Math.random() * width) / numPointsX;
+          let py = y + (Math.random() * height) / numPointsY;
           let p = { x: px, originX: px, y: py, originY: py };
           points.push(p);
         }
@@ -66,7 +69,11 @@ const MouseAnimation = () => {
       }
 
       for (let i in points) {
-        let c = new Circle(points[i], 2 + Math.random() * 2, "rgba(102, 255, 0, 1)");
+        let c = new Circle(
+          points[i],
+          2 + Math.random() * 2,
+          "rgba(102, 255, 0, 1)"
+        );
         points[i].circle = c;
       }
     };
@@ -86,8 +93,14 @@ const MouseAnimation = () => {
         posx = e.pageX;
         posy = e.pageY;
       } else if (e.clientX || e.clientY) {
-        posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-        posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+        posx =
+          e.clientX +
+          document.body.scrollLeft +
+          document.documentElement.scrollLeft;
+        posy =
+          e.clientY +
+          document.body.scrollTop +
+          document.documentElement.scrollTop;
       }
       target.x = posx;
       target.y = posy;

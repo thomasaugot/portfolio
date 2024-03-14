@@ -2,7 +2,7 @@ import "./HomePage.scss";
 import React, { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useTransition, animated } from "@react-spring/web";
-import mobileDeco from "../../assets/mobile-bg-item.png"
+import mobileDeco from "../../assets/mobile-bg-item.png";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -34,7 +34,9 @@ function HomePage() {
           set([
             t("Hi! I am Thomas,"),
             t("Full-Stack Developer"),
-            t("I bring your project to life using the latest development technologies"),
+            t(
+              "I bring your project to life using the latest development technologies"
+            ),
           ]),
         2000
       )
@@ -45,7 +47,9 @@ function HomePage() {
           set([
             t("Hi! I am Thomas,"),
             t("Full-Stack Developer"),
-            t("I bring your project to life using the latest development technologies"),
+            t(
+              "I bring your project to life using the latest development technologies"
+            ),
           ]),
         8000
       )
@@ -53,16 +57,16 @@ function HomePage() {
   }, [t]);
 
   useEffect(() => {
-      const handleResize = () => {
-        setIsDesktop(window.innerWidth >= 1024);
-      };
-  
-      handleResize(); // Check initial viewport width
-  
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    handleResize(); // Check initial viewport width
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useEffect(() => {
@@ -72,11 +76,17 @@ function HomePage() {
 
   return (
     <div className="Homepage" id="HomePage">
-        {!isDesktop ? <img className="mobile-deco" src={mobileDeco} alt="mobile-deco"/> : ""}
       <div className="title-block">
         {transitions(({ innerHeight, ...rest }, item) => (
-          <animated.div style={rest} onClick={reset} className="title-item gradient-text">
-            <animated.div style={{ overflow: "hidden", height: "auto" }} className="gradient-text">
+          <animated.div
+            style={rest}
+            onClick={reset}
+            className="title-item gradient-text"
+          >
+            <animated.div
+              style={{ overflow: "hidden", height: "auto" }}
+              className="gradient-text"
+            >
               {item}
             </animated.div>
           </animated.div>

@@ -66,24 +66,26 @@ function App() {
       })
       .then(() => {
         setIsI18nInitialized(true);
-        console.log("current detected language: ", i18n.language)
+        console.log("current detected language: ", i18n.language);
       });
 
-      const handleResize = () => {
-        setIsDesktop(window.innerWidth >= 1024);
-      };
-  
-      handleResize(); // Check initial viewport width
-  
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    handleResize(); // Check initial viewport width
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   if (!isI18nInitialized) {
     return (
-      <div style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}>
+      <div
+        style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}
+      >
         <Loading />
       </div>
     );
@@ -92,16 +94,20 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ProgressBar color={"#03dac6"} gradient={true} gradientColor={"rgba(102, 255, 0, 1)"} />
+        <ProgressBar
+          color={"#03dac6"}
+          gradient={true}
+          gradientColor={"rgba(102, 255, 0, 1)"}
+        />
         <Routes>
           <Route
             path="/"
             element={
               <>
-              {isDesktop ? <MouseAnimation /> : ""}
+                <MouseAnimation />
                 <Header />
-                {isDesktop ? <MouseAnimation /> : ""}
-                <HomePage />
+                {isDesktop && <MouseAnimation />}
+                <HomePage isDesktop={isDesktop} />
                 <AboutPage />
                 <CurriculumPage />
                 <PortfolioPage />
