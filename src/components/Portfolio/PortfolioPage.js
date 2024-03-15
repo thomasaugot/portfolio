@@ -233,14 +233,12 @@ function PortfolioPage() {
                     >
                       {t("View Code")}
                     </button>
-                    {project.id !== 8 && (
-                      <button
-                        className="whiteBtn"
-                        onClick={() => window.open(project.linkDemo, "_blank")}
-                      >
-                        {t("Visit page")}
-                      </button>
-                    )}
+                    <button
+                      className="whiteBtn"
+                      onClick={() => window.open(project.linkDemo, "_blank")}
+                    >
+                      {t("Visit page")}
+                    </button>
                   </div>
                 </div>
               </ReactCardFlip>
@@ -323,16 +321,14 @@ function PortfolioPage() {
                         <a href={project.linkRepo} class="blueBtn">
                           {t("View Code")}
                         </a>
-                        {project.id !== 8 && (
-                          <a
-                            href={project.linkDemo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="whiteBtn"
-                          >
-                            {t("Visit page")}
-                          </a>
-                        )}
+                        <a
+                          href={project.linkDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whiteBtn"
+                        >
+                          {t("Visit page")}
+                        </a>
                       </div>
                     </motion.div>
                   </ReactCardFlip>

@@ -27,24 +27,51 @@ function Footer() {
         <Fade>
           <a href="#HomePage">
             <div className="chevron-container">
-              <IconContext.Provider
-                value={{ className: "chevron-icon", size: "2.7em" }}
-              >
-                <BiSolidChevronsUp />
-              </IconContext.Provider>
+              <svg width="40" height="40" className="chevron-icon">
+                <defs>
+                  <linearGradient
+                    id="chevronGradient"
+                    gradientTransform="rotate(45)"
+                  >
+                    <stop offset="55%" stopColor="rgba(3, 218, 198, 1)" />
+                    <stop offset="95%" stopColor="rgba(102, 255, 0, 1)" />
+                  </linearGradient>
+                </defs>
+                <BiSolidChevronsUp
+                  className="chevron-icon"
+                  fill="url(#chevronGradient)"
+                  size="40px"
+                />
+              </svg>
             </div>
             <p style={{ textAlign: "center" }}>{t("Back to Top")}</p>
           </a>
-          <br></br>
+          <br />
           <p style={{ textAlign: "center", color: "white" }}>
-            {t("Crafted with")} <IoHeart className="heart-icon" size="25px" />{" "}
+            {t("Crafted with")}{" "}
+            <svg width="28" height="25" className="heart-icon">
+              <defs>
+                <linearGradient
+                  id="heartGradient"
+                  gradientTransform="rotate(45)"
+                >
+                  <stop offset="55%" stopColor="rgba(3, 218, 198, 1)" />
+                  <stop offset="95%" stopColor="rgba(102, 255, 0, 1)" />
+                </linearGradient>
+              </defs>
+              <IoHeart
+                className="heart-icon"
+                fill="url(#heartGradient)"
+                size="25px"
+              />
+            </svg>
             {t("by")}
             <a href="https://www.linkedin.com/in/thomas-augot/">
               {" "}
               Thomas Augot
             </a>
           </p>
-          <br></br>
+          <br />
         </Fade>
       )}
     </div>
