@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 import { BiSolidChevronsUp } from "react-icons/bi";
-import { IconContext } from "react-icons";
 import { IoHeart } from "react-icons/io5";
 
 function Footer() {
