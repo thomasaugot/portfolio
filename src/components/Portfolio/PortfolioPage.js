@@ -38,39 +38,25 @@ function PortfolioPage() {
       capture1: require("./kingpad.png"),
       name: t("projects.0.name"),
       description: t("projects.0.description"),
-      stack: [
-        "Next.JS",
-        "Tailwind CSS",
-        "Typescript",
-        "Material UI",
-        "Figma",
-        "Vercel",
-      ],
+      stack: ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma", "Vercel"],
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
       linkDemo: "https://kp-next-js.vercel.app/",
     },
-    // {
-    //   id: 2,
-    //   capture1: require("./cmdurand.png"),
-    //   name: t("projects.1.name"),
-    //   description: t("projects.1.description"),
-    //   stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS", "Vercel"],
-    //   linkRepo: "https://github.com/thomasaugot/charpente-menuiserie-durand",
-    //   linkDemo: "https://www.cmdurand.fr/",
-    // },
+    {
+      id: 2,
+      capture1: require("./cmdurand.png"),
+      name: t("projects.1.name"),
+      description: t("projects.1.description"),
+      stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS", "Vercel"],
+      linkRepo: "https://github.com/thomasaugot/charpente-menuiserie-durand",
+      linkDemo: "https://www.cmdurand.fr/",
+    },
     {
       id: 3,
       capture1: require("./farmhouse (2).png"),
       name: t("projects.2.name"),
       description: t("projects.2.description"),
-      stack: [
-        "React.js",
-        "SCSS",
-        "Typescript",
-        "Bootstrap",
-        "Google maps API",
-        "Netlify",
-      ],
+      stack: ["React.js", "SCSS", "Typescript", "Bootstrap", "Google maps API", "Netlify"],
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
@@ -79,14 +65,7 @@ function PortfolioPage() {
       capture1: require("./attorneyster.png"),
       name: t("projects.3.name"),
       description: t("projects.3.description"),
-      stack: [
-        "Next.js",
-        "Tailwind CSS",
-        "Framer motion",
-        "EmailJS",
-        "Figma",
-        "Vercel",
-      ],
+      stack: ["Next.js", "Tailwind CSS", "Framer motion", "EmailJS", "Figma", "Vercel"],
       linkRepo: "https://github.com/thomasaugot/attorneyster-nextjs",
       linkDemo: "https://attorneyster-ta.vercel.app/",
     },
@@ -114,14 +93,7 @@ function PortfolioPage() {
       capture1: require("./eurafrique.png"),
       name: t("projects.5.name"),
       description: t("projects.5.description"),
-      stack: [
-        "React.js",
-        "SCSS",
-        "i18next",
-        "React Context API",
-        "Cpanel",
-        "Supabase",
-      ],
+      stack: ["React.js", "SCSS", "i18next", "React Context API", "Cpanel", "Supabase"],
       linkRepo: "https://github.com/Eurafrique-eu/eurafrique-client",
       linkDemo: "https://eurafrique-eu.vercel.app/",
     },
@@ -196,15 +168,10 @@ function PortfolioPage() {
               <ReactCardFlip
                 isFlipped={activeCardIndex === index}
                 flipDirection="horizontal"
-                className={`project-card ${
-                  index === activeCardIndex ? "flipped" : ""
-                } card`}
+                className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
                 alignHeight={true}
               >
-                <div
-                  className="card-front card"
-                  onClick={() => handleCardClick(index)}
-                >
+                <div className="card-front card" onClick={() => handleCardClick(index)}>
                   <img src={project.capture1} alt="project" />
                   <h1 className="card-title">{project.name}</h1>
                   <div className="tech-stack">
@@ -221,10 +188,7 @@ function PortfolioPage() {
                     />
                   </div>
                 </div>
-                <div
-                  className="card-back card"
-                  onClick={() => handleCardClick(index)}
-                >
+                <div className="card-back card" onClick={() => handleCardClick(index)}>
                   <p className="item-description">{project.description}</p>
                   <div className="project__buttons">
                     <button
@@ -274,25 +238,16 @@ function PortfolioPage() {
             className="mySwiper"
           >
             {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                variants={itemVariants}
-                className="swiper-slide"
-              >
+              <motion.div key={project.id} variants={itemVariants} className="swiper-slide">
                 <SwiperSlide>
                   <ReactCardFlip
                     isFlipped={activeCardIndex === index}
                     flipDirection="horizontal"
-                    className={`project-card ${
-                      index === activeCardIndex ? "flipped" : ""
-                    } card`}
+                    className={`project-card ${index === activeCardIndex ? "flipped" : ""} card`}
                     alignHeight={true}
                   >
                     {/* Card front */}
-                    <motion.div
-                      onClick={() => handleCardClick(index)}
-                      className="card-front card"
-                    >
+                    <motion.div onClick={() => handleCardClick(index)} className="card-front card">
                       {/* Content */}
                       <img src={project.capture1} alt="project" />
                       <h1 className="card-title">{project.name}</h1>
@@ -311,10 +266,7 @@ function PortfolioPage() {
                     </motion.div>
 
                     {/* Card back */}
-                    <motion.div
-                      onClick={() => handleCardClick(index)}
-                      className="card-back card"
-                    >
+                    <motion.div onClick={() => handleCardClick(index)} className="card-back card">
                       {/* Content */}
                       <p className="item-description">{project.description}</p>
                       <div className="project__buttons">
