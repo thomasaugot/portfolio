@@ -87,9 +87,7 @@ function App() {
 
   if (!isI18nInitialized) {
     return (
-      <div
-        style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}
-      >
+      <div style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}>
         <Loading />
       </div>
     );
@@ -99,6 +97,7 @@ function App() {
     <Router>
       <div className="App">
         <ProgressBar
+          backgroundColor={"#212121"}
           color={"#03dac6"}
           gradient={true}
           gradientColor={"rgba(102, 255, 0, 1)"}
