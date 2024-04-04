@@ -5,8 +5,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 
-  a:hover, p:hover {
+  a:hover,
+  p:hover {
     background: linear-gradient(266deg, $primary-start, $primary-end);
     -webkit-background-clip: text;
     background-clip: text;
@@ -20,7 +22,8 @@
 
 .chevron-container {
   text-align: center;
-&:hover {
+  margin-top: 2rem;
+  &:hover {
     background-color: linear-gradient(266deg, $primary-start, $primary-end);
   }
 }

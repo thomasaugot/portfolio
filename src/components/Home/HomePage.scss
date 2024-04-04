@@ -2,7 +2,7 @@
 @import "../../styles/variables.scss";
 
 .Homepage {
-  @include bootstrapScroll();
+  @include sectionLayout();
   display: flex;
   justify-content: center;
   align-items: center;

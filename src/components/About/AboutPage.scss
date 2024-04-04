@@ -1,19 +1,16 @@
 @import "../../styles/variables.scss";
 
 .AboutPage {
-  @include bootstrapScroll();
+  @include sectionLayout();
   background-repeat: no-repeat;
   opacity: 0.9;
-  padding: 10%;
   color: $text2;
   height: fit-content;
   overflow: hidden;
   transition: 1s;
   position: relative;
   z-index: 10;
-}
 
-.AboutPage {
   p {
     font-size: $font-size-sm;
     margin: 0 1vh 1vh 1vh;
@@ -51,7 +48,6 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .AboutPage {
-    padding: 5% 10%;
     opacity: 0;
   }
 

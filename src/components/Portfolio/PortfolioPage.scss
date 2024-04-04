@@ -1,8 +1,7 @@
 @import "../../styles/variables.scss";
 
 .PortfolioPage {
-  @include bootstrapScroll();
-  padding: 10% 10% 8% 10%;
+  @include sectionLayout();
   height: fit-content;
   color: $text2;
   overflow: hidden;
@@ -63,15 +62,11 @@
   padding: 24px;
   box-shadow: 0 5px 20px black;
   text-align: center;
-  background-color: transparent !important;
   position: relative;
   perspective: 150em;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  background-image: url("../../assets/item-bg.PNG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: rgba(54, 55, 55, 0.3) !important;
   transition: all 1s;
 
   &:hover {
@@ -193,8 +188,7 @@
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
   .PortfolioPage {
-    @include bootstrapScroll();
-    padding: 5% 10%;
+    @include sectionLayout();
     overflow-y: hidden;
   }
 

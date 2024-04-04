@@ -68,13 +68,17 @@ $font-size-lrg: 3em;
   }
 }
 
-@mixin bootstrapScroll {
+@mixin sectionLayout {
   height: fit-content;
   overflow-y: scroll;
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 1600px;
   margin-inline: auto;
+  padding: 15% 10%;
+  @media only screen and (min-width: 600px) {
+    padding: 5% 10%;
+  }
 }
 
 .article-content {

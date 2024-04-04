@@ -1,10 +1,9 @@
 @import "../../styles/variables.scss";
 
 .TestimonialsPage {
-  @include bootstrapScroll();
+  @include sectionLayout();
   background-repeat: no-repeat;
   opacity: 0.9;
-  padding: 10%;
   color: $text2;
   height: fit-content;
   overflow: hidden;
@@ -26,6 +25,10 @@
     justify-content: center;
     align-items: center;
 
+    &:last-child {
+      margin-bottom: 5vh;
+    }
+
     @media only screen and (min-width: 600px) {
       flex-direction: row;
       justify-content: space-around;
@@ -39,16 +42,12 @@
     padding: 24px;
     box-shadow: 0 5px 20px black;
     text-align: center;
-    background-color: transparent !important;
     position: relative;
     display: flex;
     flex-direction: column;
     height: max-content;
     width: 85vw;
-    background-image: url("../../assets/item-bg.PNG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-color: rgba(54, 55, 55, 0.3);
     transition: all 1s;
 
     &:hover {

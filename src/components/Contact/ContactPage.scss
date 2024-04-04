@@ -1,8 +1,7 @@
 @import "../../styles/variables.scss";
 
 .ContactPage {
-  @include bootstrapScroll();
-  padding: 20% 10% 8% 10%;
+  @include sectionLayout();
   padding: 10%;
   color: $text2;
   height: fit-content;
@@ -127,7 +126,6 @@ label {
 
   .ContactPage {
     display: flex;
-    padding: 5% 10%;
   }
 
   .letsConnect {
@@ -135,12 +133,12 @@ label {
   }
 
   .linkedInLogo {
-    margin: 5vh 2vw;
+    margin: 5vh 1vw;
     padding-bottom: 12px;
   }
 
   .mediumLogo {
-    margin: 5vh 2vw;
+    margin: 5vh 1vw;
     &:hover {
       transform: scale(0.6);
       transition: 1s;
@@ -148,7 +146,7 @@ label {
   }
 
   .upworkLogo {
-    margin: 5vh 5vw;
+    margin: 5vh 1vw;
     &:hover {
       transform: scale(0.6);
       transition: 1s;

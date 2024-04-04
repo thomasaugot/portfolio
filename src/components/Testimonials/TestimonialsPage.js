@@ -26,7 +26,7 @@ function Testimonials() {
     <div className={`TestimonialsPage ${isDesktop ? "visible" : ""}`} id="TestimonialsPage">
       <motion.div
         whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: 100, opacity: 0 }}
+        initial={{ y: 70, opacity: 0 }}
         viewport={{ once: true }}
         transition={{
           type: "tween",
@@ -41,7 +41,7 @@ function Testimonials() {
       <div className="testimonial__content">
         <motion.div
           whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: 70, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "tween",
@@ -72,7 +72,7 @@ function Testimonials() {
         </motion.div>
         <motion.div
           whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: 70, opacity: 0 }}
           viewport={{ once: true }}
           transition={{
             type: "tween",

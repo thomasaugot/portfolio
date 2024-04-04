@@ -1,8 +1,7 @@
 @import "../../styles/variables.scss";
 
 .CurriculumPage {
-  @include bootstrapScroll();
-  padding: 20% 10% 15% 10%;
+  @include sectionLayout();
   color: $text2;
   overflow: hidden;
   height: fit-content;
@@ -12,7 +11,7 @@
 .certificate-logo {
   position: absolute;
   bottom: -75px;
-  right:-20%;
+  right: -20%;
 }
 
 .CurriculumPage {
@@ -72,15 +71,11 @@
     padding: 15px 0;
     box-shadow: 0 5px 20px black;
     text-align: center;
-    background-color: transparent !important;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../../assets/item-bg.PNG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background-color: rgba(54, 55, 55, 0.3);
     transition: all 1s;
 
     &:hover {
@@ -105,15 +100,15 @@
   padding: 24px;
   box-shadow: 0 5px 20px black;
   text-align: left;
-  background-color: transparent !important;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 450px;
-  background-image: url("../../assets/item-bg.PNG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: rgba(54, 55, 55, 0.4);
+  // background-image: url("../../assets/item-bg.PNG");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
   transition: all 1s;
 
   &:hover {
@@ -136,12 +131,10 @@
 /* Medium devices (Tablets, between 600px and 992px) */
 @media only screen and (min-width: 600px) {
   .CurriculumPage {
-    padding: 10% 10% 15% 10%;
-
     .certificate-logo {
       position: absolute;
       bottom: -75px;
-      right:0%;
+      right: 0%;
     }
 
     .certifications-container {
@@ -173,8 +166,6 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .CurriculumPage {
-    padding: 5% 10%;
-
     .certificate-logo {
       position: absolute;
       bottom: -75px;
