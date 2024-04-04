@@ -31,11 +31,9 @@ function HomePage() {
       setTimeout(
         () =>
           set([
-            t("Hi! I am Thomas,"),
-            t("Full-Stack Developer"),
-            t(
-              "I bring your project to life using the latest development technologies"
-            ),
+            t("< Hi! I am Thomas,"),
+            t("Web & Mobile Developer />"),
+            t("Dedicated to crafting beautiful and user-friendly digital products"),
           ]),
         2000
       )
@@ -44,11 +42,9 @@ function HomePage() {
       setTimeout(
         () =>
           set([
-            t("Hi! I am Thomas,"),
-            t("Full-Stack Developer"),
-            t(
-              "I bring your project to life using the latest development technologies"
-            ),
+            t("< Hi! I am Thomas,"),
+            t("Web & Mobile Developer />"),
+            t("Dedicated to crafting beautiful and user-friendly digital products"),
           ]),
         8000
       )
@@ -77,15 +73,8 @@ function HomePage() {
     <div className="Homepage" id="HomePage">
       <div className="title-block">
         {transitions(({ innerHeight, ...rest }, item) => (
-          <animated.div
-            style={rest}
-            onClick={reset}
-            className="title-item gradient-text"
-          >
-            <animated.div
-              style={{ overflow: "hidden", height: "auto" }}
-              className="gradient-text"
-            >
+          <animated.div style={rest} onClick={reset} className="title-item gradient-text">
+            <animated.div style={{ overflow: "hidden", height: "auto" }} className="gradient-text">
               {item}
             </animated.div>
           </animated.div>

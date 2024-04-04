@@ -2,12 +2,12 @@
   "About": "À propos",
   "Projects": "Projets",
   "Contact": "Contact",
-  "Hi! I am Thomas,": "Bonjour! Je suis Thomas,",
-  "Full-Stack Developer": "Développeur Full-Stack",
-  "I bring your project to life using the latest development technologies": "Je donne vie à vos projets grâce aux dernières technologies en matière de développement",
+  "< Hi! I am Thomas,": "< Bonjour! Je suis Thomas,",
+  "Web & Mobile Developer />": "Développeur Web & Mobile />",
+  "Dedicated to crafting beautiful and user-friendly digital products": "Engagé dans la création de produits numériques élégants et intuitifs",
   "About me": "À propos",
-  "Hi there! I am Thomas, a Full-Stack developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web and mobile development.": "Bonjour ! Je suis Thomas, développeur Full-Stack originaire de Nantes. Ancien globe-trotter, j'apporte une perspective globale et une appétence insatiable pour les défis au monde du développement à la fois web et mobile.",
-  "In this ever-evolving digital landscape, my mission is crystal clear: elevate online presence and visibility for businesses and individuals alike. Whether it's crafting seamless front-end magic or diving deep into the back-end abyss, I enjoy creating remarkable digital experiences. Staying on the cutting edge of tech trends ensures that my work is always in sync with modern design principles and the best practices in web and mobile development.": "Dans un paysage numérique en constante évolution, ma mission est on ne peut plus claire : élever la présence en ligne et la visibilité aussi bien pour les entreprises que pour les particuliers. Que ce soit en  front-end  ou back-end, j'apprécie la création d'expériences numériques remarquables. Rester à la pointe des tendances technologiques garantit que mon travail est toujours en harmonie avec les principes de design modernes et les meilleures pratiques en développement web et mobile.",
+  "Hi there! I am Thomas, a passionate developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web and mobile development.": "Bonjour ! Je suis Thomas, développeur passionné originaire de Nantes. Ancien globe-trotter, j'apporte une perspective globale et une appétence insatiable pour les défis au monde du développement à la fois web et mobile.",
+  "In today's rapidly changing digital landscape, my mission is clear: to enhance online presence and visibility for both businesses and individuals. While specializing in frontend development, my fullstack experience allows me to craft exceptional digital experiences and address any challenges that arise. By staying abreast of the latest tech trends, I ensure that my work adheres to modern design principles and the best practices in web and mobile development.": "Face à un paysage numérique en constante évolution, ma mission est claire : améliorer la présence en ligne et la visibilité à la fois pour les entreprises et les particuliers. Spécialisé dans le développement frontend, mon expérience fullstack me permet de créer des expériences numériques de qualité et de relever tous les défis qui se présentent. En restant à l'affût des dernières tendances technologiques, je veille à ce que mon travail respecte les principes de design modernes et les meilleures pratiques en matière de développement web et mobile.",
   "While my playground primarily revolves around Javascript and its captivating frameworks, I am never confined by boundaries and always seek to expand my skillset!": "Si mon terrain de jeu tourne principalement autour de JavaScript et de ses frameworks, je ne suis jamais confiné par des limites et cherche toujours à élargir mes compétences !",
   "I build with...": "Compétences",
   "Certifications": "Certifications",
@@ -75,7 +75,7 @@
     {
       "name": "Partymates",
       "description": "Une appli de type réseau social que j'ai créée pour connecter les gens afin qu'ils puissent voyager ensemble pour les festivals. Les utilisateurs peuvent créer un compte, s'abonner à des événements et interagir avec d'autres via la fonction de messagerie"
-   },
+    },
     {
       "name": "Pickle Rick vs Rats - The Game",
       "description": "Mon premier projet de codage, un jeu de tir Javascript amusant, tuez les vilains rats !"

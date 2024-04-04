@@ -61,12 +61,12 @@ function AboutPage() {
         >
           <p>
             {t(
-              "Hi there! I am Thomas, a Full-Stack developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web and mobile development."
+              "Hi there! I am Thomas, a passionate developer hailing from Nantes, France. As an ex-globetrotter, I bring a global perspective and an insatiable appetite for challenges to the world of web and mobile development."
             )}
             <br />
             <br />
             {t(
-              "In this ever-evolving digital landscape, my mission is crystal clear: elevate online presence and visibility for businesses and individuals alike. Whether it's crafting seamless front-end magic or diving deep into the back-end abyss, I enjoy creating remarkable digital experiences. Staying on the cutting edge of tech trends ensures that my work is always in sync with modern design principles and the best practices in web and mobile development."
+              "In today's rapidly changing digital landscape, my mission is clear: to enhance online presence and visibility for both businesses and individuals. While specializing in frontend development, my fullstack experience allows me to craft exceptional digital experiences and address any challenges that arise. By staying abreast of the latest tech trends, I ensure that my work adheres to modern design principles and the best practices in web and mobile development."
             )}
             <br />
             <br />
