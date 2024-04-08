@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ReactCardFlip from "react-card-flip";
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, EffectCards } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/effect-cards";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -38,7 +39,7 @@ function PortfolioPage() {
       capture1: require("./kingpad.png"),
       name: t("projects.0.name"),
       description: t("projects.0.description"),
-      stack: ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma", "Vercel"],
+      stack: ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma"],
       linkRepo: "https://github.com/thomasaugot/kp-next.js",
       linkDemo: "https://kp-next-js.vercel.app/",
     },
@@ -47,7 +48,7 @@ function PortfolioPage() {
       capture1: require("./cmdurand.png"),
       name: t("projects.1.name"),
       description: t("projects.1.description"),
-      stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS", "Vercel"],
+      stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS"],
       linkRepo: "https://github.com/thomasaugot/charpente-menuiserie-durand",
       linkDemo: "https://www.cmdurand.fr/",
     },
@@ -56,7 +57,7 @@ function PortfolioPage() {
       capture1: require("./farmhouse (2).png"),
       name: t("projects.2.name"),
       description: t("projects.2.description"),
-      stack: ["React.js", "SCSS", "Typescript", "Bootstrap", "Google maps API", "Netlify"],
+      stack: ["React.js", "SCSS", "Typescript", "Bootstrap", "Google maps API"],
       linkRepo: "https://github.com/thomasaugot/farmhouse-table-website",
       linkDemo: "https://farmhouse-table.netlify.app/",
     },
@@ -65,7 +66,7 @@ function PortfolioPage() {
       capture1: require("./attorneyster.png"),
       name: t("projects.3.name"),
       description: t("projects.3.description"),
-      stack: ["Next.js", "Tailwind CSS", "Framer motion", "EmailJS", "Figma", "Vercel"],
+      stack: ["Next.js", "Tailwind CSS", "Framer motion", "EmailJS", "Figma"],
       linkRepo: "https://github.com/thomasaugot/attorneyster-nextjs",
       linkDemo: "https://attorneyster-ta.vercel.app/",
     },
@@ -74,16 +75,7 @@ function PortfolioPage() {
       capture1: require("./todos.png"),
       name: t("projects.4.name"),
       description: t("projects.4.description"),
-      stack: [
-        "React.js",
-        "SCSS",
-        "Typescript",
-        "Jest",
-        "PostgreSQL",
-        "React Context API",
-        "Netlify",
-        "Adaptable.io",
-      ],
+      stack: ["React.js", "SCSS", "Typescript", "Jest", "PostgreSQL", "React Context API"],
       linkRepo:
         "https://github.com/thomasaugot/typescript-todo-app-frontend/tree/postgrsql-link-setup",
       linkDemo: "https://todayzzz-todos.netlify.app/",
@@ -102,16 +94,7 @@ function PortfolioPage() {
       capture1: require("./partymates1.png"),
       name: t("projects.6.name"),
       description: t("projects.6.description"),
-      stack: [
-        "MongoDB",
-        "Express.js",
-        "React.js",
-        "Node.js",
-        "REST API",
-        "Postman",
-        "Netlify",
-        "Adaptable.io",
-      ],
+      stack: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "Postman"],
       linkRepo: "https://github.com/thomasaugot/app-partymates-client",
       linkDemo: "https://partymates.netlify.app/",
     },
@@ -120,7 +103,7 @@ function PortfolioPage() {
       capture1: require("./game-capture1.png"),
       name: t("projects.7.name"),
       description: t("projects.7.description"),
-      stack: ["HTML", "CSS", "Javascript", "Netlify"],
+      stack: ["HTML", "CSS", "Javascript"],
       linkRepo: "https://github.com/thomasaugot/project-js-shooting-game",
       linkDemo: "https://pickle-rick-shooting-game.netlify.app/",
     },
@@ -153,18 +136,14 @@ function PortfolioPage() {
       </motion.h1>
       <br></br>
       {isMobile ? (
-        <div className="project-cards-container">
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwiper project-cards-container"
+        >
           {projects.map((project, index) => (
-            <motion.div
-              whileInView={{ scale: 1, opacity: 1 }}
-              initial={{ scale: 0.8, opacity: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                type: "spring",
-                stiffness: 60,
-                delay: 0.2,
-              }}
-            >
+            <SwiperSlide>
               <ReactCardFlip
                 isFlipped={activeCardIndex === index}
                 flipDirection="horizontal"
@@ -178,14 +157,13 @@ function PortfolioPage() {
                     {project.stack.map((item, stackIndex) => (
                       <p key={stackIndex}>{item}</p>
                     ))}
-                  </div>
-
-                  <div className="page__dots">
-                    <img
-                      src={require("../../assets/flip-icon.png")}
-                      alt="flip-icon"
-                      className="flip-icon"
-                    />
+                    <div className="page__dots">
+                      <img
+                        src={require("../../assets/flip-icon.png")}
+                        alt="flip-icon"
+                        className="flip-icon"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="card-back card" onClick={() => handleCardClick(index)}>
@@ -206,9 +184,9 @@ function PortfolioPage() {
                   </div>
                 </div>
               </ReactCardFlip>
-            </motion.div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       ) : (
         <motion.div
           initial="hidden"
@@ -255,16 +233,15 @@ function PortfolioPage() {
                         {project.stack.map((item, stackIndex) => (
                           <p key={stackIndex}>{item}</p>
                         ))}
-                      </div>
-                      <div className="page__dots">
-                        <img
-                          src={require("../../assets/flip-icon.png")}
-                          alt="flip-icon"
-                          className="flip-icon"
-                        />
+                        <div className="page__dots">
+                          <img
+                            src={require("../../assets/flip-icon.png")}
+                            alt="flip-icon"
+                            className="flip-icon"
+                          />
+                        </div>
                       </div>
                     </motion.div>
-
                     {/* Card back */}
                     <motion.div onClick={() => handleCardClick(index)} className="card-back card">
                       {/* Content */}

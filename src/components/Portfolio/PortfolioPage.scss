@@ -5,9 +5,18 @@
   height: fit-content;
   color: $text2;
   overflow: hidden;
+  padding: 15% 0% 15% 0%;
 
   .item-description {
     margin-top: 30px;
+  }
+
+  .gradient-underline {
+    margin-left: 10%;
+  }
+
+  h1 {
+    margin-bottom: 20px !important;
   }
 
   p {
@@ -44,8 +53,14 @@
   }
 }
 
-.swiper-wrapper {
-  padding: 20px 0;
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  opacity: 0 !important;
+}
+
+.swiper-slide-shadow {
+  opacity: 0 !important;
+  border-radius: 15px !important;
 }
 
 .portfolioContent {
@@ -58,20 +73,14 @@
 .card {
   border-radius: 15px !important;
   height: 500px !important;
-  margin: 1vh 0;
   padding: 24px;
-  box-shadow: 0 5px 20px black;
   text-align: center;
   position: relative;
   perspective: 150em;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  background-color: rgba(54, 55, 55, 0.3) !important;
   transition: all 1s;
-
-  &:hover {
-    box-shadow: 0 5px 20px white;
-  }
+  background-color: rgb(22, 21, 21, 0.95) !important;
 
   &.flipped {
     transform: rotateY(180deg);
@@ -115,21 +124,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 85%;
   height: 700px;
   backface-visibility: hidden;
   border-radius: 15px !important;
+  box-shadow: 0 5px 20px black;
+  margin: 2rem;
 }
 
-.card-front:hover {
-  transform: translateY(-5px) rotateX(10deg);
-  box-shadow: 0 5px 20px white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 15px !important;
-}
-
-.mySwiper {
-  padding-bottom: 60px !important;
+.swiper-slide-shadow {
+  opacity: 0 !important;
 }
 
 .swiper-pagination-bullet {
@@ -162,20 +166,49 @@
     justify-content: center;
   }
 
+  .swiper-wrapper {
+    padding: 1rem 0;
+  }
+
+  .gradient-underline {
+    margin-left: 0 !important;
+  }
+
   .card {
     width: 45vw !important;
     margin-inline: auto;
+
+    &:hover {
+      box-shadow: 0 5px 20px white;
+    }
+  }
+
+  .mySwiper {
+    padding-bottom: 60px !important;
+  }
+
+  .card-front:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    box-shadow: 0 5px 20px white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 15px !important;
   }
 }
 
 /* Smaller desktops (between 992px and 1024px) */
 @media only screen and (min-width: 992px) {
+  .PortfolioPage {
+    padding: 5% 10%;
+  }
+
   .portfolioContent {
     margin-inline: auto;
   }
 
   .card {
     width: 30vw !important;
+    box-shadow: 0 5px 20px black;
+    background-color: rgba(54, 55, 55, 0.3) !important;
   }
 
   .card-front,

@@ -16,7 +16,7 @@ body {
 
 .App {
   background-color: rgba(58, 58, 58);
-  background-image: url("./wallpaper.jpg");
+  background-image: url("../assets/wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,6 +30,7 @@ main {
   align-items: center;
   width: 100%;
   overflow: hidden;
+
   .intro {
     font-size: 38px;
     text-align: center;
