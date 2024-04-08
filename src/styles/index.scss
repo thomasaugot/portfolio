@@ -15,11 +15,16 @@ body {
 }
 
 .App {
+  background-color: #212121;
   background-image: url("../assets/wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow-x: hidden;
+}
+
+.App.loaded {
+  background-image: url("../assets/wallpaper.jpg");
 }
 
 main {

@@ -22,10 +22,21 @@ import MouseAnimation from "./components/AnimatedMousePad/MouseAnimation";
 // import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
 // import supabase from "../src/api/supabase";
 // import Mockarticle from "./pages/Blog/Articles/ArticleContent/Mockarticle";
+import backgroundImage from "./assets/wallpaper.jpg";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const img = new Image();
+    img.onload = () => {
+      setLoaded(true);
+    };
+    img.src = backgroundImage;
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -85,7 +96,7 @@ function App() {
     };
   }, []);
 
-  if (!isI18nInitialized) {
+  if (!isI18nInitialized || !loaded) {
     return (
       <div style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}>
         <Loading />
