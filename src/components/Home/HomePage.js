@@ -56,7 +56,7 @@ function HomePage() {
       setIsDesktop(window.innerWidth >= 1024);
     };
 
-    handleResize(); // Check initial viewport width
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => {

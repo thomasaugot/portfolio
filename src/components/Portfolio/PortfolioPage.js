@@ -36,7 +36,7 @@ function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      capture1: require("./kingpad.png"),
+      capture1: require("../../assets/kingpad.png"),
       name: t("projects.0.name"),
       description: t("projects.0.description"),
       stack: ["Next.JS", "Tailwind CSS", "Typescript", "Material UI", "Figma"],
@@ -45,7 +45,7 @@ function PortfolioPage() {
     },
     {
       id: 2,
-      capture1: require("./cmdurand.png"),
+      capture1: require("../../assets/cmdurand.png"),
       name: t("projects.1.name"),
       description: t("projects.1.description"),
       stack: ["Next.JS", "Tailwind CSS", "Framer Motion", "EmailJS"],
@@ -54,7 +54,7 @@ function PortfolioPage() {
     },
     {
       id: 3,
-      capture1: require("./farmhouse (2).png"),
+      capture1: require("../../assets/farmhouse (2).png"),
       name: t("projects.2.name"),
       description: t("projects.2.description"),
       stack: ["React.js", "SCSS", "Typescript", "Bootstrap", "Google maps API"],
@@ -63,7 +63,7 @@ function PortfolioPage() {
     },
     {
       id: 4,
-      capture1: require("./attorneyster.png"),
+      capture1: require("../../assets/attorneyster.png"),
       name: t("projects.3.name"),
       description: t("projects.3.description"),
       stack: ["Next.js", "Tailwind CSS", "Framer motion", "EmailJS", "Figma"],
@@ -72,7 +72,7 @@ function PortfolioPage() {
     },
     {
       id: 5,
-      capture1: require("./todos.png"),
+      capture1: require("../../assets/todos.png"),
       name: t("projects.4.name"),
       description: t("projects.4.description"),
       stack: ["React.js", "SCSS", "Typescript", "Jest", "PostgreSQL", "React Context API"],
@@ -82,7 +82,7 @@ function PortfolioPage() {
     },
     {
       id: 6,
-      capture1: require("./eurafrique.png"),
+      capture1: require("../../assets/eurafrique.png"),
       name: t("projects.5.name"),
       description: t("projects.5.description"),
       stack: ["React.js", "SCSS", "i18next", "React Context API", "Cpanel", "Supabase"],
@@ -91,7 +91,7 @@ function PortfolioPage() {
     },
     {
       id: 7,
-      capture1: require("./partymates1.png"),
+      capture1: require("../../assets/partymates1.png"),
       name: t("projects.6.name"),
       description: t("projects.6.description"),
       stack: ["MongoDB", "Express.js", "React.js", "Node.js", "REST API", "Postman"],
@@ -100,7 +100,7 @@ function PortfolioPage() {
     },
     {
       id: 8,
-      capture1: require("./game-capture1.png"),
+      capture1: require("../../assets/game-capture1.png"),
       name: t("projects.7.name"),
       description: t("projects.7.description"),
       stack: ["HTML", "CSS", "Javascript"],

@@ -39,10 +39,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     // // Scroll to the top of the page
     // window.scrollTo(0, 0);
     // const fetchArticles = async () => {

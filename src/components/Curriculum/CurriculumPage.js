@@ -43,12 +43,7 @@ function CurriculumPage() {
               "Crafting user interfaces from scratch with the most performant technologies such as React.js or Next.js for a seamless user experience."
             )}
           </p>
-          <Marquee
-            gradientColor={"yellow"}
-            speed={40}
-            autoFill={true}
-            direction={"right"}
-          >
+          <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
             <div className="marquee-item">
               <div className="img-container">
                 <img
@@ -97,7 +92,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./react-logo.png")}
+                  src={require("../../assets/react-logo.png")}
                   alt="React"
                   title="React"
                 />
@@ -108,7 +103,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./MUI.png")}
+                  src={require("../../assets/MUI.png")}
                   alt="Material UI"
                   title="Material UI"
                 />
@@ -119,7 +114,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./typescript-logo.png")}
+                  src={require("../../assets/typescript-logo.png")}
                   alt="Typescript"
                   title="Typescript"
                 />
@@ -130,7 +125,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./nextjs.png")}
+                  src={require("../../assets/nextjs.png")}
                   alt="Next JS"
                   title="Next JS"
                 />
@@ -152,7 +147,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./Tailwind_CSS.png")}
+                  src={require("../../assets/Tailwind_CSS.png")}
                   alt="Tailwind CSS"
                   title="Tailwind CSS"
                 />
@@ -163,7 +158,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./jest.png")}
+                  src={require("../../assets/jest.png")}
                   alt="Jest Testing"
                   title="Jest Testing"
                 />
@@ -174,7 +169,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./figma.png")}
+                  src={require("../../assets/figma.png")}
                   alt="Figma"
                   title="Figma"
                 />
@@ -261,7 +256,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./firebase.png")}
+                  src={require("../../assets/firebase.png")}
                   alt="Firebase"
                   title="Firebase"
                   style={{ borderRadius: 20 }}
@@ -273,7 +268,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./supabase.png")}
+                  src={require("../../assets/supabase.png")}
                   alt="Supabase"
                   title="Supabase"
                 />
@@ -300,17 +295,12 @@ function CurriculumPage() {
               "Developing intuitive mobile applications for iOS and Android using native development tools."
             )}
           </p>
-          <Marquee
-            gradientColor={"yellow"}
-            speed={40}
-            autoFill={true}
-            direction={"right"}
-          >
+          <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
             <div className="marquee-item">
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./react-native.png")}
+                  src={require("../../assets/react-native.png")}
                   alt="React Native"
                   title="React Native"
                 />
@@ -321,7 +311,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./expo.png")}
+                  src={require("../../assets/expo.png")}
                   alt="Expo"
                   title="Expo"
                   style={{ borderRadius: 20 }}
@@ -333,7 +323,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./Xcode_14_icon.png")}
+                  src={require("../../assets/Xcode_14_icon.png")}
                   alt="Xcode"
                   title="Xcode"
                   style={{ borderRadius: 20 }}
@@ -345,7 +335,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./new-studio-logo-1.png")}
+                  src={require("../../assets/new-studio-logo-1.png")}
                   alt="Android Studio"
                   title="Android Studio"
                   style={{ borderRadius: 20 }}
@@ -357,7 +347,7 @@ function CurriculumPage() {
               <div className="img-container">
                 <img
                   height="70"
-                  src={require("./flutterflow.png")}
+                  src={require("../../assets/flutterflow.png")}
                   alt="Flutterflow"
                   title="Flutterflow"
                 />
@@ -407,8 +397,8 @@ function CurriculumPage() {
               "9-week web development bootcamp, during which I was taught the following technologies:"
             )}
             <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
-            <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs{" "}
-            <br></br>- {t("Version control")}: Git/ Github
+            <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>-{" "}
+            {t("Version control")}: Git/ Github
           </p>
           <img
             height="160"
@@ -424,9 +414,7 @@ function CurriculumPage() {
               rel="noreferrer"
               target="_blank"
             >
-              <button className="blueBtn gradient-bg">
-                {t("Show credential")}
-              </button>
+              <button className="blueBtn gradient-bg">{t("Show credential")}</button>
             </a>
           </div>
           <br></br>
@@ -466,9 +454,7 @@ function CurriculumPage() {
               rel="noreferrer"
               target="_blank"
             >
-              <button className="blueBtn gradient-bg">
-                {t("Show credential")}
-              </button>
+              <button className="blueBtn gradient-bg">{t("Show credential")}</button>
             </a>
           </div>
         </motion.div>
