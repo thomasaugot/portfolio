@@ -56,6 +56,7 @@ function App() {
     // };
 
     // fetchArticles();
+    //
 
     const rootElement = document.documentElement;
     rootElement.setAttribute("translate", "no");
