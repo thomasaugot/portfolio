@@ -179,7 +179,7 @@ function PortfolioPage() {
                       className="whiteBtn"
                       onClick={() => window.open(project.linkDemo, "_blank")}
                     >
-                      {t("Visit page")}
+                      {t("Visit Page")}
                     </button>
                   </div>
                 </div>
