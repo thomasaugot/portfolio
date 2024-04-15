@@ -3,8 +3,6 @@ import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-import certificateLogo from "../../assets/certification-logo.png";
-
 function CurriculumPage() {
   const { t } = useTranslation();
 
@@ -22,7 +20,7 @@ function CurriculumPage() {
         }}
         className="gradient-underline"
       >
-        <h1>{t("Skills & Services")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <h1>{t("My Skills")}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
       </motion.div>
       <div className="services-container">
         <motion.div
@@ -355,108 +353,6 @@ function CurriculumPage() {
               <div className="subtitle">Flutterflow</div>
             </div>
           </Marquee>
-        </motion.div>
-      </div>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <motion.div
-        whileInView={{ y: 0, opacity: 1 }}
-        initial={{ y: 50, opacity: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          type: "tween",
-          stiffness: 40,
-          delay: 0.4,
-          ease: "linear",
-        }}
-      >
-        <div className="gradient-underline">
-          <h1>{t("Certifications")}</h1>
-        </div>
-      </motion.div>
-      <div className="certifications-container">
-        <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
-          initial={{ x: "-20vw", opacity: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            type: "tween",
-            stiffness: 40,
-            delay: 0.4,
-            ease: "linear",
-          }}
-          className="certification-item"
-        >
-          <h2>{t("Full-Stack Web Development, MERN")}</h2>
-          <h2 style={{ fontStyle: "italic" }}>Ironhack</h2>
-          <p>
-            {t(
-              "9-week web development bootcamp, during which I was taught the following technologies:"
-            )}
-            <br></br>- Frontend: HTML, CSS/ Bootstrap, Javascript, React.js
-            <br></br>- Backend: MongoDB, Express.js, Node.js, REST APIs <br></br>-{" "}
-            {t("Version control")}: Git/ Github
-          </p>
-          <img
-            height="160"
-            src={certificateLogo}
-            alt="certificate logo"
-            className="certificate-logo"
-          />
-
-          <br></br>
-          <div className="curriculum__buttons">
-            <a
-              href="https://www.credential.net/e93a0eb1-2504-45c1-9b18-f6e9fe9c5587"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <button className="blueBtn gradient-bg">{t("Show credential")}</button>
-            </a>
-          </div>
-          <br></br>
-        </motion.div>
-        <br></br>
-        <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
-          initial={{ x: "20vw", opacity: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            type: "tween",
-            stiffness: 40,
-            delay: 0.4,
-            ease: "linear",
-          }}
-          className="certification-item"
-        >
-          <div>
-            <h2>{t("Mobile Development with React Native")}</h2>
-            <h2 style={{ fontStyle: "italic" }}>Udemy</h2>
-            <p>
-              {t("28-hour course covering mobile apps development using :")}
-              <br></br>- React Native CLI <br></br>- Expo
-              <br></br>- Android & iOS specifics
-            </p>
-            <img
-              height="160"
-              src={certificateLogo}
-              alt="certificate logo"
-              className="certificate-logo"
-            />
-          </div>
-          <br></br>
-          <div className="curriculum__buttons">
-            <a
-              href="https://www.udemy.com/certificate/UC-19a32e00-feb2-4ccf-b645-e68d820d637d/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <button className="blueBtn gradient-bg">{t("Show credential")}</button>
-            </a>
-          </div>
         </motion.div>
       </div>
     </div>

@@ -85,7 +85,7 @@ const Header = () => {
               setActiveLink("CurriculumPage");
             }}
           >
-            {t("Skills & Services")}
+            {t("Skills")}
           </ScrollLink>
           <ScrollLink
             to="PortfolioPage"

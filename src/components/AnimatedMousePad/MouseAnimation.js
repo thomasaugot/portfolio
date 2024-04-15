@@ -26,8 +26,8 @@ const MouseAnimation = () => {
       canvas.height = height;
       ctx = canvas.getContext("2d");
 
-      const numPointsX = width < 600 ? 8 : 15;
-      const numPointsY = height < 600 ? 8 : 15;
+      const numPointsX = width < 600 ? 8 : 17;
+      const numPointsY = height < 600 ? 8 : 17;
 
       points = [];
       for (let x = 0; x < width; x = x + width / numPointsX) {
@@ -69,11 +69,7 @@ const MouseAnimation = () => {
       }
 
       for (let i in points) {
-        let c = new Circle(
-          points[i],
-          2 + Math.random() * 2,
-          "rgba(102, 255, 0, 1)"
-        );
+        let c = new Circle(points[i], 2 + Math.random() * 2, "rgba(102, 255, 0, 1)");
         points[i].circle = c;
       }
     };
@@ -93,14 +89,8 @@ const MouseAnimation = () => {
         posx = e.pageX;
         posy = e.pageY;
       } else if (e.clientX || e.clientY) {
-        posx =
-          e.clientX +
-          document.body.scrollLeft +
-          document.documentElement.scrollLeft;
-        posy =
-          e.clientY +
-          document.body.scrollTop +
-          document.documentElement.scrollTop;
+        posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+        posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
       }
       target.x = posx;
       target.y = posy;
