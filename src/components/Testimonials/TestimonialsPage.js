@@ -61,7 +61,7 @@ function Testimonials() {
           </p>
           <p className="signature">
             <a
-              href="https://www.linkedin.com/in/remy-riehl-757b32139/"
+              href="https://www.linkedin.com/in/remy-riehl-0800532a3/"
               rel="noreferrer"
               target="_blank"
             >
