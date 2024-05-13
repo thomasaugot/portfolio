@@ -22,7 +22,7 @@ import MouseAnimation from "./components/AnimatedMousePad/MouseAnimation";
 // import ArticleContent from "./pages/Blog/Articles/ArticleContent/ArticleContent";
 // import supabase from "../src/api/supabase";
 // import Mockarticle from "./pages/Blog/Articles/ArticleContent/Mockarticle";
-import backgroundImage from "./assets/wallpaper.jpg";
+import backgroundImage from "./assets/wallpaper.webp";
 
 function App() {
   const [isI18nInitialized, setIsI18nInitialized] = useState(false);
@@ -95,7 +95,9 @@ function App() {
 
   if (!isI18nInitialized || !loaded) {
     return (
-      <div style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}>
+      <div
+        style={{ width: "100vw", height: "100vh", backgroundColor: "#212121" }}
+      >
         <Loading />
       </div>
     );

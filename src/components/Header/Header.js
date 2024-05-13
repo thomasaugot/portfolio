@@ -56,7 +56,12 @@ const Header = () => {
   return (
     <nav className={`navbar ${menuOpen ? "open" : ""}`}>
       <div className="navbar-container">
-        <input type="checkbox" checked={menuOpen} onChange={handleMenuToggle} id="menu-toggle" />
+        <input
+          type="checkbox"
+          checked={menuOpen}
+          onChange={handleMenuToggle}
+          id="menu-toggle"
+        />
         <label htmlFor="menu-toggle" className="hamburger-lines">
           <span className="line line1"></span>
           <span className="line line2"></span>
@@ -79,7 +84,9 @@ const Header = () => {
             to="CurriculumPage"
             smooth={true}
             duration={500}
-            className={`nav-item ${activeLink === "CurriculumPage" ? "active" : ""}`}
+            className={`nav-item ${
+              activeLink === "CurriculumPage" ? "active" : ""
+            }`}
             onClick={() => {
               setMenuOpen(false);
               setActiveLink("CurriculumPage");
@@ -91,7 +98,9 @@ const Header = () => {
             to="PortfolioPage"
             smooth={true}
             duration={500}
-            className={`nav-item ${activeLink === "PortfolioPage" ? "active" : ""}`}
+            className={`nav-item ${
+              activeLink === "PortfolioPage" ? "active" : ""
+            }`}
             onClick={() => {
               setMenuOpen(false);
               setActiveLink("PortfolioPage");
@@ -103,7 +112,9 @@ const Header = () => {
             to="TestimonialsPage"
             smooth={true}
             duration={500}
-            className={`nav-item ${activeLink === "TestimonialsPage" ? "active" : ""}`}
+            className={`nav-item ${
+              activeLink === "TestimonialsPage" ? "active" : ""
+            }`}
             onClick={() => {
               setMenuOpen(false);
               setActiveLink("TestimonialsPage");
@@ -115,7 +126,9 @@ const Header = () => {
             to="ContactPage"
             smooth={true}
             duration={500}
-            className={`nav-item ${activeLink === "ContactPage" ? "active" : ""}`}
+            className={`nav-item ${
+              activeLink === "ContactPage" ? "active" : ""
+            }`}
             onClick={() => {
               setMenuOpen(false);
               setActiveLink("ContactPage");
@@ -123,11 +136,15 @@ const Header = () => {
           >
             {t("Contact")}
           </ScrollLink>
-          <a href="https://medium.com/@thomasaugot" target="_blank" rel="noreferrer">
-            <IconContext.Provider value={{ color: "white", className: "medium-link" }}>
-              <div>
-                <BsMedium />
-              </div>
+          <a
+            href="https://medium.com/@thomasaugot"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconContext.Provider
+              value={{ color: "white", className: "medium-link" }}
+            >
+              <BsMedium />
             </IconContext.Provider>
           </a>
           <div className={`nav-item no-hover-effect`}>

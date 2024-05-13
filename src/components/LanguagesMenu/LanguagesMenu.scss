@@ -1,74 +1,36 @@
 @import "../../styles/variables.scss";
 
 .languages-menu {
-  position: relative;
-  display: inline-block;
-  margin-top: -3px;
+  .flag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .flag-button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    height: 40px;
     padding: 0;
-    .item {
-      display: flex;
-      align-items: center;
+    margin: 0 10px;
+    position: relative;
+    transition: transform 0.3s, filter 0.3s;
+
+    &.active {
+      transform: scale(1.5);
+    }
+
+    &:hover .flag {
+      filter: brightness(2);
     }
   }
 
-  .active-flag {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    width: 30px;
+  .flag {
+    width: 20px;
     height: 20px;
     border-radius: 50%;
-    &:hover {
-      transform: scale(0.9);
-      filter: drop-shadow(4px 4px 3px $primary-start);
-    }
-  }
-
-  .chevron-icon {
-    &:hover {
-      transform: scale(0.9);
-      filter: drop-shadow(4px 4px 3px $primary-start);
-    }
-  }
-
-  .flag-button img {
-    width: 30px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-
-  .flag-button p {
-    color: white;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    top: 150%;
-    left: -25%;
-    z-index: 1;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .dropdown-menu button {
-    display: flex;
-    width: 100%;
-    text-align: left;
-    padding: 10px 15px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  .dropdown-menu button:hover {
-    background-color: rgb(223, 208, 208, 0.2);
+    object-fit: cover;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.5);
+    transition: filter 0.3s;
   }
 }

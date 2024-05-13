@@ -16,7 +16,7 @@ body {
 
 .App {
   background-color: #212121;
-  background-image: url("../assets/wallpaper.jpg");
+  background-image: url("../assets/wallpaper.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,7 +24,7 @@ body {
 }
 
 .App.loaded {
-  background-image: url("../assets/wallpaper.jpg");
+  background-image: url("../assets/wallpaper.webp");
 }
 
 main {

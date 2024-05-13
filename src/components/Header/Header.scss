@@ -37,6 +37,7 @@
         height: 100%;
         transition: 0.3s ease color;
         cursor: pointer;
+
         &:not(:last-child) {
           &:hover {
             color: $primary;
@@ -128,7 +129,7 @@
       }
 
       .menu-items {
-        padding-block: 100px;
+        padding-block: 80px;
         backdrop-filter: blur(2px);
         background: rgba(26, 25, 25, 0.9);
         height: 100vh;
@@ -138,33 +139,34 @@
         flex-direction: column;
         transition: transform 0.5s ease-in-out;
         overflow-y: scroll;
-        padding-left: 100px;
 
         .nav-item {
           display: block;
-          padding-inline: $spacing-md !important;
-          padding-bottom: 0 !important;
+          font-size: larger;
+          padding-bottom: 0;
           text-decoration: none;
           color: inherit;
           transition: transform 0.3s;
           cursor: pointer;
-          &:not(:last-child) {
-            &:hover {
-              color: $primary;
-              transform: scale(0.9);
-              filter: drop-shadow(4px 4px 3px $primary-start);
-            }
+          padding-block: 0;
+
+          &:last-child {
+            padding-inline: 0;
           }
+
           &.active {
             color: $primary;
             transform: scale(0.9);
             filter: drop-shadow(4px 4px 3px $primary-start);
           }
         }
+        a {
+          margin-block: 20px;
+          margin-inline: auto;
+        }
+
         .medium-link {
-          padding-inline: $spacing-md !important;
-          margin-block: 25px;
-          width: 85px;
+          margin: -0.9rem 0 2rem 0;
         }
       }
     }
@@ -184,7 +186,7 @@
 
   &.open {
     .menu-items {
-      transform: translate(20%);
+      transform: translate(0%);
     }
   }
 }

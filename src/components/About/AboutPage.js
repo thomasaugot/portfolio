@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import profileImage from "../../assets/profile.png";
+import profileImage from "../../assets/profile.webp";
 import { useEffect, useState } from "react";
 import "./AboutPage.scss";
 import { useTranslation } from "react-i18next";
