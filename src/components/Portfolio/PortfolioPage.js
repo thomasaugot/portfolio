@@ -29,7 +29,7 @@ function PortfolioPage() {
 
   const handleResize = debounce(() => {
     setIsMobile(window.innerWidth < 1023);
-  }, 250);
+  }, 500);
 
   useEffect(() => {
     handleResize();
