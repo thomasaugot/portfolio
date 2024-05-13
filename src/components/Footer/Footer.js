@@ -24,11 +24,14 @@ function Footer() {
     <div className="Footer" ref={ref}>
       {isVisible && (
         <Fade>
-          <a href="#HomePage">
+          <a href="#HomePage" className="back-to-top-link">
             <div className="chevron-container">
               <svg width="40" height="40" className="chevron-icon">
                 <defs>
-                  <linearGradient id="chevronGradient" gradientTransform="rotate(45)">
+                  <linearGradient
+                    id="chevronGradient"
+                    gradientTransform="rotate(45)"
+                  >
                     <stop offset="55%" stopColor="rgba(3, 218, 198, 1)" />
                     <stop offset="95%" stopColor="rgba(102, 255, 0, 1)" />
                   </linearGradient>
@@ -40,22 +43,32 @@ function Footer() {
                 />
               </svg>
             </div>
-            <p style={{ textAlign: "center" }}>{t("Back to Top")}</p>
+            <p>{t("Back to Top")}</p>
           </a>
           <br />
-          <p style={{ textAlign: "center", color: "white" }}>
+          <p>
             {t("Crafted with")}{" "}
             <svg width="28" height="25" className="heart-icon">
               <defs>
-                <linearGradient id="heartGradient" gradientTransform="rotate(45)">
+                <linearGradient
+                  id="heartGradient"
+                  gradientTransform="rotate(45)"
+                >
                   <stop offset="55%" stopColor="rgba(3, 218, 198, 1)" />
                   <stop offset="95%" stopColor="rgba(102, 255, 0, 1)" />
                 </linearGradient>
               </defs>
-              <IoHeart className="heart-icon" fill="url(#heartGradient)" size="25px" />
+              <IoHeart
+                className="heart-icon"
+                fill="url(#heartGradient)"
+                size="25px"
+              />
             </svg>
-            {t("by")}
-            <a href="https://www.linkedin.com/in/thomas-augot/"> Thomas Augot</a>
+            {t("by ")}
+            <a href="https://www.linkedin.com/in/thomas-augot/">
+              {" "}
+              Thomas Augot
+            </a>
           </p>
           <br />
         </Fade>
