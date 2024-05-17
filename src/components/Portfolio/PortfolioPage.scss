@@ -72,7 +72,7 @@
 
 .card {
   border-radius: 15px !important;
-  height: 500px !important;
+  height: 540px;
   padding: 24px;
   text-align: center;
   position: relative;
@@ -125,7 +125,7 @@
   top: 0;
   left: 0;
   width: 85%;
-  height: 700px;
+  height: 540px;
   backface-visibility: hidden;
   border-radius: 15px !important;
   box-shadow: 0 5px 20px black;
@@ -213,7 +213,7 @@
   .card-front,
   .card-back {
     width: 30vw;
-    height: 690px;
+    height: 540px;
   }
 
   .swiper-slide {
