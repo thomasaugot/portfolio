@@ -72,7 +72,7 @@
 
 .card {
   border-radius: 15px !important;
-  height: 540px;
+  height: 500px !important;
   padding: 24px;
   text-align: center;
   position: relative;
@@ -244,7 +244,7 @@
   .card-front,
   .card-back {
     width: 25vw;
-    height: 700px;
+    height: 540px;
   }
 
   .card-front:hover {
