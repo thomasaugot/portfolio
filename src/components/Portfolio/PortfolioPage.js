@@ -170,11 +170,9 @@ function PortfolioPage() {
       {isMobile ? (
         <Swiper
           effect={"cards"}
-          cssMode={true}
           grabCursor={true}
           modules={[EffectCards]}
           className="mySwiper project-cards-container"
-          // cssMode={true}
         >
           {projects.map((project, index) => (
             <SwiperSlide>
