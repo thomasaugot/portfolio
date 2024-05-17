@@ -173,7 +173,7 @@ function PortfolioPage() {
           grabCursor={true}
           modules={[EffectCards]}
           className="mySwiper project-cards-container"
-          height={940}
+          height={540}
         >
           {projects.map((project, index) => (
             <SwiperSlide>
