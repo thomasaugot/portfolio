@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import ReactCardFlip from "react-card-flip";
 import { EffectCoverflow, Pagination, EffectCards } from "swiper";
@@ -27,15 +27,16 @@ function PortfolioPage() {
     };
   };
 
-  const handleResize = debounce(() => {
+  const handleResize = useCallback(() => {
     setIsMobile(window.innerWidth < 1023);
-  }, 500);
+  }, []);
 
   useEffect(() => {
     handleResize();
-    window.addEventListener("resize", handleResize);
+    const debouncedResize = debounce(handleResize, 500);
+    window.addEventListener("resize", debouncedResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", debouncedResize);
     };
   }, [handleResize]);
 
@@ -169,9 +170,11 @@ function PortfolioPage() {
       {isMobile ? (
         <Swiper
           effect={"cards"}
+          cssMode={true}
           grabCursor={true}
           modules={[EffectCards]}
           className="mySwiper project-cards-container"
+          // cssMode={true}
         >
           {projects.map((project, index) => (
             <SwiperSlide>
