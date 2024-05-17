@@ -132,6 +132,10 @@
   margin: 2rem;
 }
 
+.swiper-slide {
+  height: 540px !important;
+}
+
 .swiper-slide-shadow {
   opacity: 0 !important;
 }
@@ -151,11 +155,6 @@
   background: linear-gradient(266deg, $primary-start, $primary-end);
 }
 
-.swiper-slide {
-  width: 100%;
-  min-height: 400px;
-}
-
 /* Medium devices (Tablets, between 600px and 992px) */
 @media only screen and (min-width: 600px) {
   .portfolioContent {
@@ -170,6 +169,10 @@
     padding: 1rem 0;
   }
 
+  .mySwiper {
+    margin-bottom: 0 !important;
+  }
+
   .gradient-underline {
     margin-left: 0 !important;
   }
@@ -181,10 +184,6 @@
     &:hover {
       box-shadow: 0 5px 20px white;
     }
-  }
-
-  .mySwiper {
-    padding-bottom: 60px !important;
   }
 
   .card-front:hover {
@@ -215,6 +214,10 @@
   .card-back {
     width: 30vw;
     height: 690px;
+  }
+
+  .swiper-slide {
+    margin-bottom: 60px !important;
   }
 }
 
