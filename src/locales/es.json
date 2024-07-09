@@ -51,16 +51,20 @@
   "Developing intuitive mobile applications for iOS and Android using native development tools.": "Desarrollando aplicaciones móviles intuitivas para iOS y Android utilizando herramientas de desarrollo nativas.",
   "projects": [
     {
-      "name": "Kingpad",
-      "description": "Una página web completamente receptiva que construí para Kingworld Finance, colaborando con un equipo de diseñadores y desarrolladores, duplicando perfectamente un diseño de Figma."
-    },
-    {
       "name": "Charpente Menuiserie Durand",
       "description": "Un sitio web que diseñé y desarrollé para una empresa francesa de construción."
     },
     {
+      "name": "Wave Rider Surf Shop",
+      "description": "Un sitio web de e-commerce que construí como un tributo a la isla que llamo hogar y al paraíso de los deportes acuáticos: Fuerteventura."
+    },
+    {
       "name": "Farmhouse Table",
       "description": "Un sitio web de restaurante que integra la API de Google Maps y un formulario de reserva."
+    },
+    {
+      "name": "Kingpad",
+      "description": "Una página web completamente receptiva que construí para Kingworld Finance, colaborando con un equipo de diseñadores y desarrolladores, duplicando perfectamente un diseño de Figma."
     },
     {
       "name": "Attorneyster",

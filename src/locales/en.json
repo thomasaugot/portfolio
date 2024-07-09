@@ -1,16 +1,20 @@
 {
   "projects": [
     {
-      "name": "Kingpad",
-      "description": "A fully responsive landing-page I built for Kingworld Finance, collaborating with a team of designers & developers, pixel-perfectly duplicating a Figma design"
-    },
-    {
       "name": "Charpente Menuiserie Durand",
       "description": "A website I designed and developed for a French construction company."
     },
     {
+      "name": "Wave Rider Surf Shop",
+      "description": "A fake e-commerce website I build as a tribute to the place I call home and water sports heaven: Fuerteventura"
+    },
+    {
       "name": "Farmhouse Table",
       "description": "A restaurant website integrating Google Maps API and a reservation form"
+    },
+    {
+      "name": "Kingpad",
+      "description": "A fully responsive landing-page I built for Kingworld Finance, collaborating with a team of designers & developers, pixel-perfectly duplicating a Figma design"
     },
     {
       "name": "Attorneyster",

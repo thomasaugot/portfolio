@@ -41,7 +41,12 @@ function CurriculumPage() {
               "Crafting user interfaces from scratch with the most performant technologies such as React.js or Next.js for a seamless user experience."
             )}
           </p>
-          <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
+          <Marquee
+            gradientColor={"yellow"}
+            speed={40}
+            autoFill={true}
+            direction={"right"}
+          >
             <div className="marquee-item">
               <div className="img-container">
                 <img
@@ -129,6 +134,17 @@ function CurriculumPage() {
                 />
               </div>
               <div className="subtitle">Next.js</div>
+            </div>
+            <div className="marquee-item">
+              <div className="img-container">
+                <img
+                  height="70"
+                  src={require("../../assets/redux.png")}
+                  alt="Redux"
+                  title="Redux"
+                />
+              </div>
+              <div className="subtitle">Redux</div>
             </div>
             <div className="marquee-item">
               <div className="img-container">
@@ -293,7 +309,12 @@ function CurriculumPage() {
               "Developing intuitive mobile applications for iOS and Android using native development tools."
             )}
           </p>
-          <Marquee gradientColor={"yellow"} speed={40} autoFill={true} direction={"right"}>
+          <Marquee
+            gradientColor={"yellow"}
+            speed={40}
+            autoFill={true}
+            direction={"right"}
+          >
             <div className="marquee-item">
               <div className="img-container">
                 <img

@@ -51,16 +51,20 @@
   "by ": "par",
   "projects": [
     {
-      "name": "Kingpad",
-      "description": "Une page entièrement responsive que j'ai développée pour Kingworld Finance, en collaboration avec une équipe de designers et de développeurs, en dupliquant parfaitement un design Figma"
-    },
-    {
       "name": "Charpente Menuiserie Durand",
       "description": "Un site web dont j'ai moi-même pensé le design et que j'ai entièrement développé, pour une entreprise de charpente/menuiserie."
     },
     {
+      "name": "Wave Rider Surf Shop",
+      "description": "Un site de e-commerce fictif que j'ai créé en hommage à l'endroit que où j'ai passé beaucoup d'années, aussi paradis des sports nautiques : Fuerteventura."
+    },
+    {
       "name": "Farmhouse Table",
       "description": "Un site web de restaurant intégrant l'API Google Maps et un formulaire de réservation"
+    },
+    {
+      "name": "Kingpad",
+      "description": "Une page entièrement responsive que j'ai développée pour Kingworld Finance, en collaboration avec une équipe de designers et de développeurs, en dupliquant parfaitement un design Figma"
     },
     {
       "name": "Attorneyster",
