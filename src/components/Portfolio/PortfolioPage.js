@@ -61,11 +61,11 @@ function PortfolioPage() {
       description: t("projects.1.description"),
       stack: [
         "Next.JS",
+        "Typescript",
         "SCSS",
+        "Redux",
         "Framer Motion",
         "EmailJS",
-        "Typescript",
-        "Context API",
         "Google Maps API",
         "Stripe API",
         "Supabase",
